@@ -4,12 +4,12 @@
 @Author: MaxCentaur
 @Date: 2018-11-14 17:38:30
 @LastEditors: MaxCentaur
-@LastEditTime: 2018-11-15 16:03:24
+@LastEditTime: 2018-11-19 22:28:51
 '''
 import os
 import sys
 import random
-from CaptchaLabel import CaptchaLabel
+from Label import CaptchaLabel
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),os.pardir)))
 from Utils import Utils
 
@@ -72,19 +72,19 @@ def getCharList():
 def generate(charList,captchaNumber,captchaLen):
     label = CaptchaLabel(charList,captchaLen)
     labels = []
-    for _ in range(1000):
+    for _ in range(captchaNumber):
         labels.append(label.getLabel())
     return '#'.join(labels)
 def main():
-#     创建文件夹
     dataDir = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0],"data/labels")
     utils = Utils()
     utils.makeDir(dataDir)
 
     charList = getCharList()
-    captchaNumber = 10000
-    captchaLen= 6
+    captchaNumber = 10
+    captchaLen= 5
     labels = generate(charList,captchaNumber,captchaLen)
+    print(labels)
     utils.saveStringFile(os.path.join(dataDir,"labels.txt"),labels)
 
 if __name__ == '__main__':
