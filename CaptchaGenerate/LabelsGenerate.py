@@ -4,7 +4,7 @@
 @Author: MaxCentaur
 @Date: 2018-11-14 17:38:30
 @LastEditors: MaxCentaur
-@LastEditTime: 2018-11-19 22:28:51
+@LastEditTime: 2018-11-20 21:02:40
 '''
 import os
 import sys
@@ -67,7 +67,11 @@ def getCharList():
         'A', 'B', 'C', 'E', 'F', 'G', 'H', 'K', 'M', 'N', 'P', 'Q', 'R', 'S',
         'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    return charSetComplete
+    charSetBlizzard = [
+        'a', 'b', 'c', 'd', 'e', 'f', 'h', 'k', 'm', 'n', 'p', 'q', 's', 'u',
+        'v', 'w', 'x', 'y', 'z'
+    ]
+    return charSetBlizzard
 
 def generate(charList,captchaNumber,captchaLen):
     label = CaptchaLabel(charList,captchaLen)
@@ -81,11 +85,11 @@ def main():
     utils.makeDir(dataDir)
 
     charList = getCharList()
-    captchaNumber = 10
-    captchaLen= 5
+    captchaNumber = 20
+    captchaLen= 6
     labels = generate(charList,captchaNumber,captchaLen)
     print(labels)
-    utils.saveStringFile(os.path.join(dataDir,"labels.txt"),labels)
+    utils.saveStringFile(os.path.join(dataDir,"labelsBlizzard.txt"),labels)
 
 if __name__ == '__main__':
     main()
