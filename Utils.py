@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+# @Time    : 18-11-29 下午10:49
+# @Author  : MaxCentaur
+# @Email   : ambition_x@163.com
+# @File    : Utils.py
+# @Software: PyCharm Community Edition
+
 import os
 
 
@@ -20,6 +27,7 @@ def save_string_2_file(file_path, file_content):
 # 得到folder文件夹下所有文件的绝对路径
 def get_internal_path(folder):
     """os.path.abspath会出现错误（abspath使用的是getwd获取运行路径）"""
+
     def f(x):
         return os.path.join(folder, x)
 
