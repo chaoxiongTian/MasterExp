@@ -1,95 +1,101 @@
-'''
-@Description: 1. 随机生成指定为的验证码,用#号隔开
-@version: 
-@Author: MaxCentaur
-@Date: 2018-11-14 17:38:30
-@LastEditors: MaxCentaur
-@LastEditTime: 2018-11-20 21:02:40
-'''
+# -*- coding: utf-8 -*-
+# @Time    : 18-11-29 下午10:49
+# @Author  : MaxCentaur
+# @Email   : ambition_x@163.com
+# @File    : CaptchaGenerate.py
+# @Software: PyCharm Community Edition
+
 import os
 import sys
-import random
 from Label import CaptchaLabel
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),os.pardir)))
-from Utils import Utils
 
-# TODO：
-def getCharList():
-    charSetComplete = [
+# 为了导入上层的工具包，将上层的路径添加到环境变量
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
+
+from Utils import make_folder, save_string_2_file
+
+data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "data")
+
+
+def get_chars():
+    complete_chars = [
         '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    charSetLive = [
+    live_chars = [
         '3', '4', '5', '6',
-        'd','p','s','y',
+        'd', 'p', 's', 'y',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    charSetSohu = [
+    Sohu_chars = [
         '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'm', 'n', 'p',
         'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y'
     ]
-    charSetEBay = [
+    EBay_chars = [
         '2', '3', '4', '5', '6', '7', '8', '9',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'M', 'N',
         'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    charSetBaidu = [
+    Baidu_chars = [
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y'
     ]
-    charSet360 = [
+    _360_chars = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'm', 'n', 'p', 'q',
         'r', 's', 'u', 'v', 'w', 'x', 'y', 'z',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'M', 'N', 'P', 'Q',
         'R', 'S', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    charSetJd = [
+    Jd_chars = [
         '3', '4', '5', '6', '8',
         'A', 'B', 'C', 'E', 'F', 'H', 'K', 'M', 'N', 'R', 'S', 'T', 'U', 'V',
         'W', 'X', 'Y'
     ]
-    charSetWeibo = [
+    Weibo_chars = [
         '2', '3', '4', '6', '7', '8', '9',
         'A', 'B', 'C', 'E', 'F', 'H', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R',
         'S', 'T', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    charSetEbay = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-    charSetSina = [
+    Ebay_chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    Sina_chars = [
         '2', '3', '4', '5', '6', '7', '8',
         'a', 'b', 'c', 'd', 'e', 'f', 'h', 'k', 'm', 'n', 'p', 'q', 's', 'u',
         'v', 'w', 'x', 'y', 'z',
         'A', 'B', 'C', 'E', 'F', 'G', 'H', 'K', 'M', 'N', 'P', 'Q', 'R', 'S',
         'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    charSetBlizzard = [
+    Blizzard_chars = [
         'a', 'b', 'c', 'd', 'e', 'f', 'h', 'k', 'm', 'n', 'p', 'q', 's', 'u',
-        'v', 'w', 'x', 'y', 'z'
+        'v', 'w', 'x', 'y', 'z', 'g'
     ]
-    return charSetBlizzard
+    return Blizzard_chars
 
-def generate(charList,captchaNumber,captchaLen):
-    label = CaptchaLabel(charList,captchaLen)
+
+def get_labels(chars, captcha_number, captcha_len):
+    label = CaptchaLabel(chars, captcha_len)
     labels = []
-    for _ in range(captchaNumber):
-        labels.append(label.getLabel())
+    for _ in range(captcha_number):
+        labels.append(label.get_label())
     return '#'.join(labels)
-def main():
-    dataDir = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0],"data/labels")
-    utils = Utils()
-    utils.makeDir(dataDir)
 
-    charList = getCharList()
-    captchaNumber = 20
-    captchaLen= 6
-    labels = generate(charList,captchaNumber,captchaLen)
+
+def main():
+    label_folder = os.path.join(data_folder, "labels")
+    make_folder(label_folder)
+
+    chars = get_chars()
+    captcha_number = 30
+    captcha_len = 6
+    labels = get_labels(chars, captcha_number, captcha_len)
     print(labels)
-    utils.saveStringFile(os.path.join(dataDir,"labelsBlizzard.txt"),labels)
+    save_string_2_file(os.path.join(label_folder, "Blizzard_labels.txt"), labels)
+
 
 if __name__ == '__main__':
     main()

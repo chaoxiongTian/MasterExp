@@ -1,243 +1,228 @@
-'''
-@Description: 
-@version: 
-@Author: MaxCentaur
-@Date: 2018-11-28 17:24:10
-@LastEditors: MaxCentaur
-@LastEditTime: 2018-11-28 17:24:46
-'''
-'''
-@Description: 工具类
-@version: 1.0
-@Author: MaxCentaur
-@Date: 2018-11-14 22:59:38
-@LastEditors: MaxCentaur
-@LastEditTime: 2018-11-28 17:34:48
-'''
+# -*- coding: utf-8 -*-
+# @Time    : 18-11-29 下午10:49
+# @Author  : MaxCentaur
+# @Email   : ambition_x@163.com
+# @File    : Captcha.py
+# @Software: PyCharm Community Edition
+
 import os
+import sys
 import random
 from PIL import Image, ImageDraw, ImageFont
-dataDir = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0],"data")
-'''
-@msg: 字符类
-'''
-class CharUtit(object):
-    '''
-    @msg: 构造函数
-    '''
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
+
+from Utils import get_internal_path
+
+data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "data")
+
+
+class Char(object):
     def __init__(self,
-        fontList,        # 字体路径列表
-        fontSize,        # 字体大小
-        fontRandomRange, # 字体随机的区间
-        fontColor        # 字体的颜色 （此处 因为多数都进行二值化，所以不存在随机颜色）
-    ):
-        self.fontList = fontList
-        self.fontSize = fontSize
-        self.fontColor = fontColor
-        self.fontRandomRange = fontRandomRange
-    '''
-    @msg: 字符生成函数
-    '''
-    def generateChar(self,char):
-        fontPath = random.choice(self.fontList) # 选字体
-        fontSize = random.randint(self.fontSize-self.fontRandomRange,self.fontSize+self.fontRandomRange) # 选大小
+                 font_paths,  # 字体路径列表
+                 font_size,  # 字体大小
+                 font_size_random_range,  # 字体随机的区间
+                 font_color  # 字体的颜色 （此处 因为多数都进行二值化，所以不存在随机颜色）
+                 ):
+        self.font_paths = font_paths
+        self.font_size = font_size
+        self.font_size_random_range = font_size_random_range
+        self.font_color = font_color
+
+    # 生成字符char的Image对象
+    def generateChar(self, char):
+        """返回字符的Image对象"""
+        font_path = random.choice(self.font_paths)  # 选字体
+        font_size = random.randint(self.font_size - self.font_size_random_range,
+                                   self.font_size + self.font_size_random_range)  # 选字符大小
         # 构造字体对象
-        font = ImageFont.truetype(fontPath,fontSize)
+        font = ImageFont.truetype(font_path, font_size)
         # 构造Image对象
-        charImage = Image.new('RGBA',(font.getsize(char)),(255,255,255))
-        charDraw = ImageDraw.Draw(charImage)
+        char_image = Image.new('RGBA', (font.getsize(char)))
+        draw = ImageDraw.Draw(char_image)
         # TODO: 这里的Draw.text存在问题，需要修改。
-        charDraw.text((0,-5), char, (0,0,0), font=font)
-        del charDraw
-        # saveDir = os.path.join(dataDir,"captcha","ceshi.jpg")
-        # charImage.save(saveDir)
-        # charImage.show()
-        return charImage
-
-'''
-@msg: 验证码类
-'''
-class Captcha(object):
-    '''
-    @msg: 验证码的构造函数
-    '''
-    def __init__(self,
-            width,           # 验证码宽
-            higt,            # 验证按高
-            haveBg,          # 是否有背景
-            bgPathDri,       # 有背景的话，背景路径
-            fontPathDir,     # 字体路径，多种字体直接全部读出来
-            fontColor,       # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
-            fontSize,        # 字体基准大小
-            fontRandomRange, # 字体随机范围
-            startX = 0,      # 第一个字符的开始位置
-            step = 10        # 每个字符之间的距离
-            ):
-        self.width = width
-        self.higt = higt
-        self.haveBg = haveBg
-        self.bgPathDri =bgPathDri
-        self.startX =startX
-        self.step = step
-        self.fontPathDir = fontPathDir
-        self.fontColor = fontColor
-        self.fontSize = fontSize
-        self.fontRandomRange = fontRandomRange
-        # 打印类信息
-        print(self)
-    '''
-    @msg: 定制打印
-    '''
-    def __str__(self):
-        return ("Captcha info\n-----------\n(width: %s)" % self.width
-                  +"\n(higt: %s)" % self.higt
-                  +'\n(haveBg: %s)' % self.haveBg
-                  +'\n(bgPathDri: %s)' % self.bgPathDri
-                  +'\n(startX: %s)' % self.startX
-                  +'\n(step: %s)' % self.step
-                  +'\n\nchar info\n-----------\n(fontColor:'+str(self.fontColor)+")"
-                  +'\n(fontPathDir: %s)' % self.fontPathDir
-                  +'\n(fontSize: %s)' % self.fontSize
-                  +'\n(fontRandomRange: %s)' % self.fontRandomRange+"\n-----------\n")
-    
-    '''
-    @msg: 返回dir文件夹下所有文件的绝对路径，若使用 os.path.abspath会出现错误（abspath使用的是getwd获取运行路径）。
-    '''
-    def getList(self,dir):
-            def f(x):
-                return os.path.join(dir,x)
-            return list(map(f,os.listdir(dir)))
-    
-    '''
-    @msg: 根据初始化参数生成背景Image
-    '''
-    def getCaptchaBg(self):
-        if(self.haveBg):
-            # 有背景的话，随机取出一个背景。
-            bgImagePath = random.choice(self.getList(self.bgPathDri))
-            bgImage = Image.open(bgImagePath)
-        else:
-            # 生成一个shitang新的白底背景 
-            bgImage = Image.new('RGBA', (self.width,  self.higt), (255,255,255))
-        return bgImage
-    
-    '''
-    @msg: 对char的Image对象进行扭曲
-    '''
-    def warpCharImage(self,charImageList, list1=(0.1, 0.3), list2=(0.2, 0.4)):
-        def warpImage(im_char, list1, list2):
-            (w, h) = im_char.size
-            dx = w * random.uniform(list1[0], list1[1])
-            dy = h * random.uniform(list2[0], list2[1])
-            x1 = int(random.uniform(-dx, dx))
-            y1 = int(random.uniform(-dy, dy))
-            x2 = int(random.uniform(-dx, dx))
-            y2 = int(random.uniform(-dy, dy))
-            w2 = w + abs(x1) + abs(x2)
-            h2 = h + abs(y1) + abs(y2) 
-                # 变量data是一个8元组(x0, y0, x1, y1, x2, y2, x3, y3)，它包括源四边形的左下，左上，右上和右下四个角。
-            data = (
-                x1,
-                y1,
-                -x1,
-                h2 - y2,
-                w2 + x2,
-                h2 + y2,
-                w2 - x2,
-                -y1,
-            )
-            im_char = im_char.resize((w2, h2))
-            im_char_1 = im_char.transform((int(w), int(h)), Image.QUAD, data)
-            return im_char_1           
-        for i in range(len(charImageList)):
-            charImageList[i] = warpImage(charImageList[i],list1,list2)
-        return charImageList
-    '''
-    @msg: 对char的Image对象进行旋转
-    '''
-    def rotateCharImage(self,charImageList,start=-20, end=20):
-        def rotateImage(im_char, start, end):
-            im_char = im_char.crop(im_char.getbbox())
-            im_char = im_char.rotate(
-                random.uniform(start, end), Image.BILINEAR, expand=1)
-            return im_char
-        for i in range(len(charImageList)):
-            charImageList[i] = rotateImage(charImageList[i],start,end)
-        return charImageList
-
-    '''
-    @msg: 添加干扰点
-    '''
-    def addNoise(self,image,noiseNumber=100,width=2,noiseColor=(0,0,0)):
-        draw = ImageDraw.Draw(image)
-        w, h = image.size
-        while noiseNumber:
-            x1 = random.randint(0, w)
-            y1 = random.randint(0, h)
-            draw.ellipse(((x1, y1), (x1 + width, y1 + width)), fill=noiseColor)
-            noiseNumber -= 1
+        draw.text((0, -5), char, (0, 0, 0), font=font)
         del draw
-        return image  
+        return char_image
 
-    '''
-    @msg: 根据labels生成 char的Image对象列表
-    '''
-    def generateCharImageList(self,label):
-        charImage = CharUtit(
-            fontList =  self.getList(self.fontPathDir),
-            fontSize = self.fontSize,
-            fontRandomRange = self.fontRandomRange,
-            fontColor = self.fontColor
-        )
-        # 生成一组字符图片
-        charImageList = []
-        for each in (label):
-            charImageList.append(charImage.generateChar(each))
-        return charImageList
-    
-    '''
-    @msg: 把一组char的Image对象粘贴到背景Image上面
-    '''
-    def pasteCharImageList(self,bgImage,charImageList):
+
+def pre_calc(start, step, images):
+    """预估char的Image对象是否可以粘贴到背景的Image上面"""
+    preCalc = start
+    for i in range(len(images) - 1):
+        eachW = images[i].size[0]
+        preCalc = preCalc + eachW + step
+    return preCalc + images[-1].size[0]
+
+
+class Captcha(object):
+    def __init__(self,
+                 captcha_width,  # 验证码宽
+                 captcha_higt,  # 验证按高
+                 have_bg,  # 是否有背景
+                 bg_folder,  # 有背景的话，背景路径
+                 font_folder,  # 字体路径，多种字体直接全部读出来
+                 font_color,  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
+                 font_size,  # 字体基准大小
+                 font_size_random_range,  # 字体随机范围
+                 start_x=0,  # 第一个字符的开始位置
+                 step=10,  # 每个字符之间的距离
+                 step_stretch=10  # 拉伸之后的step
+                 ):
+        self.captcha_width = captcha_width
+        self.captcha_higt = captcha_higt
+        self.have_bg = have_bg
+        self.bg_folder = bg_folder
+        self.start_x = start_x
+        self.step = step
+        self.step_stretch = step_stretch
+        self.font_folder = font_folder
+        self.font_color = font_color
+        self.font_size = font_size
+        self.font_size_random_range = font_size_random_range
+        print(self)  # 打印类信息
+
+    # 定制打印
+    def __str__(self):
+        return ("Captcha info\n-----------\n(captcha_width: %s)" % self.captcha_width
+                + "\n(captcha_higt: %s)" % self.captcha_higt
+                + '\n(have_bg: %s)' % self.have_bg
+                + '\n(bg_folder: %s)' % self.bg_folder
+                + '\n(start_x: %s)' % self.start_x
+                + '\n(step: %s)' % self.step
+                + '\n\nchar info\n-----------\n(font_color:' + str(self.font_color) + ")"
+                + '\n(font_folder: %s)' % self.font_folder
+                + '\n(font_size: %s)' % self.font_size
+                + '\n(font_size_random_range: %s)' % self.font_size_random_range + "\n-----------\n")
+
+    def get_captcha_bg(self):
+        """根据参数返回两个Image，一个是含有背景的，一个是去除背景的"""
+        if self.have_bg:
+            # 有背景的话，随机取出一个背景。
+            bg_image_path = random.choice(get_internal_path(self.bg_folder))
+            bg_image = Image.open(bg_image_path)
+            bg_image = bg_image.resize((self.captcha_width, self.captcha_higt), Image.ANTIALIAS)
+            bg_image_clean = Image.new('RGBA', (self.captcha_width, self.captcha_higt), (255, 255, 255))
+            return bg_image, bg_image_clean
+        else:
+            # 生成一个新的白底背景 
+            bg_image = Image.new('RGBA', (self.captcha_width, self.captcha_higt), (255, 255, 255))
+            return bg_image, bg_image
+
+    def get_char_images(self, label):
+        """根据labels生成 char的Image对象列表"""
+        char = Char(font_paths=get_internal_path(self.font_folder),
+                    font_size=self.font_size,
+                    font_size_random_range=self.font_size_random_range,
+                    font_color=self.font_color
+                    )
+        images = []  # 生成一组字符图片
+        for each in label:
+            images.append(char.generateChar(each))
+        return images
+
+    def paste_images_2_bg_image(self, bg_image, bg_image_clean, images):
+        """把一组char的Image对象粘贴到背景Image上面"""
         # TODO：目的（把char的Image对象粘贴到对象背景上粘连上去）
         # 1. 预估charImageList需要的长度，若背景image对象不够长，调整背景image长度
-        
-        '''
-        @msg: 预估函数
-        '''
-        def preCalcBgWeidth(start,step,charImageList):
-            preCalc = start
-            for i in range(len(charImageList)-1):
-                eachW = charImageList[i].size[0]
-                preCalc = preCalc+eachW+self.step
-            return preCalc+charImageList[-1].size[0]
-        
-        preCalc = preCalcBgWeidth(self.startX,self.step,charImageList)
-        
-        if(preCalc>self.width): 
+        target_width = pre_calc(self.start_x, self.step, images)
+        if target_width > self.captcha_width:
             # 重新调整背景的大小
-            bgImage = bgImage.resize((preCalc,self.higt),Image.ANTIALIAS)
-        # 2. 开始粘贴
-        offsetX = self.startX;offsetY = 0
-        for each in charImageList:
-            charW,charH = each.size;mask = each
-            bgImage.paste(each,(offsetX,int((self.higt-charH)/2)),mask)
-            offsetX = offsetX+charW+self.step
-        bgImage = bgImage.resize((self.width,self.higt),Image.ANTIALIAS)
-        return bgImage
-    
-    '''
-    @msg: 合成captcha
-    '''
-    def generateCaptcha(self,label,savePath):
-        bgImage = self.getCaptchaBg()#生成背景
-        charImageList = self.generateCharImageList(label)
+            bg_image = bg_image.resize((target_width, self.captcha_higt), Image.ANTIALIAS)
+        # 计算拉伸之后的图片是否超出边界
+        target_width = pre_calc(self.start_x, self.step_stretch, images)
+        if pre_calc > self.captcha_width:
+            # 重新调整背景的大小
+            bg_image_clean = bg_image_clean.resize((target_width, self.captcha_higt), Image.ANTIALIAS)
+        # 2. 开始粘贴 为了保证一致，对于含有背景和没有背景的一起粘贴。
+        offset_x = self.start_x
+        offset_y = 0
+        offset_x_clean = self.start_x
+        offset_y_clean = 0
+        for each in images:
+            char_w, char_h = each.size
+            mask = each
+            bg_image.paste(each, (offset_x, int((self.captcha_higt - char_h) / 2)), mask)
+            bg_image_clean.paste(each, (offset_x_clean, int((self.captcha_higt - char_h) / 2)), mask)
+            offset_x = offset_x + char_w + self.step
+            offset_x_clean = offset_x_clean + char_w + self.step_stretch
+        bg_image = bg_image.resize((self.captcha_width, self.captcha_higt), Image.ANTIALIAS)
+        bg_image_clean = bg_image_clean.resize((self.captcha_width, self.captcha_higt), Image.ANTIALIAS)
+        return bg_image, bg_image_clean
+
+    def generateCaptcha(self, label, save_path, save_path_clean="null"):
+        """生成验证码并保存"""
+        bg_image, bg_image_clean = self.get_captcha_bg()  # 生成背景
+        images = self.get_char_images(label)
         # 对图片进行旋转
-        charImageList = self.rotateCharImage(charImageList)
+        images = rotate_images(images)
         # 对图片进行扭曲
-        # charImageList = self.warpCharImage(charImageList)
-        image = self.pasteCharImageList(bgImage,charImageList)
-        # image.show()
-        image = self.addNoise(image)
-        image.save(savePath)
-    
+        images = warp_images(images)
+        image, image_clean = self.paste_images_2_bg_image(bg_image, bg_image_clean, images)
+        if save_path_clean.__eq__("null"):
+            # 只保存一个
+            image.save(save_path)
+        else:
+            # 做两个保存
+            image.save(save_path)
+            image_clean.save(save_path_clean)
+
+
+def warp_images(char_image_list, list_1=(0.1, 0.3), list_2=(0.2, 0.4)):
+    """返回扭曲过得Image集合"""
+
+    def warp_image(im_char, list1, list2):
+        (w, h) = im_char.size
+        dx = w * random.uniform(list1[0], list1[1])
+        dy = h * random.uniform(list2[0], list2[1])
+        x1 = int(random.uniform(-dx, dx))
+        y1 = int(random.uniform(-dy, dy))
+        x2 = int(random.uniform(-dx, dx))
+        y2 = int(random.uniform(-dy, dy))
+        w2 = w + abs(x1) + abs(x2)
+        h2 = h + abs(y1) + abs(y2)
+        # 变量data是一个8元组(x0, y0, x1, y1, x2, y2, x3, y3)，它包括源四边形的左下，左上，右上和右下四个角。
+        data = (
+            x1,
+            y1,
+            -x1,
+            h2 - y2,
+            w2 + x2,
+            h2 + y2,
+            w2 - x2,
+            -y1,
+        )
+        im_char = im_char.resize((w2, h2))
+        im_char_1 = im_char.transform((int(w), int(h)), Image.QUAD, data)
+        return im_char_1
+
+    for i in range(len(char_image_list)):
+        char_image_list[i] = warp_image(char_image_list[i], list_1, list_2)
+    return char_image_list
+
+
+def rotate_images(images, start=-20, end=20):
+    """返回旋转过得Image集合"""
+
+    def rotate_image(im_char, in_start, in_end):
+        im_char = im_char.crop(im_char.getbbox())
+        im_char = im_char.rotate(
+            random.uniform(in_start, in_end), Image.BILINEAR, expand=1)
+        return im_char
+
+    for i in range(len(images)):
+        images[i] = rotate_image(images[i], start, end)
+    return images
+
+
+def add_noise(image, noise_number=100, noise_width=2, noise_color=(0, 0, 0)):
+    """返回添加了干扰信息的Image"""
+    draw = ImageDraw.Draw(image)
+    w, h = image.size
+    while noise_number:
+        x1 = random.randint(0, w)
+        y1 = random.randint(0, h)
+        draw.ellipse(((x1, y1), (x1 + noise_width, y1 + noise_width)), fill=noise_color)
+        noise_number -= 1
+    del draw
+    return image

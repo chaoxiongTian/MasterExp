@@ -1,58 +1,54 @@
-'''
-@Description: 
-@version: 
-@Author: MaxCentaur
-@Date: 2018-11-19 17:24:50
-@LastEditors: MaxCentaur
-@LastEditTime: 2018-11-28 17:35:50
-'''
+# -*- coding: utf-8 -*-
+# @Time    : 18-11-29 下午10:49
+# @Author  : MaxCentaur
+# @Email   : ambition_x@163.com
+# @File    : CaptchaGenerate.py
+# @Software: PyCharm Community Edition
 import os
-import random
+import sys
+
 from Captcha import Captcha
-dataDir = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0],"data")
-def main():
+
+# 为了导入上层的工具包，将上层的路径添加到环境变量
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
+
+from Utils import make_folders
+
+data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "data")
+
+
+def generate_blizzard():
     # 构造captcha
     captcha = Captcha(
-                width = 150,           # 验证码宽
-                higt = 38,            # 验证按高
-                haveBg = False,          # 是否有背景
-                bgPathDri = os.path.join(dataDir,"bg","jd"),       # 有背景的话，背景路径
-                fontColor = (0,0,0),       # 指定颜色
-                fontPathDir = os.path.join(dataDir,"font","captcha"),# 字体路径，多种字体直接全部读出来
-                fontSize = 32,        # 字体基准大小
-                fontRandomRange = 0, # 字体随机范围
-                
+        captcha_width=150,  # 验证码宽
+        captcha_higt=30,  # 验证按高
+        have_bg=True,  # 是否有背景
+        bg_folder=os.path.join(data_folder, "bg", "Blizzard"),  # 有背景的话，背景路径
+        start_x=0,  # 第一个字符的开始位置
+        step=3,  # 每个字符之间的距离
+        step_stretch=20,  # 字符间距扩大每个字符之间的距离
+        font_folder=os.path.join(data_folder, "font", "Blizzard"),  # 字体路径，多种字体直接全部读出来
+        font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
+        font_size=32,  # 字体基准大小
+        font_size_random_range=0  # 字体随机范围
     )
-    labelPath = os.path.join(dataDir,"labels","labels.txt")
-    labelsList = open(
-        labelPath, 'r', encoding="utf-8").read().strip().split("#")
-    captchaDir = os.path.join(dataDir,"captcha","captcha")
-    for i, each in enumerate(labelsList):
-        captchaPath = os.path.join(captchaDir, str(i) + '.png')
-        print(captchaPath)
-        captcha.generateCaptcha(each,captchaPath)
-def Blizzard():
-    # 构造captcha
-    captcha = Captcha(
-                width = 150,           # 验证码宽
-                higt = 30,            # 验证按高
-                haveBg = False,          # 是否有背景
-                bgPathDri = os.path.join(dataDir,"bg","Blizzard"),       # 有背景的话，背景路径
-                startX = 0,      # 第一个字符的开始位置
-                step = 10,       # 每个字符之间的距离
-                fontPathDir = os.path.join(dataDir,"font","Blizzard"),     # 字体路径，多种字体直接全部读出来
-                fontColor = (0,0,0),       # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
-                fontSize = 32,        # 字体基准大小
-                fontRandomRange = 0  # 字体随机范围
-    )
-    labelPath = os.path.join(dataDir,"labels","labelsBlizzard.txt")
-    labelsList = open(
-        labelPath, 'r', encoding="utf-8").read().strip().split("#")
-    captchaDir = os.path.join(dataDir,"captcha","Blizzard")
-    print("generate %d captcha in %s\n" % (len(labelsList),captchaDir))
-    for i, each in enumerate(labelsList):
-        captchaPath = os.path.join(captchaDir, str(i) + '.png')
-        captcha.generateCaptcha(each,captchaPath)
-        print("Nub.%d in complete"%i)
+    label_path = os.path.join(data_folder, "labels", "Blizzard_labels.txt")
+    labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
+
+    captcha_save_folder = os.path.join(data_folder, "captcha", "Blizzard")
+    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
+    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
+    make_folders(A_folder, B_folder)
+
+    print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
+    for i, each in enumerate(labels):
+        # 传入两个参数表示值生成一个验证码
+        captcha.generateCaptcha(each,
+                                os.path.join(A_folder, str(i) + '.png'),
+                                os.path.join(B_folder, str(i) + '.png')  # 该参数为可省略参数
+                                )
+        print("Nub.%d in complete" % i)
+
+
 if __name__ == "__main__":
-    Blizzard()
+    generate_blizzard()
