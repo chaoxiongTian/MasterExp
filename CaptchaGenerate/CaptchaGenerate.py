@@ -22,11 +22,11 @@ def generate_blizzard():
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
         captcha_higt=30,  # 验证按高
-        have_bg=True,  # 是否有背景
+        have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", "Blizzard"),  # 有背景的话，背景路径
-        start_x=0,  # 第一个字符的开始位置
-        step=3,  # 每个字符之间的距离
-        step_stretch=20,  # 字符间距扩大每个字符之间的距离
+        start_x=10,  # 第一个字符的开始位置
+        step=10,  # 每个字符之间的距离
+        step_stretch=10,  # 字符间距扩大每个字符之间的距离
         font_folder=os.path.join(data_folder, "font", "Blizzard"),  # 字体路径，多种字体直接全部读出来
         font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=32,  # 字体基准大小
@@ -50,5 +50,10 @@ def generate_blizzard():
         print("Nub.%d in complete" % i)
 
 
+def generate_baidu():
+    pass
+
+
 if __name__ == "__main__":
     generate_blizzard()
+    # generate_baidu()

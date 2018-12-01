@@ -131,7 +131,7 @@ class Captcha(object):
             bg_image = bg_image.resize((target_width, self.captcha_higt), Image.ANTIALIAS)
         # 计算拉伸之后的图片是否超出边界
         target_width = pre_calc(self.start_x, self.step_stretch, images)
-        if pre_calc > self.captcha_width:
+        if target_width > self.captcha_width:
             # 重新调整背景的大小
             bg_image_clean = bg_image_clean.resize((target_width, self.captcha_higt), Image.ANTIALIAS)
         # 2. 开始粘贴 为了保证一致，对于含有背景和没有背景的一起粘贴。
@@ -150,15 +150,22 @@ class Captcha(object):
         bg_image_clean = bg_image_clean.resize((self.captcha_width, self.captcha_higt), Image.ANTIALIAS)
         return bg_image, bg_image_clean
 
-    def generateCaptcha(self, label, save_path, save_path_clean="null"):
+    def generateCaptcha(self, label, save_path, save_path_clean="null",
+                        # list_1=(0.1, 0.3), list_2=(0.2, 0.4),
+                        # rotate_start=-20, rotate_end=20,
+                        # noise_number=100, noise_width=2, noise_color=(0, 0, 0)):
+                        list_1=(0, 0), list_2=(0, 0),
+                        rotate_start=0, rotate_end=0,
+                        noise_number=0, noise_width=0, noise_color=(0, 0, 0)):
         """生成验证码并保存"""
         bg_image, bg_image_clean = self.get_captcha_bg()  # 生成背景
         images = self.get_char_images(label)
         # 对图片进行旋转
-        images = rotate_images(images)
+        images = rotate_images(images, rotate_start, rotate_end)
         # 对图片进行扭曲
-        images = warp_images(images)
+        images = warp_images(images, list_1, list_2)
         image, image_clean = self.paste_images_2_bg_image(bg_image, bg_image_clean, images)
+        image = add_noise(image, noise_number, noise_width, noise_color)
         if save_path_clean.__eq__("null"):
             # 只保存一个
             image.save(save_path)
@@ -168,7 +175,7 @@ class Captcha(object):
             image_clean.save(save_path_clean)
 
 
-def warp_images(char_image_list, list_1=(0.1, 0.3), list_2=(0.2, 0.4)):
+def warp_images(char_image_list, list_1, list_2):
     """返回扭曲过得Image集合"""
 
     def warp_image(im_char, list1, list2):
@@ -196,12 +203,14 @@ def warp_images(char_image_list, list_1=(0.1, 0.3), list_2=(0.2, 0.4)):
         im_char_1 = im_char.transform((int(w), int(h)), Image.QUAD, data)
         return im_char_1
 
+    if list_1.__eq__((0, 0)) and list_2.__eq__((0, 0)):
+        return char_image_list
     for i in range(len(char_image_list)):
         char_image_list[i] = warp_image(char_image_list[i], list_1, list_2)
     return char_image_list
 
 
-def rotate_images(images, start=-20, end=20):
+def rotate_images(images, start, end):
     """返回旋转过得Image集合"""
 
     def rotate_image(im_char, in_start, in_end):
@@ -210,13 +219,17 @@ def rotate_images(images, start=-20, end=20):
             random.uniform(in_start, in_end), Image.BILINEAR, expand=1)
         return im_char
 
+    if start == 0 and end == 0:
+        return images
     for i in range(len(images)):
         images[i] = rotate_image(images[i], start, end)
     return images
 
 
-def add_noise(image, noise_number=100, noise_width=2, noise_color=(0, 0, 0)):
+def add_noise(image, noise_number, noise_width, noise_color):
     """返回添加了干扰信息的Image"""
+    if noise_number == 0:
+        return image
     draw = ImageDraw.Draw(image)
     w, h = image.size
     while noise_number:
