@@ -27,6 +27,7 @@ def generate_blizzard():
         start_x=10,  # 第一个字符的开始位置
         step=10,  # 每个字符之间的距离
         step_stretch=10,  # 字符间距扩大每个字符之间的距离
+        step_random_range=10,  # 字符之间距离随机的范围
         font_folder=os.path.join(data_folder, "font", "Blizzard"),  # 字体路径，多种字体直接全部读出来
         font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=32,  # 字体基准大小

@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/IdentifiNetwork/pq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaGenerate/Captcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/Captcha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/MNIST_data/t10k-images-idx3-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/MNIST_data/t10k-labels-idx1-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/MNIST_data/train-images-idx3-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/MNIST_data/train-labels-idx1-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/IdentifiNetwork/test1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaptchaGenerate/Captcha.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="231" selection-start-line="231" selection-end-line="231" />
+            <state relative-caret-position="144">
+              <caret line="70" column="34" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="34" />
               <folding>
                 <element signature="e#174#183#0" expanded="true" />
                 <element signature="e#489#1534#0" />
@@ -40,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            <state relative-caret-position="307">
+              <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding>
                 <element signature="e#181#190#0" expanded="true" />
               </folding>
@@ -89,8 +81,9 @@
         <option value="$PROJECT_DIR$/Utils.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/pq.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/test1.py" />
-        <option value="$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/Captcha.py" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py" />
       </list>
     </option>
   </component>
@@ -144,28 +137,6 @@
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
               <item name="CaptchaGenerate" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaGenerate" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="bg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaGenerate" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="captcha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaGenerate" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="captcha" type="462c0819:PsiDirectoryNode" />
-              <item name="Blizzard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
@@ -253,7 +224,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="LabelsGenerate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ceshi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,7 +236,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaGenerate/LabelsGenerate.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -317,19 +288,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.LabelsGenerate" />
       <item itemvalue="Python.pq" />
       <item itemvalue="Python.test1" />
       <item itemvalue="Python.CaptchaGenerate" />
       <item itemvalue="Python.Captcha" />
+      <item itemvalue="Python.ceshi" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.CaptchaGenerate" />
+        <item itemvalue="Python.ceshi" />
         <item itemvalue="Python.Captcha" />
         <item itemvalue="Python.test1" />
         <item itemvalue="Python.pq" />
-        <item itemvalue="Python.LabelsGenerate" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +341,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295901" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295901" />
-      <window_info anchor="bottom" x="396" y="229" width="1228" height="617" id="Terminal" order="8" type="WINDOWED" weight="0.35092646" />
+      <window_info anchor="bottom" x="391" y="240" width="1238" height="611" id="Terminal" order="8" type="WINDOWED" weight="0.35092646" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49612403" weight="0.3295901" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503876" side_tool="true" weight="0.3295901" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -402,7 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/LabelsGenerate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -417,7 +387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -500,20 +469,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/ceshi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding>
-            <element signature="e#181#190#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/Captcha.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="231" selection-start-line="231" selection-end-line="231" />
+        <state relative-caret-position="144">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="34" />
           <folding>
             <element signature="e#174#183#0" expanded="true" />
             <element signature="e#489#1534#0" />
@@ -522,6 +488,16 @@
             <element signature="e#4201#4619#0" />
             <element signature="e#6843#7822#0" />
             <element signature="e#7875#8231#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="e#181#190#0" expanded="true" />
           </folding>
         </state>
       </provider>
