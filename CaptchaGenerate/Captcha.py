@@ -16,6 +16,8 @@ from Utils import get_internal_path
 
 data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "data")
 
+MUL = 4
+
 
 class Char(object):
     def __init__(self,
@@ -51,7 +53,7 @@ def pre_calc(start, step, images, step_randoms):
     preCalc = start
     for i in range(len(images) - 1):
         eachW = images[i].size[0]
-        preCalc = preCalc + eachW + step+step_randoms[i]
+        preCalc = preCalc + eachW + step + step_randoms[i]
     return preCalc + images[-1].size[0]
 
 
@@ -70,18 +72,19 @@ class Captcha(object):
                  step_stretch=10,  # 拉伸之后的step
                  step_random_range=0  # 字符之间的距离变化
                  ):
-        self.captcha_width = captcha_width
-        self.captcha_higt = captcha_higt
+
+        self.captcha_width = captcha_width * MUL
+        self.captcha_higt = captcha_higt * MUL
         self.have_bg = have_bg
         self.bg_folder = bg_folder
-        self.start_x = start_x
-        self.step = step
-        self.step_stretch = step_stretch
+        self.start_x = start_x * MUL
+        self.step = step * MUL
+        self.step_stretch = step_stretch * MUL
         self.font_folder = font_folder
         self.font_color = font_color
-        self.font_size = font_size
-        self.font_size_random_range = font_size_random_range
-        self.step_random_range = step_random_range
+        self.font_size = font_size * MUL
+        self.font_size_random_range = font_size_random_range * MUL
+        self.step_random_range = step_random_range * MUL
         print(self)  # 打印类信息
 
     # 定制打印
@@ -151,8 +154,8 @@ class Captcha(object):
             mask = each
             bg_image.paste(each, (offset_x, int((self.captcha_higt - char_h) / 2)), mask)
             bg_image_clean.paste(each, (offset_x_clean, int((self.captcha_higt - char_h) / 2)), mask)
-            offset_x = offset_x + char_w + self.step+step_randoms[i]
-            offset_x_clean = offset_x_clean + char_w + self.step_stretch+step_randoms[i]
+            offset_x = offset_x + char_w + self.step + step_randoms[i]
+            offset_x_clean = offset_x_clean + char_w + self.step_stretch + step_randoms[i]
         bg_image = bg_image.resize((self.captcha_width, self.captcha_higt), Image.ANTIALIAS)
         bg_image_clean = bg_image_clean.resize((self.captcha_width, self.captcha_higt), Image.ANTIALIAS)
         return bg_image, bg_image_clean
@@ -172,6 +175,8 @@ class Captcha(object):
         # 对图片进行扭曲
         images = warp_images(images, list_1, list_2)
         image, image_clean = self.paste_images_2_bg_image(bg_image, bg_image_clean, images)
+        image = zoom_down_mul(image, MUL)
+        image_clean = zoom_down_mul(image_clean, MUL)
         image = add_noise(image, noise_number, noise_width, noise_color)
         if save_path_clean.__eq__("null"):
             # 只保存一个
@@ -180,6 +185,11 @@ class Captcha(object):
             # 做两个保存
             image.save(save_path)
             image_clean.save(save_path_clean)
+
+
+def zoom_down_mul(image, mul):
+    width, high = image.size
+    return image.resize((int(width / mul), int(high / mul)), Image.ANTIALIAS)
 
 
 def warp_images(char_image_list, list_1, list_2):
