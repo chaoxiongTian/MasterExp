@@ -1,4 +1,5 @@
 # Python:
+.vscode
 *.py[cod]
 *.so
 *.egg

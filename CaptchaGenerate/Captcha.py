@@ -41,7 +41,7 @@ class Char(object):
         char_image = Image.new('RGBA', (font.getsize(char)))
         draw = ImageDraw.Draw(char_image)
         # TODO: 这里的Draw.text存在问题，需要修改。
-        draw.text((0, -5), char, (0, 0, 0), font=font)
+        draw.text((0, -5), char, self.font_color, font=font)
         del draw
         return char_image
 
@@ -68,7 +68,7 @@ class Captcha(object):
                  start_x=0,  # 第一个字符的开始位置
                  step=10,  # 每个字符之间的距离
                  step_stretch=10,  # 拉伸之后的step
-                 step_random_range=5  # 字符之间的距离变化
+                 step_random_range=0  # 字符之间的距离变化
                  ):
         self.captcha_width = captcha_width
         self.captcha_higt = captcha_higt
