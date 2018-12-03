@@ -19,6 +19,30 @@ data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "d
 MUL = 4
 
 
+class Font(object):
+    def __init__(self,
+                 font_path,
+                 font_size,
+                 font_color
+                 ):
+        self.font_path = font_path
+        self.font_size = font_size
+        self.font_color = font_color
+
+
+def generateChar(char, font_path, font_size, font_color=(0, 0, 0)):
+    """返回字符的Image对象"""
+    # 构造字体对象
+    image_font = ImageFont.truetype(font_path, font_size)
+    # 构造Image对象
+    char_image = Image.new('RGBA', (image_font.getsize(char)))
+    draw = ImageDraw.Draw(char_image)
+    # TODO: 这里的Draw.text存在问题，需要修改。
+    draw.text((0, -5), char, font_color, font=image_font)
+    del draw
+    return char_image
+
+
 class Char(object):
     def __init__(self,
                  font_paths,  # 字体路径列表
@@ -31,31 +55,6 @@ class Char(object):
         self.font_size_random_range = font_size_random_range
         self.font_color = font_color
 
-    # 生成字符char的Image对象
-    def generateChar(self, char):
-        """返回字符的Image对象"""
-        font_path = random.choice(self.font_paths)  # 选字体
-        font_size = random.randint(self.font_size - self.font_size_random_range,
-                                   self.font_size + self.font_size_random_range)  # 选字符大小
-        # 构造字体对象
-        font = ImageFont.truetype(font_path, font_size)
-        # 构造Image对象
-        char_image = Image.new('RGBA', (font.getsize(char)))
-        draw = ImageDraw.Draw(char_image)
-        # TODO: 这里的Draw.text存在问题，需要修改。
-        draw.text((0, -5), char, self.font_color, font=font)
-        del draw
-        return char_image
-
-
-def pre_calc(start, step, images, step_randoms):
-    """预估char的Image对象是否可以粘贴到背景的Image上面"""
-    preCalc = start
-    for i in range(len(images) - 1):
-        eachW = images[i].size[0]
-        preCalc = preCalc + eachW + step + step_randoms[i]
-    return preCalc + images[-1].size[0]
-
 
 class Captcha(object):
     def __init__(self,
@@ -63,6 +62,7 @@ class Captcha(object):
                  captcha_higt,  # 验证按高
                  have_bg,  # 是否有背景
                  bg_folder,  # 有背景的话，背景路径
+
                  font_folder,  # 字体路径，多种字体直接全部读出来
                  font_color,  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
                  font_size,  # 字体基准大小
@@ -70,7 +70,9 @@ class Captcha(object):
                  start_x=0,  # 第一个字符的开始位置
                  step=10,  # 每个字符之间的距离
                  step_stretch=10,  # 拉伸之后的step
-                 step_random_range=0  # 字符之间的距离变化
+                 step_random_range=0,  # 字符之间的距离变化
+                 font_folder_clean="null",  # 相对应Image的字体（用于空心到实心的转换）
+                 bg_color=(255, 255, 255)
                  ):
 
         self.captcha_width = captcha_width * MUL
@@ -85,6 +87,11 @@ class Captcha(object):
         self.font_size = font_size * MUL
         self.font_size_random_range = font_size_random_range * MUL
         self.step_random_range = step_random_range * MUL
+        self.bg_color = bg_color
+        if font_folder_clean.__eq__("null"):  # 没有传入参数，就说明对应的Image用的是同一张验证码
+            self.font_folder_clean = font_folder
+        else:
+            self.font_folder_clean = font_folder_clean
         print(self)  # 打印类信息
 
     # 定制打印
@@ -111,20 +118,23 @@ class Captcha(object):
             return bg_image, bg_image_clean
         else:
             # 生成一个新的白底背景 
-            bg_image = Image.new('RGBA', (self.captcha_width, self.captcha_higt), (255, 255, 255))
-            return bg_image, bg_image
+            bg_image = Image.new('RGBA', (self.captcha_width, self.captcha_higt), self.bg_color)
+            bg_image_clean = Image.new('RGBA', (self.captcha_width, self.captcha_higt), (255, 255, 255))
+            return bg_image, bg_image_clean
 
     def get_char_images(self, label):
         """根据labels生成 char的Image对象列表"""
-        char = Char(font_paths=get_internal_path(self.font_folder),
-                    font_size=self.font_size,
-                    font_size_random_range=self.font_size_random_range,
-                    font_color=self.font_color
-                    )
+
         images = []  # 生成一组字符图片
+        images_clean = []  # 对应的没有干扰信息的验证码中的字符图片
         for each in label:
-            images.append(char.generateChar(each))
-        return images
+            font_size = random.randint(self.font_size - self.font_size_random_range,
+                                       self.font_size + self.font_size_random_range)  # 选字符大小
+            font_path = random.choice(get_internal_path(self.font_folder))
+            font_path_clean = random.choice(get_internal_path(self.font_folder_clean))
+            images.append(generateChar(each, font_path, font_size))
+            images_clean.append(generateChar(each, font_path_clean, font_size))
+        return images, images_clean
 
     def paste_images_2_bg_image(self, bg_image, bg_image_clean, images):
         """把一组char的Image对象粘贴到背景Image上面"""
@@ -169,7 +179,7 @@ class Captcha(object):
                         noise_number=0, noise_width=0, noise_color=(0, 0, 0)):
         """生成验证码并保存"""
         bg_image, bg_image_clean = self.get_captcha_bg()  # 生成背景
-        images = self.get_char_images(label)
+        images, images_clean = self.get_char_images(label)
         # 对图片进行旋转
         images = rotate_images(images, rotate_start, rotate_end)
         # 对图片进行扭曲
@@ -187,7 +197,17 @@ class Captcha(object):
             image_clean.save(save_path_clean)
 
 
+def pre_calc(start, step, images, step_randoms):
+    """预估char的Image对象是否可以粘贴到背景的Image上面"""
+    preCalc = start
+    for i in range(len(images) - 1):
+        eachW = images[i].size[0]
+        preCalc = preCalc + eachW + step + step_randoms[i]
+    return preCalc + images[-1].size[0]
+
+
 def zoom_down_mul(image, mul):
+    """image等比例缩小mul倍"""
     width, high = image.size
     return image.resize((int(width / mul), int(high / mul)), Image.ANTIALIAS)
 
