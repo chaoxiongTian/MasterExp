@@ -21,7 +21,7 @@ def generate_blizzard():
     # 构造captcha
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
-        captcha_higt=38,  # 验证按高
+        captcha_high=38,  # 验证按高
         have_bg=True,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", "Blizzard"),  # 有背景的话，背景路径
         start_x=20,  # 第一个字符的开始位置
@@ -56,7 +56,7 @@ def generate_authorize():
     # 构造captcha
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
-        captcha_higt=38,  # 验证按高
+        captcha_high=38,  # 验证按高
         have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", "Authorize"),  # 有背景的话，背景路径
         start_x=30,  # 第一个字符的开始位置
@@ -92,7 +92,7 @@ def generate_baidu():
     # 构造captcha
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
-        captcha_higt=38,  # 验证按高
+        captcha_high=38,  # 验证按高
         have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", "Baidu"),  # 有背景的话，背景路径
         start_x=40,  # 第一个字符的开始位置
@@ -128,7 +128,7 @@ def generate_captcha():
     # 构造captcha
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
-        captcha_higt=38,  # 验证按高
+        captcha_high=38,  # 验证按高
         have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", "captcha"),  # 有背景的话，背景路径
         start_x=20,  # 第一个字符的开始位置
@@ -165,7 +165,7 @@ def generate_Qq():
     # 构造captcha
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
-        captcha_higt=38,  # 验证按高
+        captcha_high=38,  # 验证按高
         have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", "Qq"),  # 有背景的话，背景路径
         start_x=40,  # 第一个字符的开始位置
@@ -200,7 +200,7 @@ def generate_NIH():
     # 构造captcha
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
-        captcha_higt=38,  # 验证按高
+        captcha_high=38,  # 验证按高
         have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", "NIH"),  # 有背景的话，背景路径
         start_x=10,  # 第一个字符的开始位置

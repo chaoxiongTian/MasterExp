@@ -5,10 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaGenerate/Captcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/Captcha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/font/Baidu/bd3.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/font/Baidu/bd3.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/Baidu_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/Baidu_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/Blizzard_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/Blizzard_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/CaptchaUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/CaptchaUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,14 +21,33 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="244">
-                  <caret line="233" selection-start-line="233" selection-end-line="233" />
+                <state relative-caret-position="273">
+                  <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
                   <folding>
-                    <element signature="e#495#2063#0" />
-                    <element signature="e#2092#3638#0" />
-                    <element signature="e#3669#5315#0" />
-                    <element signature="e#5341#6792#0" />
-                    <element signature="e#6819#8365#0" />
+                    <element signature="n#!!doc" />
+                    <element signature="e#1997#3565#0" />
+                    <element signature="e#3117#3565#0" />
+                    <element signature="e#3594#5140#0" />
+                    <element signature="e#4697#5140#0" />
+                    <element signature="e#5171#6818#0" />
+                    <element signature="e#6281#6818#0" />
+                    <element signature="e#6844#8295#0" />
+                    <element signature="e#7942#8295#0" />
+                    <element signature="e#8322#9868#0" />
+                    <element signature="e#9422#9868#0" />
+                    <element signature="e#9926#9944#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/CaptchaUtils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="12" column="24" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="24" />
+                  <folding>
+                    <element signature="n#!!doc" />
                   </folding>
                 </state>
               </provider>
@@ -39,28 +56,24 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptchaGenerate/Captcha.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="244">
-                  <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+                <state relative-caret-position="627">
+                  <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
                   <folding>
-                    <element signature="e#174#183#0" expanded="true" />
-                    <element signature="e#7745#8811#0" />
-                    <element signature="e#7817#8578#0" />
-                    <element signature="e#8857#9267#0" />
-                    <element signature="e#9336#9696#0" />
+                    <element signature="n#!!doc" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/PIL/Image.py">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="1644" selection-start-line="1644" selection-end-line="1644" />
+                <state relative-caret-position="210">
+                  <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -103,10 +116,11 @@
         <option value="$PROJECT_DIR$/Utils.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/pq.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/test1.py" />
-        <option value="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/__init__.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/CaptchaUtils.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/Captcha.py" />
       </list>
     </option>
@@ -144,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,10 +174,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -338,21 +352,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2342048" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2342048" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Data View" order="0" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
@@ -439,7 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
     <entry file="file://$PROJECT_DIR$/IdentifiNetwork/test1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3394">
@@ -457,13 +469,6 @@
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/Baidu_labels.txt" />
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SagerCaptcha/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -486,31 +491,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/ceshi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="233" selection-start-line="233" selection-end-line="233" />
+        <state relative-caret-position="231">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/CaptchaUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="24" />
           <folding>
-            <element signature="e#495#2063#0" />
-            <element signature="e#2092#3638#0" />
-            <element signature="e#3669#5315#0" />
-            <element signature="e#5341#6792#0" />
-            <element signature="e#6819#8365#0" />
+            <element signature="n#!!doc" />
+            <element signature="e#1013#1140#0" />
+            <element signature="e#1751#1888#0" />
+            <element signature="e#2343#2795#0" />
+            <element signature="e#2421#2606#0" />
+            <element signature="e#2651#2808#0" />
+            <element signature="e#2817#3177#0" />
+            <element signature="e#2973#3147#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/Captcha.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="627">
+          <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
           <folding>
-            <element signature="e#174#183#0" expanded="true" />
-            <element signature="e#7745#8811#0" />
-            <element signature="e#7817#8578#0" />
-            <element signature="e#8857#9267#0" />
-            <element signature="e#9336#9696#0" />
+            <element signature="n#!!doc" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/CaptchaGenerate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#1997#3565#0" />
+            <element signature="e#3117#3565#0" />
+            <element signature="e#3594#5140#0" />
+            <element signature="e#4697#5140#0" />
+            <element signature="e#5171#6818#0" />
+            <element signature="e#6281#6818#0" />
+            <element signature="e#6844#8295#0" />
+            <element signature="e#7942#8295#0" />
+            <element signature="e#8322#9868#0" />
+            <element signature="e#9422#9868#0" />
+            <element signature="e#9926#9944#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
