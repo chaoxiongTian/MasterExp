@@ -27,10 +27,10 @@ def generate_char_images(char, font_path, font_size, font_color=(0, 0, 0)):
 def pre_calc(start, step, images, step_randoms):
     """预估char的Image对象是否可以粘贴到背景的Image上面"""
     preCalc = start
-    for i in range(len(images) - 1):
+    for i in range(len(images)):
         eachW = images[i].size[0]
         preCalc = preCalc + eachW + step + step_randoms[i]
-    return preCalc + images[-1].size[0]
+    return preCalc
 
 
 #  等比例缩小多少倍
@@ -73,7 +73,7 @@ def warp_images(images, images_clean, list_1, list_2):
         return im_char_1, im_char_2
 
     if list_1.__eq__((0, 0)) and list_2.__eq__((0, 0)):
-        return images
+        return images, images_clean
     for i in range(len(images)):
         images[i], images_clean[i] = warp_image(images[i],
                                                 images_clean[i],
