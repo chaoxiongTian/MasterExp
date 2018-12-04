@@ -41,10 +41,10 @@ def zoom_down_mul(image, mul):
 
 
 #  扭曲一组图片
-def warp_images(char_image_list, list_1, list_2):
+def warp_images(images, images_clean, list_1, list_2):
     """返回扭曲过得Image集合"""
 
-    def warp_image(im_char, list1, list2):
+    def warp_image(im_char, im_char_clean, list1, list2):
         (w, h) = im_char.size
         dx = w * random.uniform(list1[0], list1[1])
         dy = h * random.uniform(list2[0], list2[1])
@@ -67,30 +67,36 @@ def warp_images(char_image_list, list_1, list_2):
         )
         im_char = im_char.resize((w2, h2))
         im_char_1 = im_char.transform((int(w), int(h)), Image.QUAD, data)
-        return im_char_1
+
+        im_char_clean = im_char_clean.resize((w2, h2))
+        im_char_2 = im_char_clean.transform((int(w), int(h)), Image.QUAD, data)
+        return im_char_1, im_char_2
 
     if list_1.__eq__((0, 0)) and list_2.__eq__((0, 0)):
-        return char_image_list
-    for i in range(len(char_image_list)):
-        char_image_list[i] = warp_image(char_image_list[i], list_1, list_2)
-    return char_image_list
+        return images
+    for i in range(len(images)):
+        images[i], images_clean[i] = warp_image(images[i],
+                                                images_clean[i],
+                                                list_1, list_2)
+    return images, images_clean
 
 
 #  旋转一组图片
-def rotate_images(images, start, end):
+def rotate_images(images, images_clean, start, end):
     """返回旋转过得Image集合"""
 
-    def rotate_image(im_char, in_start, in_end):
+    def rotate_image(im_char, angle):
         im_char = im_char.crop(im_char.getbbox())
-        im_char = im_char.rotate(
-            random.uniform(in_start, in_end), Image.BILINEAR, expand=1)
+        im_char = im_char.rotate(angle, Image.BILINEAR, expand=1)
         return im_char
 
     if start == 0 and end == 0:
-        return images
+        return images, images_clean
     for i in range(len(images)):
-        images[i] = rotate_image(images[i], start, end)
-    return images
+        rotate_angle = random.uniform(start, end)
+        images[i] = rotate_image(images[i], rotate_angle)
+        images_clean[i] = rotate_image(images_clean[i], rotate_angle)
+    return images, images_clean
 
 
 # 添加干扰信息
