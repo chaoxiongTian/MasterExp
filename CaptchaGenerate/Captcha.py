@@ -43,6 +43,8 @@ class Captcha(object):
                  font_size_random_range,  # 字体随机范围
 
                  start_x=0,  # 第一个字符在验证码中开始位置
+                 start_x_random_range=0,  # 开始位置随机在start_x的一个区间
+                 offset_y_range=0,  # 粘连字符的时候在Y轴上的一个随机区间。
                  step=10,  # 每两个之间的距离
                  step_stretch=10,  # 保证不粘连时，每两个字符之间的距离
                  step_random_range=0,  # 每两个字符之距离的随机值
@@ -56,10 +58,11 @@ class Captcha(object):
         self.bg_folder = bg_folder
         self.bg_color = bg_color
         self.start_x = start_x * MUL
+        self.start_x_random_range = start_x_random_range * MUL
         self.step = step * MUL
         self.step_stretch = step_stretch * MUL
         self.step_random_range = step_random_range * MUL
-
+        self.offset_y_range = offset_y_range * MUL
         self.font_folder = font_folder
         if font_folder_clean.__eq__("null"):  # 没有传入参数，就说明用的同一种字体
             self.font_folder_clean = font_folder
@@ -126,32 +129,37 @@ class Captcha(object):
         for i in range(len(images)):
             step_randoms.append(random.randint(-self.step_random_range, self.step_random_range))
 
+        offset_y_randoms = []
+        for i in range(len(images)):
+            offset_y_randoms.append(random.randint(-self.offset_y_range, self.offset_y_range))
         # TODO：目的（把char的Image对象粘贴到对象背景上粘连上去）
 
         # 1. 预估images+step和step_randoms需要的长度，若背景image对象不够长，先调整背景image长度。
-        target_width = pre_calc(self.start_x, self.step, images, step_randoms)
+        start_rio = int(random.randint(self.start_x - self.start_x_random_range,
+                                   self.start_x + self.start_x_random_range))
+        target_width = pre_calc(start_rio, self.step, images, step_randoms)
         if target_width > self.captcha_width:
             # 重新调整背景的大小
             bg_image = bg_image.resize((target_width, self.captcha_high), Image.ANTIALIAS)
 
-        target_width_clean = pre_calc(self.start_x, self.step_stretch, images_clean, step_randoms)
+        target_width_clean = pre_calc(start_rio, self.step_stretch, images_clean, step_randoms)
         if target_width_clean > self.captcha_width:
             bg_image_clean = bg_image_clean.resize((target_width_clean, self.captcha_high), Image.ANTIALIAS)
 
         # 2. 开始粘贴 为了保证一致，对于含有背景和没有背景的一起粘贴。
-        offset_x = self.start_x
+        offset_x = start_rio
         offset_y = 0
-        offset_x_clean = self.start_x
+        offset_x_clean = start_rio
         offset_y_clean = 0
         for i in range(len(images)):
             char_w, char_h = images[i].size
             char_w_clean, char_h_clean = images_clean[i].size
             bg_image.paste(images[i],
-                           (offset_x, int((self.captcha_high - char_h) / 2)),
+                           (offset_x, int((self.captcha_high - char_h) / 2)+offset_y_randoms[i]),
                            images[i]
                            )
             bg_image_clean.paste(images_clean[i],
-                                 (offset_x_clean, int((self.captcha_high - char_h_clean) / 2)),
+                                 (offset_x_clean, int((self.captcha_high - char_h_clean) / 2)+offset_y_randoms[i]),
                                  images_clean[i]
                                  )
             offset_x = offset_x + char_w + self.step + step_randoms[i]
