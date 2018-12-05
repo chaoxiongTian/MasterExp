@@ -6,6 +6,7 @@
 # @Software: PyCharm
 
 import random
+import math
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -113,3 +114,73 @@ def add_noise(image, noise_number, noise_width, noise_color):
         noise_number -= 1
     del draw
     return image
+
+
+# 对一张图片进行波浪处理
+def sin_warp_x(image, amplitude, period, phase, background):
+    """
+    对图片进行水平方向的波浪处理
+    :param image: 需要处理的图片
+    :param amplitude: 振幅
+    :param period: 周期
+    :param phase: 相位
+    :param background: 填充的颜色
+    :return: 处理之后的图片
+    """
+    image_w, image_h = image.size
+    bg_image = Image.new('RGBA', (image_w, image_h + 2 * amplitude),
+                         background)
+    unit_length = 6.28318530717958 / period
+    offsets = [
+        int(amplitude * math.sin(phase * unit_length + unit_length * i))
+        for i in range(period)
+    ]
+    for i in range(image_w - 1):
+        box = (i, 0, i + 1, image_h)
+        region = image.crop(box)
+        bg_image.paste(region, (i, amplitude + offsets[i % period]))
+    return bg_image.resize((image_w, image_h), Image.ANTIALIAS)
+
+
+def sin_warp_y(image, amplitude, period, phase, background):
+    """
+    对图片进行垂直方向的波浪处理
+    :param image: 需要处理的图片
+    :param amplitude: 振幅
+    :param period: 周期
+    :param phase: 相位
+    :param background: 填充的颜色
+    :return: 处理之后的图片
+    """
+    image_w, image_h = image.size
+    bg_image = Image.new('RGBA', (image_w + 2 * amplitude, image_h),
+                         background)
+    unit_length = 6.28318530717958 / period
+    offsets = [
+        int(amplitude *
+            math.sin((phase / period) * unit_length + unit_length * i))
+        for i in range(period)
+    ]
+    for i in range(image_h - 1):
+        box = (0, i, image_w, i + 1)
+        region = image.crop(box)
+        bg_image.paste(region, ((amplitude + offsets[i % period]), i))
+    return bg_image.resize((image_w, image_h), Image.ANTIALIAS)
+
+
+# image = Image.new("RGBA", (100 * 4, 40 * 4), (0, 0, 0))
+# MUL_x = 30
+# MUL_y = 15
+# image_width, image_high = image.size
+# step_x = int(image_width / MUL_x)
+# step_y = int(image_high / MUL_y)
+# draw = ImageDraw.Draw(image)
+# for i in range(1, MUL_x + 1):
+#     draw.line(((step_x * i, 0), (step_x * i, image_high)), (255, 255, 255), 1)
+#     pass
+# for i in range(1, MUL_y + 1):
+#     draw.line(((0, step_y * i), (image_width, step_y * i)), (255, 255, 255), 1)
+# image = sin_warp_x(image, 10, 100, 10, (0, 0, 0))
+# image = sin_warp_y(image, 10, 100, 10, (0, 0, 0))
+# # image.show()
+# image.save("/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaGenerate/data/bg/bg.png")
