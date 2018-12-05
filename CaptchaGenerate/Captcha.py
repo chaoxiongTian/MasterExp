@@ -7,6 +7,7 @@
 
 import os
 import sys
+import math
 from CaptchaUtils import *
 
 # 上级目录添加到环境变量中，用来导入上层的Utils包
@@ -135,7 +136,7 @@ class Captcha(object):
         # TODO：目的（把char的Image对象粘贴到对象背景上粘连上去）
 
         # 1. 预估images+step和step_randoms需要的长度，若背景image对象不够长，先调整背景image长度。
-        start_rio = int(random.randint(self.start_x - self.start_x_random_range,
+        start_rio = abs(random.randint(self.start_x - self.start_x_random_range,
                                    self.start_x + self.start_x_random_range))
         target_width = pre_calc(start_rio, self.step, images, step_randoms)
         if target_width > self.captcha_width:
