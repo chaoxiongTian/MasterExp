@@ -19,3 +19,7 @@
 3. 阅读对抗样本相关的文章，学习如何提高对抗样本的泛化作用。
 下周任务：
 提高对抗样本的质量，对安全验证码的生成形成整体完整的思路。
+
+rm *captcha.png
+rename "s/_captcha*//" *.png
+rename "s/ generated//" *.png
