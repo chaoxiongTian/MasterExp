@@ -170,10 +170,7 @@ class Captcha(object):
         return bg_image, bg_image_clean
 
     #  根据label生成验证码  扭曲，旋转和干扰信息都是缺省调用。
-    def generate_Captcha(self, label, save_path, save_path_clean="null",
-                         # list_1=(0.1, 0.3), list_2=(0.2, 0.4),
-                         # rotate_start=-20, rotate_end=20,
-                         # noise_number=100, noise_width=2, noise_color=(0, 0, 0)):
+    def generate_Captcha(self, label,
                          list_1=(0, 0), list_2=(0, 0),
                          rotate_start=0, rotate_end=0,
                          noise_number=0, noise_width=0, noise_color=(0, 0, 0)):
@@ -190,6 +187,20 @@ class Captcha(object):
         image = zoom_down_mul(image, MUL)
         image_clean = zoom_down_mul(image_clean, MUL)
         image = add_noise(image, noise_number, noise_width, noise_color)
+        return image, image_clean
+
+    #  根据label生成验证码  扭曲，旋转和干扰信息都是缺省调用。
+    def generate_save_Captcha(self, label, save_path, save_path_clean="null",
+                              # list_1=(0.1, 0.3), list_2=(0.2, 0.4),
+                              # rotate_start=-20, rotate_end=20,
+                              # noise_number=100, noise_width=2, noise_color=(0, 0, 0)):
+                              list_1=(0, 0), list_2=(0, 0),
+                              rotate_start=0, rotate_end=0,
+                              noise_number=0, noise_width=0, noise_color=(0, 0, 0)):
+        image, image_clean = self.generate_Captcha(label,
+                                                   list_1, list_2,
+                                                   rotate_start, rotate_end,
+                                                   noise_number, noise_width, noise_color)
         if save_path_clean.__eq__("null"):
             # 只保存一个
             image.save(save_path)
