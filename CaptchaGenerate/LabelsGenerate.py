@@ -127,7 +127,7 @@ def get_chars():
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    return Sina_old_chars
+    return QQ_chars
 
 
 def get_labels(chars, captcha_number, captcha_len):
@@ -143,11 +143,11 @@ def main():
     make_folder(label_folder)
 
     chars = get_chars()
-    captcha_number = 20
-    captcha_len = 5
+    captcha_number = 1000
+    captcha_len = 4
     labels = get_labels(chars, captcha_number, captcha_len)
     print(labels)
-    save_string_2_file(os.path.join(label_folder, "Sina_labels.txt"), labels)
+    save_string_2_file(os.path.join(label_folder, "Qq_off_1000_labels.txt"), labels)
 
 
 if __name__ == '__main__':
