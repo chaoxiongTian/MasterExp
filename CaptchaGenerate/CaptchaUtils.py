@@ -196,6 +196,16 @@ def image_resize_scale(image, target_side, padding):
     return target_image
 
 
+# 两个图片的纵向拼接
+def image_merge_horizontal(image1, image2):
+    w1, h1 = image1.size
+    w2, h2 = image2.size
+    h = (h1, h2)[h1 < h2]
+    image = Image.new("RGB", (w1 + w2, h))
+    image.paste(image1, (0, 0))
+    image.paste(image2, (w1, 0))
+    return image
+
 # image = Image.open("/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaGenerate/data/bg/Blizzard/0.png")
 # image_resize_scale(image, 256, 20).show()
 
