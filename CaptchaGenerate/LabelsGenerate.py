@@ -143,11 +143,11 @@ def main():
     make_folder(label_folder)
 
     chars = get_chars()
-    captcha_number = 1000
+    captcha_number = 200
     captcha_len = 4
     labels = get_labels(chars, captcha_number, captcha_len)
     print(labels)
-    save_string_2_file(os.path.join(label_folder, "Qq_off_1000_labels.txt"), labels)
+    save_string_2_file(os.path.join(label_folder, "Qq_off_200_labels.txt"), labels)
 
 
 if __name__ == '__main__':

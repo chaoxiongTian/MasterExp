@@ -7,7 +7,7 @@
 import os
 import sys
 import random
-
+import argparse
 from Captcha import Captcha
 from CaptchaUtils import image_resize_scale, image_merge_horizontal
 
@@ -17,6 +17,13 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardi
 from Utils import make_folders
 
 data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "data")
+
+parser = argparse.ArgumentParser('create image pairs')
+parser.add_argument('--tar', dest='tar', help='train or test',
+                    type=str, default='train')
+parser.add_argument('--label', dest='label_name', help='label`s name',
+                    type=str, default='Qq_labels.txt')
+args = parser.parse_args()
 
 
 def generate_blizzard():
@@ -293,14 +300,14 @@ def generate_Qq():
         font_size=28,  # 字体基准大小
         font_size_random_range=8  # 字体随机范围
     )
-    label_path = os.path.join(data_folder, "labels", "Qq_off_1000_labels.txt")
+    label_path = os.path.join(data_folder, "labels", args.label_name)
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Qq")
-    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
-    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
-    train_folder = os.path.join(captcha_save_folder, "train")  # 有背景的验证码
-    make_folders(A_folder, B_folder, train_folder)
+    # A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
+    # B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
+    save_folder = os.path.join(captcha_save_folder, args.tar)  # 有背景的验证码
+    make_folders(save_folder)
 
     print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
     for i, each in enumerate(labels):
@@ -312,7 +319,7 @@ def generate_Qq():
         #                               rotate_start=rotate, rotate_end=rotate
         #                               )
         image, image_clean = captcha.generate_captcha(each, rotate_start=rotate, rotate_end=rotate)
-        image_merge_horizontal(image, image_clean).save(os.path.join(train_folder, str(i) + '.png'))
+        image_merge_horizontal(image, image_clean).save(os.path.join(save_folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
 
