@@ -109,8 +109,8 @@ def get_chars():
     ]
     Sina_old_chars = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-        'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+        'a', 'b', 'd', 'e', 'f', 'g', 'h', 'k', 'l', 'm', 'n',
+        'o', 'p', 'q', 'r', 's', 't'
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
@@ -127,7 +127,7 @@ def get_chars():
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    return Authorize_chars
+    return Sina_old_chars
 
 
 def get_labels(chars, captcha_number, captcha_len):
@@ -147,7 +147,7 @@ def main():
     captcha_len = 5
     labels = get_labels(chars, captcha_number, captcha_len)
     print(labels)
-    save_string_2_file(os.path.join(label_folder, "Authorize_labels.txt"), labels)
+    save_string_2_file(os.path.join(label_folder, "Sina_labels.txt"), labels)
 
 
 if __name__ == '__main__':
