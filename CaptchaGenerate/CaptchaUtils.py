@@ -116,7 +116,7 @@ def add_noise(image, noise_number, noise_width, noise_color):
     return image
 
 
-# 对一张图片进行波浪处理
+# 对一张图片x轴进行波浪处理
 def sin_warp_x(image, amplitude, period, phase, background):
     """
     对图片进行水平方向的波浪处理
@@ -142,6 +142,7 @@ def sin_warp_x(image, amplitude, period, phase, background):
     return bg_image.resize((image_w, image_h), Image.ANTIALIAS)
 
 
+# 对一张图片y轴进行波浪处理
 def sin_warp_y(image, amplitude, period, phase, background):
     """
     对图片进行垂直方向的波浪处理
@@ -166,6 +167,37 @@ def sin_warp_y(image, amplitude, period, phase, background):
         region = image.crop(box)
         bg_image.paste(region, ((amplitude + offsets[i % period]), i))
     return bg_image.resize((image_w, image_h), Image.ANTIALIAS)
+
+
+# 把image resize到target_weight, target_high的长度
+def image_resize(image, target_weight, target_high):
+    return image.resize((int(target_weight), int(target_high)), Image.ANTIALIAS)
+
+
+#  把image resize到边长为target_side长的正方形
+#  等比例扩到最大边为target_side-padding，然后再其周围使用填充padding长度白边
+def image_resize_scale(image, target_side, padding):
+    (origin_w, origin_h) = image.size
+    target_image = Image.new("RGBA", (target_side, target_side), (255, 255, 255))
+    if origin_w >= origin_h:
+        # 宽窄
+        target_w = target_side - 2 * padding
+        mul = target_w / origin_w
+        target_h = int(mul * origin_h)
+        image = image_resize(image, target_w, target_h)
+        target_image.paste(image, (padding, int((target_side - target_h) / 2)), image)
+    else:
+        # 短长
+        target_h = target_side - 2 * padding
+        mul = target_h / origin_h
+        target_w = int(origin_h * mul)
+        image = image_resize(image, target_w, target_h)
+        target_image.paste(image, (int((target_side - target_w) / 2), padding), image)
+    return target_image
+
+
+# image = Image.open("/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaGenerate/data/bg/Blizzard/0.png")
+# image_resize_scale(image, 256, 20).show()
 
 
 # image = Image.new("RGBA", (100 * 4, 40 * 4), (0, 0, 0))
