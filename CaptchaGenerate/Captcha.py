@@ -15,7 +15,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardi
 
 from Utils import get_internal_path
 
-# 统一的资源文件夹
+# 统一的资源文件夹 
 data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "data")
 
 MUL = 4  # 制作验证码的时候，为了保证图片的清晰度。先制作原图MUL倍大小的图片，然后再缩小回需要的大小
@@ -137,7 +137,7 @@ class Captcha(object):
 
         # 1. 预估images+step和step_randoms需要的长度，若背景image对象不够长，先调整背景image长度。
         start_rio = abs(random.randint(self.start_x - self.start_x_random_range,
-                                   self.start_x + self.start_x_random_range))
+                                       self.start_x + self.start_x_random_range))
         target_width = pre_calc(start_rio, self.step, images, step_randoms)
         if target_width > self.captcha_width:
             # 重新调整背景的大小
@@ -156,11 +156,11 @@ class Captcha(object):
             char_w, char_h = images[i].size
             char_w_clean, char_h_clean = images_clean[i].size
             bg_image.paste(images[i],
-                           (offset_x, int((self.captcha_high - char_h) / 2)+offset_y_randoms[i]),
+                           (offset_x, int((self.captcha_high - char_h) / 2) + offset_y_randoms[i]),
                            images[i]
                            )
             bg_image_clean.paste(images_clean[i],
-                                 (offset_x_clean, int((self.captcha_high - char_h_clean) / 2)+offset_y_randoms[i]),
+                                 (offset_x_clean, int((self.captcha_high - char_h_clean) / 2) + offset_y_randoms[i]),
                                  images_clean[i]
                                  )
             offset_x = offset_x + char_w + self.step + step_randoms[i]
@@ -170,13 +170,13 @@ class Captcha(object):
         return bg_image, bg_image_clean
 
     #  根据label生成验证码  扭曲，旋转和干扰信息都是缺省调用。
-    def generateCaptcha(self, label, save_path, save_path_clean="null",
-                        # list_1=(0.1, 0.3), list_2=(0.2, 0.4),
-                        # rotate_start=-20, rotate_end=20,
-                        # noise_number=100, noise_width=2, noise_color=(0, 0, 0)):
-                        list_1=(0, 0), list_2=(0, 0),
-                        rotate_start=0, rotate_end=0,
-                        noise_number=0, noise_width=0, noise_color=(0, 0, 0)):
+    def generate_Captcha(self, label, save_path, save_path_clean="null",
+                         # list_1=(0.1, 0.3), list_2=(0.2, 0.4),
+                         # rotate_start=-20, rotate_end=20,
+                         # noise_number=100, noise_width=2, noise_color=(0, 0, 0)):
+                         list_1=(0, 0), list_2=(0, 0),
+                         rotate_start=0, rotate_end=0,
+                         noise_number=0, noise_width=0, noise_color=(0, 0, 0)):
         # 1. 生成两张对象的背景
         bg_image, bg_image_clean = self.get_captcha_bg()
         # 2. 生成两组对应的Images
