@@ -46,18 +46,24 @@ def generate_blizzard():
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Blizzard")
-    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
-    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
-    make_folders(A_folder, B_folder)
+    # A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
+    # B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
+    # make_folders(A_folder, B_folder)
+    save_folder = os.path.join(captcha_save_folder, args.tar)  # 有背景的验证码
+    make_folders(save_folder)
 
     print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
     for i, each in enumerate(labels):
         # 传入两个参数表示值生成一个验证码
-        captcha.generate_save_captcha(each,
-                                      os.path.join(A_folder, str(i) + '.png'),
-                                      os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
-                                      rotate_start=-20, rotate_end=20
-                                      )
+        # captcha.generate_save_captcha(each,
+        #                               os.path.join(A_folder, str(i) + '.png'),
+        #                               os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
+        #                               rotate_start=-20, rotate_end=20
+        #                               )
+        image, image_clean = captcha.generate_captcha(each,
+                                                      rotate_start=-20, rotate_end=20,
+                                                      padding=20)
+        image_merge_horizontal(image, image_clean).save(os.path.join(save_folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
 
@@ -81,23 +87,30 @@ def generate_authorize():
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Authorize")
-    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
-    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
-    make_folders(A_folder, B_folder)
+    # A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
+    # B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
+    # make_folders(A_folder, B_folder)
+    save_folder = os.path.join(captcha_save_folder, args.tar)  # 有背景的验证码
+    make_folders(save_folder)
 
     print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
     for i, each in enumerate(labels):
         # 传入两个参数表示值生成一个验证码
-        captcha.generate_save_captcha(each,
-                                      os.path.join(A_folder, str(i) + '.png'),
-                                      os.path.join(B_folder, str(i) + '.png'),
-                                      noise_number=300, noise_width=1, noise_color=(128, 128, 128),
-                                      rotate_start=-10, rotate_end=10
-                                      )
+        # captcha.generate_save_captcha(each,
+        #                               os.path.join(A_folder, str(i) + '.png'),
+        #                               os.path.join(B_folder, str(i) + '.png'),
+        #                               noise_number=300, noise_width=1, noise_color=(128, 128, 128),
+        #                               rotate_start=-10, rotate_end=10
+        #                               )
+        image, image_clean = captcha.generate_captcha(each,
+                                                      rotate_start=-10, rotate_end=10,
+                                                      noise_number=300, noise_width=1, noise_color=(128, 128, 128),
+                                                      padding=20)
+        image_merge_horizontal(image, image_clean).save(os.path.join(save_folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
 
-def generate_save_captcha():
+def generate_captcha():
     # 构造captcha
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
@@ -118,20 +131,26 @@ def generate_save_captcha():
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "captcha")
-    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
-    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
-    make_folders(A_folder, B_folder)
+    # A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
+    # B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
+    # make_folders(A_folder, B_folder)
+    save_folder = os.path.join(captcha_save_folder, args.tar)  # 有背景的验证码
+    make_folders(save_folder)
 
     print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
     for i, each in enumerate(labels):
         # 传入两个参数表示值生成一个验证码
-        captcha.generate_save_captcha(each,
-                                      os.path.join(A_folder, str(i) + '.png'),
-                                      os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
-                                      rotate_start=-10, rotate_end=10,
-                                      noise_number=2500, noise_width=0.7, noise_color=(50, 50, 50)
-                                      # noise_number1=500, noise_width1=1, noise_color1=(96, 96, 96)
-                                      )
+        # captcha.generate_save_captcha(each,
+        #                               os.path.join(A_folder, str(i) + '.png'),
+        #                               os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
+        #                               rotate_start=-10, rotate_end=10,
+        #                               noise_number=2500, noise_width=0.7, noise_color=(50, 50, 50)
+        #                               )
+        image, image_clean = captcha.generate_captcha(each,
+                                                      rotate_start=-10, rotate_end=10,
+                                                      noise_number=2500, noise_width=0.7, noise_color=(50, 50, 50),
+                                                      padding=20)
+        image_merge_horizontal(image, image_clean).save(os.path.join(save_folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
 
@@ -156,19 +175,22 @@ def generate_NIH():
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "NIH")
-    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
-    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
-    make_folders(A_folder, B_folder)
+    # A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
+    # B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
+    # make_folders(A_folder, B_folder)
+    save_folder = os.path.join(captcha_save_folder, args.tar)  # 有背景的验证码
+    make_folders(save_folder)
 
     print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
     for i, each in enumerate(labels):
         # 传入两个参数表示值生成一个验证码
-        captcha.generate_save_captcha(each,
-                                      os.path.join(A_folder, str(i) + '.png'),
-                                      os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
-                                      noise_number=500, noise_width=0.7, noise_color=(96, 96, 96),
-
-                                      )
+        # captcha.generate_save_captcha(each,
+        #                               os.path.join(A_folder, str(i) + '.png'),
+        #                               os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
+        #                               noise_number=500, noise_width=0.7, noise_color=(96, 96, 96),
+        #                               )
+        image, image_clean = captcha.generate_captcha(each, noise_number=500, noise_width=0.7, noise_color=(96, 96, 96), padding=20)
+        image_merge_horizontal(image, image_clean).save(os.path.join(save_folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
 
@@ -193,19 +215,23 @@ def generate_Reddit():
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Reddit")
-    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
-    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
-    make_folders(A_folder, B_folder)
+    # A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
+    # B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
+    # make_folders(A_folder, B_folder)
+    save_folder = os.path.join(captcha_save_folder, args.tar)  # 有背景的验证码
+    make_folders(save_folder)
 
     print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
     for i, each in enumerate(labels):
         # 传入两个参数表示值生成一个验证码
         rotate = random.randint(-7, 7)
-        captcha.generate_save_captcha(each,
-                                      os.path.join(A_folder, str(i) + '.png'),
-                                      os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
-                                      rotate_start=rotate, rotate_end=rotate
-                                      )
+        # captcha.generate_save_captcha(each,
+        #                               os.path.join(A_folder, str(i) + '.png'),
+        #                               os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
+        #                               rotate_start=rotate, rotate_end=rotate
+        #                               )
+        image, image_clean = captcha.generate_captcha(each, rotate_start=rotate, rotate_end=rotate, padding=20)
+        image_merge_horizontal(image, image_clean).save(os.path.join(save_folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
 
@@ -230,18 +256,21 @@ def generate_Digg():
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Digg")
-    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
-    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
-    make_folders(A_folder, B_folder)
+    # A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
+    # B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
+    save_folder = os.path.join(captcha_save_folder, args.tar)  # 有背景的验证码
+    make_folders(save_folder)
 
     print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
     for i, each in enumerate(labels):
         # 传入两个参数表示值生成一个验证码
-        captcha.generate_save_captcha(each,
-                                      os.path.join(A_folder, str(i) + '.png'),
-                                      os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
-                                      rotate_start=-25, rotate_end=25
-                                      )
+        # captcha.generate_save_captcha(each,
+        #                               os.path.join(A_folder, str(i) + '.png'),
+        #                               os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
+        #                               rotate_start=-25, rotate_end=25
+        #                               )
+        image, image_clean = captcha.generate_captcha(each, rotate_start=-25, rotate_end=25, padding=20)
+        image_merge_horizontal(image, image_clean).save(os.path.join(save_folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
 
@@ -266,19 +295,21 @@ def generate_baidu():
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Baidu")
-    A_folder = os.path.join(captcha_save_folder, "A")  # 有背景的验证码
-    B_folder = os.path.join(captcha_save_folder, "B")  # 没有背景的验证码
-    make_folders(A_folder, B_folder)
+
+    save_folder = os.path.join(captcha_save_folder, args.tar)  # 有背景的验证码
+    make_folders(save_folder)
 
     print("generate %d captcha in %s\n" % (len(labels), captcha_save_folder))
     for i, each in enumerate(labels):
         # 传入两个参数表示值生成一个验证码
         rotate = random.randint(-15, 15)
-        captcha.generate_save_captcha(each,
-                                      os.path.join(A_folder, str(i) + '.png'),
-                                      os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
-                                      rotate_start=rotate, rotate_end=rotate,
-                                      )
+        # captcha.generate_save_captcha(each,
+        #                               os.path.join(A_folder, str(i) + '.png'),
+        #                               os.path.join(B_folder, str(i) + '.png'),  # 该参数为可省略参数
+        #                               rotate_start=rotate, rotate_end=rotate,
+        #                               )
+        image, image_clean = captcha.generate_captcha(each, rotate_start=rotate, rotate_end=rotate)
+        image_merge_horizontal(image, image_clean).save(os.path.join(save_folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
 
@@ -324,12 +355,12 @@ def generate_Qq():
 
 
 if __name__ == "__main__":
-    # generate_blizzard()
+    generate_blizzard()
     # generate_authorize()
     # generate_captcha()
     # generate_NIH()
     # generate_Reddit()
     # generate_Digg()
     # generate_baidu()
-    generate_Qq()
+    # generate_Qq()
     pass
