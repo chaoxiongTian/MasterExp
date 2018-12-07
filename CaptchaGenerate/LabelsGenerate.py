@@ -71,42 +71,51 @@ def get_chars():
         'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
     # xin
+    # len = 6
     Blizzard_chars = [
         'a', 'b', 'c', 'd', 'e', 'f', 'h', 'k', 'm', 'n', 'p', 'q', 's', 'u',
         'v', 'w', 'x', 'y', 'z', 'g'
     ]
+    # 5
     Authorize_chars = [
         '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z',
     ]
+    # 6
     Captcha_chars = [
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
     ]
+    # 5
     NIH_chars = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
+    # 6
     Reddit_chars = [
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
+    # 5
     Digg_chars = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
     ]
+    # 4
     Baidu_2016_chars = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
     ]
+    # 4
     QQ_chars = [
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
+    # 5
     Sina_old_chars = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'd', 'e', 'f', 'g', 'h', 'k', 'l', 'm', 'n',
@@ -114,20 +123,23 @@ def get_chars():
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
+    # 8
     reCaptcha_chars = [
         '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
     ]
+    # 6
     Amazon_chars = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
+    # 7
     Yahoo_chars = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
-    return QQ_chars
+    return Baidu_2016_chars
 
 
 def get_labels(chars, captcha_number, captcha_len):
@@ -143,11 +155,11 @@ def main():
     make_folder(label_folder)
 
     chars = get_chars()
-    captcha_number = 200
+    captcha_number = 2000
     captcha_len = 4
     labels = get_labels(chars, captcha_number, captcha_len)
     print(labels)
-    save_string_2_file(os.path.join(label_folder, "Qq_off_200_labels.txt"), labels)
+    save_string_2_file(os.path.join(label_folder, "Baidu_off_2000_labels.txt"), labels)
 
 
 if __name__ == '__main__':
