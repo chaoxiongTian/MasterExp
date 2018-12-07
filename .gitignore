@@ -10,4 +10,5 @@ dist
 build
 *ceshi.py
 
-!/CaptchaGenerate/data/bg/*
+!/CaptchaGenerate/data/bg/*.jpg
+!/CaptchaGenerate/data/bg/*.png
