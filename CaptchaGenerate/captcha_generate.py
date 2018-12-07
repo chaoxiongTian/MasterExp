@@ -356,12 +356,12 @@ def generate_Qq():
 
 
 if __name__ == "__main__":
-    generate_blizzard()
+    # generate_blizzard()
     # generate_authorize()
     # generate_captcha()
     # generate_NIH()
     # generate_Reddit()
     # generate_Digg()
-    # generate_baidu()
+    generate_baidu()
     # generate_Qq()
     pass
