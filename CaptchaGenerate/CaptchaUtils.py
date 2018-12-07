@@ -185,7 +185,7 @@ def image_resize_scale(image, target_side, padding):
         mul = target_w / origin_w
         target_h = int(mul * origin_h)
         image = image_resize(image, target_w, target_h)
-        target_image.paste(image, (padding, int((target_side - target_h) / 2)), image)
+        target_image.paste(image, (padding, int((target_side - target_h) / 2)))
     else:
         # 短长
         target_h = target_side - 2 * padding
