@@ -1,4 +1,6 @@
 # Python:
+!/CaptchaGenerate/data/bg/*
+
 .vscode
 *.py[cod]
 *.so
@@ -10,5 +12,7 @@ dist
 build
 *ceshi.py
 
-!/CaptchaGenerate/data/bg/*.jpg
-!/CaptchaGenerate/data/bg/*.png
+
+
+!CaptchaGenerate/data/bg/*/*.jpg
+!CaptchaGenerate/data/bg/*/*.png
