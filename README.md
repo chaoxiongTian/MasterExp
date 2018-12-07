@@ -6,6 +6,7 @@ Experimental part of the master's paper.
 **初步分为三个部分**
 1. 验证码生成部分。
 ```
+CaptchaGenerate
 ├── CaptchaGenerate.py #  验证码生成程序。
 ├── Captcha.py #  验证码类。
 ├── CaptchaUtils.py #  验证码生成工具类。
