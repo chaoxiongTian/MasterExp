@@ -43,7 +43,7 @@ def generate_blizzard():
         font_size=15,  # 字体基准大小
         font_size_random_range=0  # 字体随机范围
     )
-    label_path = os.path.join(data_folder, "labels", "Blizzard_labels.txt")
+    label_path = os.path.join(data_folder, "labels", args.label_name)
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Blizzard")
@@ -84,7 +84,7 @@ def generate_authorize():
         font_size=28,  # 字体基准大小
         font_size_random_range=0  # 字体随机范围
     )
-    label_path = os.path.join(data_folder, "labels", "Authorize_labels.txt")
+    label_path = os.path.join(data_folder, "labels", args.label_name)
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Authorize")
@@ -128,7 +128,7 @@ def generate_captcha():
         font_size_random_range=0,  # 字体随机范围
         offset_y_range=3
     )
-    label_path = os.path.join(data_folder, "labels", "captcha_labels.txt")
+    label_path = os.path.join(data_folder, "labels", args.label_name)
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "captcha")
@@ -172,7 +172,7 @@ def generate_NIH():
         font_size_random_range=0,  # 字体随机范围
         offset_y_range=5
     )
-    label_path = os.path.join(data_folder, "labels", "NIH_labels.txt")
+    label_path = os.path.join(data_folder, "labels", args.label_name)
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "NIH")
@@ -212,7 +212,7 @@ def generate_Reddit():
         font_size_random_range=0,  # 字体随机范围
         offset_y_range=2
     )
-    label_path = os.path.join(data_folder, "labels", "Reddit_labels.txt")
+    label_path = os.path.join(data_folder, "labels", args.label_name)
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Reddit")
@@ -253,7 +253,7 @@ def generate_Digg():
         font_size_random_range=2,  # 字体随机范围
         offset_y_range=5
     )
-    label_path = os.path.join(data_folder, "labels", "Digg_labels.txt")
+    label_path = os.path.join(data_folder, "labels", args.label_name)
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Digg")
@@ -292,7 +292,7 @@ def generate_baidu():
         font_size=35,  # 字体基准大小
         font_size_random_range=0  # 字体随机范围
     )
-    label_path = os.path.join(data_folder, "labels", "Baidu_labels.txt")
+    label_path = os.path.join(data_folder, "labels", args.label_name)
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
     captcha_save_folder = os.path.join(data_folder, "captcha", "Baidu")
