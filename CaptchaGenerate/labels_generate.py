@@ -7,7 +7,7 @@
 
 import os
 import sys
-from Label import CaptchaLabel
+from label import CaptchaLabel
 
 # 为了导入上层的工具包，将上层的路径添加到环境变量
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))

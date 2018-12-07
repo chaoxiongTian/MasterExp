@@ -7,7 +7,7 @@
 
 import os
 import sys
-from CaptchaUtils import *
+from captcha_utils import *
 
 # 上级目录添加到环境变量中，用来导入上层的Utils包
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))

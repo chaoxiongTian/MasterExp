@@ -206,10 +206,6 @@ def image_merge_horizontal(image1, image2):
     image.paste(image2, (w1, 0))
     return image
 
-# image = Image.open("/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaGenerate/data/bg/Blizzard/0.png")
-# image_resize_scale(image, 256, 20).show()
-
-
 # image = Image.new("RGBA", (100 * 4, 40 * 4), (0, 0, 0))
 # MUL_x = 30
 # MUL_y = 15
