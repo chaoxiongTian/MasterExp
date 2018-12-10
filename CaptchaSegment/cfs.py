@@ -46,11 +46,17 @@ def get_block(pix_data, p_x, p_y, value=127):
     return block
 
 
+# 得到起始位置，和跨度大小
+def get_boundary(block, axis):
+    s2b = sorted(block, key=lambda x: x[axis])
+    return s2b[-1][axis] - s2b[0][axis], s2b[0][axis]
+
+
 # 返回block的信息，（宽，x轴开始的位置，高，轴开始的位置）
 def get_block_info(block):
-    block_w, w_min_begin_point = get_boundary(block, 0)
-    block_h, h_min_begin_point = get_boundary(block, 1)
-    return block_w, w_min_begin_point, block_h, h_min_begin_point
+    block_w, w_begin = get_boundary(block, 0)
+    block_h, h_begin = get_boundary(block, 1)
+    return block_w, w_begin, block_h, h_begin
 
 
 # 判断一个连通域是否合法
@@ -91,32 +97,80 @@ def get_connected_blocks(im, min_block_size=10):
     return connected_blocks
 
 
-def get_boundary(block, axit):
-    """
-    得到区块的长和宽 和长宽起始的位置
-    :param block: 存储的位置
-    :param axit: 宽是0 长是1
-    :return: 宽和宽的起始位置 或者长和长的起始位置
-    """
-    s2b_list = sorted(block, key=lambda x: x[axit])
-    b2s_list = sorted(block, key=lambda x: x[axit], reverse=True)
-    return b2s_list[0][axit] - s2b_list[0][axit], s2b_list[0][axit]
-
-
-def save_blocks(blocks, save_folder, file_name, padding=1):
-    target_name_srefix = os.path.join(save_folder, file_name)
+def blocks_2_images(blocks, padding=1):
+    images = []
     for i, each_block in enumerate(blocks):
         # 获取每个区块的长宽 和长宽的其实起始位置
-        block_w, w_min_begin_point, block_h, h_min_begin_point = get_block_info(each_block)
+        block_w, w_begin, block_h, h_begin = get_block_info(each_block)
         im_bg = Image.new('RGB', (block_w + padding, block_h + padding), (255, 255, 255))
         im = convert_binary(im_bg, 220)
         pix_data = im.load()
         for x, y in each_block:
-            pix_data[x - w_min_begin_point, y - h_min_begin_point] = 0
-        im.save(target_name_srefix + '-' + str(i) + ".png")
+            pix_data[x - w_begin, y - h_begin] = 0
+        images.append(im)
+    return images
 
 
-#  连通域分割算法
+def correct_blocks(blocks):
+    # 计算重叠度
+    def get_overlap_rate(block1, block2):
+        # 1, 找出list1,list2 再垂直方向上的起始和终止位置.
+        w1, w_begin1, _, _ = get_block_info(block1)
+        w2, w_begin2, _, _ = get_block_info(block2)
+        # 2. 根据区间找到重合率
+        rate = get_rate(w_begin1, w1 + w_begin1, w_begin2, w2 + w_begin2)
+        return rate
+
+    def get_rate(start1, end1, start2, end2):
+        if start2 > end1 or start1 > end2:
+            return 0
+        if start1 > start2 and end1 < end2:
+            return 1
+        if start2 > start1 and end2 < end1:
+            return 1
+        len_min = ((end1 - start1)
+                   if (end1 - start1) < (end2 - start2) else (end2 - start2)) + 1
+        return (min(abs(end1 - start2), abs(end2 - start1)) + 1) / len_min
+
+    # 根据重合率进行修正
+    def combine_block(threshold=0.3):
+        switch = 0
+        new_blocks = []
+        for j in range(len(blocks)):
+            if j == len(blocks) - 1:
+                block = blocks[j]
+                if switch == 0:
+                    new_blocks.append(block)
+                break
+            if overlaps[j] >= threshold:
+                block = blocks[j] + blocks[j + 1]
+                new_blocks.append(block)
+                switch = 1
+            else:
+                if switch == 1:
+                    switch = 0
+                else:
+                    block = blocks[j]
+                    new_blocks.append(block)
+
+        return new_blocks
+
+    overlaps = []  # 重叠度（前一个和后一个的重叠度）
+    for i in range(len(blocks) - 1):
+        overlaps.append(get_overlap_rate(blocks[i], blocks[i + 1]))
+
+    print(overlaps)
+    blocks = combine_block()
+    return blocks
+
+
+def save_images(images, folder, file_name):
+    target_name_srefix = os.path.join(folder, file_name)
+    for i, each in enumerate(images):
+        # each.show()
+        each.save(target_name_srefix + '-' + str(i) + ".png")
+
+
 def cfs(file_path):
     # 1. 二值化
     image = convert_binary(Image.open(file_path), threshold=220)
@@ -125,15 +179,21 @@ def cfs(file_path):
     connected_blocks = get_connected_blocks(image)
     print("block num is : %d" % len(connected_blocks))
 
-    # 3. 保存 联通块
-    save_blocks(connected_blocks, get_file_folder(file_path), get_file_name(file_path))
+    # 3. 对类似于 i 上面的哪一点进行修复（计算两个block在竖直方向的重合率）
+    connected_blocks = correct_blocks(connected_blocks)
+    connected_blocks = correct_blocks(connected_blocks)
+
+    # 4. 把联通快转为images
+    images = blocks_2_images(connected_blocks)
+
+    # 5. 保存
+    save_images(images, get_file_folder(file_path), get_file_name(file_path))
 
 
 def main():
     target_folder = os.path.join(data_folder, "cfs")
     make_folder(target_folder)
-    image_path = os.path.join(target_folder, "0.png")
-    cfs(image_path)
+    cfs(os.path.join(target_folder, "1.png"))
 
 
 if __name__ == '__main__':
