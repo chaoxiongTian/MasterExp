@@ -5,17 +5,8 @@
 # @File    : Captcha.py
 # @Software: PyCharm Community Edition
 
-import os
-import sys
 from captcha_utils import *
 
-# 上级目录添加到环境变量中，用来导入上层的Utils包
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
-
-from Utils import get_internal_path
-
-# 统一的资源文件夹 
-data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "data")
 
 MUL = 4  # 制作验证码的时候，为了保证图片的清晰度。先制作原图MUL倍大小的图片，然后再缩小回需要的大小
 

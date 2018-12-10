@@ -7,6 +7,7 @@
 
 import random
 import math
+from out_utils import *
 from PIL import Image, ImageDraw, ImageFont
 
 

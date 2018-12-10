@@ -5,16 +5,8 @@
 # @File    : CaptchaGenerate.py
 # @Software: PyCharm Community Edition
 
-import os
-import sys
+from out_utils import *
 from label import CaptchaLabel
-
-# 为了导入上层的工具包，将上层的路径添加到环境变量
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
-
-from Utils import make_folder, save_string_2_file
-
-data_folder = os.path.join(os.path.split(os.path.abspath(os.sys.argv[0]))[0], "data")
 
 
 def get_chars():
@@ -120,7 +112,7 @@ def get_chars():
         '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'd', 'e', 'f', 'g', 'h', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 't'
-        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+                                 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
         'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ]
     # 8
@@ -159,7 +151,8 @@ def main():
     captcha_len = 4
     labels = get_labels(chars, captcha_number, captcha_len)
     print(labels)
-    save_string_2_file(os.path.join(label_folder, "Baidu_off_5000_labels.txt"), labels)
+    save_string_2_file(os.path.join(label_folder, "Baidu_labels.txt"), labels)
+    pass
 
 
 if __name__ == '__main__':

@@ -6,6 +6,12 @@
 # @Software: PyCharm Community Edition
 
 import os
+from PIL import Image
+
+
+# 把image resize到target_weight, target_high的长度
+def image_resize(image, target_weight, target_high):
+    return image.resize((int(target_weight), int(target_high)), Image.ANTIALIAS)
 
 
 def make_folder(path):
@@ -32,3 +38,7 @@ def get_internal_path(folder):
         return os.path.join(folder, x)
 
     return list(map(f, os.listdir(folder)))
+
+
+def get_file_name(complete_name):
+    return os.path.splitext(os.path.split(complete_name)[1])[0]
