@@ -11,7 +11,6 @@ from cfs import get_block_info
 from cfs_update1 import fix_segented_image
 
 
-
 def sava_block(block_w, w_min_begin_point, block_h, h_min_begin_point, block,
                save_path):
     """

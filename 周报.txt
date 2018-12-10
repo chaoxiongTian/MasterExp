@@ -23,3 +23,6 @@
 rm *captcha.png
 rename "s/_captcha*//" *.png
 rename "s/ generated//" *.png
+
+python CaptchaGenerate/captcha_generate.py --tar test --label Baidu_off_200_labels.txt
+python CaptchaGenerate/captcha_generate.py --label Blizzard_off_2000_labels.txt

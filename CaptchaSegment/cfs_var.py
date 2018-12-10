@@ -2,7 +2,7 @@
 """
 1. cfs分割算法
 """
-__author__ = 'big_centaur'
+__author__ = 'MaxCentaur'
 import os
 from PIL import Image
 
@@ -164,7 +164,7 @@ def save_segmented_image_list(segmented_image_list, sava_folder):
     return 0
 
 
-def save_bigest_5_segmented(image, segmented_pixel_list, sava_folder, flag):
+def save_biggest_5_segmented(image, segmented_pixel_list, sava_folder, flag):
     """
     把segmented_pixel_list 最大的几个保存起来
     """
@@ -175,7 +175,7 @@ def save_bigest_5_segmented(image, segmented_pixel_list, sava_folder, flag):
     image_threshold_new = convert_binarization(iamge_new.convert("L"), 220)
     pixdata_new = image_threshold_new.load()
     for each in segmented_pixel_list:
-        if len(each)>25:
+        if len(each) > 25:
             for tmp_m, tmp_n in each:
                 pixdata_new[tmp_m, tmp_n] = 0
     image_threshold_new.save(sava_folder)
@@ -203,13 +203,10 @@ def cfs(file_path, sava_folder):
     # 4.此处为变异部分  只检索其中最大的四块黑色像素域进行保存
     # print(len(segmented_pixel_list))
     flag = 5
-    save_bigest_5_segmented(image, segmented_pixel_list, sava_folder, flag)
+    save_biggest_5_segmented(image, segmented_pixel_list, sava_folder, flag)
 
 
 def main():
-    """
-    :return: 入口
-    """
     folder1 = '/home/tianchaoxiong/LinuxData/paper/experiment/segment/10_sohu/sohu_otsu_resize4*4'
     folder2 = '/home/tianchaoxiong/LinuxData/paper/experiment/segment/10_sohu/ceshi2'
     if not os.path.exists(folder2):
