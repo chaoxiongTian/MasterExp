@@ -2,21 +2,27 @@
 Experimental part of the master's paper.
 > 该项目为毕业论文的实验部分。
 
-
-**初步分为三个部分**
-1. 验证码生成部分。
+**初步分为四个部分**
 ```
-CaptchaGenerate
-├── CaptchaGenerate.py #  验证码生成程序。
-├── Captcha.py #  验证码类。
-├── CaptchaUtils.py #  验证码生成工具类。
-├── data # 资源文件夹（对应有labels、font、和bg）。
-├── Label.py #  标签对象。
-├── LabelsGenerate.py #  标签生成对象。
+MasterExp
+├── AdversarialCaptcha # 对抗验证码生成部分
+├── CaptchaGenerate # 验证码生成部分
+│   ├── captcha_generate.py # 生成函数
+│   ├── captcha.py # 验证码类
+│   ├── captcha_utils.py # 生成工具的单元
+│   ├── data # 资源目录
+│   │   ├── bg # 背景
+│   │   ├── captcha # 生成存放的目录
+│   │   ├── font # 字体存放目录
+│   │   └── labels # 标签目录
+│   ├── label.py # 标签类
+│   ├── labels_generate.py # 标签生成类
+│   ├── out_utils.py # 工具类导入函数
+├── CaptchaSegment # 验证码分割部分
+├── IdentifiNetwork # 网络识别部分
+├── README.md
+├── utils.py # 工具类
+└── 周报.txt
 ```
-2. 验证码分割部分。
-3. 网络识别部分。
-4. 对抗验证码生成部分。
-
 
 
