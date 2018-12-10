@@ -182,7 +182,7 @@ def image_resize_scale(image, target_side, padding):
     target_image = Image.new("RGBA", (target_side, target_side), (255, 255, 255))
     if origin_w >= origin_h:
         # 宽窄
-        target_w = target_side - 2 * padding
+        target_w = int(target_side - 2 * padding)
         mul = target_w / origin_w
         target_h = int(mul * origin_h)
         image = image_resize(image, target_w, target_h)
