@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-1. 滴水算法分割算法
-2. 更改分割之后出现白色部分
-"""
-__author__ = 'big_centaur'
-import shutil
-from itertools import groupby
-from PIL import Image
-from cfs import convert_binarization
-from projection import get_project_segment_info
-from projection import remove_extra_info
+# @Time    : 18-12-11 下午5:14
+# @Author  : MaxCentaur
+# @Email   : ambition_x@163.com
+# @File    : segment_drop.py
+# @Software: PyCharm
 
+from itertools import groupby
+from segment_utils import *
+from segment_projection import get_edge
 
 
 def get_nearby_pix_value(img_pix, x, y, j):
@@ -24,7 +21,7 @@ def get_nearby_pix_value(img_pix, x, y, j):
             return 0 if img_pix[x + 1, y + 1] == 0 else 1
         elif j == 4:
             return 0 if img_pix[x + 1, y] == 0 else 1
-        else:  #j == 5
+        else:  # j == 5
             return 0 if img_pix[x - 1, y] == 0 else 1
     except IndexError:
         return 0
@@ -35,7 +32,7 @@ def get_end_route(img, start_x, height):
     left_limit = 0
     right_limit = img.size[0] - 1
     end_route = []
-    cur_p = (start_x, 0)  #第一个位置
+    cur_p = (start_x, 0)  # 第一个位置
     last_p = cur_p
     end_route.append(cur_p)
     while cur_p[1] < (height - 1):
@@ -46,7 +43,7 @@ def get_end_route(img, start_x, height):
         pix_img = img.load()
         for i in range(1, 6):
             cur_w = get_nearby_pix_value(pix_img, cur_p[0], cur_p[1], i) * (
-                6 - i)
+                    6 - i)
             sum_n += cur_w
             if max_w < cur_w:
                 max_w = cur_w
@@ -104,7 +101,7 @@ def get_end_route(img, start_x, height):
     return end_route
 
 
-def do_split(gary_image, source_image, starts, filter_ends):
+def do_split(source_image, starts, filter_ends):
     """
     具体实行切割
     : param starts: 每一行的起始点 tuple of list
@@ -128,22 +125,13 @@ def do_split(gary_image, source_image, starts, filter_ends):
         end = filter_ends[i]
         for x in range(start[0], end[0] + 1):
             if pixdata[x, start[1]] == 0:
-                # image.putpixel((x - left, start[1] - top), (0, 0, 0))
-                image.putpixel((x - left, start[1] - top),
-                               gary_image.load()[x, start[1]])
+                image.putpixel((x - left, start[1] - top), (0, 0, 0))
     return image
 
 
-def drop_fall(image, img, start_list, save_dir):
-    """
-    采用滴水切割 根据res 对image_threshold进行切割
-    :param image_threshold:
-    :param res:[point,width][切割点,切割的宽度]
-    :return:
-    """
-    num_code = len(start_list)
+def drop_segment(im, start_list):
     images = []
-    width, height = img.size
+    width, height = im.size
     # 开始滴水算法
     next_start_route = []
     for i in range(len(start_list) - 1):
@@ -154,13 +142,13 @@ def drop_fall(image, img, start_list, save_dir):
                 start_route.append((0, y))
         else:
             start_route = next_start_route
-        end_route = get_end_route(img, start_x, height)
+        end_route = get_end_route(im, start_x, height)
         filter_end_route = [
             max(list(k)) for _, k in groupby(end_route, lambda x: x[1])
         ]  # 注意这里groupby
         try:
-            img1 = do_split(image, img, start_route, filter_end_route)
-            img1.save(save_dir + "-" + str(i) + ".png")
+            img1 = do_split(im, start_route, filter_end_route)
+            images.append(img1)
         except IndexError:
             pass
 
@@ -172,48 +160,18 @@ def drop_fall(image, img, start_list, save_dir):
     end_route = []
     for y in range(height):
         end_route.append((width - 1, y))
-    img2 = do_split(image, img, start_route, end_route)
-    img2.save(save_dir + "-" + str(num_code - 1) + '.png')
+    img2 = do_split(im, start_route, end_route)
+    images.append(img2)
     return images
 
-from projection_update1 import fix_segment_use_2
-def dropfall(file_path, sava_folder):
-    """
-    投影分割算法
-    :param file_path: image存储路劲
-    :param sava_folder: 存储位置
-    :return: 分割之后的数组 [[开始纵坐标,持续的长度],[开始纵坐标,持续的长度],[开始纵坐标,持续的长度]]
-    """
-    image = Image.open(file_path)
-    # 1. 转为灰度图像
-    image = image.convert('L')
-    # 2. 二值化图像
-    threshold = 220
-    image = convert_binarization(image, threshold)
-    # 3. 获取分割信息
-    edge, segment_info = get_project_segment_info(image)
-    # 3-1. 长度小于阈值的块进行去除
-    edge, segment_info = remove_extra_info(edge, segment_info, 3)
-    # 4. 对使用投影值为0 不能分割的情况使用 区域内最小值的方案.
-    # 解释:假设一个字符的长度为0-20 两个字符是20-40,那么当一个分割块的长度为35的时候则认为两个字符粘连,则对区域进行等分,然后等分长度的三分之一领域内找到的极值 作为分割点.
-    edge = fix_segment_use_2(edge, segment_info)
-    # 5. 使用滴水算法进行分割
-    print('分割的边' + str(edge))
-    if len(edge) == 1:
-        # 直接复制
-        shutil.copy(file_path, sava_folder+ '.png')
-    else:
-        drop_fall(image, image, edge, sava_folder)
+
+def drop(file_path, pre_conditions=(30, 60, 90)):
+    new_image, edge = get_edge(file_path, pre_conditions)
+    images = drop_segment(new_image, edge)
+    return images
 
 
-def main():
-    """
-    :return: 入口
-    """
-    file_path = '/home/tianchaoxiong/LinuxData/code/pro_collect/production/data/-0.png'
-    sava_folder = '../data/'
-    dropfall(file_path, sava_folder)
-
-
-if __name__ == '__main__':
-    main()
+# file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images/0.png'
+# images = drop(file_path, pre_conditions=[67, 106, 134])
+# for each in images:
+#     each.show()
