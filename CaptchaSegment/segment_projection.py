@@ -104,7 +104,7 @@ def find_zero_point(segments):
 
 
 # 长度过于窄的直接进行清理。
-def correct_segments(edge, wave_info, threshold=15):
+def correct_segments(edge, wave_info, threshold=4):
     edge_back = edge.copy()
     new_edge = []
     new_segment_info = []
@@ -215,9 +215,9 @@ def get_images(image, edge):
     return images
 
 
-def projection(file_path, pre_conditions=(30, 60, 90)):
+def get_edge(image, pre_conditions):
     # TODO: 1.先水平投影，切割出上下白边。 2.再竖直投影，先找波谷为0的点 3.再按照先验证条件按照长度进行分割。
-    image = convert_binary(Image.open(file_path))
+    image = convert_binary(image)
 
     # 1.水平投影，切割上下白边。
     horizontal_counts = get_horizontal_counts(image)
@@ -247,9 +247,13 @@ def projection(file_path, pre_conditions=(30, 60, 90)):
     # pre_conditions = [30, 60, 90]  # 0-30(切一份)，30-60(切两份),60-90(切三分),>90(切四份)
     # pre_conditions_qq = [67, 106, 134]
     edge = re_segment(edge, edge_segments, pre_conditions)
+    return new_image, edge
+
+
+def projection(image, pre_conditions=(30, 60, 90)):
+    new_image, edge = get_edge(image, pre_conditions)
     images = get_images(new_image, edge)
     return images
-
 
 # file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images/0.png'
 # images = projection(file_path, pre_conditions=[67, 106, 134])

@@ -168,15 +168,9 @@ def correct_blocks(blocks):
     return blocks
 
 
-def save_images(images, folder, file_name):
-    target_name_srefix = os.path.join(folder, file_name)
-    for i, each in enumerate(images):
-        each.save(target_name_srefix + '-' + str(i) + ".png")
-
-
-def cfs(file_path):
+def cfs(image):
     # 1. 二值化
-    image = convert_binary(Image.open(file_path), threshold=220)
+    image = convert_binary(image, threshold=220)
 
     # 2. 根据二值化之后的像素点，获取相连的块
     connected_blocks = get_connected_blocks(image)
@@ -189,6 +183,3 @@ def cfs(file_path):
     # 4. 把联通快转为images
     images = blocks_2_images(connected_blocks)
     return images
-
-    # 5. 保存
-    # save_images(images, get_file_folder(file_path), get_file_name(file_path))

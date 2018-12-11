@@ -107,10 +107,10 @@ def do_split(source_image, starts, filter_ends):
     : param starts: 每一行的起始点 tuple of list
     : param ends: 每一行的终止点
     """
-    left = starts[0][0]
-    top = starts[0][1]
-    right = filter_ends[0][0]
-    bottom = filter_ends[0][1]
+    left = abs(starts[0][0])
+    top = abs(starts[0][1])
+    right = abs(filter_ends[0][0])
+    bottom = abs(filter_ends[0][1])
     pixdata = source_image.load()
     for i in range(len(starts)):
         left = min(starts[i][0], left)
@@ -165,13 +165,9 @@ def drop_segment(im, start_list):
     return images
 
 
-def drop(file_path, pre_conditions=(30, 60, 90)):
-    new_image, edge = get_edge(file_path, pre_conditions)
+def drop(image, pre_conditions=(30, 60, 90)):
+    new_image, edge = get_edge(image, pre_conditions)
+    if len(edge) == 1:
+        return [new_image]
     images = drop_segment(new_image, edge)
     return images
-
-
-# file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images/0.png'
-# images = drop(file_path, pre_conditions=[67, 106, 134])
-# for each in images:
-#     each.show()
