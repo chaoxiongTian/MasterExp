@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
-"""
-1. cfs分割算法
-"""
-__author__ = 'MaxCentaur'
+# @Time    : 18-12-10 下午8:10
+# @Author  : MaxCentaur
+# @Email   : ambition_x@163.com
+# @File    : segment_image.py
+# @Software: PyCharm
+
+
 from out_utils import *
 from segment_utils import convert_binary
 
@@ -97,6 +100,7 @@ def get_connected_blocks(im, min_block_size=10):
     return connected_blocks
 
 
+# block 转为 image
 def blocks_2_images(blocks, padding=1):
     images = []
     for i, each_block in enumerate(blocks):
@@ -111,6 +115,7 @@ def blocks_2_images(blocks, padding=1):
     return images
 
 
+# 对有重叠的block进行修正
 def correct_blocks(blocks):
     # 计算重叠度
     def get_overlap_rate(block1, block2):
@@ -159,7 +164,7 @@ def correct_blocks(blocks):
     for i in range(len(blocks) - 1):
         overlaps.append(get_overlap_rate(blocks[i], blocks[i + 1]))
 
-    print(overlaps)
+    print("overlap_rate:", overlaps)
     blocks = combine_block()
     return blocks
 
@@ -167,7 +172,6 @@ def correct_blocks(blocks):
 def save_images(images, folder, file_name):
     target_name_srefix = os.path.join(folder, file_name)
     for i, each in enumerate(images):
-        # each.show()
         each.save(target_name_srefix + '-' + str(i) + ".png")
 
 
@@ -185,16 +189,7 @@ def cfs(file_path):
 
     # 4. 把联通快转为images
     images = blocks_2_images(connected_blocks)
+    return images
 
     # 5. 保存
-    save_images(images, get_file_folder(file_path), get_file_name(file_path))
-
-
-def main():
-    target_folder = os.path.join(data_folder, "cfs")
-    make_folder(target_folder)
-    cfs(os.path.join(target_folder, "1.png"))
-
-
-if __name__ == '__main__':
-    main()
+    # save_images(images, get_file_folder(file_path), get_file_name(file_path))
