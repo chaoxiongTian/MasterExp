@@ -2,7 +2,7 @@
 # @Time    : 18-12-10 下午8:10
 # @Author  : MaxCentaur
 # @Email   : ambition_x@163.com
-# @File    : segment_image.py
+# @File    : segment_cfs.py
 # @Software: PyCharm
 
 
@@ -164,7 +164,6 @@ def correct_blocks(blocks):
     for i in range(len(blocks) - 1):
         overlaps.append(get_overlap_rate(blocks[i], blocks[i + 1]))
 
-    print("overlap_rate:", overlaps)
     blocks = combine_block()
     return blocks
 
