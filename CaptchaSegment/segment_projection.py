@@ -99,7 +99,7 @@ def find_zero_point(segments):
         if i == (len(boundary) - 1):
             tmp = segments[boundary[i - 1][0]:boundary[i][0] + 1]
         edge_segments.append(tmp)
-    print(edge_segments)
+    # print(edge_segments)
     return edge, edge_segments
 
 
@@ -251,7 +251,7 @@ def projection(file_path, pre_conditions=(30, 60, 90)):
     return images
 
 
-file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images/0.png'
-images = projection(file_path, pre_conditions=[67, 106, 134])
-for each in images:
-    each.show()
+# file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images/0.png'
+# images = projection(file_path, pre_conditions=[67, 106, 134])
+# for each in images:
+#     each.show()
