@@ -26,7 +26,7 @@ def cfs_drop(file_path, pre_conditions=(30, 60, 90)):
     return new_images
 
 
-# file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images/56.png'
+# file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images/192.png'
 # images = cfs_drop(Image.open(file_path), pre_conditions=[67, 106, 134])
 # for each in images:
 #     each.show()

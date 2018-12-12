@@ -174,7 +174,7 @@ def cfs(image):
 
     # 2. 根据二值化之后的像素点，获取相连的块
     connected_blocks = get_connected_blocks(image)
-    print("block num is : %d" % len(connected_blocks))
+    # print("block num is : %d" % len(connected_blocks))
 
     # 3. 对类似于 i 上面的哪一点进行修复（计算两个block在竖直方向的重合率）
     connected_blocks = correct_blocks(connected_blocks)

@@ -170,42 +170,6 @@ def sin_warp_y(image, amplitude, period, phase, background):
     return bg_image.resize((image_w, image_h), Image.ANTIALIAS)
 
 
-# 把image resize到target_weight, target_high的长度
-def image_resize(image, target_weight, target_high):
-    return image.resize((int(target_weight), int(target_high)), Image.ANTIALIAS)
-
-
-#  把image resize到边长为target_side长的正方形
-#  等比例扩到最大边为target_side-padding，然后再其周围使用填充padding长度白边
-def image_resize_scale(image, target_side, padding):
-    (origin_w, origin_h) = image.size
-    target_image = Image.new("RGBA", (target_side, target_side), (255, 255, 255))
-    if origin_w >= origin_h:
-        # 宽窄
-        target_w = int(target_side - 2 * padding)
-        mul = target_w / origin_w
-        target_h = int(mul * origin_h)
-        image = image_resize(image, target_w, target_h)
-        target_image.paste(image, (padding, int((target_side - target_h) / 2)))
-    else:
-        # 短长
-        target_h = target_side - 2 * padding
-        mul = target_h / origin_h
-        target_w = int(origin_h * mul)
-        image = image_resize(image, target_w, target_h)
-        target_image.paste(image, (int((target_side - target_w) / 2), padding), image)
-    return target_image
-
-
-# 两个图片的纵向拼接
-def image_merge_horizontal(image1, image2):
-    w1, h1 = image1.size
-    w2, h2 = image2.size
-    h = (h1, h2)[h1 < h2]
-    image = Image.new("RGB", (w1 + w2, h))
-    image.paste(image1, (0, 0))
-    image.paste(image2, (w1, 0))
-    return image
 
 # image = Image.new("RGBA", (100 * 4, 40 * 4), (0, 0, 0))
 # MUL_x = 30

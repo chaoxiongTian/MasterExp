@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CaptchaSegment/segment_synthesis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaptchaSegment/net_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaSegment/image_segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/image_segment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaSegment/segment_cfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/segment_cfs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaSegment/segment_drop.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/segment_drop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaSegment/segment_projection.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/segment_projection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaSegment/segment_synthesis.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/segment_synthesis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,45 +18,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_drop.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-915">
-              <caret line="109" column="28" lean-forward="true" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
-              <folding>
-                <element signature="n#!!doc" />
-                <element signature="e#160#189#0" expanded="true" />
-                <element signature="e#308#758#0" />
-                <element signature="e#343#718#0" />
-                <element signature="e#806#2954#0" />
-                <element signature="e#1015#2933#0" />
-                <element signature="e#1166#1344#0" />
-                <element signature="e#1380#1412#0" />
-                <element signature="e#1494#1545#0" />
-                <element signature="e#1583#1634#0" />
-                <element signature="e#1672#1727#0" />
-                <element signature="e#1765#1820#0" />
-                <element signature="e#1858#1909#0" />
-                <element signature="e#1947#2270#0" />
-                <element signature="e#1985#2065#0" />
-                <element signature="e#2116#2171#0" />
-                <element signature="e#2215#2270#0" />
-                <element signature="e#2404#2647#0" />
-                <element signature="e#2442#2527#0" />
-                <element signature="e#2562#2647#0" />
-                <element signature="e#2716#2770#0" />
-                <element signature="e#2815#2868#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_projection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="254" column="40" lean-forward="true" selection-start-line="254" selection-start-column="40" selection-end-line="254" selection-end-column="40" />
+            <state relative-caret-position="93">
+              <caret line="14" selection-start-line="14" selection-end-line="25" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#309#592#0" />
@@ -73,22 +42,86 @@
                 <element signature="e#1892#2768#0" />
                 <element signature="e#2110#2215#0" />
                 <element signature="e#2405#2710#0" />
-                <element signature="e#2844#3153#0" />
-                <element signature="e#2969#3115#0" />
-                <element signature="e#3041#3115#0" />
-                <element signature="e#3194#3641#0" />
-                <element signature="e#3194#3251#1" />
-                <element signature="e#3342#3577#0" />
-                <element signature="e#3707#4554#0" />
-                <element signature="e#3707#3758#1" />
-                <element signature="e#3882#3947#0" />
-                <element signature="e#4247#4535#0" />
-                <element signature="e#4405#4535#0" />
-                <element signature="e#4637#5409#0" />
-                <element signature="e#4976#5238#0" />
-                <element signature="e#5521#5657#0" />
-                <element signature="e#5575#5618#0" />
+                <element signature="e#2843#3152#0" />
+                <element signature="e#2968#3114#0" />
+                <element signature="e#3040#3114#0" />
+                <element signature="e#3193#3640#0" />
+                <element signature="e#3193#3250#1" />
+                <element signature="e#3341#3576#0" />
+                <element signature="e#3706#4553#0" />
+                <element signature="e#3706#3757#1" />
+                <element signature="e#3881#3946#0" />
+                <element signature="e#4246#4534#0" />
+                <element signature="e#4404#4534#0" />
+                <element signature="e#4636#5408#0" />
+                <element signature="e#4975#5237#0" />
+                <element signature="e#5490#5911#0" />
+                <element signature="e#5520#5656#0" />
+                <element signature="e#5574#5617#0" />
+                <element signature="e#5728#5891#0" />
                 <element signature="e#5947#6110#0" />
+                <element signature="e#6154#7381#0" />
+                <element signature="e#6970#6990#0" />
+                <element signature="e#7440#7548#0" />
+                <element signature="e#7551#7655#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#161#184#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CaptchaSegment/cfs_dropfall.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+              <folding>
+                <element signature="e#24#58#1" />
+                <element signature="e#372#780#0" />
+                <element signature="e#372#397#1" />
+                <element signature="e#918#990#1" />
+                <element signature="e#1073#1265#0" />
+                <element signature="e#2432#2537#1" />
+                <element signature="e#2709#2751#0" />
+                <element signature="e#3065#3094#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CaptchaSegment/ceshi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!doc" />
+                <element signature="e#290#618#0" />
+                <element signature="e#412#604#0" />
+                <element signature="e#454#604#0" />
+                <element signature="e#692#1003#0" />
+                <element signature="e#788#1003#0" />
+                <element signature="e#830#979#0" />
               </folding>
             </state>
           </provider>
@@ -97,10 +130,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_cfs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="170" column="15" lean-forward="true" selection-start-line="170" selection-start-column="15" selection-end-line="170" selection-end-column="15" />
+            <state relative-caret-position="1092">
+              <caret line="172" column="39" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
               <folding>
                 <element signature="n#!!doc" />
+                <element signature="e#160#183#0" expanded="true" />
                 <element signature="e#295#453#0" />
                 <element signature="e#333#436#0" />
                 <element signature="e#373#436#0" />
@@ -123,8 +157,6 @@
                 <element signature="e#2566#2598#0" />
                 <element signature="e#2641#3023#0" />
                 <element signature="e#2761#2798#0" />
-                <element signature="e#3115#3559#0" />
-                <element signature="e#3179#3541#0" />
                 <element signature="e#3611#5226#0" />
                 <element signature="e#3669#3924#0" />
                 <element signature="e#3980#4357#0" />
@@ -142,44 +174,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaptchaSegment/image_segment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="-12">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#161#184#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_synthesis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="31" column="17" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="31" selection-end-column="17" />
-              <folding>
-                <element signature="e#163#184#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding>
-                <element signature="n#!!doc" />
-                <element signature="e#290#618#0" />
-                <element signature="e#412#604#0" />
-                <element signature="e#454#604#0" />
-                <element signature="e#692#1003#0" />
-                <element signature="e#788#1003#0" />
-                <element signature="e#830#979#0" />
-                <element signature="e#1078#1520#0" />
-                <element signature="e#1214#1289#0" />
-                <element signature="e#1404#1520#0" />
-                <element signature="e#1522#1621#0" />
               </folding>
             </state>
           </provider>
@@ -205,6 +203,9 @@
       <find>find_min_point</find>
       <find>print</find>
       <find>get_tar_num</find>
+      <find>pr</find>
+      <find>+</find>
+      <find>1</find>
     </findStrings>
     <replaceStrings>
       <replace>generate_Captcha</replace>
@@ -220,10 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IdentifiNetwork/test1.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/__init__.py" />
-        <option value="$PROJECT_DIR$/CaptchaGenerate/data/labels/Reddit_labels.txt" />
-        <option value="$PROJECT_DIR$/CaptchaGenerate/data/labels/Digg_labels.txt" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/data/labels/Qq_labels.txt" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/data/labels/Sina_labels.txt" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/data/captcha/combine_A_and_B.py" />
@@ -244,11 +241,9 @@
         <option value="$PROJECT_DIR$/CaptchaGenerate/utils.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/out_utils.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/out_utils.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CaptchaSegment/cfs_update1.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/data/labels/Baidu_labels.txt" />
-        <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/captcha.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/generate_util.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" />
@@ -258,19 +253,25 @@
         <option value="$PROJECT_DIR$/CaptchaSegment/segment_image.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/filter_correct.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/cfs.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/projection_update1.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/segment_utils.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/rm_clean_pic.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/segment_pro.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/segment_drip.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/segment_cfs.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/segment_cvf_projection.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/segment_cfs_drop.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/segment_drop.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/image_segment.py" />
+        <option value="$PROJECT_DIR$/../../pro_collect/captchas/cnn/get_image_and_labels.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/rename_net.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/segment_utils.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/segment_projection.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/segment_synthesis.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/ceshi2.py" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/segment_cfs.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/image_segment.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/ceshi.py" />
       </list>
     </option>
   </component>
@@ -288,6 +289,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,7 +306,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,17 +320,17 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/CaptchaSegment/data/cfs" />
-      <recent name="$PROJECT_DIR$/SegmentCaptcha" />
-      <recent name="$PROJECT_DIR$/CaptchaSegment" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CaptchaSegment" />
       <recent name="$PROJECT_DIR$/CaptchaSegment/data/cfs" />
       <recent name="$PROJECT_DIR$/CaptchaSegment/data" />
       <recent name="$PROJECT_DIR$/CaptchaGenerate/data/bg" />
       <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/Reddit" />
-      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/Digg" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CaptchaSegment/data/cfs" />
+      <recent name="$PROJECT_DIR$/SegmentCaptcha" />
+      <recent name="$PROJECT_DIR$/CaptchaSegment" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -344,8 +345,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.segment_image">
-    <configuration name="segment_cfs_drop" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ceshi">
+    <configuration name="ceshi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -357,7 +358,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaSegment/segment_synthesis.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaSegment/ceshi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -366,7 +367,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="segment_cvf_projection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ceshi2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -378,7 +379,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaSegment/segment_cvf_projection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaSegment/ceshi2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -387,28 +388,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="segment_drop" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MasterExp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CaptchaSegment" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaSegment/segment_drop.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="segment_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="image_segment" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -429,7 +409,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="segment_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="net_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -441,7 +421,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaSegment/segment_utils.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="segment_cfs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MasterExp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CaptchaSegment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaSegment/segment_cfs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -451,19 +452,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.segment_image" />
-      <item itemvalue="Python.segment_drop" />
-      <item itemvalue="Python.segment_cfs_drop" />
-      <item itemvalue="Python.segment_cvf_projection" />
-      <item itemvalue="Python.segment_utils" />
+      <item itemvalue="Python.ceshi" />
+      <item itemvalue="Python.net_data" />
+      <item itemvalue="Python.ceshi2" />
+      <item itemvalue="Python.segment_cfs" />
+      <item itemvalue="Python.image_segment" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.segment_image" />
-        <item itemvalue="Python.segment_cfs_drop" />
-        <item itemvalue="Python.segment_utils" />
-        <item itemvalue="Python.segment_cvf_projection" />
-        <item itemvalue="Python.segment_drop" />
+        <item itemvalue="Python.ceshi" />
+        <item itemvalue="Python.net_data" />
+        <item itemvalue="Python.image_segment" />
+        <item itemvalue="Python.segment_cfs" />
+        <item itemvalue="Python.ceshi2" />
       </list>
     </recent_temporary>
   </component>
@@ -499,7 +500,7 @@
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.4994726" visible="true" weight="0.32821077" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32821077" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.22612514" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.3600439" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50052744" side_tool="true" weight="0.32821077" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.32930845" />
@@ -522,392 +523,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/PIL/Image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="791" column="36" selection-start-line="791" selection-start-column="36" selection-end-line="791" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#722#769#0" expanded="true" />
-            <element signature="e#906#910#0" />
-            <element signature="e#955#1074#0" />
-            <element signature="e#1015#1074#0" />
-            <element signature="e#1205#1759#0" />
-            <element signature="e#1205#1269#0" />
-            <element signature="e#1640#1759#0" />
-            <element signature="e#1658#1758#0" />
-            <element signature="e#1790#3186#0" />
-            <element signature="e#1951#2250#0" />
-            <element signature="e#1951#2007#0" />
-            <element signature="e#2128#2208#0" />
-            <element signature="e#2415#2714#0" />
-            <element signature="e#2415#2459#0" />
-            <element signature="e#2535#2672#0" />
-            <element signature="e#2779#3075#0" />
-            <element signature="e#2779#2823#0" />
-            <element signature="e#2899#3033#0" />
-            <element signature="e#3080#3149#0" />
-            <element signature="e#3237#3282#0" />
-            <element signature="e#3590#3621#0" />
-            <element signature="e#3689#3931#0" />
-            <element signature="e#3689#3903#1" />
-            <element signature="e#3934#3935#0" />
-            <element signature="e#4637#4785#0" />
-            <element signature="e#4788#4858#0" />
-            <element signature="e#4969#5039#0" />
-            <element signature="e#5087#5854#0" />
-            <element signature="e#5093#5152#0" />
-            <element signature="e#5702#5768#0" />
-            <element signature="e#5942#6735#0" />
-            <element signature="e#6768#6928#0" />
-            <element signature="e#6965#7034#0" />
-            <element signature="e#7195#7538#0" />
-            <element signature="e#7195#7494#1" />
-            <element signature="e#7568#7885#0" />
-            <element signature="e#7568#7841#1" />
-            <element signature="e#7920#8438#0" />
-            <element signature="e#7920#8397#1" />
-            <element signature="e#8469#8727#0" />
-            <element signature="e#8469#8681#1" />
-            <element signature="e#8730#8800#0" />
-            <element signature="e#8850#9479#0" />
-            <element signature="e#9381#9389#0" />
-            <element signature="e#9498#10016#0" />
-            <element signature="e#9498#9623#1" />
-            <element signature="e#9729#9952#0" />
-            <element signature="e#9746#9849#0" />
-            <element signature="e#9983#10016#0" />
-            <element signature="e#10019#10089#0" />
-            <element signature="e#10214#10731#0" />
-            <element signature="e#10350#10426#0" />
-            <element signature="e#10478#10639#0" />
-            <element signature="e#10792#11309#0" />
-            <element signature="e#10928#11004#0" />
-            <element signature="e#11056#11217#0" />
-            <element signature="e#11312#11382#0" />
-            <element signature="e#11438#11490#0" />
-            <element signature="e#11515#11755#0" />
-            <element signature="e#11549#11565#0" />
-            <element signature="e#11605#11660#0" />
-            <element signature="e#11700#11755#0" />
-            <element signature="e#11789#12434#0" />
-            <element signature="e#11853#12094#0" />
-            <element signature="e#12147#12356#0" />
-            <element signature="e#12437#12507#0" />
-            <element signature="e#12559#12889#1" />
-            <element signature="e#13016#13335#0" />
-            <element signature="e#13016#13061#0" />
-            <element signature="e#13380#13399#0" />
-            <element signature="e#13445#13464#0" />
-            <element signature="e#13498#13851#0" />
-            <element signature="e#13716#13796#0" />
-            <element signature="e#13916#13927#0" />
-            <element signature="e#13968#13980#0" />
-            <element signature="e#14011#14823#0" />
-            <element signature="e#14011#14364#1" />
-            <element signature="e#14390#14432#0" />
-            <element signature="e#14598#14653#0" />
-            <element signature="e#14869#15071#0" />
-            <element signature="e#14900#15071#0" />
-            <element signature="e#15102#15201#0" />
-            <element signature="e#15256#15687#0" />
-            <element signature="e#15376#15434#0" />
-            <element signature="e#15559#15667#0" />
-            <element signature="e#15726#16136#0" />
-            <element signature="e#16175#16217#0" />
-            <element signature="e#16251#16454#0" />
-            <element signature="e#16317#16440#0" />
-            <element signature="e#16490#16696#0" />
-            <element signature="e#16490#16587#1" />
-            <element signature="e#16755#17231#0" />
-            <element signature="e#16982#17157#0" />
-            <element signature="e#16982#17036#0" />
-            <element signature="e#17269#17405#0" />
-            <element signature="e#17276#17405#0" />
-            <element signature="e#17450#17764#0" />
-            <element signature="e#17824#19011#0" />
-            <element signature="e#17824#18341#1" />
-            <element signature="e#18802#18896#0" />
-            <element signature="e#19058#19183#0" />
-            <element signature="e#19084#19182#0" />
-            <element signature="e#19231#19946#0" />
-            <element signature="e#19231#19538#1" />
-            <element signature="e#19693#19945#0" />
-            <element signature="e#20014#20780#0" />
-            <element signature="e#20014#20251#1" />
-            <element signature="e#20829#20958#0" />
-            <element signature="e#20855#20957#0" />
-            <element signature="e#22403#22793#0" />
-            <element signature="e#22403#22780#1" />
-            <element signature="e#22904#29801#0" />
-            <element signature="e#22904#24643#1" />
-            <element signature="e#24678#24949#0" />
-            <element signature="e#24752#24896#0" />
-            <element signature="e#25003#25205#0" />
-            <element signature="e#25489#27763#0" />
-            <element signature="e#25554#25771#0" />
-            <element signature="e#25554#25610#0" />
-            <element signature="e#25867#27295#0" />
-            <element signature="e#25958#26255#0" />
-            <element signature="e#26298#27295#0" />
-            <element signature="e#26298#26331#0" />
-            <element signature="e#26516#26885#0" />
-            <element signature="e#26626#26885#0" />
-            <element signature="e#26763#26885#0" />
-            <element signature="e#26780#26884#0" />
-            <element signature="e#27086#27243#0" />
-            <element signature="e#27086#27140#0" />
-            <element signature="e#27367#27763#0" />
-            <element signature="e#27655#27763#0" />
-            <element signature="e#27825#28719#0" />
-            <element signature="e#28046#28224#0" />
-            <element signature="e#28046#28108#0" />
-            <element signature="e#28274#28696#0" />
-            <element signature="e#28397#28696#0" />
-            <element signature="e#28397#28456#0" />
-            <element signature="e#28916#29166#0" />
-            <element signature="e#28937#29082#0" />
-            <element signature="e#29235#29343#0" />
-            <element signature="e#29385#29779#0" />
-            <element signature="e#29424#29710#0" />
-            <element signature="e#29553#29710#0" />
-            <element signature="e#29884#31332#0" />
-            <element signature="e#29884#30347#1" />
-            <element signature="e#30409#30506#0" />
-            <element signature="e#30577#30794#0" />
-            <element signature="e#30828#31264#0" />
-            <element signature="e#31061#31178#0" />
-            <element signature="e#31362#31667#0" />
-            <element signature="e#31362#31606#1" />
-            <element signature="e#31728#32411#0" />
-            <element signature="e#31728#32144#1" />
-            <element signature="e#32454#33050#0" />
-            <element signature="e#32454#33037#1" />
-            <element signature="e#33106#33237#0" />
-            <element signature="e#33277#34103#0" />
-            <element signature="e#33277#33518#1" />
-            <element signature="e#33678#33792#0" />
-            <element signature="e#34137#34421#0" />
-            <element signature="e#34137#34371#1" />
-            <element signature="e#34454#34810#0" />
-            <element signature="e#34454#34756#1" />
-            <element signature="e#34860#35504#0" />
-            <element signature="e#34860#35153#1" />
-            <element signature="e#35228#35460#0" />
-            <element signature="e#35322#35372#0" />
-            <element signature="e#36464#37017#0" />
-            <element signature="e#36464#36764#1" />
-            <element signature="e#36828#36981#0" />
-            <element signature="e#37048#37216#0" />
-            <element signature="e#37048#37168#1" />
-            <element signature="e#37252#37675#0" />
-            <element signature="e#37252#37418#1" />
-            <element signature="e#37465#37610#0" />
-            <element signature="e#37713#38076#0" />
-            <element signature="e#37713#37947#1" />
-            <element signature="e#38115#38419#0" />
-            <element signature="e#38115#38305#1" />
-            <element signature="e#38479#39589#0" />
-            <element signature="e#38479#39281#1" />
-            <element signature="e#39331#39396#0" />
-            <element signature="e#39445#39554#0" />
-            <element signature="e#39644#39777#0" />
-            <element signature="e#39670#39776#0" />
-            <element signature="e#39833#43018#0" />
-            <element signature="e#39833#41748#1" />
-            <element signature="e#41808#41890#0" />
-            <element signature="e#41980#42404#0" />
-            <element signature="e#42201#42352#0" />
-            <element signature="e#42447#42523#0" />
-            <element signature="e#42567#42811#0" />
-            <element signature="e#42630#42788#0" />
-            <element signature="e#42708#42788#0" />
-            <element signature="e#42914#42969#0" />
-            <element signature="e#43065#44784#0" />
-            <element signature="e#43065#43838#1" />
-            <element signature="e#43982#44548#0" />
-            <element signature="e#44092#44422#0" />
-            <element signature="e#44092#44148#0" />
-            <element signature="e#44591#44732#0" />
-            <element signature="e#44825#46707#0" />
-            <element signature="e#44825#45209#1" />
-            <element signature="e#45339#46031#0" />
-            <element signature="e#45423#45933#0" />
-            <element signature="e#45500#45562#0" />
-            <element signature="e#45636#45892#0" />
-            <element signature="e#46163#46378#0" />
-            <element signature="e#46405#46666#0" />
-            <element signature="e#46550#46625#0" />
-            <element signature="e#46769#47423#0" />
-            <element signature="e#46769#47305#1" />
-            <element signature="e#47480#48580#0" />
-            <element signature="e#47480#47915#1" />
-            <element signature="e#48212#48448#0" />
-            <element signature="e#48260#48394#0" />
-            <element signature="e#48625#49484#0" />
-            <element signature="e#48625#49232#1" />
-            <element signature="e#49292#49361#0" />
-            <element signature="e#49554#52459#0" />
-            <element signature="e#49554#49926#1" />
-            <element signature="e#50110#50292#0" />
-            <element signature="e#50483#50588#0" />
-            <element signature="e#50598#50657#0" />
-            <element signature="e#51741#51774#0" />
-            <element signature="e#52533#53805#0" />
-            <element signature="e#52533#53185#1" />
-            <element signature="e#53916#58251#0" />
-            <element signature="e#53916#55256#1" />
-            <element signature="e#55297#55352#0" />
-            <element signature="e#55449#55755#0" />
-            <element signature="e#55765#55826#0" />
-            <element signature="e#56896#57053#0" />
-            <element signature="e#57104#57179#0" />
-            <element signature="e#57419#58186#0" />
-            <element signature="e#57557#57645#0" />
-            <element signature="e#57785#57851#0" />
-            <element signature="e#58308#61282#0" />
-            <element signature="e#58308#59727#1" />
-            <element signature="e#59810#59850#0" />
-            <element signature="e#59904#60031#0" />
-            <element signature="e#59982#60031#0" />
-            <element signature="e#60113#60185#0" />
-            <element signature="e#60513#60721#0" />
-            <element signature="e#60949#61114#0" />
-            <element signature="e#60949#61001#0" />
-            <element signature="e#61203#61282#0" />
-            <element signature="e#61319#62000#0" />
-            <element signature="e#61319#61911#1" />
-            <element signature="e#62056#62834#0" />
-            <element signature="e#62056#62783#1" />
-            <element signature="e#62865#63455#0" />
-            <element signature="e#62865#63209#1" />
-            <element signature="e#63320#63429#0" />
-            <element signature="e#63485#63647#0" />
-            <element signature="e#63485#63630#1" />
-            <element signature="e#63706#65329#0" />
-            <element signature="e#63706#64797#1" />
-            <element signature="e#64892#64953#0" />
-            <element signature="e#64990#65051#0" />
-            <element signature="e#65335#65400#0" />
-            <element signature="e#65552#67764#0" />
-            <element signature="e#65552#66798#1" />
-            <element signature="e#66842#66944#0" />
-            <element signature="e#66990#67096#0" />
-            <element signature="e#67282#67372#0" />
-            <element signature="e#67531#67653#0" />
-            <element signature="e#67877#69217#0" />
-            <element signature="e#68028#68243#0" />
-            <element signature="e#68352#68839#0" />
-            <element signature="e#68352#68406#0" />
-            <element signature="e#68652#68838#0" />
-            <element signature="e#69260#69744#0" />
-            <element signature="e#69260#69671#1" />
-            <element signature="e#69793#69983#0" />
-            <element signature="e#69793#69905#1" />
-            <element signature="e#70017#70229#0" />
-            <element signature="e#70264#70478#0" />
-            <element signature="e#70481#70551#0" />
-            <element signature="e#70611#70681#0" />
-            <element signature="e#70725#70802#0" />
-            <element signature="e#70805#70875#0" />
-            <element signature="e#70922#71009#0" />
-            <element signature="e#71039#71503#0" />
-            <element signature="e#71039#71215#1" />
-            <element signature="e#71540#72532#0" />
-            <element signature="e#71540#72211#1" />
-            <element signature="e#72266#72334#0" />
-            <element signature="e#72372#72477#0" />
-            <element signature="e#72599#73805#0" />
-            <element signature="e#72599#73509#1" />
-            <element signature="e#73841#73968#0" />
-            <element signature="e#74036#76410#0" />
-            <element signature="e#74036#75550#1" />
-            <element signature="e#75737#76350#0" />
-            <element signature="e#75764#76115#0" />
-            <element signature="e#75795#75983#0" />
-            <element signature="e#76161#76350#0" />
-            <element signature="e#76448#77761#0" />
-            <element signature="e#76448#76886#1" />
-            <element signature="e#77036#77267#0" />
-            <element signature="e#77053#77153#0" />
-            <element signature="e#77191#77267#0" />
-            <element signature="e#77593#77699#0" />
-            <element signature="e#77788#77994#0" />
-            <element signature="e#78022#78230#0" />
-            <element signature="e#78254#79027#0" />
-            <element signature="e#78260#78295#0" />
-            <element signature="e#79200#79533#0" />
-            <element signature="e#79319#79533#0" />
-            <element signature="e#79346#79453#0" />
-            <element signature="e#79564#81962#0" />
-            <element signature="e#79564#80366#1" />
-            <element signature="e#80538#80706#0" />
-            <element signature="e#80555#80661#0" />
-            <element signature="e#80733#80795#0" />
-            <element signature="e#80887#80941#0" />
-            <element signature="e#81034#81617#0" />
-            <element signature="e#81059#81597#0" />
-            <element signature="e#81080#81317#0" />
-            <element signature="e#81175#81317#0" />
-            <element signature="e#81405#81597#0" />
-            <element signature="e#81405#81459#0" />
-            <element signature="e#81689#81749#0" />
-            <element signature="e#81770#81819#0" />
-            <element signature="e#81964#81965#0" />
-            <element signature="e#82023#82367#0" />
-            <element signature="e#82023#82278#1" />
-            <element signature="e#82402#83146#0" />
-            <element signature="e#82402#83060#1" />
-            <element signature="e#83190#83634#0" />
-            <element signature="e#83190#83554#1" />
-            <element signature="e#83665#84185#0" />
-            <element signature="e#83665#84152#1" />
-            <element signature="e#84216#85056#0" />
-            <element signature="e#84216#84587#1" />
-            <element signature="e#84728#84889#0" />
-            <element signature="e#84977#85027#0" />
-            <element signature="e#85059#85129#0" />
-            <element signature="e#85198#85578#0" />
-            <element signature="e#85198#85509#1" />
-            <element signature="e#85618#85856#0" />
-            <element signature="e#85618#85824#1" />
-            <element signature="e#85894#86137#0" />
-            <element signature="e#85894#86107#1" />
-            <element signature="e#86179#86471#0" />
-            <element signature="e#86179#86437#1" />
-            <element signature="e#86517#86768#0" />
-            <element signature="e#86517#86722#1" />
-            <element signature="e#86804#86971#0" />
-            <element signature="e#86804#86907#1" />
-            <element signature="e#87014#87338#0" />
-            <element signature="e#87014#87309#1" />
-            <element signature="e#87382#87690#0" />
-            <element signature="e#87382#87661#1" />
-            <element signature="e#87693#87763#0" />
-            <element signature="e#87854#87911#0" />
-            <element signature="e#87961#88028#0" />
-            <element signature="e#88031#88101#0" />
-            <element signature="e#88163#88496#0" />
-            <element signature="e#88163#88425#1" />
-            <element signature="e#88534#88783#0" />
-            <element signature="e#88534#88727#1" />
-            <element signature="e#88817#88983#0" />
-            <element signature="e#88817#88931#1" />
-            <element signature="e#89017#89184#0" />
-            <element signature="e#89017#89132#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/data/cfs/0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/data-1.png" />
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/in_utils.py" />
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/Baidu_off_5000_labels.txt" />
-    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/out_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -989,82 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding>
-            <element signature="e#182#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#160#173#0" expanded="true" />
-            <element signature="e#365#699#0" />
-            <element signature="e#772#974#0" />
-            <element signature="e#871#955#0" />
-            <element signature="e#1024#1151#0" />
-            <element signature="e#1223#2564#0" />
-            <element signature="e#1310#2218#0" />
-            <element signature="e#1782#1919#0" />
-            <element signature="e#2353#2532#0" />
-            <element signature="e#2634#3143#0" />
-            <element signature="e#2701#2831#0" />
-            <element signature="e#2942#3111#0" />
-            <element signature="e#3221#3581#0" />
-            <element signature="e#3377#3551#0" />
-            <element signature="e#3665#4385#0" />
-            <element signature="e#3665#3839#1" />
-            <element signature="e#4038#4149#0" />
-            <element signature="e#4191#4321#0" />
-            <element signature="e#4469#5214#0" />
-            <element signature="e#4469#4643#1" />
-            <element signature="e#4842#4976#0" />
-            <element signature="e#5018#5150#0" />
-            <element signature="e#5320#5396#0" />
-            <element signature="e#5399#5435#0" />
-            <element signature="e#5547#6271#0" />
-            <element signature="e#5700#5963#0" />
-            <element signature="e#5982#6247#0" />
-            <element signature="e#6334#6530#0" />
-            <element signature="e#6532#6589#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#161#174#0" expanded="true" />
-            <element signature="e#341#1452#0" />
-            <element signature="e#1048#1452#0" />
-            <element signature="e#1499#2776#0" />
-            <element signature="e#2202#2776#0" />
-            <element signature="e#2821#4122#0" />
-            <element signature="e#3547#4122#0" />
-            <element signature="e#4163#5263#0" />
-            <element signature="e#4886#5263#0" />
-            <element signature="e#5307#6447#0" />
-            <element signature="e#6052#6447#0" />
-            <element signature="e#6489#7576#0" />
-            <element signature="e#7227#7576#0" />
-            <element signature="e#7619#8745#0" />
-            <element signature="e#8348#8745#0" />
-            <element signature="e#8785#9992#0" />
-            <element signature="e#9595#9992#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/label.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1105,13 +644,6 @@
             <element signature="e#4880#5041#0" />
             <element signature="e#5060#5313#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1156,18 +688,6 @@
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/cfs_var.py" />
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/image_cut.py" />
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/projection_update1.py" />
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/ceshi.py" />
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#309#385#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/shutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -1179,81 +699,49 @@
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/image_resize.py" />
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/rm_clean_pic.py" />
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/filter_correct.py" />
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_drip.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_drip.py" />
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_cvf_projection.py" />
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_labels.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="169" column="26" lean-forward="true" selection-start-line="169" selection-start-column="26" selection-end-line="169" selection-end-column="26" />
+        <state>
+          <caret column="162" lean-forward="true" selection-start-column="162" selection-end-column="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../pro_collect/captchas/cnn/get_image_and_labels.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
           <folding>
-            <element signature="e#24#59#1" />
-            <element signature="e#87#100#0" expanded="true" />
-            <element signature="e#243#693#0" />
-            <element signature="e#278#653#0" />
-            <element signature="e#950#2868#0" />
-            <element signature="e#1429#1480#0" />
-            <element signature="e#1518#1569#0" />
-            <element signature="e#1607#1662#0" />
-            <element signature="e#1700#1755#0" />
-            <element signature="e#1793#1844#0" />
-            <element signature="e#1882#2205#0" />
-            <element signature="e#1920#2000#0" />
-            <element signature="e#2051#2106#0" />
-            <element signature="e#2150#2205#0" />
-            <element signature="e#2339#2582#0" />
-            <element signature="e#2377#2462#0" />
-            <element signature="e#2497#2582#0" />
-            <element signature="e#2651#2705#0" />
-            <element signature="e#2750#2803#0" />
-            <element signature="e#2957#3906#0" />
-            <element signature="e#2957#3047#1" />
-            <element signature="e#3231#3392#0" />
-            <element signature="e#3561#3889#0" />
-            <element signature="e#3666#3889#0" />
-            <element signature="e#3712#3889#0" />
-            <element signature="e#3962#4092#1" />
-            <element signature="e#4555#4638#0" />
-            <element signature="e#4679#4793#0" />
+            <element signature="e#23#193#1" />
+            <element signature="e#1054#1870#0" />
+            <element signature="e#1054#1167#1" />
+            <element signature="e#1259#1870#0" />
+            <element signature="e#1541#1840#0" />
+            <element signature="e#1793#1840#0" />
+            <element signature="e#1911#2543#0" />
+            <element signature="e#1911#2015#1" />
+            <element signature="e#2068#2543#0" />
+            <element signature="e#2068#2126#0" />
+            <element signature="e#2581#3685#0" />
+            <element signature="e#2581#2704#1" />
+            <element signature="e#2822#3375#0" />
+            <element signature="e#2969#3375#0" />
+            <element signature="e#3079#3292#0" />
+            <element signature="e#3463#3637#0" />
+            <element signature="e#3734#3898#0" />
+            <element signature="e#3734#3829#1" />
+            <element signature="e#3978#4054#1" />
+            <element signature="e#4180#4234#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/cfs_dropfall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding>
-            <element signature="e#24#58#1" />
-            <element signature="e#372#780#0" />
-            <element signature="e#372#397#1" />
-            <element signature="e#918#990#1" />
-            <element signature="e#1073#1265#0" />
-            <element signature="e#2432#2537#1" />
-            <element signature="e#2709#2751#0" />
-            <element signature="e#3065#3094#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_cvf_projection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/image_segment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#161#184#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/rename_net.py" />
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_drop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-915">
-          <caret line="109" column="28" lean-forward="true" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+        <state relative-caret-position="135">
+          <caret line="159" column="17" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#160#189#0" expanded="true" />
@@ -1281,10 +769,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/ceshi2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#160#173#0" expanded="true" />
+            <element signature="e#365#699#0" />
+            <element signature="e#772#974#0" />
+            <element signature="e#871#955#0" />
+            <element signature="e#1024#1151#0" />
+            <element signature="e#1223#2564#0" />
+            <element signature="e#1310#2218#0" />
+            <element signature="e#1782#1919#0" />
+            <element signature="e#2353#2532#0" />
+            <element signature="e#2634#3143#0" />
+            <element signature="e#2701#2831#0" />
+            <element signature="e#2942#3111#0" />
+            <element signature="e#3221#3581#0" />
+            <element signature="e#3377#3551#0" />
+            <element signature="e#3665#4385#0" />
+            <element signature="e#3665#3839#1" />
+            <element signature="e#4038#4149#0" />
+            <element signature="e#4191#4321#0" />
+            <element signature="e#4469#5214#0" />
+            <element signature="e#4469#4643#1" />
+            <element signature="e#4842#4976#0" />
+            <element signature="e#5018#5150#0" />
+            <element signature="e#6532#6589#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#182#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#1499#2776#0" />
+            <element signature="e#2202#2776#0" />
+            <element signature="e#2821#4122#0" />
+            <element signature="e#3547#4122#0" />
+            <element signature="e#4163#5263#0" />
+            <element signature="e#4886#5263#0" />
+            <element signature="e#5307#6447#0" />
+            <element signature="e#6052#6447#0" />
+            <element signature="e#6489#7576#0" />
+            <element signature="e#7227#7576#0" />
+            <element signature="e#7619#8745#0" />
+            <element signature="e#8348#8745#0" />
+            <element signature="e#8785#9992#0" />
+            <element signature="e#9595#9992#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_synthesis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#163#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1352" selection-start-line="1352" selection-end-line="1352" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#490#566#0" />
+            <element signature="e#569#605#0" />
+            <element signature="e#870#1133#0" />
+            <element signature="e#425#479#0" />
+            <element signature="e#521#564#0" />
+            <element signature="e#639#703#0" />
+            <element signature="e#765#914#0" />
+            <element signature="e#839#869#0" />
+            <element signature="e#955#1014#0" />
+            <element signature="e#1057#1095#0" />
+            <element signature="e#1138#1180#0" />
+            <element signature="e#1239#1338#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/image_segment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#161#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="462">
+          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#290#618#0" />
@@ -1293,62 +911,17 @@
             <element signature="e#692#1003#0" />
             <element signature="e#788#1003#0" />
             <element signature="e#830#979#0" />
-            <element signature="e#1078#1520#0" />
-            <element signature="e#1214#1289#0" />
-            <element signature="e#1404#1520#0" />
-            <element signature="e#1522#1621#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_projection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="254" column="40" lean-forward="true" selection-start-line="254" selection-start-column="40" selection-end-line="254" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#309#592#0" />
-            <element signature="e#425#574#0" />
-            <element signature="e#485#545#0" />
-            <element signature="e#653#936#0" />
-            <element signature="e#769#918#0" />
-            <element signature="e#829#889#0" />
-            <element signature="e#939#952#0" />
-            <element signature="e#1063#1440#0" />
-            <element signature="e#1172#1363#0" />
-            <element signature="e#1233#1326#0" />
-            <element signature="e#1498#1691#0" />
-            <element signature="e#1570#1671#0" />
-            <element signature="e#1757#1830#0" />
-            <element signature="e#1892#2768#0" />
-            <element signature="e#2110#2215#0" />
-            <element signature="e#2405#2710#0" />
-            <element signature="e#2844#3153#0" />
-            <element signature="e#2969#3115#0" />
-            <element signature="e#3041#3115#0" />
-            <element signature="e#3194#3641#0" />
-            <element signature="e#3194#3251#1" />
-            <element signature="e#3342#3577#0" />
-            <element signature="e#3707#4554#0" />
-            <element signature="e#3707#3758#1" />
-            <element signature="e#3882#3947#0" />
-            <element signature="e#4247#4535#0" />
-            <element signature="e#4405#4535#0" />
-            <element signature="e#4637#5409#0" />
-            <element signature="e#4976#5238#0" />
-            <element signature="e#5521#5657#0" />
-            <element signature="e#5575#5618#0" />
-            <element signature="e#5947#6110#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_cfs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="170" column="15" lean-forward="true" selection-start-line="170" selection-start-column="15" selection-end-line="170" selection-end-column="15" />
+        <state relative-caret-position="1092">
+          <caret line="172" column="39" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
           <folding>
             <element signature="n#!!doc" />
+            <element signature="e#160#183#0" expanded="true" />
             <element signature="e#295#453#0" />
             <element signature="e#333#436#0" />
             <element signature="e#373#436#0" />
@@ -1371,8 +944,6 @@
             <element signature="e#2566#2598#0" />
             <element signature="e#2641#3023#0" />
             <element signature="e#2761#2798#0" />
-            <element signature="e#3115#3559#0" />
-            <element signature="e#3179#3541#0" />
             <element signature="e#3611#5226#0" />
             <element signature="e#3669#3924#0" />
             <element signature="e#3980#4357#0" />
@@ -1386,12 +957,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_synthesis.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_projection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="31" column="17" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="31" selection-end-column="17" />
+        <state relative-caret-position="93">
+          <caret line="14" selection-start-line="14" selection-end-line="25" />
           <folding>
-            <element signature="e#163#184#0" expanded="true" />
+            <element signature="n#!!doc" />
+            <element signature="e#309#592#0" />
+            <element signature="e#425#574#0" />
+            <element signature="e#485#545#0" />
+            <element signature="e#653#936#0" />
+            <element signature="e#769#918#0" />
+            <element signature="e#829#889#0" />
+            <element signature="e#939#952#0" />
+            <element signature="e#1063#1440#0" />
+            <element signature="e#1172#1363#0" />
+            <element signature="e#1233#1326#0" />
+            <element signature="e#1498#1691#0" />
+            <element signature="e#1570#1671#0" />
+            <element signature="e#1757#1830#0" />
+            <element signature="e#1892#2768#0" />
+            <element signature="e#2110#2215#0" />
+            <element signature="e#2405#2710#0" />
+            <element signature="e#2843#3152#0" />
+            <element signature="e#2968#3114#0" />
+            <element signature="e#3040#3114#0" />
+            <element signature="e#3193#3640#0" />
+            <element signature="e#3193#3250#1" />
+            <element signature="e#3341#3576#0" />
+            <element signature="e#3706#4553#0" />
+            <element signature="e#3706#3757#1" />
+            <element signature="e#3881#3946#0" />
+            <element signature="e#4246#4534#0" />
+            <element signature="e#4404#4534#0" />
+            <element signature="e#4636#5408#0" />
+            <element signature="e#4975#5237#0" />
+            <element signature="e#5490#5911#0" />
+            <element signature="e#5520#5656#0" />
+            <element signature="e#5574#5617#0" />
+            <element signature="e#5728#5891#0" />
+            <element signature="e#5947#6110#0" />
+            <element signature="e#6154#7381#0" />
+            <element signature="e#6970#6990#0" />
+            <element signature="e#7440#7548#0" />
+            <element signature="e#7551#7655#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/cfs_dropfall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding>
+            <element signature="e#24#58#1" />
+            <element signature="e#372#780#0" />
+            <element signature="e#372#397#1" />
+            <element signature="e#918#990#1" />
+            <element signature="e#1073#1265#0" />
+            <element signature="e#2432#2537#1" />
+            <element signature="e#2709#2751#0" />
+            <element signature="e#3065#3094#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/ceshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#161#184#0" expanded="true" />
           </folding>
         </state>
       </provider>

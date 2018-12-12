@@ -199,10 +199,9 @@ def re_segment(edge, edge_segments, pre_conditions):
 
     new_edge = []
     for i, (start, end) in enumerate(edge):
-        width = end - start
+        width = end - start+1
         # 根据先验条件得到预分割的份数。
         tar_num = get_tar_num(width)
-
         new_edge = new_edge + get_sub_edge(edge[i], edge_segments[i], tar_num)
     return new_edge
 
@@ -255,7 +254,8 @@ def projection(image, pre_conditions=(30, 60, 90)):
     images = get_images(new_image, edge)
     return images
 
-# file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images/0.png'
-# images = projection(file_path, pre_conditions=[67, 106, 134])
+
+# file_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/results_85/images_cfs/82-1.jpg'
+# images = projection(Image.open(file_path), pre_conditions=[67, 106, 134])
 # for each in images:
 #     each.show()
