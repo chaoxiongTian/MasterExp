@@ -67,7 +67,7 @@ def get_len_max_image(images):
             max_w = images[i].size[0]
             max_index = i
         elif images[i].size[0] == max_w:
-            print(get_pix(images[i]), get_pix(images[max_index]))
+            # print(get_pix(images[i]), get_pix(images[max_index]))
             if get_pix(images[i]) > get_pix(images[max_index]):
                 max_index = i
     return max_index
