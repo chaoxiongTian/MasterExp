@@ -35,7 +35,7 @@ class PreNet(object):
         self.model_name = options.model_name  # 模型的名字，对应训练样本文件夹的名字，最后文件保存的文件名
         self.y_dim = return_y_dim(os.path.join(os.path.dirname(__file__),
                                                options.data_set_folder,
-                                               options.model_name))  # TODO:根据训练数据文件夹返回需要的类别
+                                               options.model_name))
         print('y_dim', self.y_dim)
         self.data_loader = return_loader(options)  # 返回data_loader
 
@@ -92,6 +92,7 @@ class PreNet(object):
         print("=> saved checkpoint '{}'".format(file_path))
 
     def train(self):
+        print(self.model_name)
         for epoch_idx in range(self.epoch):
             for batch_idx, (batch_images, batch_labels) in enumerate(self.data_loader['train']):
                 x = Variable(cuda(batch_images, self.cuda))
@@ -106,9 +107,10 @@ class PreNet(object):
                 cost.backward()
                 self.optim.step()
 
-                if batch_idx % 100 == 0:
-                    print(self.model_name)
-                    print('Epoch:', epoch_idx, 'iter:', batch_idx * self.batch_size, '| train loss: %.4f' % cost.item(),
+                if batch_idx % 4 == 0:
+                    print('Epoch:', epoch_idx,
+                          '| iter:', batch_idx * self.batch_size,
+                          '| train loss: %.4f' % cost.item(),
                           '| train accuracy: %.3f' % accuracy)
             self.test()
 
@@ -128,10 +130,14 @@ class PreNet(object):
             total += x.size(0)
         accuracy = accuracy / total
         cost /= total
-        print('test loss: %.4f' % cost, '| test accuracy: %.3f' % accuracy)
+
         if accuracy >= self.bast_accuracy and self.mode == 'train':
             self.bast_accuracy = accuracy
             self.save_checkpoint('best_acc.tar')
+
+        print('test loss: %.4f' % cost,
+              '| test accuracy: %.3f' % accuracy,
+              '| bast accuracy: %.3f\n' % self.bast_accuracy)
 
 
 if __name__ == '__main__':
