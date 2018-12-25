@@ -30,8 +30,11 @@ class PreNet(object):
         self.batch_size = options.batch_size
         self.lr = options.lr
         self.mode = options.mode
-        self.y_dim = options.y_dim  # TODO:根据训练数据文件夹返回需要的类别
         self.model_name = options.model_name  # 模型的名字，对应训练样本文件夹的名字，最后文件保存的文件名
+        self.y_dim = return_y_dim(os.path.join(os.path.dirname(__file__),
+                                               options.data_set_folder,
+                                               options.model_name))  # TODO:根据训练数据文件夹返回需要的类别
+        print('y_dim', self.y_dim)
         self.data_loader = return_loader(options)  # 返回data_loader
 
         # 设置模型保存的位置

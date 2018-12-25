@@ -32,6 +32,11 @@ def return_loader(options):
     return loader
 
 
+# 返回 预分类的类别
+def return_y_dim(folder):
+    return len(os.listdir(os.path.join(folder, 'train')))
+
+
 # 一般的tensor转为cuda的tensor
 def cuda(tensor, is_cuda):
     if is_cuda:
