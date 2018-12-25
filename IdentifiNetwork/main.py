@@ -21,6 +21,8 @@ opt = Options().parse()
 
 
 # 网络的预处理类，包括定义网络的类型，网络的参数等等。
+
+
 class PreNet(object):
     def __init__(self, options):
         self.opt = options  # 保存参数
@@ -45,14 +47,16 @@ class PreNet(object):
         self.model_init()
 
         self.load_ckpt = options.load_ckpt
+
+        self.bast_accuracy = 0
+
         # 没有指明调用用的模型 则调用 best_acc.tar
         if self.load_ckpt != '':
             self.load_checkpoint(self.load_ckpt)
-        self.bast_accuracy = 0
 
     def model_init(self):
         # 加载网络
-        self.net = cuda(CNN(channel=1, y_dim=10), self.cuda)
+        self.net = cuda(CNN(channel=1, y_dim=self.y_dim), self.cuda)
         # 凯明初始化
         self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
         print(self.net)
@@ -104,7 +108,7 @@ class PreNet(object):
 
                 if batch_idx % 100 == 0:
                     print(self.model_name)
-                    print('Epoch:', epoch_idx, '| train loss: %.4f' % cost.item(),
+                    print('Epoch:', epoch_idx, 'iter:', batch_idx * self.batch_size, '| train loss: %.4f' % cost.item(),
                           '| train accuracy: %.3f' % accuracy)
             self.test()
 
