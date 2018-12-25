@@ -15,12 +15,13 @@ import torch.utils.data as Data
 torch.manual_seed(1)  # reproducible
 
 # 超参数
-EPOCH = 20  # train the training data n times, to save time, we just train 1 epoch
+EPOCH = 20
 BATCH_SIZE = 50
-LR = 0.001  # learning rate
+LR = 0.001
 
-train_data = datasets.ImageFolder(root=os.path.join(data_folder, 'train'), transform=transforms.ToTensor())
-test_data = datasets.ImageFolder(root=os.path.join(data_folder, 'test'), transform=transforms.ToTensor())
+transform = transforms.Compose([transforms.ToTensor(), transforms.Gray()])
+train_data = datasets.ImageFolder(root=os.path.join(data_folder, 'train'), transform=transform)
+test_data = datasets.ImageFolder(root=os.path.join(data_folder, 'test'), transform=transform)
 train_loader = Data.DataLoader(train_data, batch_size=BATCH_SIZE, shuffle=True)
 
 
@@ -33,7 +34,7 @@ def combine_tensor(data):
 
 test_x, test_y = combine_tensor(test_data)
 
-cnn = CNN(3)
+cnn = CNN()
 print(cnn)  # net architecture
 
 optimizer = torch.optim.Adam(cnn.parameters(), lr=LR)
@@ -46,7 +47,6 @@ for epoch in range(EPOCH):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-
         # 50个batch做一个测试
         if step % 50 == 0:
             test_output, last_layer = cnn(test_x)
