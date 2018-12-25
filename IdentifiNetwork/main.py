@@ -20,6 +20,7 @@ from models.nets import CNN
 opt = Options().parse()
 
 
+# 网络的预处理类，包括定义网络的类型，网络的参数等等。
 class PreNet(object):
     def __init__(self, options):
         self.opt = options  # 保存参数
