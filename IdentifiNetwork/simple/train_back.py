@@ -1,27 +1,25 @@
 # -*- coding: utf-8 -*-
-# @Time    : 18-12-19 下午10:34
+# @Time    : 18-12-25 上午11:35
 # @Author  : MaxCentaur
 # @Email   : ambition_x@163.com
-# @File    : mnist.py
+# @File    : train_back.py
 # @Software: PyCharm
 
 import torch
 import torch.nn as nn
-from IdentifiNetwork.Net import CNN
-from torchvision import datasets
-from out_utils import *
-import torch.utils.data as Data
 
-torch.manual_seed(1)  # reproducible
+from id_utils import *
+
+from models.nets import CNN
 
 # 超参数
-EPOCH = 20
+EPOCH = 50
 BATCH_SIZE = 50
 LR = 0.001
 
 transform = transforms.Compose([transforms.ToTensor(), transforms.Gray()])
-train_data = datasets.ImageFolder(root=os.path.join(data_folder, 'train'), transform=transform)
-test_data = datasets.ImageFolder(root=os.path.join(data_folder, 'test'), transform=transform)
+train_data = datasets.ImageFolder(root=os.path.join(os.path.dirname(__file__), 'data_sets', 'd_mnist', 'train'), transform=transform)
+test_data = datasets.ImageFolder(root=os.path.join(os.path.dirname(__file__), 'data_sets', 'd_mnist', 'test'), transform=transform)
 train_loader = Data.DataLoader(train_data, batch_size=BATCH_SIZE, shuffle=True)
 
 

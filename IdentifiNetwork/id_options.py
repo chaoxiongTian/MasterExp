@@ -6,7 +6,7 @@
 # @Software: PyCharm
 
 import argparse
-from adversarial_utils import str2bool
+from id_utils import str2bool
 
 
 class Options:
@@ -14,11 +14,12 @@ class Options:
         self.parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     def initialize(self):
-        self.parser.add_argument('--epoch', type=int, default=20, help='epoch size')  # 循环次数
+        self.parser.add_argument('--epoch', type=int, default=50, help='epoch size')  # 循环次数
         self.parser.add_argument('--batch_size', type=int, default=100, help='mini-batch size')  # 批大小
-        self.parser.add_argument('--lr', type=float, default=2e-4, help='learning rate')  # 学习率
+        self.parser.add_argument('--lr', type=float, default=0.001, help='learning rate')  # 学习率
         self.parser.add_argument('--y_dim', type=int, default=10, help='the number of classes')  # 目标类别
-        self.parser.add_argument('--dset_dir', type=str, default='datasets', help='dataset directory path')  # 目录
+        self.parser.add_argument('--model_name', type=str, default='d_mnist', help='dataset and model save_name')  # 目录
+        self.parser.add_argument('--data_set_folder', type=str, default='data_sets', help='dataset directory path')  # 目录
         self.parser.add_argument('--ckpt_dir', type=str, default='checkpoints',
                                  help='checkpoint directory path')  # 模型目录
         self.parser.add_argument('--load_ckpt', type=str, default='', help='')  # 加载模型的名字
