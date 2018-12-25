@@ -7,6 +7,7 @@
 
 import os
 from PIL import Image
+import torchvision.transforms as transforms
 
 
 # 把image resize到target_weight, target_high的长度
@@ -42,8 +43,8 @@ def image_merge_horizontal(image1, image2):
     w2, h2 = image2.size
     h = (h1, h2)[h1 < h2]
     image = Image.new("RGB", (w1 + w2, h))
-    image.paste(image1, (0, int((h-h1)/2)))
-    image.paste(image2, (w1, int((h-h2)/2)))
+    image.paste(image1, (0, int((h - h1) / 2)))
+    image.paste(image2, (w1, int((h - h2) / 2)))
     return image
 
 
@@ -91,3 +92,11 @@ def get_file_suffix(complete_name):
 # 由文件路径获得文件名
 def get_file_path_info(complete_name):
     return get_file_folder(complete_name), get_file_name(complete_name), get_file_suffix(complete_name)
+
+
+def image_2_tensor(pil_image):
+    return transforms.ToTensor()(pil_image)
+
+
+def tensor_2_image(pil_tensor):
+    return transforms.ToPILImage()(pil_tensor)
