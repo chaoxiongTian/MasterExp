@@ -100,3 +100,18 @@ def image_2_tensor(pil_image):
 
 def tensor_2_image(pil_tensor):
     return transforms.ToPILImage()(pil_tensor)
+
+
+import pickle
+
+
+def save_pickle(path, content):
+    file = open(path, 'wb')
+    pickle.dump(content, file)
+    file.close()
+
+
+def load_pickle(path):
+    with open(path, 'rb')as file:
+        content = pickle.load(file)
+    return content

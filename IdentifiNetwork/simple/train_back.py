@@ -17,9 +17,18 @@ EPOCH = 50
 BATCH_SIZE = 50
 LR = 0.001
 
-transform = transforms.Compose([transforms.ToTensor(), transforms.Gray()])
-train_data = datasets.ImageFolder(root=os.path.join(os.path.dirname(__file__), 'data_sets', 'd_mnist', 'train'), transform=transform)
-test_data = datasets.ImageFolder(root=os.path.join(os.path.dirname(__file__), 'data_sets', 'd_mnist', 'test'), transform=transform)
+
+def cus_loader(path):
+    return Image.open(path).convert('L')
+
+
+transform = transforms.Compose([transforms.ToTensor()])
+train_data = datasets.ImageFolder(root=os.path.join(os.path.dirname(__file__), 'data_sets', 'd_mnist', 'train'),
+                                  transform=transform,
+                                  loader=cus_loader)
+test_data = datasets.ImageFolder(root=os.path.join(os.path.dirname(__file__), 'data_sets', 'd_mnist', 'test'),
+                                 transform=transform,
+                                  loader=cus_loader)
 train_loader = Data.DataLoader(train_data, batch_size=BATCH_SIZE, shuffle=True)
 
 
