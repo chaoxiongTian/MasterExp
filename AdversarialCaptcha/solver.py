@@ -41,6 +41,7 @@ class Solver(object):
         self.ckpt_dir = Path(args.ckpt_dir).joinpath(args.env_name)
         if not self.ckpt_dir.exists():
             self.ckpt_dir.mkdir(parents=True, exist_ok=True)
+
         self.output_dir = Path(args.output_dir).joinpath(args.env_name)
         if not self.output_dir.exists():
             self.output_dir.mkdir(parents=True, exist_ok=True)

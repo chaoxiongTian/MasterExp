@@ -41,7 +41,6 @@ class PreNet(object):
                                                              options.model_name))
         print(self.data_set_folder)
         self.y_dim = return_y_dim(self.data_set_folder)
-        print('y_dim', self.y_dim)
         self.data_loader = return_loader(options)  # 返回data_loader
 
         # 设置模型保存的位置
