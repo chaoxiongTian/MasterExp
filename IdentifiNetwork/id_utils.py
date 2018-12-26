@@ -11,22 +11,27 @@ from torchvision import datasets
 import torch.utils.data as Data
 
 
+# datasets.ImageFolder中自定义的class loader
+def cus_loader(path):
+    return Image.open(path).convert('L')
+
+
 # 返回data_loader
 def return_loader(options):
     data_set = options.data_set_folder
     name = options.model_name
     batch_size = options.batch_size
-    transform = transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Gray()
-    ])
+    transform = transforms.Compose([transforms.ToTensor()])
     loader = dict()
     train_folder = os.path.join(os.path.dirname(__file__), data_set, name, 'train')
     test_folder = os.path.join(os.path.dirname(__file__), data_set, name, 'test')
-    train_data = datasets.ImageFolder(root=train_folder, transform=transform)
-    test_data = datasets.ImageFolder(root=test_folder, transform=transform)
+    train_data = datasets.ImageFolder(root=train_folder, transform=transform, loader=cus_loader)
+    test_data = datasets.ImageFolder(root=test_folder, transform=transform, loader=cus_loader)
+    # print(len(test_data))
+    # for i in range(len(test_data)):
+    #     print(test_data[i][1])
     train_loader = Data.DataLoader(train_data, batch_size=batch_size, shuffle=True)
-    test_loader = Data.DataLoader(test_data, batch_size=batch_size, shuffle=False)
+    test_loader = Data.DataLoader(test_data, batch_size=len(test_data), shuffle=False)
     loader['train'] = train_loader
     loader['test'] = test_loader
     return loader
@@ -57,6 +62,38 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 
+def find_classes(folder):
+    classes = [d for d in os.listdir(folder) if os.path.isdir(os.path.join(folder, d))]
+    classes.sort()
+    class_to_idx = {classes[i]: i for i in range(len(classes))}
+    idx_to_class = {j: classes[j] for j in range(len(classes))}
+    return classes, class_to_idx, idx_to_class
+
+
+def is_image_file(filename):
+    IMG_EXTENSIONS = [
+        '.jpg', '.JPG', '.jpeg', '.JPEG',
+        '.png', '.PNG', '.ppm', '.PPM', '.bmp', '.BMP',
+    ]
+    return any(filename.endswith(extension) for extension in IMG_EXTENSIONS)
+
+
+# 获得loader的数据顺序
+def make_dataset(folder, class_to_idx):
+    images = []
+    for target in os.listdir(folder):
+        d = os.path.join(folder, target)
+        if not os.path.isdir(d):
+            continue
+        for root, _, fnames in sorted(os.walk(d)):
+            for fname in fnames:
+                if is_image_file(fname):
+                    path = os.path.join(root, fname)
+                    item = (path, target, class_to_idx[target])
+                    images.append(item)
+    return images
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_set_folder', type=str, default='data_sets')
@@ -67,15 +104,11 @@ if __name__ == '__main__':
     train_loader = data_loader['train']
     test_loader = data_loader['test']
 
-    print('train data shape')
-    for i, (image, labels) in enumerate(train_loader):
-        if i == 1:
-            break
-        print(image.size())
-        print(labels.size())
-    print('test data shape')
-    for i, (image, labels) in enumerate(test_loader):
-        if i == 1:
-            break
-        print(image.size())
-        print(labels.size())
+    # print('train data shape')
+    # for i, (image, labels) in enumerate(train_loader):
+    #     if i == 1:
+    #         break
+    #     print(labels)
+    # print('test data shape')
+    # for i, (image, labels) in enumerate(test_loader):
+    #     print(labels)

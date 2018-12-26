@@ -33,9 +33,14 @@ class PreNet(object):
         self.lr = options.lr
         self.mode = options.mode
         self.model_name = options.model_name  # 模型的名字，对应训练样本文件夹的名字，最后文件保存的文件名
-        self.y_dim = return_y_dim(os.path.join(os.path.dirname(__file__),
-                                               options.data_set_folder,
-                                               options.model_name))
+        # 是否为验证码，验证码长度
+        self.captcha = options.captcha
+        self.captcha_len = options.captcha_len
+        self.data_set_folder = os.path.realpath(os.path.join(os.path.dirname(__file__),
+                                                             options.data_set_folder,
+                                                             options.model_name))
+        print(self.data_set_folder)
+        self.y_dim = return_y_dim(self.data_set_folder)
         print('y_dim', self.y_dim)
         self.data_loader = return_loader(options)  # 返回data_loader
 
@@ -91,6 +96,26 @@ class PreNet(object):
         torch.save(states, open(file_path, 'wb+'))
         print("=> saved checkpoint '{}'".format(file_path))
 
+    def evaluation_captcha_acc(self, predictions, total=200):
+        test_data_folder = os.path.join(self.data_set_folder, 'test')
+        _, class_to_idx, idx_to_class = find_classes(test_data_folder)
+        logs = make_dataset(test_data_folder, class_to_idx)
+        pred_dict = {}
+        # 创建字典 [路径:(正确标签，预测标签，是否争取)]
+        for i, (image_path, real_class, real_class_idx) in enumerate(logs):
+            pred_dict[image_path] = (real_class, idx_to_class[predictions[i]], real_class_idx == predictions[i])
+        pickle_name = os.path.join(self.data_set_folder, self.model_name + '_order_log.pickle')
+        order_log = load_pickle(pickle_name)
+        count = 0  # 预测准确的个数
+        for i in range(int(len(order_log) / self.captcha_len)):
+            each_count = 0
+            for j in range(self.captcha_len):
+                if pred_dict[order_log[i*self.captcha_len+j]][2]:
+                    each_count += 1
+            if each_count == self.captcha_len:
+                count += 1
+        print('captcha accuracy: %.4f\n' % (count/total))
+
     def train(self):
         print(self.model_name)
         for epoch_idx in range(self.epoch):
@@ -118,12 +143,15 @@ class PreNet(object):
         accuracy = 0.
         cost = 0.
         total = 0.
+        predictions = []
         for batch_idx, (batch_images, batch_labels) in enumerate(self.data_loader['test']):
             x = Variable(cuda(batch_images, self.cuda))
             y = Variable(cuda(batch_labels, self.cuda))
 
             output = self.net(x)[0]
             prediction = output.max(1)[1]
+
+            predictions.extend(list(prediction.numpy()))
 
             accuracy += prediction.eq(y).float().sum().item()
             cost += F.cross_entropy(output, y, reduction='mean').item()
@@ -138,6 +166,9 @@ class PreNet(object):
         print('test loss: %.4f' % cost,
               '| test accuracy: %.3f' % accuracy,
               '| bast accuracy: %.3f\n' % self.bast_accuracy)
+        # 是否为验证码，如果是验证码需要评估 指定个字符连在一起的长度
+        if self.captcha:
+            self.evaluation_captcha_acc(predictions)
 
 
 if __name__ == '__main__':

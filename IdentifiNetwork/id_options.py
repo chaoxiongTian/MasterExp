@@ -27,7 +27,9 @@ class Options:
         self.parser.add_argument('--mode', type=str, default='train',
                                  help='train / test / generate / universal')  # 训练的类型
         self.parser.add_argument('--seed', type=int, default=1, help='random seed')  # 随机因子
-
+        # 是否为验证码如果是验证码需要提供 字符的顺序
+        self.parser.add_argument('--captcha', type=bool, default=False, help='captcha or not')
+        self.parser.add_argument('--captcha_len', type=int, default=4, help='captcha')
     def parse(self):
         self.initialize()
         self.opt = self.parser.parse_args()

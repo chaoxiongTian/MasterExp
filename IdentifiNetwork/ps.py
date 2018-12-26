@@ -5,11 +5,13 @@
 # @File    : ceshi_2.py
 # @Software: PyCharm
 
+
+# 学习过程中的一些Demo
+
 from PIL import Image
 from out_utils import *
 from torchvision import datasets
 import torch.utils.data as Data
-
 
 # # 自定义 loader
 # def cus_loader(path):
@@ -46,3 +48,34 @@ import torch.utils.data as Data
 # print(addd(1,2,fun=def_add))
 # print(addd(1,2,fun=add))
 
+# pickle 简单使用
+import pickle
+
+# a_dict = [('a', 1), ('b', 2)]
+# file = open('./pickle_example.pickle', 'wb')
+# pickle.dump(a_dict, file)
+# file.close()
+
+# with open('./pickle_example.pickle', 'rb')as file:
+#     a_dict1 = pickle.load(file)
+# print(a_dict1)
+
+# a_dict = [('a', 1), ('b', 2)]
+
+# save_pickle('./pickle_example.pickle', a_dict)
+# print(load_pickle('./pickle_example.pickle'))
+
+# 字典的使用
+# reals = {}
+# reals['a'] = 1
+# reals['b'] = 2
+# print(reals)
+# print(reals['a'])
+# print(reals.get('a'))
+
+# # 文件路径
+# dirname, filename = os.path.split(os.path.abspath(sys.argv[0]))
+# print(dirname)
+#
+# dirname = os.path.split(os.path.abspath(__file__))
+# print(dirname)
