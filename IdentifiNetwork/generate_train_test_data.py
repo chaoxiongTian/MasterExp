@@ -14,22 +14,27 @@ def get_has_num(folder):
 
 
 def generate(folder, paths, labels):
+    order_log = []
     for i, each in enumerate(labels):
         tar_folder = os.path.join(folder, str(each))
         make_folder(tar_folder)
         has_num = get_has_num(tar_folder)
-        shutil.copy(paths[i], os.path.join(tar_folder, str(has_num) + '.png'))
+        target_path = os.path.join(tar_folder, str(has_num) + '.png')
+        shutil.copy(paths[i], target_path)
         print(paths[i] + ' have save complete')
+        order_log.append(target_path)
+    return order_log
 
 
 if __name__ == '__main__':
-    source_root = '/home/tianchaoxiong/LinuxData/paper/experiment/segment/1_JD/cnn_pro/datasets/train/se_op'
-    source_image_folder = os.path.join(source_root, 'train_sets_resize')
-    source_labels_path = os.path.join(source_root, 'train_labels.txt')
+    source_root = '/home/tianchaoxiong/LinuxData/paper/experiment/segment/1_JD/cnn_pro/datasets/test/se_op_o/投影'
+    source_image_folder = os.path.join(source_root, 'test_sets')
+    source_labels_path = os.path.join(source_root, 'test_labels.txt')
     image_num = 10000
     target_data_set = '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/IdentifiNetwork/data_sets'
-    target_mode = 'train'
-    target_folder = os.path.join(target_data_set, 'jd', target_mode)
+    target_mode = 'test'
+    data_name = 'jd'
+    target_folder = os.path.join(target_data_set, data_name, target_mode)
     make_folder(target_folder)
     labels = open(source_labels_path, 'r', encoding="utf-8").read().strip().split('#')
     if len(labels) < image_num:
@@ -41,4 +46,5 @@ if __name__ == '__main__':
     # print(labels[0])
     # Image.open(image_paths[-1]).show()
     # print(labels[-1])
-    generate(target_folder, image_paths, labels)
+    order_log = generate(target_folder, image_paths, labels)
+    save_pickle(os.path.join(target_data_set, data_name, data_name+'_order_log.pickle'), order_log)
