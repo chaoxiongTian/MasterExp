@@ -27,7 +27,7 @@ def generate(folder, paths, labels):
 
 
 if __name__ == '__main__':
-    source_root = '/home/tianchaoxiong/LinuxData/paper/experiment/segment/1_JD/cnn_pro/datasets/test/se_op_o/投影'
+    source_root = '/home/tianchaoxiong/LinuxData/paper/experiment/segment/1_JD/cnn_pro/datasets/test/se_op_or'
     source_image_folder = os.path.join(source_root, 'test_sets')
     source_labels_path = os.path.join(source_root, 'test_labels.txt')
     image_num = 10000
