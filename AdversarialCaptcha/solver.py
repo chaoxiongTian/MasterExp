@@ -1,15 +1,15 @@
 """solver.py"""
-from pathlib import Path
 
 import torch
 import torch.optim as optim
 import torch.nn.functional as F
-from torch.autograd import Variable
 from torchvision.utils import save_image
 
-from models.net import ToyNet
-from datasets.datasets import return_data
-from adversarial_utils import rm_dir, cuda, where
+import torch.utils.data as Data
+
+from models.net import CNN
+from data_sets.datasets import return_data
+from adversarial_utils import *
 from adversary import Attack
 from out_utils import *
 
@@ -22,31 +22,38 @@ class Solver(object):
         self.cuda = (args.cuda and torch.cuda.is_available())
         self.epoch = args.epoch
         self.batch_size = args.batch_size
-        self.eps = args.eps  # 扰动参数
         self.lr = args.lr
-        self.y_dim = args.y_dim  # 分类的类别数  TODO:需要改
+        self.model_name = args.model_name
+        self.data_type = args.data_type
+        self.data_set_folder = os.path.realpath(os.path.join(os.path.dirname(__file__),
+                                                             args.data_set_folder,
+                                                             args.model_name))
+        self.y_dim = return_y_dim(self.data_set_folder)  # 分类的类别数
         self.target = args.target  # 目标生成的时候使用
-        self.dataset = args.dataset  # 根据传入的字段 返回loder字典
-        self.data_loader = return_data(args)  # 返回data_loader
+        self.data_loader, self.test_data = return_data(args)  # 返回data_loader
 
         self.global_epoch = 0
         self.global_iter = 0
         self.print_ = not args.silent
 
-        self.env_name = args.env_name
+        # 标签和类别 和类别到标签的两个对应字典
+        test_data_folder = os.path.join(self.data_set_folder, 'train')
+        _, self.class_to_idx, self.idx_to_class = find_classes(test_data_folder)
+
         self.tensorboard = args.tensorboard
         self.visdom = args.visdom
 
-        # 设置模型和Output存储的路径
-        self.ckpt_dir = Path(args.ckpt_dir).joinpath(args.env_name)
-        if not self.ckpt_dir.exists():
-            self.ckpt_dir.mkdir(parents=True, exist_ok=True)
+        # 模型路径
+        self.ckpt_dir = os.path.join(os.path.dirname(__file__), args.ckpt_dir, args.model_name)
+        if not os.path.exists(self.ckpt_dir):
+            make_folder(self.ckpt_dir)
 
-        self.output_dir = Path(args.output_dir).joinpath(args.env_name)
-        if not self.output_dir.exists():
-            self.output_dir.mkdir(parents=True, exist_ok=True)
+        # 输出路径
+        # self.output_dir = os.path.join(os.path.dirname(__file__), args.output_dir, args.model_name)
+        # if not os.path.exists(self.output_dir):
+        #     make_folder(self.output_dir)
 
-        # Visualization Tools
+        # 可视化工具
         self.visualization_init(args)
 
         # Histories 创建字典
@@ -72,16 +79,16 @@ class Solver(object):
         if self.visdom:
             from utils.visdom_utils import VisFunc
             self.port = args.visdom_port
-            self.vf = VisFunc(enval=self.env_name, port=self.port)
+            self.vf = VisFunc(enval=self.model_name, port=self.port)
         if self.visdom:
             from utils.visdom_utils import VisFunc
             self.port = args.visdom_port
-            self.vf = VisFunc(enval=self.env_name, port=self.port)
+            self.vf = VisFunc(enval=self.model_name, port=self.port)
 
         # TensorboardX
         if self.tensorboard:
             from tensorboardX import SummaryWriter
-            self.summary_dir = Path(args.summary_dir).joinpath(args.env_name)
+            self.summary_dir = Path(args.summary_dir).joinpath(args.model_name)
             if not self.summary_dir.exists():
                 self.summary_dir.mkdir(parents=True, exist_ok=True)
 
@@ -91,7 +98,7 @@ class Solver(object):
     # 网络参数的初始化过程。
     def model_init(self, args):
         # Network 初始化网络 初始化优化器 初始化参数（凯明）
-        self.net = cuda(ToyNet(y_dim=self.y_dim), self.cuda)
+        self.net = cuda(CNN(y_dim=self.y_dim), self.cuda)
         self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
         print(self.net)
         # Optimizers 初始化优化器
@@ -99,46 +106,35 @@ class Solver(object):
                                 betas=(0.5, 0.999))
 
     def train(self):
-        self.set_mode('train')
-        for e in range(self.epoch):
+        print(self.model_name)
+        for epoch_idx in range(self.epoch):
             self.global_epoch += 1
-
-            correct = 0.
-            cost = 0.
-            total = 0.
             for batch_idx, (images, labels) in enumerate(self.data_loader['train']):
                 self.global_iter += 1
-
-                print(images.size())
-                print(labels.size())
-
                 x = Variable(cuda(images, self.cuda))
                 y = Variable(cuda(labels, self.cuda))
-
-                logit = self.net(x)
-                prediction = logit.max(1)[1]
-
+                output = self.net(x)
+                prediction = output.max(1)[1]
                 # 求准确率
-                correct = torch.eq(prediction, y).float().mean().item()
-                cost = F.cross_entropy(logit, y)
+                accuracy = prediction.eq(y).float().mean().item()
+                cost = F.cross_entropy(output, y)
 
                 self.optim.zero_grad()
                 cost.backward()
                 self.optim.step()
 
-                if batch_idx % 100 == 0:
-                    if self.print_:
-                        print()
-                        print(self.env_name)
-                        print('[{:03d}:{:03d}]'.format(self.global_epoch, batch_idx))
-                        print('acc:{:.3f} loss:{:.3f}'.format(correct, cost.item()))
+                if batch_idx % 4 == 0:
+                    print('Epoch:', epoch_idx,
+                          '| iter:', batch_idx * self.batch_size,
+                          '| train loss: %.4f' % cost.item(),
+                          '| train accuracy: %.3f' % accuracy)
 
                     if self.tensorboard:
                         self.tf.add_scalars(main_tag='performance/acc',
-                                            tag_scalar_dict={'train': correct},
+                                            tag_scalar_dict={'train': accuracy},
                                             global_step=self.global_iter)
                         self.tf.add_scalars(main_tag='performance/error',
-                                            tag_scalar_dict={'train': 1 - correct},
+                                            tag_scalar_dict={'train': 1 - accuracy},
                                             global_step=self.global_iter)
                         self.tf.add_scalars(main_tag='performance/cost',
                                             tag_scalar_dict={'train': cost.data[0]},
@@ -153,46 +149,31 @@ class Solver(object):
         print(" [*] Training Finished!")
 
     def test(self):
-        self.set_mode('eval')
-
         correct = 0.
         cost = 0.
         total = 0.
-
-        data_loader = self.data_loader['test']
-        for batch_idx, (images, labels) in enumerate(data_loader):
+        for batch_idx, (images, labels) in enumerate(self.data_loader['test']):
             x = Variable(cuda(images, self.cuda))
             y = Variable(cuda(labels, self.cuda))
 
-            logit = self.net(x)
-            prediction = logit.max(1)[1]
+            output = self.net(x)
+            prediction = output.max(1)[1]
 
-            correct += torch.eq(prediction, y).float().sum().item()
-            cost += F.cross_entropy(logit, y, size_average=False).item()
+            correct += prediction.eq(y).float().sum().item()
+            cost += F.cross_entropy(output, y, reduction='mean').item()
             total += x.size(0)
-
         accuracy = correct / total
         cost /= total
 
-        if self.print_:
-            print()
-            print('[{:03d}]\nTEST RESULT'.format(self.global_epoch))
-            print('ACC:{:.4f}'.format(accuracy))
-            print('*TOP* ACC:{:.4f} at e:{:03d}'.format(accuracy, self.global_epoch, ))
-            print()
+        if self.tensorboard:
+            self.tf.add_scalars(main_tag='performance/acc', tag_scalar_dict={'test': accuracy},
+                                global_step=self.global_iter)
 
-            if self.tensorboard:
-                self.tf.add_scalars(main_tag='performance/acc',
-                                    tag_scalar_dict={'test': accuracy},
-                                    global_step=self.global_iter)
+            self.tf.add_scalars(main_tag='performance/error', tag_scalar_dict={'test': (1 - accuracy)},
+                                global_step=self.global_iter)
 
-                self.tf.add_scalars(main_tag='performance/error',
-                                    tag_scalar_dict={'test': (1 - accuracy)},
-                                    global_step=self.global_iter)
-
-                self.tf.add_scalars(main_tag='performance/cost',
-                                    tag_scalar_dict={'test': cost},
-                                    global_step=self.global_iter)
+            self.tf.add_scalars(main_tag='performance/cost', tag_scalar_dict={'test': cost},
+                                global_step=self.global_iter)
 
         if self.history['acc'] < accuracy:
             self.history['acc'] = accuracy
@@ -200,54 +181,69 @@ class Solver(object):
             self.history['iter'] = self.global_iter
             self.save_checkpoint('best_acc.tar')
 
-        self.set_mode('train')
+        print('test loss: %.4f' % cost,
+              '| test accuracy: %.3f' % accuracy,
+              '| bast accuracy: %.3f\n' % self.history['acc'])
 
-    def generate(self, num_sample=100, target=-1, epsilon=0.03, alpha=2 / 255, iteration=1):
-        self.set_mode('eval')
-        # TODO: 循环生成100张图片 （之前是生成一张图片上面有一般个字符）
-        make_folders(self.output_dir.joinpath('legitimate'),
-                     self.output_dir.joinpath('perturbed'),
-                     self.output_dir.joinpath('changed'))
-        for i in range(num_sample):
-            self.iter_generate(i, target, epsilon, alpha, iteration)
-        self.set_mode('train')
+    def generate(self, num_sample, target=-1, epsilon=0.03, alpha=2 / 255, iteration=1):
 
-    def save_generate_image(self, index, x_true, x_adv, changed, padding=0):
-        print(x_true.size())
-        save_image(x_true,
-                   self.output_dir.joinpath('legitimate', str(index) + '.jpg'),
-                   padding=padding,
-                   )
-        save_image(x_adv,
-                   self.output_dir.joinpath('perturbed', str(index) + '.jpg'),
-                   padding=padding,
-                   )
-        save_image(changed,
-                   self.output_dir.joinpath('changed', str(index) + '.jpg'),
-                   padding=padding,
-                   )
-
-    def iter_generate(self, index, target, epsilon, alpha, iteration):
-        x_true, y_true = self.sample_data_one(index)
-        if isinstance(target, int) and (target in range(self.y_dim)):
-            y_target = torch.LongTensor(y_true.size()).fill_(target)
-        else:
-            y_target = None
-        x_adv, changed, values = self.FGSM(x_true, y_true, y_target, epsilon, alpha, iteration)
+        test_loader = Data.DataLoader(self.test_data, batch_size=len(self.test_data), shuffle=False)
+        x_true, x_adv, values = None, None, None
+        for (images, labels) in test_loader:
+            x_true = images
+            y_target = self.get_target_tensor(target, len(self.test_data))
+            x_adv, values = self.FGSM(images, labels, y_target, epsilon, alpha, iteration)
         accuracy, cost, prediction, accuracy_adv, cost_adv, prediction_adv = values
-        self.save_generate_image(index, x_true, x_adv, changed)
+        predictions = list(prediction.numpy())
+        prediction_adv = list(prediction_adv.numpy())
+        logs = make_dataset(os.path.join(self.data_set_folder, 'test'), self.class_to_idx)
+        detail = []
+        # 创建字典 [路径:(正确标签，预测标签，对抗样本预测标签)]
+        for i, (image_path, real_class, real_class_idx) in enumerate(logs):
+            detail.append((image_path, real_class,
+                           self.idx_to_class[predictions[i]],
+                           self.idx_to_class[prediction_adv[i]]))
+        log_dict = {'before_accuracy': (accuracy, cost), 'after_accuracy': (accuracy_adv, cost_adv), 'detail': detail}
+        import json
+        j = json.dumps(log_dict)
+        save_string_2_file(os.path.join(self.data_set_folder, 'ad.json'), j)
 
+        self.save_ad_image(x_adv, logs)
         if self.visdom:
             self.vf.imshow_multi(x_true.cpu(), title='legitimate', factor=1.5)
             self.vf.imshow_multi(x_adv.cpu(), title='perturbed(e:{},i:{})'.format(epsilon, iteration), factor=1.5)
-            self.vf.imshow_multi(changed.cpu(), title='changed(white)'.format(epsilon), factor=1.5)
+        print('[BEFORE] accuracy : {:.4f} cost : {:.4f}'.format(accuracy, cost))
+        print('[AFTER] accuracy : {:.4f} cost : {:.4f}'.format(accuracy_adv, cost_adv))
 
-        print('\n[BEFORE] label :{:d} [AFTER] label :{:d}'.format(prediction.numpy()[0], prediction_adv.numpy()[0]))
-        print('[BEFORE] accuracy : {:.2f} cost : {:.3f}'.format(accuracy, cost))
-        print('[AFTER] accuracy : {:.2f} cost : {:.3f}'.format(accuracy_adv, cost_adv))
+    def save_ad_image(self, tensor, logs):
+        def get_path(p):
+            file_folder, file_name = os.path.split(p)
+            _, parent_dir = os.path.split(file_folder)
+            target_folder = os.path.join(self.data_set_folder, 'perturbed', parent_dir)
+            make_folder(target_folder)
+            target_path = os.path.join(target_folder, file_name)
+            return target_path
+
+        # 根据log顺序把tensor保存起来。
+        index = tensor.size()[0]
+        for i in range(index):
+            path = get_path(logs[i][0])
+            save_image(tensor[i], path, padding=0)
+        pass
+
+    def get_target_tensor(self, target, batch):
+        # 类别class和对应class_idx进行转换
+        if target == -1:  # 表示没有目标
+            y_target = None
+        else:  # 有目标 根据输入转换成为类别
+            if str(target) in self.class_to_idx:
+                # y_target = torch.LongTensor([self.class_to_idx[str(target)]])
+                y_target = torch.LongTensor(batch).fill_(self.class_to_idx[str(target)])
+            else:
+                raise ('target in put error')
+        return y_target
 
     def FGSM(self, x, y_true, y_target=None, eps=0.03, alpha=2 / 255, iteration=1):
-        self.set_mode('eval')
 
         x = Variable(cuda(x, self.cuda), requires_grad=True)
         y_true = Variable(cuda(y_true, self.cuda), requires_grad=False)
@@ -260,7 +256,7 @@ class Solver(object):
         # 先做测试
         h = self.net(x)
         prediction = h.max(1)[1]
-        accuracy = torch.eq(prediction, y_true).float().mean()
+        accuracy = prediction.eq(y_true).float().mean()
         cost = F.cross_entropy(h, y_true)
 
         # 开始扰动
@@ -276,49 +272,13 @@ class Solver(object):
                 x_adv, h_adv, h = self.attack.i_fgsm(x, y_true, False, eps, alpha, iteration)
 
         prediction_adv = h_adv.max(1)[1]
-        accuracy_adv = torch.eq(prediction_adv, y_true).float().mean()
+        accuracy_adv = prediction_adv.eq(y_true).float().mean()
         cost_adv = F.cross_entropy(h_adv, y_true)
+        return x_adv.data, (accuracy.item(), cost.item(), prediction,
+                            accuracy_adv.item(), cost_adv.item(), prediction_adv)
 
-        # make indication of perturbed images that changed predictions of the classifier
-        if targeted:
-            changed = torch.eq(y_target, prediction_adv)
-        else:
-            changed = torch.eq(prediction, prediction_adv)
-            changed = torch.eq(changed, 0)
-        changed = changed.float().view(-1, 1, 1, 1).repeat(1, 3, 28, 28)
-
-        changed[:, 0, :, :] = where(changed[:, 0, :, :] == 1, 252, 91)
-        changed[:, 1, :, :] = where(changed[:, 1, :, :] == 1, 39, 252)
-        changed[:, 2, :, :] = where(changed[:, 2, :, :] == 1, 25, 25)
-        changed = self.scale(changed / 255)
-        changed[:, :, 3:-2, 3:-2] = x_adv.repeat(1, 3, 1, 1)[:, :, 3:-2, 3:-2]
-
-        self.set_mode('train')
-
-        return x_adv.data, changed.data, \
-               (accuracy.item(), cost.item(), prediction,
-                accuracy_adv.item(), cost_adv.item(), prediction_adv)
-
-    def sample_data_one(self, index):
-        seed = torch.FloatTensor(1).uniform_(index, index).long()
-        x = self.data_loader['test'].dataset.test_data[seed]
-        x = self.scale(x.float().unsqueeze(1).div(255))
-        y = self.data_loader['test'].dataset.test_labels[seed]
-        return x, y
-
-    def sample_data(self, num_sample=100):
-
-        total = len(self.data_loader['test'].dataset)
-        # 随机 index tensor
-        seed = torch.FloatTensor(num_sample).uniform_(1, total).long()
-
-        x = self.data_loader['test'].dataset.test_data[seed]
-        x = self.scale(x.float().unsqueeze(1).div(255))
-        y = self.data_loader['test'].dataset.test_labels[seed]
-
-        return x, y
-
-    def save_checkpoint(self, filename='ckpt.tar'):
+    # 保存模型
+    def save_checkpoint(self, file_name='ckpt.tar'):
         model_states = {
             'net': self.net.state_dict(),
         }
@@ -334,16 +294,16 @@ class Solver(object):
             'optim_states': optim_states,
         }
 
-        file_path = self.ckpt_dir / filename
-        torch.save(states, file_path.open('wb+'))
+        file_path = os.path.join(self.ckpt_dir, file_name)
+        torch.save(states, open(file_path, 'wb+'))
         print("=> saved checkpoint '{}' (iter {})".format(file_path, self.global_iter))
 
     # 加载模型
-    def load_checkpoint(self, filename='best_acc.tar'):
-        file_path = self.ckpt_dir / filename
-        if file_path.is_file():
+    def load_checkpoint(self, file_name='best_acc.tar'):
+        file_path = os.path.join(self.ckpt_dir, file_name)
+        if os.path.exists(file_path):
             print("=> loading checkpoint '{}'".format(file_path))
-            checkpoint = torch.load(file_path.open('rb'))
+            checkpoint = torch.load(open(file_path, 'rb'))
             self.global_epoch = checkpoint['epoch']
             self.global_iter = checkpoint['iter']
             self.history = checkpoint['history']
@@ -355,23 +315,3 @@ class Solver(object):
 
         else:
             print("=> no checkpoint found at '{}'".format(file_path))
-
-    def set_mode(self, mode='train'):
-        if mode == 'train':
-            self.net.train()
-        elif mode == 'eval':
-            self.net.eval()
-        else:
-            raise ('mode error. It should be either train or eval')
-
-    def scale(self, image):
-        return image.mul(2).add(-1)
-
-    def unscale(self, image):
-        return image.add(1).mul(0.5)
-
-    def summary_flush(self, silent=True):
-        rm_dir(self.summary_dir, silent)
-
-    def checkpoint_flush(self, silent=True):
-        rm_dir(self.ckpt_dir, silent)

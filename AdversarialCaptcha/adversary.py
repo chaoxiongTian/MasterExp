@@ -8,7 +8,7 @@ from torch.autograd import Variable
 from torchvision.utils import save_image
 
 from models.net import ToyNet
-from datasets.datasets import return_data
+from data_sets.datasets import return_data
 from adversarial_utils import rm_dir, cuda, where
 
 

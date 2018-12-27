@@ -21,12 +21,12 @@ def cus_loader(path):
 
 def return_data(args):
     name = args.model_name
-    data_set_folder = args.data_set_folder
+    data_set = args.data_set_folder
     batch_size = args.batch_size
     transform = transforms.Compose([transforms.ToTensor()])
     loader = dict()
     if 'MNIST' in name:
-        root = os.path.join(data_set_folder, 'MNIST')
+        root = os.path.join(data_set, 'MNIST')
         train_kwargs = {'root': root, 'train': True, 'transform': transform, 'download': True}
         test_kwargs = {'root': root, 'train': False, 'transform': transform, 'download': False}
         dset = MNIST
@@ -48,19 +48,17 @@ def return_data(args):
 
         loader['train'] = train_loader
         loader['test'] = test_loader
-        return loader
-    elif 'd_mnist' in name:
-        train_data_folder = os.path.join(data_set_folder, str(name), 'train')
-        test_data_folder = os.path.join(data_set_folder, str(name), 'test')
-        train_data = datasets.ImageFolder(root=train_data_folder, transform=transform, loader=cus_loader)
-        test_data = datasets.ImageFolder(root=test_data_folder, transform=transform, loader=cus_loader)
+        return loader, test_data
+    else:
+        train_folder = os.path.join(os.path.dirname(__file__), name, 'train')
+        test_folder = os.path.join(os.path.dirname(__file__), name, 'test')
+        train_data = datasets.ImageFolder(root=train_folder, transform=transform, loader=cus_loader)
+        test_data = datasets.ImageFolder(root=test_folder, transform=transform, loader=cus_loader)
         train_loader = Data.DataLoader(train_data, batch_size=batch_size, shuffle=True)
         test_loader = Data.DataLoader(test_data, batch_size=batch_size, shuffle=False)
         loader['train'] = train_loader
         loader['test'] = test_loader
-        return loader
-    else:
-        raise UnknownDatasetError()
+        return loader, test_data
 
 
 if __name__ == '__main__':
@@ -69,15 +67,13 @@ if __name__ == '__main__':
     os.chdir('..')
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_set_folder', type=str, default='data_folder')
-    parser.add_argument('--dset_dir', type=str, default='datasets')
+    parser.add_argument('--data_set_folder', type=str, default='data_sets')
+    parser.add_argument('--model_name', type=str, default='d_mnist')
     parser.add_argument('--batch_size', type=int, default=64)
     args = parser.parse_args()
 
-    data_loader = return_data(args)
-    data_loader_iter = data_loader['test']
-    for batch_idx, (images, labels) in enumerate(data_loader_iter):
-        print(images.size())
-        print(labels.size())
-        if batch_idx == 1:
-            break
+    data_loader, test_data = return_data(args)
+    test_data_loader = data_loader['test']
+    print(type(test_data[0][0]))
+    print(type(test_data[0][1]))
+

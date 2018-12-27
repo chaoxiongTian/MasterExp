@@ -16,14 +16,14 @@ class Options:
     def initialize(self):
         self.parser.add_argument('--epoch', type=int, default=20, help='epoch size')  # 循环次数
         self.parser.add_argument('--batch_size', type=int, default=100, help='mini-batch size')  # 批大小
-        self.parser.add_argument('--lr', type=float, default=2e-4, help='learning rate')  # 学习率
+        self.parser.add_argument('--lr', type=float, default=0.001, help='learning rate')  # 学习率
         self.parser.add_argument('--y_dim', type=int, default=10, help='the number of classes')  # 目标类别
         self.parser.add_argument('--target', type=int, default=-1,
                                  help='target class for targeted generation')  # 含目标攻击时候的目标
-        self.parser.add_argument('--eps', type=float, default=1e-9, help='epsilon')  # 干扰因子
-        self.parser.add_argument('--env_name', type=str, default='main', help='experiment name')  # 模型的名字（文件夹名）
-        self.parser.add_argument('--dataset', type=str, default='FMNIST', help='dataset type')  # 攻击的类型（这里用来限制loader的样子）
-        self.parser.add_argument('--dset_dir', type=str, default='datasets', help='dataset directory path')  # 目录
+        # self.parser.add_argument('--eps', type=float, default=1e-9, help='epsilon')  # 干扰因子
+        self.parser.add_argument('--model_name', type=str, default='main', help='experiment name')  # 模型的名字（文件夹名）
+        self.parser.add_argument('--data_type', type=str, default='FMNIST', help='dataset type')  # 攻击的类型（这里用来限制loader的样子）
+        self.parser.add_argument('--data_set_folder', type=str, default='data_sets', help='dataset directory path')  # 目录
         self.parser.add_argument('--summary_dir', type=str, default='summary', help='summary directory path')  #
         self.parser.add_argument('--output_dir', type=str, default='output', help='output directory path')  # 输出目录
         self.parser.add_argument('--ckpt_dir', type=str, default='checkpoints',
@@ -34,7 +34,7 @@ class Options:
         self.parser.add_argument('--mode', type=str, default='train',
                                  help='train / test / generate / universal')  # 训练的类型
         self.parser.add_argument('--seed', type=int, default=1, help='random seed')  # 随机因子
-        self.parser.add_argument('--iteration', type=int, default=1, help='the number of iteration for FGSM')  # 对抗样本算法
+        self.parser.add_argument('--iteration', type=int, default=3, help='the number of iteration for FGSM')  # 对抗样本算法
         self.parser.add_argument('--epsilon', type=float, default=0.03, help='epsilon for FGSM and i-FGSM')  # ？？
         self.parser.add_argument('--alpha', type=float, default=2 / 255, help='alpha for i-FGSM')  # ？？
         self.parser.add_argument('--tensorboard', type=str2bool, default=False, help='enable tensorboard')  # ？？

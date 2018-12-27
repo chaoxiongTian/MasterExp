@@ -5,11 +5,46 @@
 # @File    : adversarial_utils.py
 # @Software: PyCharm
 
-import argparse, torch
-import numpy as np
+import argparse
+import torch
+from pathlib import Path
+
+import os
+
 from torch import nn
 from torch.autograd import Variable
-from pathlib import Path
+
+
+def find_classes(folder):
+    classes = [d for d in os.listdir(folder) if os.path.isdir(os.path.join(folder, d))]
+    classes.sort()
+    class_to_idx = {classes[i]: i for i in range(len(classes))}
+    idx_to_class = {j: classes[j] for j in range(len(classes))}
+    return classes, class_to_idx, idx_to_class
+
+
+def is_image_file(filename):
+    IMG_EXTENSIONS = [
+        '.jpg', '.JPG', '.jpeg', '.JPEG',
+        '.png', '.PNG', '.ppm', '.PPM', '.bmp', '.BMP',
+    ]
+    return any(filename.endswith(extension) for extension in IMG_EXTENSIONS)
+
+
+# 获得loader的数据顺序
+def make_dataset(folder, class_to_idx):
+    images = []
+    for target in os.listdir(folder):
+        d = os.path.join(folder, target)
+        if not os.path.isdir(d):
+            continue
+        for root, _, fnames in sorted(os.walk(d)):
+            for fname in fnames:
+                if is_image_file(fname):
+                    path = os.path.join(root, fname)
+                    item = (path, target, class_to_idx[target])
+                    images.append(item)
+    return images
 
 
 class One_Hot(nn.Module):
@@ -83,3 +118,8 @@ def where(cond, x, y):
     """
     cond = cond.float()
     return (cond * x) + ((1 - cond) * y)
+
+
+# 返回 预分类的类别
+def return_y_dim(folder):
+    return len(os.listdir(os.path.join(folder, 'train')))
