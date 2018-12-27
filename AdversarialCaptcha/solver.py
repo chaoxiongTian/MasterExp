@@ -185,15 +185,34 @@ class Solver(object):
               '| test accuracy: %.3f' % accuracy,
               '| bast accuracy: %.3f\n' % self.history['acc'])
 
+    def acc_pre(self, x_tensor, y_tensor):
+        x = Variable(cuda(x_tensor, self.cuda), requires_grad=True)
+        y_true = Variable(cuda(y_tensor, self.cuda), requires_grad=False)
+        # 预测
+        h = self.net(x)
+        prediction = h.max(1)[1]
+        accuracy = prediction.eq(y_true).float().mean()
+        cost = F.cross_entropy(h, y_true)
+        return accuracy.item(), cost.item(), prediction
+
     def generate(self, num_sample, target=-1, epsilon=0.03, alpha=2 / 255, iteration=1):
 
         test_loader = Data.DataLoader(self.test_data, batch_size=len(self.test_data), shuffle=False)
+
         x_true, x_adv, values = None, None, None
+        accuracy, cost, prediction, accuracy_adv, cost_adv, prediction_adv = None, None, None, None, None, None
+
         for (images, labels) in test_loader:
             x_true = images
             y_target = self.get_target_tensor(target, len(self.test_data))
-            x_adv, values = self.FGSM(images, labels, y_target, epsilon, alpha, iteration)
-        accuracy, cost, prediction, accuracy_adv, cost_adv, prediction_adv = values
+            # TODO:先做预测，然后返回修改的tensor，再做预测
+            # 做预测
+            accuracy, cost, prediction = self.acc_pre(images, labels)
+            # 修改tensor
+            x_adv = self.FGSM(images, labels, y_target, epsilon, alpha, iteration)
+            # 做周末的预测
+            accuracy_adv, cost_adv, prediction_adv = self.acc_pre(x_adv, labels)
+
         predictions = list(prediction.numpy())
         prediction_adv = list(prediction_adv.numpy())
         logs = make_dataset(os.path.join(self.data_set_folder, 'test'), self.class_to_idx)
@@ -204,6 +223,7 @@ class Solver(object):
                            self.idx_to_class[predictions[i]],
                            self.idx_to_class[prediction_adv[i]]))
         log_dict = {'before_accuracy': (accuracy, cost), 'after_accuracy': (accuracy_adv, cost_adv), 'detail': detail}
+
         import json
         j = json.dumps(log_dict)
         save_string_2_file(os.path.join(self.data_set_folder, 'ad.json'), j)
@@ -253,12 +273,6 @@ class Solver(object):
         else:
             targeted = False
 
-        # 先做测试
-        h = self.net(x)
-        prediction = h.max(1)[1]
-        accuracy = prediction.eq(y_true).float().mean()
-        cost = F.cross_entropy(h, y_true)
-
         # 开始扰动
         if iteration == 1:
             if targeted:
@@ -271,11 +285,8 @@ class Solver(object):
             else:
                 x_adv, h_adv, h = self.attack.i_fgsm(x, y_true, False, eps, alpha, iteration)
 
-        prediction_adv = h_adv.max(1)[1]
-        accuracy_adv = prediction_adv.eq(y_true).float().mean()
-        cost_adv = F.cross_entropy(h_adv, y_true)
-        return x_adv.data, (accuracy.item(), cost.item(), prediction,
-                            accuracy_adv.item(), cost_adv.item(), prediction_adv)
+
+        return x_adv.data
 
     # 保存模型
     def save_checkpoint(self, file_name='ckpt.tar'):
