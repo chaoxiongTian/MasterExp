@@ -12,12 +12,15 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 #  根据labels生成一组char的Image对象。
-def generate_char_images(char, font_path, font_size, font_color=(0, 0, 0)):
+def generate_char_images(char, font_path, font_size, font_color=(0, 0, 0), font_bg_color=None):
     """返回字符的Image对象"""
     # 构造字体对象
     image_font = ImageFont.truetype(font_path, font_size)
     # 构造Image对象
-    char_image = Image.new('RGBA', (image_font.getsize(char)))
+    if font_bg_color is not None:
+        char_image = Image.new('RGBA', (image_font.getsize(char)), font_bg_color)
+    else:
+        char_image = Image.new('RGBA', (image_font.getsize(char)))
     draw = ImageDraw.Draw(char_image)
     # TODO: 这里的Draw.text存在问题，需要修改。
     draw.text((0, -5), char, font_color, font=image_font)
@@ -170,6 +173,47 @@ def sin_warp_y(image, amplitude, period, phase, background):
     return bg_image.resize((image_w, image_h), Image.ANTIALIAS)
 
 
+def convert_gray(im):
+    return im.convert("L")
+
+
+# 转二值化
+def convert_binary(im, threshold=127):
+    im = convert_gray(im)
+    (image_w, image_h) = im.size
+    pix_data = im.load()
+    for iter_y in range(image_h):
+        for iter_x in range(image_w):
+            if pix_data[iter_x, iter_y] < threshold:
+                pix_data[iter_x, iter_y] = 0
+            else:
+                pix_data[iter_x, iter_y] = 255
+    return im
+
+
+# 把一个image 粘贴到另外一个image上面 重合部分改为黑色
+def paste(bg_image, image, offset_x, offset_y):
+    b_w, b_h = bg_image.size
+    w, h = image.size
+    # 创建一个新白色背景把旋转之后的image粘贴在其上
+    image_new = Image.new('RGB', (w, h), (255, 255, 255))
+    image_new.paste(image, (0, 0), image)
+    bg_image = convert_binary(bg_image)
+    bg_pix = bg_image.load()
+    image_pix = convert_binary(image_new).load()
+
+    for iter_x in range(w):
+        if iter_x + offset_x >= b_w:
+            break
+        for iter_y in range(h):
+            if iter_y + offset_y >= b_h:
+                break
+            if image_pix[iter_x, iter_y] == 0:
+                if bg_pix[iter_x + offset_x, iter_y + offset_y] == 0:
+                    bg_pix[iter_x + offset_x, iter_y + offset_y] = 255
+                else:
+                    bg_pix[iter_x + offset_x, iter_y + offset_y] = 0
+    return bg_image
 
 # image = Image.new("RGBA", (100 * 4, 40 * 4), (0, 0, 0))
 # MUL_x = 30

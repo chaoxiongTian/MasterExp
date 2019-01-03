@@ -22,7 +22,14 @@ def download_each(target_folder, data, label):
     image.save(os.path.join(target_folder, str(items_num) + '.jpg'))
 
 
+def cus_download(target_folder, index, image_tensor):
+    image_path = os.path.join(target_folder, str(index) + '.png')
+    print(image_path, 'is saved .')
+    tensor_2_image(image_tensor).convert('L').save(image_path)
+
+
 def download_data(target_folder, data, num, flag):
+    labels = []
     for i in range(num):
         if flag == 'train':
             save_data = data.train_data[i].unsqueeze(dim=0)
@@ -30,7 +37,12 @@ def download_data(target_folder, data, num, flag):
         else:
             save_data = data.test_data[i].unsqueeze(dim=0)
             label = data.test_labels[i].item()
-        download_each(target_folder, save_data, label)
+        # pytorch dataloader的形式保存文件
+        # download_each(target_folder, save_data, label)
+        cus_download(target_folder, i, save_data)
+        labels.append(str(label))
+    labels_path = os.path.join(target_folder, flag + '_labels.txt')
+    save_string_2_file(labels_path, '#'.join(labels))
 
 
 def download(train_data, test_data, train_num, test_num):
@@ -43,8 +55,10 @@ def download(train_data, test_data, train_num, test_num):
 
 
 def main():
-    train_data = torchvision.datasets.MNIST('./mnist/', True, transforms.Compose(transforms.ToTensor()), False)
-    test_data = torchvision.datasets.MNIST('./mnist/', False, transforms.Compose(transforms.ToTensor()), False)
+    train_data = torchvision.datasets.MNIST('./data_sets/mnist/', True, transforms.Compose(transforms.ToTensor()),
+                                            False)
+    test_data = torchvision.datasets.MNIST('./data_sets/mnist/', False, transforms.Compose(transforms.ToTensor()),
+                                           False)
     train_num = 1000
     test_num = 100
     download(train_data, test_data, train_num, test_num)

@@ -1,7 +1,17 @@
 train:
-python IdentifiNetwork/main.py --mode train --model_name d_mnist --captcha Ture --captcha_len 4
+```shell
+python AdversarialCaptcha/main.py --mode train --model_name d_mnist
+```
+
 
 test:
-python IdentifiNetwork/main.py --mode test --model_name jd --load_ckpt best_acc_0.972.tar --captcha Ture --captcha_len 4
+```shell
+python AdversarialCaptcha/main.py --mode test --model_name jd --load_ckpt best_acc.tar
+```
 
-jd: captcha accuracy: 0.9100
+
+generate
+```shell
+python AdversarialCaptcha/main.py --mode generate --iteration 1 --epsilon 0.2 --model_name d_mnist --load_ckpt best_acc.tar
+
+```

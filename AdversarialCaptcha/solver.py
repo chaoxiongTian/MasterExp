@@ -1,6 +1,5 @@
 """solver.py"""
 
-import torch
 import torch.optim as optim
 import torch.nn.functional as F
 from torchvision.utils import save_image
@@ -105,6 +104,7 @@ class Solver(object):
         self.optim = optim.Adam([{'params': self.net.parameters(), 'lr': self.lr}],
                                 betas=(0.5, 0.999))
 
+    # 训练
     def train(self):
         print(self.model_name)
         for epoch_idx in range(self.epoch):
@@ -148,6 +148,7 @@ class Solver(object):
                                 global_step=self.history['iter'])
         print(" [*] Training Finished!")
 
+    # 批量测试（使用loader）
     def test(self):
         correct = 0.
         cost = 0.
@@ -185,16 +186,7 @@ class Solver(object):
               '| test accuracy: %.3f' % accuracy,
               '| bast accuracy: %.3f\n' % self.history['acc'])
 
-    def acc_pre(self, x_tensor, y_tensor):
-        x = Variable(cuda(x_tensor, self.cuda), requires_grad=True)
-        y_true = Variable(cuda(y_tensor, self.cuda), requires_grad=False)
-        # 预测
-        h = self.net(x)
-        prediction = h.max(1)[1]
-        accuracy = prediction.eq(y_true).float().mean()
-        cost = F.cross_entropy(h, y_true)
-        return accuracy.item(), cost.item(), prediction
-
+    # 对抗样本生成
     def generate(self, num_sample, target=-1, epsilon=0.03, alpha=2 / 255, iteration=1):
 
         test_loader = Data.DataLoader(self.test_data, batch_size=len(self.test_data), shuffle=False)
@@ -235,6 +227,18 @@ class Solver(object):
         print('[BEFORE] accuracy : {:.4f} cost : {:.4f}'.format(accuracy, cost))
         print('[AFTER] accuracy : {:.4f} cost : {:.4f}'.format(accuracy_adv, cost_adv))
 
+    # 预测（batch_size等于test长度的时候）
+    def acc_pre(self, x_tensor, y_tensor):
+        x = Variable(cuda(x_tensor, self.cuda), requires_grad=True)
+        y_true = Variable(cuda(y_tensor, self.cuda), requires_grad=False)
+        # 预测
+        h = self.net(x)
+        prediction = h.max(1)[1]
+        accuracy = prediction.eq(y_true).float().mean()
+        cost = F.cross_entropy(h, y_true)
+        return accuracy.item(), cost.item(), prediction
+
+    # 保存生成对抗样本
     def save_ad_image(self, tensor, logs):
         def get_path(p):
             file_folder, file_name = os.path.split(p)
@@ -251,6 +255,7 @@ class Solver(object):
             save_image(tensor[i], path, padding=0)
         pass
 
+    # 目标攻击的时候 tensor生成
     def get_target_tensor(self, target, batch):
         # 类别class和对应class_idx进行转换
         if target == -1:  # 表示没有目标
@@ -263,10 +268,11 @@ class Solver(object):
                 raise ('target in put error')
         return y_target
 
+    # 对抗样本生成算法
     def FGSM(self, x, y_true, y_target=None, eps=0.03, alpha=2 / 255, iteration=1):
-
         x = Variable(cuda(x, self.cuda), requires_grad=True)
         y_true = Variable(cuda(y_true, self.cuda), requires_grad=False)
+
         if y_target is not None:
             targeted = True
             y_target = Variable(cuda(y_target, self.cuda), requires_grad=False)
@@ -284,7 +290,6 @@ class Solver(object):
                 x_adv, h_adv, h = self.attack.i_fgsm(x, y_target, True, eps, alpha, iteration)
             else:
                 x_adv, h_adv, h = self.attack.i_fgsm(x, y_true, False, eps, alpha, iteration)
-
 
         return x_adv.data
 

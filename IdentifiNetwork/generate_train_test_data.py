@@ -27,13 +27,16 @@ def generate(folder, paths, labels):
 
 
 if __name__ == '__main__':
-    source_root = '/home/tianchaoxiong/LinuxData/paper/experiment/segment/1_JD/cnn_pro/datasets/test/se_op_or'
-    source_image_folder = os.path.join(source_root, 'test_sets')
-    source_labels_path = os.path.join(source_root, 'test_labels.txt')
+    # source_root = '/home/tianchaoxiong/LinuxData/paper/experiment/segment/1_JD/cnn_pro/datasets/test/se_op_or'
+    # source_image_folder = os.path.join(source_root, 'test_sets')
+    # source_labels_path = os.path.join(source_root, 'test_labels.txt')
+    source_image_folder = '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaGenerate/data/captcha/authorize/ceshi'
+    source_labels_path = '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaGenerate/data/labels/authorize_test_200_labels.txt'
+
     image_num = 10000
-    target_data_set = '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/IdentifiNetwork/data_sets'
+    target_data_set = '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/AdversarialCaptcha/data_sets'
+    data_name = 'authorize'
     target_mode = 'test'
-    data_name = 'jd'
     target_folder = os.path.join(target_data_set, data_name, target_mode)
     make_folder(target_folder)
     labels = open(source_labels_path, 'r', encoding="utf-8").read().strip().split('#')

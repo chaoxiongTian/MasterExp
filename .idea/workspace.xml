@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MasterExp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MasterExp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/ad_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdversarialCaptcha/ad_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/adversarial_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdversarialCaptcha/adversarial_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/adversary.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdversarialCaptcha/adversary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/datasets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdversarialCaptcha/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/models/net.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdversarialCaptcha/models/net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/AdversarialCaptcha/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdversarialCaptcha/solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/pickle_example.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_ceshi_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_ceshi_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/labels_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/labels_generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/checkpoints/d_mnist/best_acc.tar" beforeDir="false" afterPath="$PROJECT_DIR$/IdentifiNetwork/checkpoints/d_mnist/best_acc.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/checkpoints/jd/best_acc.tar" beforeDir="false" afterPath="$PROJECT_DIR$/IdentifiNetwork/checkpoints/jd/best_acc.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/generate_train_test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/IdentifiNetwork/generate_train_test_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/IdentifiNetwork/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/周报.txt" beforeDir="false" afterPath="$PROJECT_DIR$/周报.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,58 +30,204 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/solver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="98" column="31" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
-              <folding>
-                <element signature="e#17#29#0" expanded="true" />
-                <element signature="e#382#2503#0" />
-                <element signature="e#1667#1673#0" />
-                <element signature="e#2304#2340#0" />
-                <element signature="e#2553#3396#0" />
-                <element signature="e#2598#2746#0" />
-                <element signature="e#2783#2931#0" />
-                <element signature="e#2997#3396#0" />
-                <element signature="e#3456#3797#0" />
-                <element signature="e#3828#5806#0" />
-                <element signature="e#3907#5525#0" />
-                <element signature="e#4031#5500#0" />
-                <element signature="e#4549#5500#0" />
-                <element signature="e#4833#5500#0" />
-                <element signature="e#5568#5765#0" />
-                <element signature="e#5836#7270#0" />
-                <element signature="e#5978#6306#0" />
-                <element signature="e#6406#6874#0" />
-                <element signature="e#6931#7116#0" />
-                <element signature="e#7376#8765#0" />
-                <element signature="e#8244#8429#0" />
-                <element signature="e#8928#9474#0" />
-                <element signature="e#8957#9276#0" />
-                <element signature="e#9383#9461#0" />
-                <element signature="e#9532#9958#0" />
-                <element signature="e#9665#9934#0" />
-                <element signature="e#9718#9870#0" />
-                <element signature="e#11179#12447#0" />
-                <element signature="e#11349#11444#0" />
-                <element signature="e#11714#11893#0" />
-                <element signature="e#11920#12139#0" />
-                <element signature="e#12311#12447#0" />
-                <element signature="e#12324#12446#0" />
-                <element signature="e#12521#13128#0" />
-                <element signature="e#12536#12589#0" />
-                <element signature="e#12613#12670#0" />
-                <element signature="e#12688#12929#0" />
-                <element signature="e#13206#13898#0" />
-                <element signature="e#13307#13813#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.58491564">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+                  <folding>
+                    <element signature="n#!!doc" />
+                    <element signature="e#408#4326#0" />
+                    <element signature="e#1021#1029#0" />
+                    <element signature="e#1185#3721#0" />
+                    <element signature="e#1577#1613#0" />
+                    <element signature="e#2003#2108#0" />
+                    <element signature="e#2581#3471#0" />
+                    <element signature="e#3769#4326#0" />
+                    <element signature="e#4372#5430#0" />
+                    <element signature="e#5079#5430#0" />
+                    <element signature="e#5477#6819#0" />
+                    <element signature="e#6180#6819#0" />
+                    <element signature="e#6557#6609#0" />
+                    <element signature="e#6867#8145#0" />
+                    <element signature="e#7593#8145#0" />
+                    <element signature="e#8186#9333#0" />
+                    <element signature="e#8909#9333#0" />
+                    <element signature="e#9377#10518#0" />
+                    <element signature="e#10122#10518#0" />
+                    <element signature="e#10560#11648#0" />
+                    <element signature="e#11298#11648#0" />
+                    <element signature="e#11691#12818#0" />
+                    <element signature="e#12420#12818#0" />
+                    <element signature="e#12858#14066#0" />
+                    <element signature="e#13668#14066#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/labels_generate.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="966">
+                  <caret line="100" column="33" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+                  <folding>
+                    <element signature="n#!!doc" />
+                    <element signature="e#182#205#0" expanded="true" />
+                    <element signature="e#318#674#0" />
+                    <element signature="e#688#896#0" />
+                    <element signature="e#910#1090#0" />
+                    <element signature="e#1110#1257#0" />
+                    <element signature="e#1270#1581#0" />
+                    <element signature="e#1593#1733#0" />
+                    <element signature="e#1748#1918#0" />
+                    <element signature="e#1996#2272#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor />
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="308">
+                  <caret line="202" selection-start-line="202" selection-end-line="202" />
+                  <folding>
+                    <element signature="n#!!doc" />
+                    <element signature="e#772#974#0" />
+                    <element signature="e#871#955#0" />
+                    <element signature="e#1024#1151#0" />
+                    <element signature="e#1223#2564#0" />
+                    <element signature="e#1310#2218#0" />
+                    <element signature="e#1782#1919#0" />
+                    <element signature="e#2353#2532#0" />
+                    <element signature="e#3221#3581#0" />
+                    <element signature="e#3377#3551#0" />
+                    <element signature="e#3665#4385#0" />
+                    <element signature="e#3665#3839#1" />
+                    <element signature="e#4038#4149#0" />
+                    <element signature="e#4191#4321#0" />
+                    <element signature="e#4469#5214#0" />
+                    <element signature="e#4469#4643#1" />
+                    <element signature="e#4842#4976#0" />
+                    <element signature="e#5018#5150#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="294">
+                  <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#182#209#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_utils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-105">
+                  <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+                  <folding>
+                    <element signature="n#!!doc" />
+                    <element signature="e#408#4326#0" />
+                    <element signature="e#1021#1029#0" />
+                    <element signature="e#1185#3721#0" />
+                    <element signature="e#1577#1613#0" />
+                    <element signature="e#2003#2108#0" />
+                    <element signature="e#2581#3471#0" />
+                    <element signature="e#3769#4326#0" />
+                    <element signature="e#4372#5430#0" />
+                    <element signature="e#5079#5430#0" />
+                    <element signature="e#5477#6819#0" />
+                    <element signature="e#6180#6819#0" />
+                    <element signature="e#6557#6609#0" />
+                    <element signature="e#6867#8145#0" />
+                    <element signature="e#7593#8145#0" />
+                    <element signature="e#8186#9333#0" />
+                    <element signature="e#8909#9333#0" />
+                    <element signature="e#9377#10518#0" />
+                    <element signature="e#10122#10518#0" />
+                    <element signature="e#10560#11648#0" />
+                    <element signature="e#11298#11648#0" />
+                    <element signature="e#11691#12818#0" />
+                    <element signature="e#12420#12818#0" />
+                    <element signature="e#12858#14066#0" />
+                    <element signature="e#13668#14066#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="22" column="30" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="30" />
+                  <folding>
+                    <element signature="n#!!doc" />
+                    <element signature="e#262#581#1" />
+                    <element signature="e#696#2919#0" />
+                    <element signature="e#1060#1096#0" />
+                    <element signature="e#1462#1563#0" />
+                    <element signature="e#1996#2681#0" />
+                    <element signature="e#3223#3964#0" />
+                    <element signature="e#3994#8084#0" />
+                    <element signature="e#4892#5763#0" />
+                    <element signature="e#5770#6416#0" />
+                    <element signature="e#6472#7222#0" />
+                    <element signature="e#6547#6936#0" />
+                    <element signature="e#6963#7222#0" />
+                    <element signature="e#7290#8047#0" />
+                    <element signature="e#7450#8011#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -85,15 +239,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>generateCaptcha</find>
-      <find>generate_Captcha</find>
-      <find>data_f</find>
-      <find>find_area_min_trough</find>
-      <find>get_sub_edge</find>
-      <find>find_min_point</find>
-      <find>print</find>
-      <find>get_tar_num</find>
-      <find>pr</find>
       <find>+</find>
       <find>1</find>
       <find>da</find>
@@ -102,7 +247,6 @@
       <find>MNIST</find>
       <find>silent</find>
       <find>cuda</find>
-      <find>attack</find>
       <find>weight_init</find>
       <find>data_set_folder</find>
       <find>data_loader</find>
@@ -115,6 +259,16 @@
       <find>epsilon</find>
       <find>self.eps</find>
       <find>no checkpoint found</find>
+      <find>3/0.png</find>
+      <find>yv8uf</find>
+      <find>lr</find>
+      <find>sigmoid</find>
+      <find>print</find>
+      <find>attack</find>
+      <find>nn</find>
+      <find>cross_entropy</find>
+      <find>ro</find>
+      <find>rotate</find>
     </findStrings>
     <replaceStrings>
       <replace>generate_Captcha</replace>
@@ -130,30 +284,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/segment_cfs.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/image_segment.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/ceshi.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/mnist_tutorial_keras_tf.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/mnist_tutorial_tf.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/tf_build_network.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/tf_mnist.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/tf_mnist_cvv.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/tf_mnist_cnn.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/fgsm.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/mnist.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/load_mnist.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/utils.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/ceshi_1.py" />
-        <option value="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/save_mnist_image.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/mnist_save.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/ceshi_2.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/Net.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/mnist_save_cus.py" />
-        <option value="$PROJECT_DIR$/周报.txt" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/options.py" />
         <option value="$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torchvision/transforms.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/train.py" />
@@ -168,19 +302,39 @@
         <option value="$PROJECT_DIR$/IdentifiNetwork/ceshi.py" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/ps.py" />
-        <option value="$PROJECT_DIR$/IdentifiNetwork/generate_train_test_data.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/README.md" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/adversary.py" />
-        <option value="$PROJECT_DIR$/IdentifiNetwork/main.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/datasets/datasets.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/models/net.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/id_options.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/ad_options.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/main.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/data_sets/datasets.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/adversarial_utils.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/ceshi.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/solver.py" />
+        <option value="$PROJECT_DIR$/IdentifiNetwork/generate_train_test_data.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/data_sets/net_options.py" />
+        <option value="$PROJECT_DIR$/AdversarialCaptcha/main.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/solver.py" />
+        <option value="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/ceshi.py" />
+        <option value="$PROJECT_DIR$/IdentifiNetwork/main.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/models/core_net.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/main.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/net_options.py" />
+        <option value="$PROJECT_DIR$/周报.txt" />
+        <option value="$PROJECT_DIR$/AdversarialCaptcha/README.md" />
+        <option value="$PROJECT_DIR$/CaptchaNet/adversary.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/README.md" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/README.md" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/captcha.py" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/data/labels/megaupload_test_2_labels.txt" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/labels_generate.py" />
       </list>
     </option>
   </component>
@@ -197,7 +351,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,20 +358,11 @@
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="AdversarialCaptcha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="IdentifiNetwork" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,17 +379,17 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CaptchaNet/data_sets/mnist" />
+      <recent name="$PROJECT_DIR$/CaptchaNet/data_sets" />
+      <recent name="$PROJECT_DIR$/CaptchaNet" />
       <recent name="$PROJECT_DIR$/IdentifiNetwork/simple" />
       <recent name="$PROJECT_DIR$/IdentifiNetwork" />
-      <recent name="$PROJECT_DIR$/IdentifiNetwork/checkpoints" />
-      <recent name="$PROJECT_DIR$/IdentifiNetwork/models" />
-      <recent name="$PROJECT_DIR$/IdentifiNetwork/data_set" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/IdentifiNetwork/checkpoints/jd" />
-      <recent name="$PROJECT_DIR$/IdentifiNetwork/checkpoints/jd_2" />
-      <recent name="$PROJECT_DIR$/IdentifiNetwork/data_sets/jd" />
-      <recent name="$PROJECT_DIR$/IdentifiNetwork" />
+      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/labels" />
+      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/megaupload" />
+      <recent name="$PROJECT_DIR$/CaptchaNet" />
+      <recent name="$PROJECT_DIR$/CaptchaNet/data_sets/auth" />
       <recent name="$PROJECT_DIR$/AdversarialCaptcha" />
     </key>
   </component>
@@ -261,7 +405,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ceshi (1)">
+  <component name="RunManager" selected="Python.ceshi">
     <configuration name="ceshi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -283,7 +427,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ceshi_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ceshi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,11 +435,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IdentifiNetwork" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CaptchaNet" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IdentifiNetwork/ps.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CaptchaNet/ceshi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -325,27 +469,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="datasets" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MasterExp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AdversarialCaptcha/datasets" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AdversarialCaptcha/datasets/datasets.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="generate_train_test_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -367,20 +490,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="save_mnist_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MasterExp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IdentifiNetwork" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.ceshi_2" />
       <item itemvalue="Python.generate_train_test_data" />
-      <item itemvalue="Python.datasets" />
       <item itemvalue="Python.datasets (1)" />
       <item itemvalue="Python.ceshi (1)" />
+      <item itemvalue="Python.ceshi" />
+      <item itemvalue="Python.save_mnist_image" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ceshi" />
+        <item itemvalue="Python.save_mnist_image" />
+        <item itemvalue="Python.generate_train_test_data" />
         <item itemvalue="Python.ceshi (1)" />
         <item itemvalue="Python.datasets (1)" />
-        <item itemvalue="Python.datasets" />
-        <item itemvalue="Python.generate_train_test_data" />
-        <item itemvalue="Python.ceshi_2" />
       </list>
     </recent_temporary>
   </component>
@@ -411,7 +555,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.17668776" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.18459916" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4978903" weight="0.39187706" />
@@ -423,242 +567,1097 @@
       <window_info anchor="bottom" id="Find" order="7" weight="0.32930845" />
       <window_info anchor="right" id="Data View" order="0" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.12921941" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4994726" weight="0.34687155" />
-      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32821077" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.3600439" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50052744" side_tool="true" weight="0.32821077" />
-      <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.32930845" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32930845" />
-      <window_info anchor="right" id="Data View" order="0" />
-    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/1.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/3.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/5.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/7.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/11.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/13.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/0.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/2.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/4.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/6.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/8.jpg" />
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/changed/9.jpg" />
-    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torchvision/utils.py">
+    <entry file="file://$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="854">
-          <caret line="65" column="9" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="9" />
+        <state relative-caret-position="189">
+          <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
           <folding>
-            <element signature="e#1650#2293#0" />
+            <element signature="e#295#674#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torchvision/transforms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/legitimate/0.jpg">
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/test/0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/legitimate/1.jpg">
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/test/2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/perturbed/1.jpg">
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/test/1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torchvision/datasets/folder.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/train_labels.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="64" column="11" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="11" />
+        <state>
+          <caret selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/ad_options.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/train/0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/train/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/train/2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/train/997.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/train/998.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/train/999.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/test/99.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/test/98.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/test/97.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/models/net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="21" />
+          <folding>
+            <element signature="e#751#2195#0" />
+            <element signature="e#2641#2992#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/datasets.py">
+    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torch/autograd/variable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IdentifiNetwork/id_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="72" selection-start-line="72" selection-end-line="93" selection-end-column="17" />
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/adversarial_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="251">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="1040" lean-forward="true" selection-start-line="1040" selection-end-line="1040" />
+          <folding>
+            <element signature="e#524#1742#0" />
+            <element signature="e#1780#3052#0" />
+            <element signature="e#3104#4367#0" />
+            <element signature="e#4439#5947#0" />
+            <element signature="e#6005#7618#0" />
+            <element signature="e#7690#9299#0" />
+            <element signature="e#9355#9830#0" />
+            <element signature="e#9887#11028#0" />
+            <element signature="e#11082#12163#0" />
+            <element signature="e#12216#13334#0" />
+            <element signature="e#13594#16230#0" />
+            <element signature="e#13766#15419#1" />
+            <element signature="e#15481#15611#0" />
+            <element signature="e#15498#15610#0" />
+            <element signature="e#15648#15837#0" />
+            <element signature="e#15735#15837#0" />
+            <element signature="e#16453#16826#0" />
+            <element signature="e#17233#17798#0" />
+            <element signature="e#17405#17551#1" />
+            <element signature="e#17966#18223#0" />
+            <element signature="e#18597#19160#0" />
+            <element signature="e#18769#18915#1" />
+            <element signature="e#19328#19585#0" />
+            <element signature="e#19959#20531#0" />
+            <element signature="e#20131#20277#1" />
+            <element signature="e#20699#20956#0" />
+            <element signature="e#21253#22568#0" />
+            <element signature="e#21466#21584#0" />
+            <element signature="e#21658#22553#0" />
+            <element signature="e#21868#22142#0" />
+            <element signature="e#21885#22009#0" />
+            <element signature="e#22197#22526#0" />
+            <element signature="e#22362#22526#0" />
+            <element signature="e#22714#23426#0" />
+            <element signature="e#22877#22991#1" />
+            <element signature="e#23572#24235#0" />
+            <element signature="e#23735#23849#1" />
+            <element signature="e#24381#25077#0" />
+            <element signature="e#24544#24658#1" />
+            <element signature="e#25193#25913#0" />
+            <element signature="e#25276#25526#1" />
+            <element signature="e#25600#25725#0" />
+            <element signature="e#26029#26715#0" />
+            <element signature="e#26112#26362#1" />
+            <element signature="e#26398#26523#0" />
+            <element signature="e#26835#27298#0" />
+            <element signature="e#26911#27241#1" />
+            <element signature="e#27406#27529#0" />
+            <element signature="e#27858#28428#0" />
+            <element signature="e#27934#28300#1" />
+            <element signature="e#28536#28659#0" />
+            <element signature="e#28988#29558#0" />
+            <element signature="e#29064#29430#1" />
+            <element signature="e#29666#29789#0" />
+            <element signature="e#30062#30350#0" />
+            <element signature="e#30436#30918#0" />
+            <element signature="e#30491#30788#1" />
+            <element signature="e#31003#31485#0" />
+            <element signature="e#31058#31355#1" />
+            <element signature="e#31605#32371#0" />
+            <element signature="e#31655#32104#1" />
+            <element signature="e#32138#32253#0" />
+            <element signature="e#32155#32242#0" />
+            <element signature="e#32475#32905#0" />
+            <element signature="e#32525#32626#1" />
+            <element signature="e#32660#32775#0" />
+            <element signature="e#32677#32764#0" />
+            <element signature="e#33004#34000#0" />
+            <element signature="e#33054#33717#1" />
+            <element signature="e#33751#33866#0" />
+            <element signature="e#33768#33855#0" />
+            <element signature="e#34099#35211#0" />
+            <element signature="e#34149#34812#1" />
+            <element signature="e#34817#34890#0" />
+            <element signature="e#34962#35077#0" />
+            <element signature="e#34979#35066#0" />
+            <element signature="e#35323#35663#0" />
+            <element signature="e#35402#35517#0" />
+            <element signature="e#35419#35506#0" />
+            <element signature="e#35758#36078#0" />
+            <element signature="e#35809#35921#1" />
+            <element signature="e#36122#36217#0" />
+            <element signature="e#36290#36602#0" />
+            <element signature="e#36327#36487#1" />
+            <element signature="e#36638#36705#0" />
+            <element signature="e#36770#37370#0" />
+            <element signature="e#36806#37211#1" />
+            <element signature="e#37471#37880#0" />
+            <element signature="e#37522#37707#1" />
+            <element signature="e#37931#38031#0" />
+            <element signature="e#38105#38372#0" />
+            <element signature="e#38142#38328#1" />
+            <element signature="e#38453#38794#0" />
+            <element signature="e#38497#38653#1" />
+            <element signature="e#38835#38910#0" />
+            <element signature="e#38983#39460#0" />
+            <element signature="e#39020#39345#1" />
+            <element signature="e#39496#39563#0" />
+            <element signature="e#39646#40036#0" />
+            <element signature="e#39690#39907#1" />
+            <element signature="e#40071#40148#0" />
+            <element signature="e#40248#40711#0" />
+            <element signature="e#40292#40538#1" />
+            <element signature="e#40766#40866#0" />
+            <element signature="e#40933#41254#0" />
+            <element signature="e#40972#41216#1" />
+            <element signature="e#41371#41762#0" />
+            <element signature="e#41428#41597#1" />
+            <element signature="e#41800#41909#0" />
+            <element signature="e#41963#42148#0" />
+            <element signature="e#42223#42469#0" />
+            <element signature="e#42261#42427#1" />
+            <element signature="e#42532#42737#0" />
+            <element signature="e#42532#42705#1" />
+            <element signature="e#42798#43014#0" />
+            <element signature="e#42798#42977#1" />
+            <element signature="e#43063#43119#0" />
+            <element signature="e#43206#43518#0" />
+            <element signature="e#43255#43380#0" />
+            <element signature="e#43615#44645#0" />
+            <element signature="e#43681#44319#1" />
+            <element signature="e#44540#44630#0" />
+            <element signature="e#44742#46066#0" />
+            <element signature="e#44808#45746#1" />
+            <element signature="e#45964#46051#0" />
+            <element signature="e#46154#46583#0" />
+            <element signature="e#46213#46404#1" />
+            <element signature="e#46677#47117#0" />
+            <element signature="e#46722#46937#1" />
+            <element signature="e#47216#48909#0" />
+            <element signature="e#47267#48175#1" />
+            <element signature="e#48312#48867#0" />
+            <element signature="e#48342#48364#0" />
+            <element signature="e#48567#48611#0" />
+            <element signature="e#49010#50137#0" />
+            <element signature="e#49076#49803#1" />
+            <element signature="e#50029#50122#0" />
+            <element signature="e#50190#50339#0" />
+            <element signature="e#50397#50697#0" />
+            <element signature="e#50397#50594#1" />
+            <element signature="e#50757#51049#0" />
+            <element signature="e#50757#50937#1" />
+            <element signature="e#51127#51878#0" />
+            <element signature="e#51184#51541#1" />
+            <element signature="e#51596#51706#0" />
+            <element signature="e#51725#51863#0" />
+            <element signature="e#51967#52083#0" />
+            <element signature="e#52158#52307#0" />
+            <element signature="e#52478#56721#0" />
+            <element signature="e#52568#55674#1" />
+            <element signature="e#55715#56069#0" />
+            <element signature="e#55932#56069#0" />
+            <element signature="e#56142#56638#0" />
+            <element signature="e#56198#56267#0" />
+            <element signature="e#56423#56443#0" />
+            <element signature="e#56908#63542#0" />
+            <element signature="e#57006#60470#1" />
+            <element signature="e#60475#60510#0" />
+            <element signature="e#60686#60961#0" />
+            <element signature="e#60700#60922#0" />
+            <element signature="e#60996#61506#0" />
+            <element signature="e#61032#61311#0" />
+            <element signature="e#61049#61288#0" />
+            <element signature="e#61338#61506#0" />
+            <element signature="e#61542#62315#0" />
+            <element signature="e#61829#62051#0" />
+            <element signature="e#61846#62024#0" />
+            <element signature="e#62109#62315#0" />
+            <element signature="e#62126#62242#0" />
+            <element signature="e#62334#62465#0" />
+            <element signature="e#62351#62444#0" />
+            <element signature="e#62688#62922#0" />
+            <element signature="e#62942#63065#0" />
+            <element signature="e#63104#63375#0" />
+            <element signature="e#63160#63180#0" />
+            <element signature="e#63711#64922#0" />
+            <element signature="e#63814#64015#1" />
+            <element signature="e#64041#64768#0" />
+            <element signature="e#64069#64146#0" />
+            <element signature="e#65113#65632#0" />
+            <element signature="e#65244#65469#1" />
+            <element signature="e#65747#66091#0" />
+            <element signature="e#65832#65961#1" />
+            <element signature="e#66200#66532#0" />
+            <element signature="e#66279#66408#1" />
+            <element signature="e#66639#67619#0" />
+            <element signature="e#66696#66949#1" />
+            <element signature="e#66996#67117#0" />
+            <element signature="e#67013#67104#0" />
+            <element signature="e#67183#67295#0" />
+            <element signature="e#67314#67554#0" />
+            <element signature="e#67772#69594#0" />
+            <element signature="e#67837#69478#1" />
+            <element signature="e#69758#73846#0" />
+            <element signature="e#69857#72373#1" />
+            <element signature="e#72666#72813#0" />
+            <element signature="e#73080#73831#0" />
+            <element signature="e#73259#73359#0" />
+            <element signature="e#73569#73668#0" />
+            <element signature="e#73695#73831#0" />
+            <element signature="e#74032#76858#0" />
+            <element signature="e#74127#76294#1" />
+            <element signature="e#76574#76697#0" />
+            <element signature="e#76975#79807#0" />
+            <element signature="e#77051#78910#1" />
+            <element signature="e#79058#79629#0" />
+            <element signature="e#79094#79424#0" />
+            <element signature="e#79108#79423#0" />
+            <element signature="e#79981#82788#0" />
+            <element signature="e#80080#82566#1" />
+            <element signature="e#82957#85908#0" />
+            <element signature="e#83051#84953#1" />
+            <element signature="e#85201#85398#0" />
+            <element signature="e#85215#85361#0" />
+            <element signature="e#85447#85632#0" />
+            <element signature="e#85464#85593#0" />
+            <element signature="e#85669#85814#0" />
+            <element signature="e#86118#88725#0" />
+            <element signature="e#86230#88266#1" />
+            <element signature="e#88810#89177#0" />
+            <element signature="e#88843#88990#0" />
+            <element signature="e#89009#89177#0" />
+            <element signature="e#89253#89374#0" />
+            <element signature="e#89499#90275#0" />
+            <element signature="e#89575#89753#1" />
+            <element signature="e#89917#90062#0" />
+            <element signature="e#90081#90260#0" />
+            <element signature="e#90393#91195#0" />
+            <element signature="e#90469#90685#1" />
+            <element signature="e#90849#90989#0" />
+            <element signature="e#91008#91180#0" />
+            <element signature="e#91314#92092#0" />
+            <element signature="e#91390#91585#1" />
+            <element signature="e#91749#91885#0" />
+            <element signature="e#91904#92077#0" />
+            <element signature="e#92265#93104#0" />
+            <element signature="e#92356#92540#0" />
+            <element signature="e#92820#93019#0" />
+            <element signature="e#92840#92965#0" />
+            <element signature="e#93272#93814#0" />
+            <element signature="e#93355#93534#0" />
+            <element signature="e#93947#94467#0" />
+            <element signature="e#94023#94194#1" />
+            <element signature="e#94594#95096#0" />
+            <element signature="e#94670#94829#1" />
+            <element signature="e#95279#96154#0" />
+            <element signature="e#95373#95535#1" />
+            <element signature="e#96074#96139#0" />
+            <element signature="e#96331#96900#0" />
+            <element signature="e#96422#96610#0" />
+            <element signature="e#97079#97947#0" />
+            <element signature="e#97185#97400#1" />
+            <element signature="e#97718#97854#0" />
+            <element signature="e#97999#98473#0" />
+            <element signature="e#98568#100693#0" />
+            <element signature="e#98568#100524#1" />
+            <element signature="e#100790#106423#0" />
+            <element signature="e#100790#102630#1" />
+            <element signature="e#102751#103306#0" />
+            <element signature="e#103143#103306#0" />
+            <element signature="e#103160#103274#0" />
+            <element signature="e#103343#103616#0" />
+            <element signature="e#103662#103852#0" />
+            <element signature="e#103704#103852#0" />
+            <element signature="e#103721#103851#0" />
+            <element signature="e#103871#104263#0" />
+            <element signature="e#103909#104263#0" />
+            <element signature="e#103923#104215#0" />
+            <element signature="e#106165#106423#0" />
+            <element signature="e#106191#106396#0" />
+            <element signature="e#106489#107350#0" />
+            <element signature="e#106489#107131#1" />
+            <element signature="e#107417#108280#0" />
+            <element signature="e#107417#108039#1" />
+            <element signature="e#108317#108357#0" />
+            <element signature="e#108387#108444#0" />
+            <element signature="e#108553#112296#0" />
+            <element signature="e#108602#111460#1" />
+            <element signature="e#111518#111666#0" />
+            <element signature="e#111535#111652#0" />
+            <element signature="e#111769#111972#0" />
+            <element signature="e#111786#111950#0" />
+            <element signature="e#112366#113007#0" />
+            <element signature="e#112408#112954#1" />
+            <element signature="e#113094#117326#0" />
+            <element signature="e#113148#115358#1" />
+            <element signature="e#115595#117311#0" />
+            <element signature="e#115721#116130#0" />
+            <element signature="e#116019#116130#0" />
+            <element signature="e#116175#116584#0" />
+            <element signature="e#116473#116584#0" />
+            <element signature="e#116629#117102#0" />
+            <element signature="e#116742#116853#0" />
+            <element signature="e#116991#117102#0" />
+            <element signature="e#117129#117311#0" />
+            <element signature="e#117440#117626#0" />
+            <element signature="e#117499#117566#1" />
+            <element signature="e#117662#118569#0" />
+            <element signature="e#118630#119425#0" />
+            <element signature="e#119632#120147#0" />
+            <element signature="e#119743#119812#1" />
+            <element signature="e#120242#121456#0" />
+            <element signature="e#120310#121161#1" />
+            <element signature="e#121190#121282#0" />
+            <element signature="e#121301#121441#0" />
+            <element signature="e#121511#121581#0" />
+            <element signature="e#121653#122437#0" />
+            <element signature="e#121653#121882#1" />
+            <element signature="e#121917#122311#0" />
+            <element signature="e#122520#123400#0" />
+            <element signature="e#122520#122766#1" />
+            <element signature="e#122800#123274#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_200_labels.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/auth/train_labels.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/captcha/authorize/ceshi/0.png" />
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="750" selection-start-line="750" selection-end-line="750" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/test_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/auth/test_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentifiNetwork/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="103" column="55" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+        <state relative-caret-position="147">
+          <caret line="143" column="12" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/ceshi.py">
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#153#159#0" expanded="true" />
+            <element signature="e#154#166#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/0/5.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/0/6.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/0/7.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/5.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/6.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/7.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/8.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/10.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/11.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/1/12.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/0/0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/0/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/0/2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/0/3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/0/4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/ad.json">
+    <entry file="file://$PROJECT_DIR$/IdentifiNetwork/id_options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="108" selection-start-column="108" selection-end-column="108" />
+        <state relative-caret-position="294">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/output/d_mnist/perturbed/0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/perturbed/7/4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/周报.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="11" />
+        <state relative-caret-position="677">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/test/7/11.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/ad.json">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="231">
+            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="98" column="31" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+        <state relative-caret-position="3822">
+          <caret line="189" column="36" lean-forward="true" selection-start-line="189" selection-start-column="36" selection-end-line="189" selection-end-column="36" />
           <folding>
-            <element signature="e#17#29#0" expanded="true" />
-            <element signature="e#382#2503#0" />
-            <element signature="e#1667#1673#0" />
-            <element signature="e#2304#2340#0" />
-            <element signature="e#2553#3396#0" />
-            <element signature="e#2598#2746#0" />
-            <element signature="e#2783#2931#0" />
-            <element signature="e#2997#3396#0" />
-            <element signature="e#3456#3797#0" />
-            <element signature="e#3828#5806#0" />
-            <element signature="e#3907#5525#0" />
-            <element signature="e#4031#5500#0" />
-            <element signature="e#4549#5500#0" />
-            <element signature="e#4833#5500#0" />
-            <element signature="e#5568#5765#0" />
-            <element signature="e#5836#7270#0" />
-            <element signature="e#5978#6306#0" />
-            <element signature="e#6406#6874#0" />
-            <element signature="e#6931#7116#0" />
-            <element signature="e#7376#8765#0" />
-            <element signature="e#8244#8429#0" />
-            <element signature="e#8928#9474#0" />
-            <element signature="e#8957#9276#0" />
-            <element signature="e#9383#9461#0" />
-            <element signature="e#9532#9958#0" />
-            <element signature="e#9665#9934#0" />
-            <element signature="e#9718#9870#0" />
-            <element signature="e#11179#12447#0" />
-            <element signature="e#11349#11444#0" />
-            <element signature="e#11714#11893#0" />
-            <element signature="e#11920#12139#0" />
-            <element signature="e#12311#12447#0" />
-            <element signature="e#12324#12446#0" />
-            <element signature="e#12521#13128#0" />
-            <element signature="e#12536#12589#0" />
-            <element signature="e#12613#12670#0" />
-            <element signature="e#12688#12929#0" />
-            <element signature="e#13206#13898#0" />
-            <element signature="e#13307#13813#0" />
+            <element signature="e#17#44#0" expanded="true" />
+            <element signature="e#3449#3790#0" />
+            <element signature="e#7406#9335#0" />
+            <element signature="e#9420#9777#0" />
+            <element signature="e#9845#10392#0" />
+            <element signature="e#10473#10899#0" />
+            <element signature="e#11008#11825#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/ceshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#162#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#164#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="168">
+            <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/adversary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/out_utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="e#182#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/logging/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="1745" column="44" selection-start-line="1745" selection-start-column="38" selection-end-line="1745" selection-end-column="44" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#906#910#0" />
+            <element signature="e#955#1074#0" />
+            <element signature="e#1015#1074#0" />
+            <element signature="e#1205#1759#0" />
+            <element signature="e#1205#1269#0" />
+            <element signature="e#1640#1759#0" />
+            <element signature="e#1658#1758#0" />
+            <element signature="e#1790#3186#0" />
+            <element signature="e#1951#2250#0" />
+            <element signature="e#1951#2007#0" />
+            <element signature="e#2128#2208#0" />
+            <element signature="e#2415#2714#0" />
+            <element signature="e#2415#2459#0" />
+            <element signature="e#2535#2672#0" />
+            <element signature="e#2779#3075#0" />
+            <element signature="e#2779#2823#0" />
+            <element signature="e#2899#3033#0" />
+            <element signature="e#3080#3149#0" />
+            <element signature="e#3237#3282#0" />
+            <element signature="e#3590#3621#0" />
+            <element signature="e#3689#3931#0" />
+            <element signature="e#3689#3903#1" />
+            <element signature="e#3934#3935#0" />
+            <element signature="e#4637#4785#0" />
+            <element signature="e#4788#4858#0" />
+            <element signature="e#4969#5039#0" />
+            <element signature="e#5087#5854#0" />
+            <element signature="e#5093#5152#0" />
+            <element signature="e#5702#5768#0" />
+            <element signature="e#5942#6735#0" />
+            <element signature="e#6768#6928#0" />
+            <element signature="e#6965#7034#0" />
+            <element signature="e#7195#7538#0" />
+            <element signature="e#7195#7494#1" />
+            <element signature="e#7568#7885#0" />
+            <element signature="e#7568#7841#1" />
+            <element signature="e#7920#8438#0" />
+            <element signature="e#7920#8397#1" />
+            <element signature="e#8469#8727#0" />
+            <element signature="e#8469#8681#1" />
+            <element signature="e#8730#8800#0" />
+            <element signature="e#8850#9479#0" />
+            <element signature="e#9381#9389#0" />
+            <element signature="e#9498#10016#0" />
+            <element signature="e#9498#9623#1" />
+            <element signature="e#9729#9952#0" />
+            <element signature="e#9746#9849#0" />
+            <element signature="e#9983#10016#0" />
+            <element signature="e#10019#10089#0" />
+            <element signature="e#10214#10731#0" />
+            <element signature="e#10350#10426#0" />
+            <element signature="e#10478#10639#0" />
+            <element signature="e#10792#11309#0" />
+            <element signature="e#10928#11004#0" />
+            <element signature="e#11056#11217#0" />
+            <element signature="e#11312#11382#0" />
+            <element signature="e#11438#11490#0" />
+            <element signature="e#11515#11755#0" />
+            <element signature="e#11549#11565#0" />
+            <element signature="e#11605#11660#0" />
+            <element signature="e#11700#11755#0" />
+            <element signature="e#11789#12434#0" />
+            <element signature="e#11853#12094#0" />
+            <element signature="e#12147#12356#0" />
+            <element signature="e#12437#12507#0" />
+            <element signature="e#12559#12889#1" />
+            <element signature="e#13016#13335#0" />
+            <element signature="e#13016#13061#0" />
+            <element signature="e#13380#13399#0" />
+            <element signature="e#13445#13464#0" />
+            <element signature="e#13498#13851#0" />
+            <element signature="e#13716#13796#0" />
+            <element signature="e#13916#13927#0" />
+            <element signature="e#13968#13980#0" />
+            <element signature="e#14011#14823#0" />
+            <element signature="e#14011#14364#1" />
+            <element signature="e#14390#14432#0" />
+            <element signature="e#14598#14653#0" />
+            <element signature="e#14869#15071#0" />
+            <element signature="e#14900#15071#0" />
+            <element signature="e#15102#15201#0" />
+            <element signature="e#15256#15687#0" />
+            <element signature="e#15376#15434#0" />
+            <element signature="e#15559#15667#0" />
+            <element signature="e#15726#16136#0" />
+            <element signature="e#16175#16217#0" />
+            <element signature="e#16251#16454#0" />
+            <element signature="e#16317#16440#0" />
+            <element signature="e#16490#16696#0" />
+            <element signature="e#16490#16587#1" />
+            <element signature="e#16755#17231#0" />
+            <element signature="e#16982#17157#0" />
+            <element signature="e#16982#17036#0" />
+            <element signature="e#17269#17405#0" />
+            <element signature="e#17276#17405#0" />
+            <element signature="e#17450#17764#0" />
+            <element signature="e#17824#19011#0" />
+            <element signature="e#17824#18341#1" />
+            <element signature="e#18802#18896#0" />
+            <element signature="e#19058#19183#0" />
+            <element signature="e#19084#19182#0" />
+            <element signature="e#19231#19946#0" />
+            <element signature="e#19231#19538#1" />
+            <element signature="e#19693#19945#0" />
+            <element signature="e#20014#20780#0" />
+            <element signature="e#20014#20251#1" />
+            <element signature="e#20829#20958#0" />
+            <element signature="e#20855#20957#0" />
+            <element signature="e#20988#22371#0" />
+            <element signature="e#20988#21418#1" />
+            <element signature="e#21491#21995#0" />
+            <element signature="e#21738#21995#0" />
+            <element signature="e#22029#22371#0" />
+            <element signature="e#22078#22316#0" />
+            <element signature="e#22403#22793#0" />
+            <element signature="e#22403#22780#1" />
+            <element signature="e#22904#29801#0" />
+            <element signature="e#22904#24643#1" />
+            <element signature="e#24678#24949#0" />
+            <element signature="e#24752#24896#0" />
+            <element signature="e#25003#25205#0" />
+            <element signature="e#25489#27763#0" />
+            <element signature="e#25554#25771#0" />
+            <element signature="e#25554#25610#0" />
+            <element signature="e#25867#27295#0" />
+            <element signature="e#25958#26255#0" />
+            <element signature="e#26298#27295#0" />
+            <element signature="e#26298#26331#0" />
+            <element signature="e#26516#26885#0" />
+            <element signature="e#26626#26885#0" />
+            <element signature="e#26763#26885#0" />
+            <element signature="e#26780#26884#0" />
+            <element signature="e#27086#27243#0" />
+            <element signature="e#27086#27140#0" />
+            <element signature="e#27367#27763#0" />
+            <element signature="e#27655#27763#0" />
+            <element signature="e#27825#28719#0" />
+            <element signature="e#28046#28224#0" />
+            <element signature="e#28046#28108#0" />
+            <element signature="e#28274#28696#0" />
+            <element signature="e#28397#28696#0" />
+            <element signature="e#28397#28456#0" />
+            <element signature="e#28916#29166#0" />
+            <element signature="e#28937#29082#0" />
+            <element signature="e#29235#29343#0" />
+            <element signature="e#29385#29779#0" />
+            <element signature="e#29424#29710#0" />
+            <element signature="e#29553#29710#0" />
+            <element signature="e#29884#31332#0" />
+            <element signature="e#29884#30347#1" />
+            <element signature="e#30409#30506#0" />
+            <element signature="e#30577#30794#0" />
+            <element signature="e#30828#31264#0" />
+            <element signature="e#31061#31178#0" />
+            <element signature="e#31362#31667#0" />
+            <element signature="e#31362#31606#1" />
+            <element signature="e#31728#32411#0" />
+            <element signature="e#31728#32144#1" />
+            <element signature="e#32454#33050#0" />
+            <element signature="e#32454#33037#1" />
+            <element signature="e#33106#33237#0" />
+            <element signature="e#33277#34103#0" />
+            <element signature="e#33277#33518#1" />
+            <element signature="e#33678#33792#0" />
+            <element signature="e#34137#34421#0" />
+            <element signature="e#34137#34371#1" />
+            <element signature="e#34454#34810#0" />
+            <element signature="e#34454#34756#1" />
+            <element signature="e#34860#35504#0" />
+            <element signature="e#34860#35153#1" />
+            <element signature="e#35228#35460#0" />
+            <element signature="e#35322#35372#0" />
+            <element signature="e#35548#36428#0" />
+            <element signature="e#35548#36295#1" />
+            <element signature="e#36464#37017#0" />
+            <element signature="e#36464#36764#1" />
+            <element signature="e#36828#36981#0" />
+            <element signature="e#37048#37216#0" />
+            <element signature="e#37048#37168#1" />
+            <element signature="e#37252#37675#0" />
+            <element signature="e#37252#37418#1" />
+            <element signature="e#37465#37610#0" />
+            <element signature="e#37713#38076#0" />
+            <element signature="e#37713#37947#1" />
+            <element signature="e#38115#38419#0" />
+            <element signature="e#38115#38305#1" />
+            <element signature="e#38479#39589#0" />
+            <element signature="e#38479#39281#1" />
+            <element signature="e#39331#39396#0" />
+            <element signature="e#39445#39554#0" />
+            <element signature="e#39644#39777#0" />
+            <element signature="e#39670#39776#0" />
+            <element signature="e#39833#43018#0" />
+            <element signature="e#39833#41748#1" />
+            <element signature="e#41808#41890#0" />
+            <element signature="e#41980#42404#0" />
+            <element signature="e#42201#42352#0" />
+            <element signature="e#42447#42523#0" />
+            <element signature="e#42567#42811#0" />
+            <element signature="e#42630#42788#0" />
+            <element signature="e#42708#42788#0" />
+            <element signature="e#42914#42969#0" />
+            <element signature="e#43065#44784#0" />
+            <element signature="e#43065#43838#1" />
+            <element signature="e#43982#44548#0" />
+            <element signature="e#44092#44422#0" />
+            <element signature="e#44092#44148#0" />
+            <element signature="e#44591#44732#0" />
+            <element signature="e#44825#46707#0" />
+            <element signature="e#44825#45209#1" />
+            <element signature="e#45339#46031#0" />
+            <element signature="e#45423#45933#0" />
+            <element signature="e#45500#45562#0" />
+            <element signature="e#45636#45892#0" />
+            <element signature="e#46163#46378#0" />
+            <element signature="e#46405#46666#0" />
+            <element signature="e#46550#46625#0" />
+            <element signature="e#46769#47423#0" />
+            <element signature="e#46769#47305#1" />
+            <element signature="e#47480#48580#0" />
+            <element signature="e#47480#47915#1" />
+            <element signature="e#48212#48448#0" />
+            <element signature="e#48260#48394#0" />
+            <element signature="e#48625#49484#0" />
+            <element signature="e#48625#49232#1" />
+            <element signature="e#49292#49361#0" />
+            <element signature="e#49554#52459#0" />
+            <element signature="e#49554#49926#1" />
+            <element signature="e#50110#50292#0" />
+            <element signature="e#50483#50588#0" />
+            <element signature="e#50598#50657#0" />
+            <element signature="e#51741#51774#0" />
+            <element signature="e#52533#53805#0" />
+            <element signature="e#52533#53185#1" />
+            <element signature="e#53916#55256#1" />
+            <element signature="e#57104#57179#0" />
+            <element signature="e#57557#57645#0" />
+            <element signature="e#58308#61282#0" />
+            <element signature="e#58308#59727#1" />
+            <element signature="e#59810#59850#0" />
+            <element signature="e#59904#60031#0" />
+            <element signature="e#59982#60031#0" />
+            <element signature="e#60113#60185#0" />
+            <element signature="e#60513#60721#0" />
+            <element signature="e#60949#61114#0" />
+            <element signature="e#60949#61001#0" />
+            <element signature="e#61203#61282#0" />
+            <element signature="e#61319#62000#0" />
+            <element signature="e#61319#61911#1" />
+            <element signature="e#62056#62834#0" />
+            <element signature="e#62056#62783#1" />
+            <element signature="e#62865#63455#0" />
+            <element signature="e#62865#63209#1" />
+            <element signature="e#63320#63429#0" />
+            <element signature="e#63485#63647#0" />
+            <element signature="e#63485#63630#1" />
+            <element signature="e#63706#65329#0" />
+            <element signature="e#63706#64797#1" />
+            <element signature="e#64892#64953#0" />
+            <element signature="e#64990#65051#0" />
+            <element signature="e#65335#65400#0" />
+            <element signature="e#65552#67764#0" />
+            <element signature="e#65552#66798#1" />
+            <element signature="e#66842#66944#0" />
+            <element signature="e#66990#67096#0" />
+            <element signature="e#67282#67372#0" />
+            <element signature="e#67531#67653#0" />
+            <element signature="e#67877#69217#0" />
+            <element signature="e#68028#68243#0" />
+            <element signature="e#68352#68839#0" />
+            <element signature="e#68352#68406#0" />
+            <element signature="e#68652#68838#0" />
+            <element signature="e#69260#69744#0" />
+            <element signature="e#69260#69671#1" />
+            <element signature="e#69793#69983#0" />
+            <element signature="e#69793#69905#1" />
+            <element signature="e#70017#70229#0" />
+            <element signature="e#70264#70478#0" />
+            <element signature="e#70481#70551#0" />
+            <element signature="e#70611#70681#0" />
+            <element signature="e#70725#70802#0" />
+            <element signature="e#70805#70875#0" />
+            <element signature="e#70922#71009#0" />
+            <element signature="e#71039#71503#0" />
+            <element signature="e#71039#71215#1" />
+            <element signature="e#71540#72532#0" />
+            <element signature="e#71540#72211#1" />
+            <element signature="e#72266#72334#0" />
+            <element signature="e#72372#72477#0" />
+            <element signature="e#72599#73805#0" />
+            <element signature="e#72599#73509#1" />
+            <element signature="e#73841#73968#0" />
+            <element signature="e#74036#76410#0" />
+            <element signature="e#74036#75550#1" />
+            <element signature="e#75737#76350#0" />
+            <element signature="e#75764#76115#0" />
+            <element signature="e#75795#75983#0" />
+            <element signature="e#76161#76350#0" />
+            <element signature="e#76448#77761#0" />
+            <element signature="e#76448#76886#1" />
+            <element signature="e#77036#77267#0" />
+            <element signature="e#77053#77153#0" />
+            <element signature="e#77191#77267#0" />
+            <element signature="e#77593#77699#0" />
+            <element signature="e#77788#77994#0" />
+            <element signature="e#78022#78230#0" />
+            <element signature="e#78254#79027#0" />
+            <element signature="e#78260#78295#0" />
+            <element signature="e#79200#79533#0" />
+            <element signature="e#79319#79533#0" />
+            <element signature="e#79346#79453#0" />
+            <element signature="e#79564#81962#0" />
+            <element signature="e#79564#80366#1" />
+            <element signature="e#80538#80706#0" />
+            <element signature="e#80555#80661#0" />
+            <element signature="e#80733#80795#0" />
+            <element signature="e#80887#80941#0" />
+            <element signature="e#81034#81617#0" />
+            <element signature="e#81059#81597#0" />
+            <element signature="e#81080#81317#0" />
+            <element signature="e#81175#81317#0" />
+            <element signature="e#81405#81597#0" />
+            <element signature="e#81405#81459#0" />
+            <element signature="e#81689#81749#0" />
+            <element signature="e#81770#81819#0" />
+            <element signature="e#81964#81965#0" />
+            <element signature="e#82023#82367#0" />
+            <element signature="e#82023#82278#1" />
+            <element signature="e#82402#83146#0" />
+            <element signature="e#82402#83060#1" />
+            <element signature="e#83190#83634#0" />
+            <element signature="e#83190#83554#1" />
+            <element signature="e#83665#84185#0" />
+            <element signature="e#83665#84152#1" />
+            <element signature="e#84216#85056#0" />
+            <element signature="e#84216#84587#1" />
+            <element signature="e#84728#84889#0" />
+            <element signature="e#84977#85027#0" />
+            <element signature="e#85059#85129#0" />
+            <element signature="e#85198#85578#0" />
+            <element signature="e#85198#85509#1" />
+            <element signature="e#85618#85856#0" />
+            <element signature="e#85618#85824#1" />
+            <element signature="e#85894#86137#0" />
+            <element signature="e#85894#86107#1" />
+            <element signature="e#86179#86471#0" />
+            <element signature="e#86179#86437#1" />
+            <element signature="e#86517#86768#0" />
+            <element signature="e#86517#86722#1" />
+            <element signature="e#86804#86971#0" />
+            <element signature="e#86804#86907#1" />
+            <element signature="e#87014#87338#0" />
+            <element signature="e#87014#87309#1" />
+            <element signature="e#87382#87690#0" />
+            <element signature="e#87382#87661#1" />
+            <element signature="e#87693#87763#0" />
+            <element signature="e#87854#87911#0" />
+            <element signature="e#87961#88028#0" />
+            <element signature="e#88031#88101#0" />
+            <element signature="e#88163#88496#0" />
+            <element signature="e#88163#88425#1" />
+            <element signature="e#88534#88783#0" />
+            <element signature="e#88534#88727#1" />
+            <element signature="e#88817#88983#0" />
+            <element signature="e#88817#88931#1" />
+            <element signature="e#89017#89184#0" />
+            <element signature="e#89017#89132#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/megaupload_test_2_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#772#974#0" />
+            <element signature="e#871#955#0" />
+            <element signature="e#1024#1151#0" />
+            <element signature="e#1223#2564#0" />
+            <element signature="e#1310#2218#0" />
+            <element signature="e#1782#1919#0" />
+            <element signature="e#2353#2532#0" />
+            <element signature="e#3221#3581#0" />
+            <element signature="e#3377#3551#0" />
+            <element signature="e#3665#4385#0" />
+            <element signature="e#3665#3839#1" />
+            <element signature="e#4038#4149#0" />
+            <element signature="e#4191#4321#0" />
+            <element signature="e#4469#5214#0" />
+            <element signature="e#4469#4643#1" />
+            <element signature="e#4842#4976#0" />
+            <element signature="e#5018#5150#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#262#581#1" />
+            <element signature="e#696#2919#0" />
+            <element signature="e#1060#1096#0" />
+            <element signature="e#1462#1563#0" />
+            <element signature="e#1996#2681#0" />
+            <element signature="e#3223#3964#0" />
+            <element signature="e#3994#8084#0" />
+            <element signature="e#4892#5763#0" />
+            <element signature="e#5770#6416#0" />
+            <element signature="e#6472#7222#0" />
+            <element signature="e#6547#6936#0" />
+            <element signature="e#6963#7222#0" />
+            <element signature="e#7290#8047#0" />
+            <element signature="e#7450#8011#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="147">
+            <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/labels_generate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="100" column="33" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#182#205#0" expanded="true" />
+            <element signature="e#318#674#0" />
+            <element signature="e#688#896#0" />
+            <element signature="e#910#1090#0" />
+            <element signature="e#1110#1257#0" />
+            <element signature="e#1270#1581#0" />
+            <element signature="e#1593#1733#0" />
+            <element signature="e#1748#1918#0" />
+            <element signature="e#1996#2272#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#408#4326#0" />
+            <element signature="e#1021#1029#0" />
+            <element signature="e#1185#3721#0" />
+            <element signature="e#1577#1613#0" />
+            <element signature="e#2003#2108#0" />
+            <element signature="e#2581#3471#0" />
+            <element signature="e#3769#4326#0" />
+            <element signature="e#4372#5430#0" />
+            <element signature="e#5079#5430#0" />
+            <element signature="e#5477#6819#0" />
+            <element signature="e#6180#6819#0" />
+            <element signature="e#6557#6609#0" />
+            <element signature="e#6867#8145#0" />
+            <element signature="e#7593#8145#0" />
+            <element signature="e#8186#9333#0" />
+            <element signature="e#8909#9333#0" />
+            <element signature="e#9377#10518#0" />
+            <element signature="e#10122#10518#0" />
+            <element signature="e#10560#11648#0" />
+            <element signature="e#11298#11648#0" />
+            <element signature="e#11691#12818#0" />
+            <element signature="e#12420#12818#0" />
+            <element signature="e#12858#14066#0" />
+            <element signature="e#13668#14066#0" />
           </folding>
         </state>
       </provider>

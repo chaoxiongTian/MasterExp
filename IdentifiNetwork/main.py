@@ -123,7 +123,6 @@ class PreNet(object):
                 y = Variable(cuda(batch_labels, self.cuda))
                 output = self.net(x)[0]
                 prediction = output.max(1)[1]
-                # 求准确率
                 accuracy = prediction.eq(y).float().mean().item()
                 cost = F.cross_entropy(output, y)
 

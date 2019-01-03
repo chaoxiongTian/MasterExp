@@ -45,9 +45,20 @@
 下周任务：
 调试完成DeepFool算法，和FGSM算法的效果进行对比。
 
+第七周：
+田超雄本周工作
+1. 完成对抗样本的生成工作，初步效果还不错，单个字符验证码的干扰效果能从97%降至20％。多个字符使用authorize验证码为例可有90%降至30%。
+2. 使用pytorch框架重构了验证码识别部分整体的代码，现测试对于京东验证码从89%提升至92%.
+下周工作：
+思考不定长度的验证码的识别方法，理解完成DeepFool算法。
+
+
 rm *captcha.png
 rename "s/_captcha*//" *.png
 rename "s/ generated//" *.png
+
+ls -l |grep "^-"|wc -l
+ls -l |grep "^d"|wc -l
 
 python CaptchaGenerate/captcha_generate.py --tar test --label Baidu_off_200_labels.txt
 python CaptchaGenerate/captcha_generate.py --label Blizzard_off_2000_labels.txt

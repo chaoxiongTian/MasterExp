@@ -12,6 +12,7 @@ opt = Options().parse()
 
 
 switch = {
+    'megaupload': generate_megaupload,
     'blizzard': generate_blizzard,
     'authorize': generate_authorize,
     'captcha': generate_captcha,

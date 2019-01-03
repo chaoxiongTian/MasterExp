@@ -7,7 +7,6 @@
 
 from captcha_utils import *
 
-
 MUL = 4  # 制作验证码的时候，为了保证图片的清晰度。先制作原图MUL倍大小的图片，然后再缩小回需要的大小
 
 """
@@ -21,6 +20,76 @@ MUL = 4  # 制作验证码的时候，为了保证图片的清晰度。先制作
 """
 
 
+# 把一组字符的Image对象粘贴到背景的Iamge对象上面。
+def default_paste(captcha, bg_image, bg_image_clean, images, images_clean):
+    # 每两个字符之间的距离的step，有个验证码字符之间是随机的，所以在此基础上添加一个数据数组。
+    step_randoms = []
+    for i in range(len(images)):
+        step_randoms.append(random.randint(-captcha.step_random_range, captcha.step_random_range))
+
+    offset_y_randoms = []
+    for i in range(len(images)):
+        offset_y_randoms.append(random.randint(-captcha.offset_y_range, captcha.offset_y_range))
+    # TODO：目的（把char的Image对象粘贴到对象背景上粘连上去）
+
+    # 1. 预估images+step和step_randoms需要的长度，若背景image对象不够长，先调整背景image长度。
+    start_rio = abs(random.randint(captcha.start_x - captcha.start_x_random_range,
+                                   captcha.start_x + captcha.start_x_random_range))
+    target_width = pre_calc(start_rio, captcha.step, images, step_randoms)
+    if target_width > captcha.captcha_width:
+        # 重新调整背景的大小
+        bg_image = bg_image.resize((target_width, captcha.captcha_high), Image.ANTIALIAS)
+
+    target_width_clean = pre_calc(start_rio, captcha.step_stretch, images_clean, step_randoms)
+    if target_width_clean > captcha.captcha_width:
+        bg_image_clean = bg_image_clean.resize((target_width_clean, captcha.captcha_high), Image.ANTIALIAS)
+
+    # 2. 开始粘贴 为了保证一致，对于含有背景和没有背景的一起粘贴。
+    offset_x = start_rio
+    offset_y = 0
+    offset_x_clean = start_rio
+    offset_y_clean = 0
+    for i in range(len(images)):
+        char_w, char_h = images[i].size
+        char_w_clean, char_h_clean = images_clean[i].size
+        bg_image.paste(images[i],
+                       (offset_x, int((captcha.captcha_high - char_h) / 2) + offset_y_randoms[i]),
+                       images[i]
+                       )
+        bg_image_clean.paste(images_clean[i],
+                             (offset_x_clean, int((captcha.captcha_high - char_h_clean) / 2) + offset_y_randoms[i]),
+                             images_clean[i]
+                             )
+        offset_x = offset_x + char_w + captcha.step + step_randoms[i]
+        offset_x_clean = offset_x_clean + char_w_clean + captcha.step_stretch + step_randoms[i]
+    bg_image = bg_image.resize((captcha.captcha_width, captcha.captcha_high), Image.ANTIALIAS)
+    bg_image_clean = bg_image_clean.resize((captcha.captcha_width, captcha.captcha_high), Image.ANTIALIAS)
+    return bg_image, bg_image_clean
+
+
+#  根据label生成验证码  扭曲，旋转和干扰信息都是缺省调用。
+def generate_captcha(captcha, label, fun_paste=default_paste,
+                     list_1=(0, 0), list_2=(0, 0),
+                     rotate_start=0, rotate_end=0,
+                     noise_number=0, noise_width=0, noise_color=(0, 0, 0)
+                     ):
+    # 1. 生成两张对象的背景
+    bg_image, bg_image_clean = captcha.get_captcha_bg()
+    # 2. 生成两组对应的Images
+    images, images_clean = captcha.get_char_images(label)
+    # 对两组Images同事进行旋转
+    images, images_clean = rotate_images(images, images_clean, rotate_start, rotate_end)
+    # 对两组Images同事进行扭曲
+    images, images_clean = warp_images(images, images_clean, list_1, list_2)
+
+    image, image_clean = fun_paste(captcha, bg_image, bg_image_clean, images, images_clean)
+    image = zoom_down_mul(image, MUL)
+    image_clean = zoom_down_mul(image_clean, MUL)
+    image = add_noise(image, noise_number, noise_width, noise_color)
+    # return image_resize_scale(image, 256, padding), image_resize_scale(image_clean, 256, padding)
+    return image, image_clean
+
+
 class Captcha(object):
     def __init__(self,
                  captcha_width,  # 验证码宽
@@ -32,6 +101,7 @@ class Captcha(object):
                  font_color,  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
                  font_size,  # 字体基准大小
                  font_size_random_range,  # 字体随机范围
+                 font_bg_color=None,
 
                  start_x=0,  # 第一个字符在验证码中开始位置
                  start_x_random_range=0,  # 开始位置随机在start_x的一个区间
@@ -55,6 +125,7 @@ class Captcha(object):
         self.step_random_range = step_random_range * MUL
         self.offset_y_range = offset_y_range * MUL
         self.font_folder = font_folder
+        self.font_bg_color = font_bg_color
         if font_folder_clean.__eq__("null"):  # 没有传入参数，就说明用的同一种字体
             self.font_folder_clean = font_folder
         else:
@@ -109,73 +180,6 @@ class Captcha(object):
             font_path = random.choice(get_internal_path(self.font_folder))
             font_path_clean = random.choice(get_internal_path(self.font_folder_clean))
             # 生成
-            images.append(generate_char_images(each, font_path, font_size, self.font_color))
+            images.append(generate_char_images(each, font_path, font_size, self.font_color, self.font_bg_color))
             images_clean.append(generate_char_images(each, font_path_clean, font_size))
         return images, images_clean
-
-    # 把一组字符的Image对象粘贴到背景的Iamge对象上面。
-    def paste_images_2_bg_image(self, bg_image, bg_image_clean, images, images_clean):
-        # 每两个字符之间的距离的step，有个验证码字符之间是随机的，所以在此基础上添加一个数据数组。
-        step_randoms = []
-        for i in range(len(images)):
-            step_randoms.append(random.randint(-self.step_random_range, self.step_random_range))
-
-        offset_y_randoms = []
-        for i in range(len(images)):
-            offset_y_randoms.append(random.randint(-self.offset_y_range, self.offset_y_range))
-        # TODO：目的（把char的Image对象粘贴到对象背景上粘连上去）
-
-        # 1. 预估images+step和step_randoms需要的长度，若背景image对象不够长，先调整背景image长度。
-        start_rio = abs(random.randint(self.start_x - self.start_x_random_range,
-                                       self.start_x + self.start_x_random_range))
-        target_width = pre_calc(start_rio, self.step, images, step_randoms)
-        if target_width > self.captcha_width:
-            # 重新调整背景的大小
-            bg_image = bg_image.resize((target_width, self.captcha_high), Image.ANTIALIAS)
-
-        target_width_clean = pre_calc(start_rio, self.step_stretch, images_clean, step_randoms)
-        if target_width_clean > self.captcha_width:
-            bg_image_clean = bg_image_clean.resize((target_width_clean, self.captcha_high), Image.ANTIALIAS)
-
-        # 2. 开始粘贴 为了保证一致，对于含有背景和没有背景的一起粘贴。
-        offset_x = start_rio
-        offset_y = 0
-        offset_x_clean = start_rio
-        offset_y_clean = 0
-        for i in range(len(images)):
-            char_w, char_h = images[i].size
-            char_w_clean, char_h_clean = images_clean[i].size
-            bg_image.paste(images[i],
-                           (offset_x, int((self.captcha_high - char_h) / 2) + offset_y_randoms[i]),
-                           images[i]
-                           )
-            bg_image_clean.paste(images_clean[i],
-                                 (offset_x_clean, int((self.captcha_high - char_h_clean) / 2) + offset_y_randoms[i]),
-                                 images_clean[i]
-                                 )
-            offset_x = offset_x + char_w + self.step + step_randoms[i]
-            offset_x_clean = offset_x_clean + char_w_clean + self.step_stretch + step_randoms[i]
-        bg_image = bg_image.resize((self.captcha_width, self.captcha_high), Image.ANTIALIAS)
-        bg_image_clean = bg_image_clean.resize((self.captcha_width, self.captcha_high), Image.ANTIALIAS)
-        return bg_image, bg_image_clean
-
-    #  根据label生成验证码  扭曲，旋转和干扰信息都是缺省调用。
-    def generate_captcha(self, label,
-                         list_1=(0, 0), list_2=(0, 0),
-                         rotate_start=0, rotate_end=0,
-                         noise_number=0, noise_width=0, noise_color=(0, 0, 0)):
-        # 1. 生成两张对象的背景
-        bg_image, bg_image_clean = self.get_captcha_bg()
-        # 2. 生成两组对应的Images
-        images, images_clean = self.get_char_images(label)
-        # 对两组Images同事进行旋转
-        images, images_clean = rotate_images(images, images_clean, rotate_start, rotate_end)
-        # 对两组Images同事进行扭曲
-        images, images_clean = warp_images(images, images_clean, list_1, list_2)
-
-        image, image_clean = self.paste_images_2_bg_image(bg_image, bg_image_clean, images, images_clean)
-        image = zoom_down_mul(image, MUL)
-        image_clean = zoom_down_mul(image_clean, MUL)
-        image = add_noise(image, noise_number, noise_width, noise_color)
-        # return image_resize_scale(image, 256, padding), image_resize_scale(image_clean, 256, padding)
-        return image, image_clean
