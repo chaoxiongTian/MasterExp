@@ -15,12 +15,19 @@ switch = {
     'megaupload': generate_megaupload,
     'blizzard': generate_blizzard,
     'authorize': generate_authorize,
-    'captcha': generate_captcha,
+    'captcha': generate_captcha_net,
     'nih': generate_nih,
     'reddit': generate_reddit,
     'digg': generate_digg,
     'baidu': generate_baidu,
-    'qq': generate_qq
+    'qq': generate_qq,
+    'sina_2014': generate_sina_2014,
+    # 'recaptcha_2011': generate_recaptcha_2011,
+    # 'yahoo': generate_yahoo,
+    # 'recaptcha_2013': generate_recaptcha_2013,
+    # 'baidu_2013': generate_baidu_2013,
+    # 'baidu_2011': generate_baidu_2011,
+    # 'cnn': generate_cnn,
 }
 
 if __name__ == "__main__":

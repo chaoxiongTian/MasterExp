@@ -93,12 +93,12 @@ def generate_blizzard(labels, folder):
         captcha_width=150,  # 验证码宽
         captcha_high=38,  # 验证按高
         have_bg=True,  # 是否有背景
-        bg_folder=os.path.join(data_folder, "bg", "Blizzard"),  # 有背景的话，背景路径
+        bg_folder=os.path.join(data_folder, "bg", "blizzard"),  # 有背景的话，背景路径
         start_x=20,  # 第一个字符的开始位置
         step=10,  # 每个字符之间的距离
         step_stretch=10,  # 字符间距扩大每个字符之间的距离
         step_random_range=5,  # 字符之间距离随机的范围
-        font_folder=os.path.join(data_folder, "font", "Blizzard"),  # 字体路径，多种字体直接全部读出来
+        font_folder=os.path.join(data_folder, "font", "blizzard"),  # 字体路径，多种字体直接全部读出来
         font_color=(255, 190, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=15,  # 字体基准大小
         font_size_random_range=0  # 字体随机范围
@@ -119,12 +119,12 @@ def generate_authorize(labels, folder):
         captcha_width=150,  # 验证码宽
         captcha_high=38,  # 验证按高
         have_bg=False,  # 是否有背景
-        bg_folder=os.path.join(data_folder, "bg", "Authorize"),  # 有背景的话，背景路径
+        bg_folder=os.path.join(data_folder, "bg", "authorize"),  # 有背景的话，背景路径
         start_x=30,  # 第一个字符的开始位置
         step=3,  # 每个字符之间的距离
         step_stretch=3,  # 字符间距扩大每个字符之间的距离
         step_random_range=0,  # 字符之间距离随机的范围
-        font_folder=os.path.join(data_folder, "font", "Authorize"),  # 字体路径，多种字体直接全部读出来
+        font_folder=os.path.join(data_folder, "font", "authorize"),  # 字体路径，多种字体直接全部读出来
         font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=28,  # 字体基准大小
         font_size_random_range=0  # 字体随机范围
@@ -142,18 +142,18 @@ def generate_authorize(labels, folder):
         print("Nub.%d in complete" % i)
 
 
-def generate_captchanet(labels, folder):
+def generate_captcha_net(labels, folder):
     # 构造captcha
     captcha = Captcha(
         captcha_width=150,  # 验证码宽
         captcha_high=38,  # 验证按高
         have_bg=False,  # 是否有背景
-        bg_folder=os.path.join(data_folder, "bg", "captcha"),  # 有背景的话，背景路径
+        bg_folder=os.path.join(data_folder, "bg", "captcha_net"),  # 有背景的话，背景路径
         start_x=20,  # 第一个字符的开始位置
         step=5,  # 每个字符之间的距离
         step_stretch=5,  # 字符间距扩大每个字符之间的距离
         step_random_range=2,  # 字符之间距离随机的范围
-        font_folder=os.path.join(data_folder, "font", "captcha"),  # 字体路径，多种字体直接全部读出来
+        font_folder=os.path.join(data_folder, "font", "captcha_net"),  # 字体路径，多种字体直接全部读出来
         font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=20,  # 字体基准大小
         font_size_random_range=0,  # 字体随机范围
@@ -178,12 +178,12 @@ def generate_nih(labels, folder):
         captcha_width=150,  # 验证码宽
         captcha_high=38,  # 验证按高
         have_bg=False,  # 是否有背景
-        bg_folder=os.path.join(data_folder, "bg", "NIH"),  # 有背景的话，背景路径
+        bg_folder=os.path.join(data_folder, "bg", "nih"),  # 有背景的话，背景路径
         start_x=10,  # 第一个字符的开始位置
         step=5,  # 每个字符之间的距离
         step_stretch=5,  # 字符间距扩大每个字符之间的距离
         step_random_range=0,  # 字符之间距离随机的范围
-        font_folder=os.path.join(data_folder, "font", "NIH"),  # 字体路径，多种字体直接全部读出来
+        font_folder=os.path.join(data_folder, "font", "nih"),  # 字体路径，多种字体直接全部读出来
         font_color=(107, 123, 139),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=34,  # 字体基准大小
         font_size_random_range=0,  # 字体随机范围
@@ -204,13 +204,13 @@ def generate_reddit(labels, folder):
         captcha_width=120,  # 验证码宽
         captcha_high=50,  # 验证按高
         have_bg=True,  # 是否有背景
-        bg_folder=os.path.join(data_folder, "bg", "Reddit"),  # 有背景的话，背景路径
+        bg_folder=os.path.join(data_folder, "bg", "reddit"),  # 有背景的话，背景路径
         start_x=20,  # 第一个字符的开始位置
         start_x_random_range=60,
         step=1,  # 每个字符之间的距离
         step_stretch=3,  # 字符间距扩大每个字符之间的距离
         step_random_range=0,  # 字符之间距离随机的范围
-        font_folder=os.path.join(data_folder, "font", "Reddit"),  # 字体路径，多种字体直接全部读出来
+        font_folder=os.path.join(data_folder, "font", "reddit"),  # 字体路径，多种字体直接全部读出来
         font_color=(255, 255, 255),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=19,  # 字体基准大小
         font_size_random_range=0,  # 字体随机范围
@@ -231,13 +231,13 @@ def generate_digg(labels, folder):
         captcha_width=150,  # 验证码宽
         captcha_high=35,  # 验证按高
         have_bg=True,  # 是否有背景
-        bg_folder=os.path.join(data_folder, "bg", "Digg"),  # 有背景的话，背景路径
+        bg_folder=os.path.join(data_folder, "bg", "digg"),  # 有背景的话，背景路径
         start_x=5,  # 第一个字符的开始位置
         start_x_random_range=5,
         step=15,  # 每个字符之间的距离
         step_stretch=15,  # 字符间距扩大每个字符之间的距离
         step_random_range=8,  # 字符之间距离随机的范围
-        font_folder=os.path.join(data_folder, "font", "Digg"),  # 字体路径，多种字体直接全部读出来
+        font_folder=os.path.join(data_folder, "font", "digg"),  # 字体路径，多种字体直接全部读出来
         font_color=(50, 50, 50),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=20,  # 字体基准大小
         font_size_random_range=2,  # 字体随机范围
@@ -258,13 +258,13 @@ def generate_baidu(labels, folder):
         captcha_width=75,  # 验证码宽
         captcha_high=40,  # 验证按高
         have_bg=False,  # 是否有背景
-        bg_folder=os.path.join(data_folder, "bg", "Baidu"),  # 有背景的话，背景路径
+        bg_folder=os.path.join(data_folder, "bg", "baidu"),  # 有背景的话，背景路径
         start_x=10,  # 第一个字符的开始位置
         start_x_random_range=10,
         step=-3,  # 每个字符之间的距离
         step_stretch=1,  # 字符间距扩大每个字符之间的距离
         step_random_range=0,  # 字符之间距离随机的范围
-        font_folder=os.path.join(data_folder, "font", "Baidu"),  # 字体路径，多种字体直接全部读出来
+        font_folder=os.path.join(data_folder, "font", "baidu"),  # 字体路径，多种字体直接全部读出来
         font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=35,  # 字体基准大小
         font_size_random_range=0  # 字体随机范围
@@ -286,14 +286,14 @@ def generate_qq(labels, folder):
         captcha_width=100,  # 验证码宽
         captcha_high=40,  # 验证按高
         have_bg=False,  # 是否有背景
-        bg_folder=os.path.join(data_folder, "bg", "Qq"),  # 有背景的话，背景路径
+        bg_folder=os.path.join(data_folder, "bg", "qq"),  # 有背景的话，背景路径
         start_x=15,  # 第一个字符的开始位置
         start_x_random_range=10,
         step=-4,  # 每个字符之间的距离
         step_stretch=0,  # 字符间距扩大每个字符之间的距离
         step_random_range=0,  # 字符之间距离随机的范围
-        font_folder=os.path.join(data_folder, "font", "Qq", "kong"),  # 字体路径，多种字体直接全部读出来
-        font_folder_clean=os.path.join(data_folder, "font", "Qq", "shi"),
+        font_folder=os.path.join(data_folder, "font", "qq", "kong"),  # 字体路径，多种字体直接全部读出来
+        font_folder_clean=os.path.join(data_folder, "font", "qq", "shi"),
         font_color=(81, 105, 53),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
         font_size=28,  # 字体基准大小
         font_size_random_range=8  # 字体随机范围
@@ -308,3 +308,52 @@ def generate_qq(labels, folder):
         image_merge_horizontal(image, image_clean).save(os.path.join(folder, str(i) + '.png'))
         print("Nub.%d in complete" % i)
 
+
+def draw_line(im, width=1):
+    # 开口角度也应该随机。
+    import random
+    draw = ImageDraw.Draw(im)
+    im_w, im_h = im.size
+    flag = random.randint(0, 1)
+    if flag == 0:
+        end_x = random.randint(im_w / 2, im_w)
+        end_y = random.randint(im_h / 2, im_h)
+        angle_start = random.randint(0, 15)
+        angle_end = 90 - random.randint(0, 15)
+        draw.arc((-end_x, -end_y, end_x, end_y), angle_start, angle_end, fill=(0, 0, 0), width=width)
+    else:
+        end_x = random.randint(0, int(im_w / 3))
+        end_y = random.randint(0, int(im_h / 3))
+        angle_start = 180 + random.randint(0, 30)
+        angle_end = 180 + 90 - random.randint(0, 30)
+        draw.arc((end_x, end_y, (im_w - end_x + im_w), (im_h - end_y + im_h)), angle_start, angle_end,
+                 fill=(0, 0, 0), width=width)
+    return im
+
+
+def generate_sina_2014(labels, folder):
+    captcha = Captcha(
+        captcha_width=100,  # 验证码宽
+        captcha_high=40,  # 验证按高
+        have_bg=False,  # 是否有背景
+        bg_folder=os.path.join(data_folder, "bg", "sina_2014"),  # 有背景的话，背景路径
+        start_x=10,  # 第一个字符的开始位置
+        start_x_random_range=10,
+        step=-3,  # 每个字符之间的距离
+        step_stretch=0,  # 字符间距扩大每个字符之间的距离
+        step_random_range=0,  # 字符之间距离随机的范围
+        font_folder=os.path.join(data_folder, "font", "sina_2014"),  # 字体路径，多种字体直接全部读出来
+        font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
+        font_size=28,  # 字体基准大小
+        font_size_random_range=1  # 字体随机范围
+    )
+
+    print("generate %d captcha in %s\n" % (len(labels), folder))
+    for i, each in enumerate(labels):
+        rotate = random.randint(-15, 15)
+        image, image_clean = generate_captcha(captcha, each, inter_line=draw_line,
+                                              rotate_start=rotate, rotate_end=rotate)
+        image = image_resize_scale(image, 256, padding=30)
+        image_clean = image_resize_scale(image_clean, 256, padding=30)
+        image_merge_horizontal(image, image_clean).save(os.path.join(folder, str(i) + '.png'))
+        print("Nub.%d in complete" % i)

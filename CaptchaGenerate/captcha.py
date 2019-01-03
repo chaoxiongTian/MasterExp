@@ -69,6 +69,7 @@ def default_paste(captcha, bg_image, bg_image_clean, images, images_clean):
 
 #  根据label生成验证码  扭曲，旋转和干扰信息都是缺省调用。
 def generate_captcha(captcha, label, fun_paste=default_paste,
+                     inter_line=None,
                      list_1=(0, 0), list_2=(0, 0),
                      rotate_start=0, rotate_end=0,
                      noise_number=0, noise_width=0, noise_color=(0, 0, 0)
@@ -86,7 +87,8 @@ def generate_captcha(captcha, label, fun_paste=default_paste,
     image = zoom_down_mul(image, MUL)
     image_clean = zoom_down_mul(image_clean, MUL)
     image = add_noise(image, noise_number, noise_width, noise_color)
-    # return image_resize_scale(image, 256, padding), image_resize_scale(image_clean, 256, padding)
+    if inter_line is not None:
+        image = inter_line(image)
     return image, image_clean
 
 
