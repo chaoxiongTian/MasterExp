@@ -29,13 +29,13 @@ def generate_char_images(char, font_path, font_size, font_color=(0, 0, 0), font_
 
 
 #  根据这组图片预估需要的长度
-def pre_calc(start, step, images, step_randoms):
+def pre_calc(start, step, images, step_randoms, ):
     """预估char的Image对象是否可以粘贴到背景的Image上面"""
     preCalc = start
     for i in range(len(images)):
         eachW = images[i].size[0]
         preCalc = preCalc + eachW + step + step_randoms[i]
-    return preCalc
+    return preCalc + start
 
 
 #  等比例缩小多少倍

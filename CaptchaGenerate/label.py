@@ -15,10 +15,16 @@ class CaptchaLabel(object):
     def __init__(self, chars, captcha_len):  # captcha_len 每个验证码中字符的个数
         self.chars = chars
         self.captcha_len = captcha_len
-        self.get_label()
+        # self.get_label()
+
+    def __str__(self):
+        print(self.captcha_len)
+        print(self.chars)
 
     def get_label(self):
         label = []
         for _ in range(self.captcha_len):
-            label.append(random.choice(self.chars))
+            char = random.choice(self.chars)
+            label.append(char)
+        # print('in', len(label), ''.join(label))
         return ''.join(label)

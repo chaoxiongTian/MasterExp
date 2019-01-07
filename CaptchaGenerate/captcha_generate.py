@@ -10,24 +10,25 @@ from generate_unit import *
 
 opt = Options().parse()
 
-
 switch = {
     'megaupload': generate_megaupload,
     'blizzard': generate_blizzard,
     'authorize': generate_authorize,
-    'captcha': generate_captcha_net,
+    'captcha_net': generate_captcha_net,
     'nih': generate_nih,
     'reddit': generate_reddit,
     'digg': generate_digg,
     'baidu': generate_baidu,
     'qq': generate_qq,
     'sina_2014': generate_sina_2014,
-    # 'recaptcha_2011': generate_recaptcha_2011,
-    # 'yahoo': generate_yahoo,
-    # 'recaptcha_2013': generate_recaptcha_2013,
-    # 'baidu_2013': generate_baidu_2013,
-    # 'baidu_2011': generate_baidu_2011,
-    # 'cnn': generate_cnn,
+    'amazon': generate_amazon,
+    'yahoo': generate_yahoo,
+    'recaptcha_2011': generate_recaptcha_2011,
+    'recaptcha_2013': generate_recaptcha_2013,
+    'baidu_2013': generate_baidu_2013,
+    'baidu_2011': generate_baidu_2011,
+    'cnn': generate_cnn,
+    'paypal': generate_paypal,
 }
 
 if __name__ == "__main__":

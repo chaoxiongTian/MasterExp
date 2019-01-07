@@ -69,7 +69,8 @@ def default_paste(captcha, bg_image, bg_image_clean, images, images_clean):
 
 #  根据label生成验证码  扭曲，旋转和干扰信息都是缺省调用。
 def generate_captcha(captcha, label, fun_paste=default_paste,
-                     inter_line=None,
+                     inter_line=None, draw_feature=None,
+                     wave=None, wave_feature=None,
                      list_1=(0, 0), list_2=(0, 0),
                      rotate_start=0, rotate_end=0,
                      noise_number=0, noise_width=0, noise_color=(0, 0, 0)
@@ -84,16 +85,20 @@ def generate_captcha(captcha, label, fun_paste=default_paste,
     images, images_clean = warp_images(images, images_clean, list_1, list_2)
 
     image, image_clean = fun_paste(captcha, bg_image, bg_image_clean, images, images_clean)
-    image = zoom_down_mul(image, MUL)
-    image_clean = zoom_down_mul(image_clean, MUL)
+    image = zoom_down_mul(image, captcha.mul)
+    image_clean = zoom_down_mul(image_clean, captcha.mul)
     image = add_noise(image, noise_number, noise_width, noise_color)
     if inter_line is not None:
-        image = inter_line(image)
+        image = inter_line(image, draw_feature)
+    if wave is not None:
+        image = wave(image, wave_feature)
+        image_clean = wave(image_clean, wave_feature)
     return image, image_clean
 
 
 class Captcha(object):
     def __init__(self,
+
                  captcha_width,  # 验证码宽
                  captcha_high,  # 验证按高
                  have_bg,  # 是否有背景
@@ -112,30 +117,33 @@ class Captcha(object):
                  step_stretch=10,  # 保证不粘连时，每两个字符之间的距离
                  step_random_range=0,  # 每两个字符之距离的随机值
                  font_folder_clean="null",  # 对照转换的验证码中的字体位置（未传参表示同一种）（用于空心到实心的转换）
-                 bg_color=(255, 255, 255)  # 没有背景时，验证码的背景色
+                 bg_color=(255, 255, 255),  # 没有背景时，验证码的背景色
+                 mul=MUL
                  ):
 
-        self.captcha_width = captcha_width * MUL
-        self.captcha_high = captcha_high * MUL
+        self.mul = mul
+        self.captcha_width = captcha_width * self.mul
+        self.captcha_high = captcha_high * self.mul
         self.have_bg = have_bg
         self.bg_folder = bg_folder
         self.bg_color = bg_color
-        self.start_x = start_x * MUL
-        self.start_x_random_range = start_x_random_range * MUL
-        self.step = step * MUL
-        self.step_stretch = step_stretch * MUL
-        self.step_random_range = step_random_range * MUL
-        self.offset_y_range = offset_y_range * MUL
+        self.start_x = start_x * self.mul
+        self.start_x_random_range = start_x_random_range * self.mul
+        self.step = step * self.mul
+        self.step_stretch = step_stretch * self.mul
+        self.step_random_range = step_random_range * self.mul
+        self.offset_y_range = offset_y_range * self.mul
         self.font_folder = font_folder
         self.font_bg_color = font_bg_color
+
         if font_folder_clean.__eq__("null"):  # 没有传入参数，就说明用的同一种字体
             self.font_folder_clean = font_folder
         else:
             self.font_folder_clean = font_folder_clean
 
         self.font_color = font_color
-        self.font_size = font_size * MUL
-        self.font_size_random_range = font_size_random_range * MUL
+        self.font_size = font_size * self.mul
+        self.font_size_random_range = font_size_random_range * self.mul
 
         print(self)  # 打印类信息
 
