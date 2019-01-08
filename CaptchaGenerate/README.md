@@ -4,5 +4,6 @@ python CaptchaGenerate/labels_generate.py --captcha megaupload --labels train_50
 ```
 ### 验证码生成
 ```shell
-python CaptchaGenerate/captcha_generate.py --captcha megaupload --labels test_200 --captcha_len 4 --tar test
+# 生成训练样本， single_char保存cnn训练时候需要的样本。
+python CaptchaGenerate/captcha_generate.py --captcha megaupload --labels train_5000 --captcha_len 4 --tar test --single_char True
 ```
