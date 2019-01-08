@@ -68,22 +68,32 @@ def default_paste(captcha, bg_image, bg_image_clean, images, images_clean):
 
 
 #  根据label生成验证码  扭曲，旋转和干扰信息都是缺省调用。
-def generate_captcha(captcha, label, fun_paste=default_paste,
-                     inter_line=None, draw_feature=None,
-                     wave=None, wave_feature=None,
-                     list_1=(0, 0), list_2=(0, 0),
-                     rotate_start=0, rotate_end=0,
-                     noise_number=0, noise_width=0, noise_color=(0, 0, 0)
-                     ):
+def generate_captcha(captcha, label, feature):
+    (fun_paste,  # 粘贴函数 默认为None则调用default_paste
+     # None
+     inter_line, draw_feature,  # 干扰线函数，干扰线特征
+     # None,None
+     wave, get_wave_feature,  # 波浪函数，波浪特征
+     # None,None
+     list_1, list_2,  # 扭曲特征
+     # (0,0), (0,0)
+     flag, rotate_start, rotate_end,  # 旋转特征(flag 表示字符都是0,一个方向还是1多个方向)
+     # 0,0,0
+     noise_number, noise_width, noise_color  # 干扰线特征
+     # 0, 0, (0,0,0)
+     ) = feature
     # 1. 生成两张对象的背景
     bg_image, bg_image_clean = captcha.get_captcha_bg()
     # 2. 生成两组对应的Images
     images, images_clean = captcha.get_char_images(label)
     # 对两组Images同事进行旋转
+    if flag == 1:
+        rotate_start = rotate_end = random.randint(rotate_start, rotate_end)
     images, images_clean = rotate_images(images, images_clean, rotate_start, rotate_end)
     # 对两组Images同事进行扭曲
     images, images_clean = warp_images(images, images_clean, list_1, list_2)
-
+    if fun_paste is None:
+        fun_paste = default_paste
     image, image_clean = fun_paste(captcha, bg_image, bg_image_clean, images, images_clean)
     image = zoom_down_mul(image, captcha.mul)
     image_clean = zoom_down_mul(image_clean, captcha.mul)
@@ -91,14 +101,13 @@ def generate_captcha(captcha, label, fun_paste=default_paste,
     if inter_line is not None:
         image = inter_line(image, draw_feature)
     if wave is not None:
-        image = wave(image, wave_feature)
-        image_clean = wave(image_clean, wave_feature)
+        image = wave(image, get_wave_feature())
+        image_clean = wave(image_clean, get_wave_feature())
     return image, image_clean
 
 
 class Captcha(object):
     def __init__(self,
-
                  captcha_width,  # 验证码宽
                  captcha_high,  # 验证按高
                  have_bg,  # 是否有背景

@@ -18,6 +18,8 @@ class Options:
         self.parser.add_argument('--labels', dest='labels', help='labels`s name', type=str, default='ceshi')
         self.parser.add_argument('--captcha_len', dest='captcha_len', help='captcha_len', type=int, default=4)
         self.parser.add_argument('--captcha_number', dest='captcha_number', help='captcha_number', type=int, default=20)
+        self.parser.add_argument('--single_char', dest='single_char', help='save clean for single char train',
+                                 type=bool, default=False)
 
     def parse(self):
         self.initialize()

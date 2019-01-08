@@ -11,27 +11,49 @@ from generate_unit import *
 opt = Options().parse()
 
 switch = {
-    'megaupload': generate_megaupload,
-    'blizzard': generate_blizzard,
-    'authorize': generate_authorize,
-    'captcha_net': generate_captcha_net,
-    'nih': generate_nih,
-    'reddit': generate_reddit,
-    'digg': generate_digg,
-    'baidu': generate_baidu,
-    'qq': generate_qq,
-    'sina_2014': generate_sina_2014,
-    'amazon': generate_amazon,
-    'yahoo': generate_yahoo,
-    'recaptcha_2011': generate_recaptcha_2011,
-    'recaptcha_2013': generate_recaptcha_2013,
-    'baidu_2013': generate_baidu_2013,
-    'baidu_2011': generate_baidu_2011,
-    'cnn': generate_cnn,
-    'paypal': generate_paypal,
+    'megaupload': generate_megaupload,  # 4
+    'blizzard': generate_blizzard,  # 6
+    'authorize': generate_authorize,  # 5
+    'captcha_net': generate_captcha_net,  # 5
+    'nih': generate_nih,  # 5
+    'reddit': generate_reddit,  # 6
+    'digg': generate_digg,  # 5
+    'baidu': generate_baidu,  # 4
+    'qq': generate_qq,  # 4
+    'sina_2014': generate_sina_2014,  # 5
+    'amazon': generate_amazon,  # 6
+    'yahoo': generate_yahoo,  # 7
+    'recaptcha_2011': generate_recaptcha_2011,  # 8
+    'recaptcha_2013': generate_recaptcha_2013,  # 6
+    'baidu_2013': generate_baidu_2013,  # 4
+    'baidu_2011': generate_baidu_2011,  # 4
+    'cnn': generate_cnn,  # 5
+    'paypal': generate_paypal,  # 5
 }
 
-if __name__ == "__main__":
+
+def save_images(ims, ims_clean, folder, single_folder):
+    for i in range(len(ims)):
+        im = image_resize_scale(ims[i], 256, padding=30)
+        im_clean = image_resize_scale(ims_clean[i], 256, padding=30)
+        if single_folder is not None:
+            im_clean.save(os.path.join(single_folder, str(i) + '.png'))
+        image_merge_horizontal(im, im_clean).save(os.path.join(folder, str(i) + '.png'))
+        print("Nub.{} in saved".format(str(i)))
+
+
+def generate(captcha, labels, feature):
+    ims = list()
+    ims_clean = list()
+    for i, each in enumerate(labels):
+        image, image_clean = generate_captcha(captcha, each, feature)
+        ims.append(image)
+        ims_clean.append(image_clean)
+        print("Nub.%d in generated" % i)
+    return ims, ims_clean
+
+
+def main():
     label_path = os.path.join(data_folder, "labels", opt.captcha + "_" + opt.labels + "_labels.txt")
     labels = open(label_path, 'r', encoding="utf-8").read().strip().split("#")
 
@@ -39,4 +61,16 @@ if __name__ == "__main__":
     save_folder = os.path.join(captcha_save_folder, opt.tar)
     make_folders(save_folder)
 
-    switch[opt.captcha](labels, save_folder)
+    single_char_folder = None
+    if opt.single_char:
+        single_char_folder = os.path.join(captcha_save_folder, 'clean')
+        make_folders(single_char_folder)
+
+    captcha, feature = switch[opt.captcha](opt.captcha)
+    images, images_clean = generate(captcha, labels, feature)
+
+    save_images(images, images_clean, save_folder, single_char_folder)
+
+
+if __name__ == "__main__":
+    main()

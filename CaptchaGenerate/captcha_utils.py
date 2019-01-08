@@ -35,7 +35,7 @@ def pre_calc(start, step, images, step_randoms, ):
     for i in range(len(images)):
         eachW = images[i].size[0]
         preCalc = preCalc + eachW + step + step_randoms[i]
-    return preCalc + start
+    return preCalc + abs(step)*2
 
 
 #  等比例缩小多少倍
