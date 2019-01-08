@@ -20,7 +20,7 @@ def save_images(images, folder, file_name):
 
 
 def main():
-    source_folder = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/less/images'
+    source_folder = '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaSegment/data/qq'
     target_folder = source_folder + '_cfs_pro'
     make_folder(target_folder)
 
@@ -32,7 +32,7 @@ def main():
         # 滴水分割
         # images = drop(Image.open(each), pre_conditions=[67, 106, 134])
         # 连通域+投影
-        images = cfs_projection(Image.open(each), pre_conditions=[67, 106, 134])
+        images = cfs_projection(Image.open(each), pre_conditions=[61, 182, 183])
         # 连通域+滴水
         # images = cfs_drop(Image.open(each), pre_conditions=[67, 106, 134])
         save_images(images, target_folder, get_file_name(each))

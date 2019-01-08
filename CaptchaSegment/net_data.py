@@ -99,14 +99,14 @@ def correct(images, label):
 
 
 def main():
-    source_folder = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/less/images'
+    source_folder = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq_2/qq_200/qq_pix2pix/test_latest/images'
     target_folder = '/'.join(source_folder.split('/')[:-1])
     images_folder = os.path.join(target_folder, 'train_set')
     labels_save_path = os.path.join(target_folder, 'train_labels.txt')
     make_folder(images_folder)
     # print(images_folder, labels_folder)
 
-    labels_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq/less/qq_test_labels.txt'
+    labels_path = '/home/tianchaoxiong/LinuxData/data/MasterExpData/after/qq_2/qq_200/qq_pix2pix/test_latest/qq_test_200_labels.txt'
     labels = open(labels_path, 'r', encoding="utf-8").read().strip().split("#")
 
     new_images = []
@@ -120,7 +120,7 @@ def main():
         # 滴水分割
         # images = drop(Image.open(each), pre_conditions=[67, 106, 134])
         # 连通域+投影
-        images = cfs_projection(Image.open(each), pre_conditions=[67, 106, 134])
+        images = cfs_projection(Image.open(each), pre_conditions=[61, 182, 183])
         # 连通域+滴水
         # images = cfs_drop(Image.open(each), pre_conditions=[67, 106, 134])
 
