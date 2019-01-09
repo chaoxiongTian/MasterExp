@@ -199,11 +199,11 @@ class PreNet(object):
                 y = Variable(cuda(labels, self.cuda))
 
                 output = self.net(x)
-                predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
+                predict = output.reshape([-1, self.captcha_len, len(self.captcha_char_set)])
                 max_idx_p = predict.max(2)[1]
-                real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
+                real = y.reshape([-1, self.captcha_len, len(self.captcha_char_set)])
                 max_idx_l = real.max(2)[1]
-                accuracy = max_idx_p.eq(max_idx_l).float().mean().item()
+                accuracy = max_idx_p.eq(max_idx_l).float().mean()
 
                 cost = self.loss_func(output, y)
                 self.optim.zero_grad()
@@ -213,7 +213,7 @@ class PreNet(object):
                 if batch_idx % 4 == 0:
                     print('Epoch:', epoch_idx,
                           '| iter:', batch_idx * self.batch_size,
-                          '| train loss: %.4f' % cost.item(),
+                          '| train loss: %.4f' % cost,
                           '| train accuracy: %.3f' % accuracy)
             random.shuffle(self.train_data)
             self.test()
@@ -241,13 +241,13 @@ class PreNet(object):
             y = Variable(cuda(labels, self.cuda))
 
             output = self.net(x)
-            predict = torch.view(output, [-1, self.captcha_len, len(self.captcha_char_set)])
+            predict = output.reshape([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
 
-            real = torch.view(y, [-1, self.captcha_len, len(self.captcha_char_set)])
+            real = y.reshape([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_l = real.max(2)[1]
 
-            correct = max_idx_p.eq(max_idx_l).float().mean().item()
+            correct = max_idx_p.eq(max_idx_l).float().mean()
             if correct == 1:
                 com_correct += 1
             accuracy = accuracy + correct
@@ -282,10 +282,10 @@ class PreNet(object):
     #
     #     def pred_acc(input_x, real_y):
     #         output = self.net(input_x)
-    #         predict = torch.view(output, [-1, self.captcha_len, len(self.captcha_char_set)])
+    #         predict = torch.reshape(output, [-1, self.captcha_len, len(self.captcha_char_set)])
     #         max_idx_p = predict.max(2)[1]
     #
-    #         real = torch.view(real_y, [-1, self.captcha_len, len(self.captcha_char_set)])
+    #         real = torch.reshape(real_y, [-1, self.captcha_len, len(self.captcha_char_set)])
     #         max_idx_l = real.max(2)[1]
     #         accuracy = max_idx_p.eq(max_idx_l).float().mean().item()
     #         cost = self.loss_func(output, real_y)
