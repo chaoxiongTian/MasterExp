@@ -12,8 +12,9 @@
 dist
 build
 *ceshi.py
-AdversarialCaptcha
-IdentifiNetwork
+
+/AdversarialCaptcha/*
+/IdentifiNetwork/*
 
 
 !CaptchaGenerate/data/bg/*/*.jpg
