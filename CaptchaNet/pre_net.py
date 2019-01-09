@@ -29,6 +29,8 @@ def cuda(tensor, is_cuda):
 
 def get_data(data_sets, flag, num):
     folder = os.path.join(data_sets, flag)
+    if num == 0:
+        num = len(os.listdir(folder))
     image_paths = [os.path.join(folder, str(i) + '.png') for i in range(num)]
     labels = open(os.path.join(data_sets, flag + '_labels.txt'), 'r').read().strip().split('#')
     return [(image_paths[i], labels[i]) for i in range(num)]
@@ -97,21 +99,24 @@ class PreNet(object):
         self.net = args.net
 
         # 需要的文件夹
-        self.data_sets = os.path.join(self.data_root, args.data_sets, args.model_name)
-        self.model_name = args.model_name
-        self.ckpt_dir = os.path.join(self.data_root, args.ckpt_dir, args.model_name)
+        self.data_sets = os.path.join(self.data_root, args.data_sets, args.captcha)
+        self.captcha_name = args.captcha
+        self.ckpt_dir = os.path.join(self.data_root, args.ckpt_dir, args.captcha)
         self.load_ckpt = args.load_ckpt  # 有内容的时候才加载
-        self.output_dir = os.path.join(self.data_root, args.output_dir, args.model_name)
+        self.output_dir = os.path.join(self.data_root, args.output_dir, args.captcha)
         # 创建文件夹 模型保存地址 对抗样本输出地址
         make_folders(self.ckpt_dir, self.output_dir)
 
-        # 验证码相关
+        # 验证码相关 如果都没有赋值就都是0，则按照文件夹取，取完之后重新赋值。
         self.train_num = args.train_num
         self.test_num = args.test_num
-        self.captcha_len = args.captcha_len
         # list [image_path,label]
         self.train_data = get_data(self.data_sets, 'train', self.train_num)
         self.test_data = get_data(self.data_sets, 'test', self.test_num)
+        self.train_num = len(self.train_data)
+        self.test_num = len(self.test_data)
+        self.captcha_len = len(self.train_data[0][1])
+        self.real_captcha_len = args.real_captcha_len
         self.captcha_char_set = sorted(get_char_set(self.train_data, self.test_data))
         self.char_idx = {str(self.captcha_char_set[i]): i for i in range(len(self.captcha_char_set))}
         self.idx_char = {i: str(self.captcha_char_set[i]) for i in range(len(self.captcha_char_set))}
@@ -214,19 +219,42 @@ class PreNet(object):
             self.test()
 
     def test(self):
-        # 把test中所有的数据的大小直接作为一个batch 进行测试。
-        images, labels = self.cus_data_loader(0, len(self.test_data), self.test_data)
-        x = Variable(cuda(images, self.cuda))
-        y = Variable(cuda(labels, self.cuda))
+        # 把test中所有的数据按照batch_size = captcha_len 进行测试。
 
-        output = self.net(x)
-        predict = torch.reshape(output, [-1, self.captcha_len, len(self.captcha_char_set)])
-        max_idx_p = predict.max(2)[1]
+        if self.real_captcha_len == 0:
+            # 表示这是一般的测试，不存在验证码分割之后的整体与预估
+            test_batch = len(self.test_data)
+            Times = 1
+        else:
+            if self.test_num % self.real_captcha_len != 0:
+                raise RuntimeError("There is a problem with the test sample")
+            test_batch = self.real_captcha_len
+            Times = int(self.test_num / self.real_captcha_len)
 
-        real = torch.reshape(y, [-1, self.captcha_len, len(self.captcha_char_set)])
-        max_idx_l = real.max(2)[1]
-        accuracy = max_idx_p.eq(max_idx_l).float().mean().item()
-        cost = self.loss_func(output, y)
+        accuracy = 0.
+        cost = 0.
+        com_correct = 0
+        total = 0.
+        for i in range(Times):
+            images, labels = self.cus_data_loader(i, test_batch, self.test_data)
+            x = Variable(cuda(images, self.cuda))
+            y = Variable(cuda(labels, self.cuda))
+
+            output = self.net(x)
+            predict = torch.reshape(output, [-1, self.captcha_len, len(self.captcha_char_set)])
+            max_idx_p = predict.max(2)[1]
+
+            real = torch.reshape(y, [-1, self.captcha_len, len(self.captcha_char_set)])
+            max_idx_l = real.max(2)[1]
+
+            correct = max_idx_p.eq(max_idx_l).float().mean().item()
+            if correct == 1:
+                com_correct += 1
+            accuracy = accuracy + correct
+            cost += self.loss_func(output, y)
+            total += 1
+        accuracy = accuracy / total
+        cost = cost / total
 
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
@@ -234,9 +262,9 @@ class PreNet(object):
                 vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
             return vector
 
-        for i in range(5):
-            print("real:'{}' predict:'{}'".format(vec2text(index2vec(max_idx_l[i]), self.idx_char),
-                                                  vec2text(index2vec(max_idx_p[i]), self.idx_char)))
+        # for i in range(5):
+        #     print("real:'{}' predict:'{}'".format(vec2text(index2vec(max_idx_l[i]), self.idx_char),
+        #                                           vec2text(index2vec(max_idx_p[i]), self.idx_char)))
 
         if accuracy >= self.bast_accuracy and self.mode == 'train':
             self.bast_accuracy = accuracy
@@ -244,7 +272,9 @@ class PreNet(object):
 
         print('test loss: %.4f' % cost,
               '| test accuracy: %.3f' % accuracy,
-              '| bast accuracy: %.3f\n' % self.bast_accuracy)
+              '| bast accuracy: %.3f' % self.bast_accuracy,
+              '| real: %.3f' % com_correct,
+              '| real accuracy: %.3f\n' % (com_correct/200))
 
     # def generate(self, num_sample, target=-1, epsilon=0.03, alpha=2 / 255, iteration=1):
     #     # 无目标攻击。

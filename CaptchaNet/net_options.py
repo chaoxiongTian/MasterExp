@@ -26,16 +26,16 @@ class Options:
         self.parser.add_argument('--output_dir', type=str, default='output', help='output directory path')  # 输出目录
         self.parser.add_argument('--ckpt_dir', type=str, default='checkpoints', help='checkpoint directory path')
         self.parser.add_argument('--load_ckpt', type=str, default='', help='')  # 加载模型的名字
-        self.parser.add_argument('--model_name', type=str, default='jd', help='experiment name')  # 模型的名字（文件夹名）
+        self.parser.add_argument('--captcha', type=str, default='jd', help='experiment name')  # 模型的名字（文件夹名）
         self.parser.add_argument('--mode', type=str, default='train', help='train / test / generate / universal')
 
         self.parser.add_argument('--silent', type=bool, default=False, help='')
 
         # 验证码相关
-        self.parser.add_argument('--train_num', type=int, default=10000, help='the number of train sets')
-        self.parser.add_argument('--test_num', type=int, default=200, help='the number of test sets')
-        self.parser.add_argument('--captcha_len', type=int, default=4, help='the len of captcha')
-
+        self.parser.add_argument('--train_num', type=int, default=0, help='the number of train sets')
+        self.parser.add_argument('--test_num', type=int, default=0, help='the number of test sets')
+        self.parser.add_argument('--captcha_len', type=int, default=4, help='the len of captcha in labels')
+        self.parser.add_argument('--real_captcha_len', type=int, default=0, help='the len of captcha in real')
 
         # 对抗样本
         self.parser.add_argument('--target', type=int, default=-1, help='target class for targeted generation')
