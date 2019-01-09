@@ -5,67 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CaptchaGenerate/command.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/amazon_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/amazon_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/amazon_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/amazon_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/amazon_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2011_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2011_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2011_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2011_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2011_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2013_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2013_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2013_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2013_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_2013_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/baidu_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/blizzard_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/blizzard_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/blizzard_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/blizzard_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/blizzard_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/captcha_net_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/captcha_net_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/captcha_net_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/cnn_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/cnn_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/cnn_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/cnn_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/cnn_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/digg_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/digg_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/digg_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/digg_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/digg_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/megaupload_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/megaupload_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/megaupload_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/megaupload_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/megaupload_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/nih_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/nih_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/nih_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/nih_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/nih_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/paypal_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/paypal_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/paypal_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/paypal_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/paypal_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2011_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2011_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2011_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2011_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2011_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2013_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2013_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2013_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2013_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/recaptcha_2013_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/reddit_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/reddit_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/reddit_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/reddit_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/reddit_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/sina_2014_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/sina_2014_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/sina_2014_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/sina_2014_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/sina_2014_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/yahoo_test_200_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/yahoo_test_200_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/yahoo_test_20_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/data/labels/yahoo_test_20_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/yahoo_test_5000_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/labels_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/labels_generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/options.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/ad_options.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/adversarial_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/adversary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/processed/test.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/processed/training.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/raw/t10k-images-idx3-ubyte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/raw/t10k-labels-idx1-ubyte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/raw/train-images-idx3-ubyte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/raw/train-labels-idx1-ubyte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/authorize/authorize_order_log.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/ad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/datasets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/jd/ad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/jd/jd_order_log.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/models/net.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/out_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/solver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/jd/jd_order_log.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/processed/test.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/processed/training.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/raw/t10k-images-idx3-ubyte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/raw/t10k-labels-idx1-ubyte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/raw/train-images-idx3-ubyte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/raw/train-labels-idx1-ubyte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/generate_train_test_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/id_options.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/id_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/models/nets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/out_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/ps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/simple/mnist_save.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/simple/net.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/simple/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/simple/train_back.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,249 +56,22 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.60126585">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="268">
-                  <caret line="391" selection-start-line="391" selection-end-line="391" />
-                  <folding>
-                    <element signature="n#!!doc" />
-                    <element signature="e#430#1308#0" />
-                    <element signature="e#648#935#0" />
-                    <element signature="e#954#1294#0" />
-                    <element signature="e#1368#2150#0" />
-                    <element signature="e#1368#1509#1" />
-                    <element signature="e#1573#2150#0" />
-                    <element signature="e#1795#1918#0" />
-                    <element signature="e#1962#2094#0" />
-                    <element signature="e#2199#5757#0" />
-                    <element signature="e#1249#3570#0" />
-                    <element signature="e#1641#1677#0" />
-                    <element signature="e#2067#2172#0" />
-                    <element signature="e#2645#3320#0" />
-                    <element signature="e#5290#6071#0" />
-                    <element signature="e#6740#7858#0" />
-                    <element signature="e#6859#8096#0" />
-                    <element signature="e#9089#10174#0" />
-                    <element signature="e#8473#9636#0" />
-                    <element signature="e#11331#12341#0" />
-                    <element signature="e#12390#13436#0" />
-                    <element signature="e#13482#14621#0" />
-                    <element signature="e#14674#15844#0" />
-                    <element signature="e#15902#16932#0" />
-                    <element signature="e#16981#18420#0" />
-                    <element signature="e#14899#15176#0" />
-                    <element signature="e#15552#16490#0" />
-                    <element signature="e#21077#22101#0" />
-                    <element signature="e#22159#23530#0" />
-                    <element signature="e#18709#18985#0" />
-                    <element signature="e#23580#24604#0" />
-                    <element signature="e#24651#25898#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-                  <folding>
-                    <element signature="n#!!doc" />
-                    <element signature="e#385#849#0" />
-                    <element signature="e#1184#1311#0" />
-                    <element signature="e#1383#2724#0" />
-                    <element signature="e#1470#2378#0" />
-                    <element signature="e#1942#2079#0" />
-                    <element signature="e#2513#2692#0" />
-                    <element signature="e#2794#3303#0" />
-                    <element signature="e#2861#2991#0" />
-                    <element signature="e#3102#3271#0" />
-                    <element signature="e#3381#3741#0" />
-                    <element signature="e#3537#3711#0" />
-                    <element signature="e#3825#4545#0" />
-                    <element signature="e#3825#3999#1" />
-                    <element signature="e#4198#4309#0" />
-                    <element signature="e#4351#4481#0" />
-                    <element signature="e#4629#5374#0" />
-                    <element signature="e#4629#4803#1" />
-                    <element signature="e#5002#5136#0" />
-                    <element signature="e#5178#5310#0" />
-                    <element signature="e#5403#5425#0" />
-                    <element signature="e#5478#5806#0" />
-                    <element signature="e#5600#5792#0" />
-                    <element signature="e#5642#5792#0" />
-                    <element signature="e#5896#6670#0" />
-                    <element signature="e#6230#6650#0" />
-                    <element signature="e#6321#6650#0" />
-                    <element signature="e#6435#6650#0" />
-                    <element signature="e#6672#6729#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="226">
-                  <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-                  <folding>
-                    <element signature="n#!!doc" />
-                    <element signature="e#262#581#1" />
-                    <element signature="e#696#2919#0" />
-                    <element signature="e#1060#1096#0" />
-                    <element signature="e#1462#1563#0" />
-                    <element signature="e#1996#2681#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-                  <folding>
-                    <element signature="e#182#209#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/command.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="175">
-                  <caret line="102" column="59" selection-start-line="102" selection-start-column="59" selection-end-line="102" selection-end-column="59" />
-                  <folding>
-                    <element signature="n#!!doc" />
-                    <element signature="e#419#571#0" />
-                    <element signature="e#626#1031#0" />
-                    <element signature="e#803#870#0" />
-                    <element signature="e#1145#1240#0" />
-                    <element signature="e#1291#1392#0" />
-                    <element signature="e#1431#1664#0" />
-                    <element signature="e#1545#1647#0" />
-                    <element signature="e#1587#1647#0" />
-                    <element signature="e#1702#2107#0" />
-                    <element signature="e#1790#2086#0" />
-                    <element signature="e#1832#1883#0" />
-                    <element signature="e#1937#2086#0" />
-                    <element signature="e#2138#2461#0" />
-                    <element signature="e#2263#2439#0" />
-                    <element signature="e#2344#2439#0" />
-                    <element signature="e#2496#2862#0" />
-                    <element signature="e#2563#2638#0" />
-                    <element signature="e#2760#2862#0" />
-                    <element signature="e#4491#4601#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaSegment/image_segment.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/labels_generate.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-                  <folding>
-                    <element signature="n#!!doc" />
-                    <element signature="e#300#5987#0" />
-                    <element signature="e#318#674#0" />
-                    <element signature="e#688#896#0" />
-                    <element signature="e#910#1090#0" />
-                    <element signature="e#1110#1257#0" />
-                    <element signature="e#1270#1581#0" />
-                    <element signature="e#1593#1733#0" />
-                    <element signature="e#1748#1918#0" />
-                    <element signature="e#1996#2272#0" />
-                    <element signature="e#2292#2487#0" />
-                    <element signature="e#2505#2627#0" />
-                    <element signature="e#2646#2842#0" />
-                    <element signature="e#2863#3006#0" />
-                    <element signature="e#3019#3224#0" />
-                    <element signature="e#3240#3392#0" />
-                    <element signature="e#3406#3612#0" />
-                    <element signature="e#3627#3833#0" />
-                    <element signature="e#3845#3997#0" />
-                    <element signature="e#4016#4287#0" />
-                    <element signature="e#4311#4375#0" />
-                    <element signature="e#4391#4495#0" />
-                    <element signature="e#4510#4781#0" />
-                    <element signature="e#4805#5000#0" />
-                    <element signature="e#5020#5220#0" />
-                    <element signature="e#5240#5463#0" />
-                    <element signature="e#5479#5785#0" />
-                    <element signature="e#5798#5984#0" />
-                    <element signature="e#6192#6509#0" />
-                    <element signature="e#6293#6480#0" />
-                    <element signature="e#6528#6781#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/options.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CaptchaSegment/find_char_range.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-                  <folding>
-                    <element signature="e#182#209#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/xxx.ad">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -331,13 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>da</find>
-      <find>u</find>
-      <find>dset_dir</find>
-      <find>MNIST</find>
-      <find>silent</find>
-      <find>cuda</find>
-      <find>weight_init</find>
       <find>data_set_folder</find>
       <find>data_loader</find>
       <find>labels</find>
@@ -361,11 +106,19 @@
       <find>rotate</find>
       <find>MUL</find>
       <find>captcha_generate.py</find>
+      <find>YHGH</find>
+      <find>HFMT</find>
+      <find>TFMT</find>
+      <find>SBEA</find>
+      <find>test_num</find>
+      <find />
+      <find>model_name</find>
     </findStrings>
     <replaceStrings>
       <replace>generate_Captcha</replace>
       <replace>generate_save_captcha</replace>
       <replace>labels_generate.py</replace>
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/IdentifiNetwork</dir>
@@ -377,10 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torchvision/datasets/folder.py" />
-        <option value="$PROJECT_DIR$/IdentifiNetwork/train_back.py" />
-        <option value="$PROJECT_DIR$/IdentifiNetwork/ceshi_3.py" />
-        <option value="$PROJECT_DIR$/IdentifiNetwork/ceshi_2.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/id_utils.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/ceshi.py" />
         <option value="$PROJECT_DIR$/utils.py" />
@@ -399,27 +148,18 @@
         <option value="$PROJECT_DIR$/CaptchaNet/data_sets/net_options.py" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/main.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/solver.py" />
-        <option value="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/ceshi.py" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/main.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/models/core_net.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/main.py" />
-        <option value="$PROJECT_DIR$/CaptchaNet/net_options.py" />
-        <option value="$PROJECT_DIR$/AdversarialCaptcha/README.md" />
         <option value="$PROJECT_DIR$/CaptchaNet/adversary.py" />
-        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
-        <option value="$PROJECT_DIR$/CaptchaNet/README.md" />
-        <option value="$PROJECT_DIR$/CaptchaGenerate/README.md" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/data/labels/megaupload_test_2_labels.txt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/label.py" />
         <option value="$PROJECT_DIR$/周报.txt" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/data/bg/generate_pp_bg.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/find_range.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/image_segment.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/find_char_range.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/options.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/captcha.py" />
@@ -428,6 +168,19 @@
         <option value="$PROJECT_DIR$/CaptchaGenerate/labels_generate.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/command.txt" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/README.md" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/seg_options.py" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_200_labels.txt" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/data/qq/segment/qq_test_200_labels.txt" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/ceshi.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/README.md" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/net_options.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/README.md" />
+        <option value="$PROJECT_DIR$/AdversarialCaptcha/README.md" />
+        <option value="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -453,16 +206,6 @@
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaGenerate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaSegment" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -482,19 +225,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/cnn" />
-      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/paypal_bg" />
-      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/paypal" />
-      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/baidu_2013/shi" />
-      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/baidu_2013/kong" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/paypal_bg" />
       <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/baidu_2013/kong" />
       <recent name="$PROJECT_DIR$/CaptchaGenerate" />
       <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/yahoo/kong" />
       <recent name="$PROJECT_DIR$/CaptchaNet/data_sets/mnist" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CaptchaNet/data_sets/aa" />
+      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/cnn" />
+      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/paypal_bg" />
+      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/paypal" />
+      <recent name="$PROJECT_DIR$/CaptchaGenerate/data/font/baidu_2013/shi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -509,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ceshi">
+  <component name="RunManager" selected="Python.ceshi (1)">
     <configuration name="ceshi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -624,11 +367,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ceshi" />
+        <item itemvalue="Python.ceshi (1)" />
         <item itemvalue="Python.net_data" />
+        <item itemvalue="Python.ceshi" />
         <item itemvalue="Python.find_char_range" />
         <item itemvalue="Python.image_segment" />
-        <item itemvalue="Python.ceshi (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -656,10 +399,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="32" width="1920" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49840763" weight="0.18459916" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.18459916" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4978903" weight="0.19209659" />
@@ -687,372 +429,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/test/97.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/models/net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="21" />
-          <folding>
-            <element signature="e#751#2195#0" />
-            <element signature="e#2641#2992#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torch/autograd/variable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/adversarial_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="1040" lean-forward="true" selection-start-line="1040" selection-end-line="1040" />
-          <folding>
-            <element signature="e#524#1742#0" />
-            <element signature="e#1780#3052#0" />
-            <element signature="e#3104#4367#0" />
-            <element signature="e#4439#5947#0" />
-            <element signature="e#6005#7618#0" />
-            <element signature="e#7690#9299#0" />
-            <element signature="e#9355#9830#0" />
-            <element signature="e#9887#11028#0" />
-            <element signature="e#11082#12163#0" />
-            <element signature="e#12216#13334#0" />
-            <element signature="e#13594#16230#0" />
-            <element signature="e#13766#15419#1" />
-            <element signature="e#15481#15611#0" />
-            <element signature="e#15498#15610#0" />
-            <element signature="e#15648#15837#0" />
-            <element signature="e#15735#15837#0" />
-            <element signature="e#16453#16826#0" />
-            <element signature="e#17233#17798#0" />
-            <element signature="e#17405#17551#1" />
-            <element signature="e#17966#18223#0" />
-            <element signature="e#18597#19160#0" />
-            <element signature="e#18769#18915#1" />
-            <element signature="e#19328#19585#0" />
-            <element signature="e#19959#20531#0" />
-            <element signature="e#20131#20277#1" />
-            <element signature="e#20699#20956#0" />
-            <element signature="e#21253#22568#0" />
-            <element signature="e#21466#21584#0" />
-            <element signature="e#21658#22553#0" />
-            <element signature="e#21868#22142#0" />
-            <element signature="e#21885#22009#0" />
-            <element signature="e#22197#22526#0" />
-            <element signature="e#22362#22526#0" />
-            <element signature="e#22714#23426#0" />
-            <element signature="e#22877#22991#1" />
-            <element signature="e#23572#24235#0" />
-            <element signature="e#23735#23849#1" />
-            <element signature="e#24381#25077#0" />
-            <element signature="e#24544#24658#1" />
-            <element signature="e#25193#25913#0" />
-            <element signature="e#25276#25526#1" />
-            <element signature="e#25600#25725#0" />
-            <element signature="e#26029#26715#0" />
-            <element signature="e#26112#26362#1" />
-            <element signature="e#26398#26523#0" />
-            <element signature="e#26835#27298#0" />
-            <element signature="e#26911#27241#1" />
-            <element signature="e#27406#27529#0" />
-            <element signature="e#27858#28428#0" />
-            <element signature="e#27934#28300#1" />
-            <element signature="e#28536#28659#0" />
-            <element signature="e#28988#29558#0" />
-            <element signature="e#29064#29430#1" />
-            <element signature="e#29666#29789#0" />
-            <element signature="e#30062#30350#0" />
-            <element signature="e#30436#30918#0" />
-            <element signature="e#30491#30788#1" />
-            <element signature="e#31003#31485#0" />
-            <element signature="e#31058#31355#1" />
-            <element signature="e#31605#32371#0" />
-            <element signature="e#31655#32104#1" />
-            <element signature="e#32138#32253#0" />
-            <element signature="e#32155#32242#0" />
-            <element signature="e#32475#32905#0" />
-            <element signature="e#32525#32626#1" />
-            <element signature="e#32660#32775#0" />
-            <element signature="e#32677#32764#0" />
-            <element signature="e#33004#34000#0" />
-            <element signature="e#33054#33717#1" />
-            <element signature="e#33751#33866#0" />
-            <element signature="e#33768#33855#0" />
-            <element signature="e#34099#35211#0" />
-            <element signature="e#34149#34812#1" />
-            <element signature="e#34817#34890#0" />
-            <element signature="e#34962#35077#0" />
-            <element signature="e#34979#35066#0" />
-            <element signature="e#35323#35663#0" />
-            <element signature="e#35402#35517#0" />
-            <element signature="e#35419#35506#0" />
-            <element signature="e#35758#36078#0" />
-            <element signature="e#35809#35921#1" />
-            <element signature="e#36122#36217#0" />
-            <element signature="e#36290#36602#0" />
-            <element signature="e#36327#36487#1" />
-            <element signature="e#36638#36705#0" />
-            <element signature="e#36770#37370#0" />
-            <element signature="e#36806#37211#1" />
-            <element signature="e#37471#37880#0" />
-            <element signature="e#37522#37707#1" />
-            <element signature="e#37931#38031#0" />
-            <element signature="e#38105#38372#0" />
-            <element signature="e#38142#38328#1" />
-            <element signature="e#38453#38794#0" />
-            <element signature="e#38497#38653#1" />
-            <element signature="e#38835#38910#0" />
-            <element signature="e#38983#39460#0" />
-            <element signature="e#39020#39345#1" />
-            <element signature="e#39496#39563#0" />
-            <element signature="e#39646#40036#0" />
-            <element signature="e#39690#39907#1" />
-            <element signature="e#40071#40148#0" />
-            <element signature="e#40248#40711#0" />
-            <element signature="e#40292#40538#1" />
-            <element signature="e#40766#40866#0" />
-            <element signature="e#40933#41254#0" />
-            <element signature="e#40972#41216#1" />
-            <element signature="e#41371#41762#0" />
-            <element signature="e#41428#41597#1" />
-            <element signature="e#41800#41909#0" />
-            <element signature="e#41963#42148#0" />
-            <element signature="e#42223#42469#0" />
-            <element signature="e#42261#42427#1" />
-            <element signature="e#42532#42737#0" />
-            <element signature="e#42532#42705#1" />
-            <element signature="e#42798#43014#0" />
-            <element signature="e#42798#42977#1" />
-            <element signature="e#43063#43119#0" />
-            <element signature="e#43206#43518#0" />
-            <element signature="e#43255#43380#0" />
-            <element signature="e#43615#44645#0" />
-            <element signature="e#43681#44319#1" />
-            <element signature="e#44540#44630#0" />
-            <element signature="e#44742#46066#0" />
-            <element signature="e#44808#45746#1" />
-            <element signature="e#45964#46051#0" />
-            <element signature="e#46154#46583#0" />
-            <element signature="e#46213#46404#1" />
-            <element signature="e#46677#47117#0" />
-            <element signature="e#46722#46937#1" />
-            <element signature="e#47216#48909#0" />
-            <element signature="e#47267#48175#1" />
-            <element signature="e#48312#48867#0" />
-            <element signature="e#48342#48364#0" />
-            <element signature="e#48567#48611#0" />
-            <element signature="e#49010#50137#0" />
-            <element signature="e#49076#49803#1" />
-            <element signature="e#50029#50122#0" />
-            <element signature="e#50190#50339#0" />
-            <element signature="e#50397#50697#0" />
-            <element signature="e#50397#50594#1" />
-            <element signature="e#50757#51049#0" />
-            <element signature="e#50757#50937#1" />
-            <element signature="e#51127#51878#0" />
-            <element signature="e#51184#51541#1" />
-            <element signature="e#51596#51706#0" />
-            <element signature="e#51725#51863#0" />
-            <element signature="e#51967#52083#0" />
-            <element signature="e#52158#52307#0" />
-            <element signature="e#52478#56721#0" />
-            <element signature="e#52568#55674#1" />
-            <element signature="e#55715#56069#0" />
-            <element signature="e#55932#56069#0" />
-            <element signature="e#56142#56638#0" />
-            <element signature="e#56198#56267#0" />
-            <element signature="e#56423#56443#0" />
-            <element signature="e#56908#63542#0" />
-            <element signature="e#57006#60470#1" />
-            <element signature="e#60475#60510#0" />
-            <element signature="e#60686#60961#0" />
-            <element signature="e#60700#60922#0" />
-            <element signature="e#60996#61506#0" />
-            <element signature="e#61032#61311#0" />
-            <element signature="e#61049#61288#0" />
-            <element signature="e#61338#61506#0" />
-            <element signature="e#61542#62315#0" />
-            <element signature="e#61829#62051#0" />
-            <element signature="e#61846#62024#0" />
-            <element signature="e#62109#62315#0" />
-            <element signature="e#62126#62242#0" />
-            <element signature="e#62334#62465#0" />
-            <element signature="e#62351#62444#0" />
-            <element signature="e#62688#62922#0" />
-            <element signature="e#62942#63065#0" />
-            <element signature="e#63104#63375#0" />
-            <element signature="e#63160#63180#0" />
-            <element signature="e#63711#64922#0" />
-            <element signature="e#63814#64015#1" />
-            <element signature="e#64041#64768#0" />
-            <element signature="e#64069#64146#0" />
-            <element signature="e#65113#65632#0" />
-            <element signature="e#65244#65469#1" />
-            <element signature="e#65747#66091#0" />
-            <element signature="e#65832#65961#1" />
-            <element signature="e#66200#66532#0" />
-            <element signature="e#66279#66408#1" />
-            <element signature="e#66639#67619#0" />
-            <element signature="e#66696#66949#1" />
-            <element signature="e#66996#67117#0" />
-            <element signature="e#67013#67104#0" />
-            <element signature="e#67183#67295#0" />
-            <element signature="e#67314#67554#0" />
-            <element signature="e#67772#69594#0" />
-            <element signature="e#67837#69478#1" />
-            <element signature="e#69758#73846#0" />
-            <element signature="e#69857#72373#1" />
-            <element signature="e#72666#72813#0" />
-            <element signature="e#73080#73831#0" />
-            <element signature="e#73259#73359#0" />
-            <element signature="e#73569#73668#0" />
-            <element signature="e#73695#73831#0" />
-            <element signature="e#74032#76858#0" />
-            <element signature="e#74127#76294#1" />
-            <element signature="e#76574#76697#0" />
-            <element signature="e#76975#79807#0" />
-            <element signature="e#77051#78910#1" />
-            <element signature="e#79058#79629#0" />
-            <element signature="e#79094#79424#0" />
-            <element signature="e#79108#79423#0" />
-            <element signature="e#79981#82788#0" />
-            <element signature="e#80080#82566#1" />
-            <element signature="e#82957#85908#0" />
-            <element signature="e#83051#84953#1" />
-            <element signature="e#85201#85398#0" />
-            <element signature="e#85215#85361#0" />
-            <element signature="e#85447#85632#0" />
-            <element signature="e#85464#85593#0" />
-            <element signature="e#85669#85814#0" />
-            <element signature="e#86118#88725#0" />
-            <element signature="e#86230#88266#1" />
-            <element signature="e#88810#89177#0" />
-            <element signature="e#88843#88990#0" />
-            <element signature="e#89009#89177#0" />
-            <element signature="e#89253#89374#0" />
-            <element signature="e#89499#90275#0" />
-            <element signature="e#89575#89753#1" />
-            <element signature="e#89917#90062#0" />
-            <element signature="e#90081#90260#0" />
-            <element signature="e#90393#91195#0" />
-            <element signature="e#90469#90685#1" />
-            <element signature="e#90849#90989#0" />
-            <element signature="e#91008#91180#0" />
-            <element signature="e#91314#92092#0" />
-            <element signature="e#91390#91585#1" />
-            <element signature="e#91749#91885#0" />
-            <element signature="e#91904#92077#0" />
-            <element signature="e#92265#93104#0" />
-            <element signature="e#92356#92540#0" />
-            <element signature="e#92820#93019#0" />
-            <element signature="e#92840#92965#0" />
-            <element signature="e#93272#93814#0" />
-            <element signature="e#93355#93534#0" />
-            <element signature="e#93947#94467#0" />
-            <element signature="e#94023#94194#1" />
-            <element signature="e#94594#95096#0" />
-            <element signature="e#94670#94829#1" />
-            <element signature="e#95279#96154#0" />
-            <element signature="e#95373#95535#1" />
-            <element signature="e#96074#96139#0" />
-            <element signature="e#96331#96900#0" />
-            <element signature="e#96422#96610#0" />
-            <element signature="e#97079#97947#0" />
-            <element signature="e#97185#97400#1" />
-            <element signature="e#97718#97854#0" />
-            <element signature="e#97999#98473#0" />
-            <element signature="e#98568#100693#0" />
-            <element signature="e#98568#100524#1" />
-            <element signature="e#100790#106423#0" />
-            <element signature="e#100790#102630#1" />
-            <element signature="e#102751#103306#0" />
-            <element signature="e#103143#103306#0" />
-            <element signature="e#103160#103274#0" />
-            <element signature="e#103343#103616#0" />
-            <element signature="e#103662#103852#0" />
-            <element signature="e#103704#103852#0" />
-            <element signature="e#103721#103851#0" />
-            <element signature="e#103871#104263#0" />
-            <element signature="e#103909#104263#0" />
-            <element signature="e#103923#104215#0" />
-            <element signature="e#106165#106423#0" />
-            <element signature="e#106191#106396#0" />
-            <element signature="e#106489#107350#0" />
-            <element signature="e#106489#107131#1" />
-            <element signature="e#107417#108280#0" />
-            <element signature="e#107417#108039#1" />
-            <element signature="e#108317#108357#0" />
-            <element signature="e#108387#108444#0" />
-            <element signature="e#108553#112296#0" />
-            <element signature="e#108602#111460#1" />
-            <element signature="e#111518#111666#0" />
-            <element signature="e#111535#111652#0" />
-            <element signature="e#111769#111972#0" />
-            <element signature="e#111786#111950#0" />
-            <element signature="e#112366#113007#0" />
-            <element signature="e#112408#112954#1" />
-            <element signature="e#113094#117326#0" />
-            <element signature="e#113148#115358#1" />
-            <element signature="e#115595#117311#0" />
-            <element signature="e#115721#116130#0" />
-            <element signature="e#116019#116130#0" />
-            <element signature="e#116175#116584#0" />
-            <element signature="e#116473#116584#0" />
-            <element signature="e#116629#117102#0" />
-            <element signature="e#116742#116853#0" />
-            <element signature="e#116991#117102#0" />
-            <element signature="e#117129#117311#0" />
-            <element signature="e#117440#117626#0" />
-            <element signature="e#117499#117566#1" />
-            <element signature="e#117662#118569#0" />
-            <element signature="e#118630#119425#0" />
-            <element signature="e#119632#120147#0" />
-            <element signature="e#119743#119812#1" />
-            <element signature="e#120242#121456#0" />
-            <element signature="e#120310#121161#1" />
-            <element signature="e#121190#121282#0" />
-            <element signature="e#121301#121441#0" />
-            <element signature="e#121511#121581#0" />
-            <element signature="e#121653#122437#0" />
-            <element signature="e#121653#121882#1" />
-            <element signature="e#121917#122311#0" />
-            <element signature="e#122520#123400#0" />
-            <element signature="e#122520#122766#1" />
-            <element signature="e#122800#123274#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_200_labels.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/auth/train_labels.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/captcha/authorize/ceshi/0.png" />
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/random.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -1081,16 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#154#166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IdentifiNetwork/id_options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1098,74 +464,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="231">
-            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3822">
-          <caret line="189" column="36" lean-forward="true" selection-start-line="189" selection-start-column="36" selection-end-line="189" selection-end-column="36" />
-          <folding>
-            <element signature="e#17#44#0" expanded="true" />
-            <element signature="e#3449#3790#0" />
-            <element signature="e#7406#9335#0" />
-            <element signature="e#9420#9777#0" />
-            <element signature="e#9845#10392#0" />
-            <element signature="e#10473#10899#0" />
-            <element signature="e#11008#11825#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/ceshi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="838">
           <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="e#162#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#164#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="168">
-            <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1563,28 +865,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="147">
-            <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -1623,13 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/ceshi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -1691,60 +969,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_200_labels.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="57" selection-start-column="57" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/周报.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/find_char_range.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="102" column="59" selection-start-line="102" selection-start-column="59" selection-end-line="102" selection-end-column="59" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#419#571#0" />
-            <element signature="e#626#1031#0" />
-            <element signature="e#803#870#0" />
-            <element signature="e#1145#1240#0" />
-            <element signature="e#1291#1392#0" />
-            <element signature="e#1431#1664#0" />
-            <element signature="e#1545#1647#0" />
-            <element signature="e#1587#1647#0" />
-            <element signature="e#1702#2107#0" />
-            <element signature="e#1790#2086#0" />
-            <element signature="e#1832#1883#0" />
-            <element signature="e#1937#2086#0" />
-            <element signature="e#2138#2461#0" />
-            <element signature="e#2263#2439#0" />
-            <element signature="e#2344#2439#0" />
-            <element signature="e#2496#2862#0" />
-            <element signature="e#2563#2638#0" />
-            <element signature="e#2760#2862#0" />
-            <element signature="e#4491#4601#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1852,42 +1080,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/labels_generate.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/command.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        <state relative-caret-position="525">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
           <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#300#5987#0" />
-            <element signature="e#318#674#0" />
-            <element signature="e#688#896#0" />
-            <element signature="e#910#1090#0" />
-            <element signature="e#1110#1257#0" />
-            <element signature="e#1270#1581#0" />
-            <element signature="e#1593#1733#0" />
-            <element signature="e#1748#1918#0" />
-            <element signature="e#1996#2272#0" />
-            <element signature="e#2292#2487#0" />
-            <element signature="e#2505#2627#0" />
-            <element signature="e#2646#2842#0" />
-            <element signature="e#2863#3006#0" />
-            <element signature="e#3019#3224#0" />
-            <element signature="e#3240#3392#0" />
-            <element signature="e#3406#3612#0" />
-            <element signature="e#3627#3833#0" />
-            <element signature="e#3845#3997#0" />
-            <element signature="e#4016#4287#0" />
-            <element signature="e#4311#4375#0" />
-            <element signature="e#4391#4495#0" />
-            <element signature="e#4510#4781#0" />
-            <element signature="e#4805#5000#0" />
-            <element signature="e#5020#5220#0" />
-            <element signature="e#5240#5463#0" />
-            <element signature="e#5479#5785#0" />
-            <element signature="e#5798#5984#0" />
-            <element signature="e#6192#6509#0" />
-            <element signature="e#6293#6480#0" />
-            <element signature="e#6528#6781#0" />
+            <element signature="e#182#209#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1899,22 +1104,236 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/find_char_range.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        <state relative-caret-position="189">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="126">
+            <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/labels_generate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding>
-            <element signature="e#182#209#0" expanded="true" />
+            <element signature="n#!!doc" />
+            <element signature="e#300#5932#0" />
+            <element signature="e#318#674#0" />
+            <element signature="e#688#896#0" />
+            <element signature="e#910#1090#0" />
+            <element signature="e#1110#1257#0" />
+            <element signature="e#1270#1581#0" />
+            <element signature="e#1593#1733#0" />
+            <element signature="e#1748#1918#0" />
+            <element signature="e#1996#2272#0" />
+            <element signature="e#2292#2487#0" />
+            <element signature="e#2505#2627#0" />
+            <element signature="e#2646#2837#0" />
+            <element signature="e#2858#2996#0" />
+            <element signature="e#3009#3214#0" />
+            <element signature="e#3230#3377#0" />
+            <element signature="e#3391#3592#0" />
+            <element signature="e#3607#3808#0" />
+            <element signature="e#3820#3967#0" />
+            <element signature="e#3986#4247#0" />
+            <element signature="e#4271#4335#0" />
+            <element signature="e#4351#4455#0" />
+            <element signature="e#4470#4741#0" />
+            <element signature="e#4765#4960#0" />
+            <element signature="e#4980#5175#0" />
+            <element signature="e#5195#5413#0" />
+            <element signature="e#5429#5730#0" />
+            <element signature="e#5743#5929#0" />
+            <element signature="e#6137#6454#0" />
+            <element signature="e#6238#6425#0" />
+            <element signature="e#6473#6726#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/command.txt">
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/seg_options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        <state relative-caret-position="315">
+          <caret line="15" column="104" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/qq_test_200_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="999" selection-start-column="999" selection-end-column="999" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/data/qq/cnn/qq_train_5000_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/data/qq/segment/qq_test_200_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="999" selection-start-column="999" selection-end-column="999" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/ceshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="168">
+            <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="116" column="52" lean-forward="true" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/data/qq/seg/qq_test_200_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="744" selection-start-column="740" selection-end-column="744" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/qq/test_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="63" selection-start-column="63" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="164" column="30" lean-forward="true" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="30" />
+          <folding>
+            <element signature="e#17#44#0" expanded="true" />
+            <element signature="e#3449#3790#0" />
+            <element signature="e#7406#9335#0" />
+            <element signature="e#9420#9777#0" />
+            <element signature="e#9845#10392#0" />
+            <element signature="e#10473#10899#0" />
+            <element signature="e#11008#11825#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#154#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/ad_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="273">
+            <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="42">
+            <caret line="2" column="67" lean-forward="true" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="938">
+          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#485#557#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+          <folding>
+            <element signature="e#162#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/xxx.ad">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
