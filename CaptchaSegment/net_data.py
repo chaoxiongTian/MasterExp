@@ -109,13 +109,13 @@ folder = os.path.join(data_folder, opt.captcha, opt.use)
 if opt.use == 'cnn':
     sour_folder = os.path.join(folder, 'images')
     tar_folder = os.path.join(folder, 'train')
-    labels_path = os.path.join(folder, 'qq_train_5000_labels.txt')
+    labels_path = os.path.join(folder, opt.captcha+'_train_5000_labels.txt')
     tar_labels_path = os.path.join(folder, 'train_labels.txt')
 
 elif opt.use == 'seg':
     sour_folder = os.path.join(folder, opt.tar, 'images')
     tar_folder = os.path.join(folder, opt.tar, 'test')
-    labels_path = os.path.join(folder, 'qq_test_200_labels.txt')
+    labels_path = os.path.join(folder, opt.captcha+'_test_200_labels.txt')
     tar_labels_path = os.path.join(folder, opt.tar, 'test_labels.txt')
 else:
     raise RuntimeError('use input error ,only cnn or seg')

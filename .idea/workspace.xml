@@ -5,46 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/ad_options.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/adversarial_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/adversary.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/processed/test.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/processed/training.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/raw/t10k-images-idx3-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/raw/t10k-labels-idx1-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/raw/train-images-idx3-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/MNIST/raw/train-labels-idx1-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/authorize/authorize_order_log.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/d_mnist/ad.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/datasets.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/jd/ad.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/data_sets/jd/jd_order_log.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/models/net.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/out_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdversarialCaptcha/solver.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/jd/jd_order_log.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/processed/test.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/processed/training.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/raw/t10k-images-idx3-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/raw/t10k-labels-idx1-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/raw/train-images-idx3-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/data_sets/mnist/raw/train-labels-idx1-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/generate_train_test_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/id_options.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/id_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/models/nets.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/out_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/ps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/simple/mnist_save.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/simple/net.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/simple/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentifiNetwork/simple/train_back.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaSegment/find_char_range.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/find_char_range.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaSegment/net_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/net_data.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,18 +19,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/周报.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="572">
+              <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/xxx.ad">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CaptchaSegment/find_char_range.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <folding>
+                <element signature="e#157#180#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+              <folding>
+                <element signature="n#!!doc" />
+                <element signature="e#161#170#0" expanded="true" />
+                <element signature="e#775#1184#0" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -159,7 +142,6 @@
         <option value="$PROJECT_DIR$/CaptchaGenerate/data/bg/generate_pp_bg.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/find_range.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/image_segment.py" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/find_char_range.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/options.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/captcha.py" />
@@ -174,13 +156,14 @@
         <option value="$PROJECT_DIR$/CaptchaSegment/data/qq/segment/qq_test_200_labels.txt" />
         <option value="$PROJECT_DIR$/CaptchaSegment/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/README.md" />
-        <option value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/net_options.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/README.md" />
         <option value="$PROJECT_DIR$/AdversarialCaptcha/README.md" />
         <option value="$PROJECT_DIR$/IdentifiNetwork/save_mnist_image.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/find_char_range.py" />
+        <option value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
       </list>
     </option>
   </component>
@@ -205,6 +188,11 @@
             <path>
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
+              <item name="CaptchaSegment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -399,6 +387,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="32" width="1920" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.18459916" />
@@ -969,13 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/周报.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/ceshi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="938">
@@ -1097,20 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/image_segment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/find_char_range.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -1210,16 +1178,6 @@
             <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="116" column="52" lean-forward="true" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
-          <folding>
-            <element signature="n#!!doc" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1325,15 +1283,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/xxx.ad">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="168">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/xxx.ad">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/image_segment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/find_char_range.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#157#180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#161#170#0" expanded="true" />
+            <element signature="e#775#1184#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/周报.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="29" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
