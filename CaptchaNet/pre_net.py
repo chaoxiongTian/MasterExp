@@ -199,9 +199,9 @@ class PreNet(object):
                 y = Variable(cuda(labels, self.cuda))
 
                 output = self.net(x)
-                predict = output.reshape([-1, self.captcha_len, len(self.captcha_char_set)])
+                predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
                 max_idx_p = predict.max(2)[1]
-                real = y.reshape([-1, self.captcha_len, len(self.captcha_char_set)])
+                real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
                 max_idx_l = real.max(2)[1]
                 accuracy = max_idx_p.eq(max_idx_l).float().mean()
 
@@ -241,10 +241,10 @@ class PreNet(object):
             y = Variable(cuda(labels, self.cuda))
 
             output = self.net(x)
-            predict = output.reshape([-1, self.captcha_len, len(self.captcha_char_set)])
+            predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
 
-            real = y.reshape([-1, self.captcha_len, len(self.captcha_char_set)])
+            real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_l = real.max(2)[1]
 
             correct = max_idx_p.eq(max_idx_l).float().mean()
