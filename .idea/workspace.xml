@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="251" column="27" selection-start-line="250" selection-start-column="24" selection-end-line="251" selection-end-column="27" />
+            <state relative-caret-position="316">
+              <caret line="268" column="49" selection-start-line="268" selection-start-column="49" selection-end-line="268" selection-end-column="49" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#485#557#0" />
@@ -1356,8 +1356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="251" column="27" selection-start-line="250" selection-start-column="24" selection-end-line="251" selection-end-column="27" />
+        <state relative-caret-position="316">
+          <caret line="268" column="49" selection-start-line="268" selection-start-column="49" selection-end-line="268" selection-end-column="49" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#485#557#0" />
