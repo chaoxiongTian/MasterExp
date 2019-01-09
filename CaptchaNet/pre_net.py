@@ -248,8 +248,8 @@ class PreNet(object):
             max_idx_l = real.max(2)[1]
 
             correct = max_idx_p.eq(max_idx_l).float().mean()
-            if correct == 1:
-                com_correct += 1
+            # if correct == 1:
+            #     com_correct += 1
             accuracy = accuracy + correct
             cost += self.loss_func(output, y)
             total += 1
