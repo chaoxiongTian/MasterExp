@@ -16,6 +16,8 @@ python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 6 --captcha b
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha authorize
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha captcha_net
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha nih
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 6 --captcha reddit
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha digg
 
 
 ```

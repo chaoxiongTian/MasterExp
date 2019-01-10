@@ -263,7 +263,7 @@ def generate_baidu(captcha_name):
         bg_folder=os.path.join(data_folder, "bg", captcha_name),  # 有背景的话，背景路径
         start_x=10,  # 第一个字符的开始位置
         start_x_random_range=10,
-        step=-2,  # 每个字符之间的距离
+        step=-1,  # 每个字符之间的距离
         step_stretch=1,  # 字符间距扩大每个字符之间的距离
         step_random_range=0,  # 字符之间距离随机的范围
         font_folder=os.path.join(data_folder, "font", captcha_name),  # 字体路径，多种字体直接全部读出来
