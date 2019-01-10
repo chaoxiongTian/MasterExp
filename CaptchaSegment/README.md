@@ -29,6 +29,6 @@ megaupload: 62,89
 'authorize': 56
 'captcha_net': 256 (都是一个字符)
 'nih': 256 (都是一个字符)
-'reddit': generate_reddit,  # 6
-'digg': generate_digg,  # 5
+'reddit': 37
+'digg': 256
 ```

@@ -12,7 +12,12 @@ python CaptchaNet/main.py --captcha mnist # 对应验证码的种类，后面用
 ```
 train
 ```
-python CaptchaNet/main.py --captcha qq --net cnn --epoch 100
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 6 --captcha blizzard
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha authorize
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha captcha_net
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha nih
+
+
 ```
 test
 ```
