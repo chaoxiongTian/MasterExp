@@ -31,4 +31,10 @@ megaupload: 62,89
 'nih': 256 (都是一个字符)
 'reddit': 37
 'digg': 256
+'baidu': 60,105,144  # 4
+'sina_2014': 47,80,  # 5
+'amazon': generate_amazon,  # 6
+'yahoo': generate_yahoo,  # 7
+'recaptcha_2011': 34,61,83,109,118,153  # 8
+
 ```

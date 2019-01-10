@@ -30,6 +30,8 @@ def get_cond(cond):
 
 # 合并两个相连的和最小的元素
 def combine_min_images(images):
+    if len(images) == 1:
+        return images
     # 两张image和并成一张
     sums = list()
     for i in range(len(images) - 1):
@@ -93,7 +95,9 @@ def re_segment(images):
 
 
 def correct(images, label):
-    if len(images) == captcha_len - 1:
+    if len(images) < captcha_len - 1:
+        return None, ''
+    elif len(images) == captcha_len - 1:
         # 找出最大的 强制使用 分割算法 按照两份 进行分割.
         return re_segment(images), list(label)
     elif len(images) == captcha_len:
@@ -151,9 +155,10 @@ def main():
     for each in get_internal_path(sour_folder):
         # TODO:对于训练集 使用cfs进行分割，若分割长度和验证码长度不用直接舍弃。对于测试集使用多种分割算法分割，然后修正。
         part_images, part_labels = segment(each, pre_conditions)
-        new_images.extend(part_images)
-        new_labels.extend(part_labels)
-        print(each, "is Complete")
+        if part_images is not None and len(part_images) == captcha_len :
+            new_images.extend(part_images)
+            new_labels.extend(part_labels)
+            print(each, "is Complete")
 
     # 保存图片和labels
     save_string_2_file(tar_labels_path, '#'.join(new_labels))
