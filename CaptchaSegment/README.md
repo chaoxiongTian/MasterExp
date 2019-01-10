@@ -6,8 +6,12 @@ python --captcha captcha_name#验证码的名称
        --use cnn # 是生成测试集还是生成训练集
        --tar org # 如果是训练集的话子目录的名称，可能有多组训练集
 ```
+生成cnn训练样本
 python CaptchaSegment/net_data.py --captcha qq --use cnn
-python CaptchaSegment/net_data.py --captcha qq --use seg --tar org --cond 62,105
+按照cfs分割找到字符的宽度
+python CaptchaSegment/find_char_range.py --use seg --tar org --captcha blizzard
+按照预设条件分割验证码
+python CaptchaSegment/net_data.py --use seg --tar org --cond 256 --captcha blizzard 
 ....
 # 需要保证对应目录下面存在labels。
 /home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaSegment/data/qq/seg/org/images
@@ -17,5 +21,14 @@ python CaptchaSegment/net_data.py --captcha qq --use seg --tar org --cond 62,105
 /home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaSegment/data/qq/cnn/images
 /home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaSegment/data/qq/cnn/train_sets
 /home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaSegment/data/qq/cnn/qq_train_5000_labels.txt
-
+```
+```
+qq: 62,104
+megaupload: 62,89
+'blizzard': 256 (都是一个字符)
+'authorize': 56
+'captcha_net': 256 (都是一个字符)
+'nih': 256 (都是一个字符)
+'reddit': generate_reddit,  # 6
+'digg': generate_digg,  # 5
 ```
