@@ -31,10 +31,8 @@ def get_data(data_sets, flag, num):
     folder = os.path.join(data_sets, flag)
     if num == 0:
         num = len(os.listdir(folder))
-    print("num:", num)
     image_paths = [os.path.join(folder, str(i) + '.png') for i in range(num)]
     labels = open(os.path.join(data_sets, flag + '_labels.txt'), 'r').read().strip().split('#')
-    print("labels num:", len(labels))
     return [(image_paths[i], labels[i]) for i in range(num)]
 
 
