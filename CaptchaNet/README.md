@@ -18,7 +18,9 @@ python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha c
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha nih
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 6 --captcha reddit
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha digg
-
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha baidu
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha sina_2014
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 8 --captcha recaptcha_2011
 
 ```
 test

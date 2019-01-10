@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaSegment/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaSegment/net_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaSegment/net_data.py" afterDir="false" />
     </list>
@@ -19,14 +20,14 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.31177232">
+    <splitter split-orientation="horizontal" split-proportion="0.42690814">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="20" column="10" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="10" />
+                <state relative-caret-position="294">
+                  <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
                   <folding>
                     <element signature="e#182#209#0" expanded="true" />
                   </folding>
@@ -39,7 +40,7 @@
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
                   <first_editor relative-caret-position="694">
-                    <caret line="38" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="38" />
+                    <caret line="38" selection-start-line="38" selection-end-line="38" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -131,19 +132,53 @@
             <entry file="file://$PROJECT_DIR$/CaptchaSegment/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="687">
-                    <caret line="37" column="38" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="38" />
+                  <first_editor relative-caret-position="624">
+                    <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
                   </first_editor>
                   <second_editor />
                 </state>
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaNet/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="84">
+                    <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="471">
+                  <caret line="228" column="52" selection-start-line="228" selection-start-column="36" selection-end-line="228" selection-end-column="52" />
+                  <folding>
+                    <element signature="n#!!doc" />
+                    <element signature="e#485#557#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/周报.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="656">
+                  <caret line="67" selection-start-line="67" selection-end-line="67" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="245">
-                  <caret line="148" column="24" lean-forward="true" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
+                <state relative-caret-position="35">
+                  <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
                   <folding>
                     <element signature="n#!!doc" />
                     <element signature="e#161#170#0" expanded="true" />
@@ -260,11 +295,11 @@
         <option value="$PROJECT_DIR$/CaptchaSegment/find_char_range.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/command" />
-        <option value="$PROJECT_DIR$/CaptchaNet/README.md" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/README.md" />
         <option value="$PROJECT_DIR$/CaptchaSegment/README.md" />
         <option value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/README.md" />
       </list>
     </option>
   </component>
@@ -311,6 +346,11 @@
             <path>
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
+              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
               <item name="CaptchaSegment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -318,6 +358,21 @@
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
               <item name="CaptchaSegment" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
+              <item name="CaptchaSegment" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
+              <item name="CaptchaSegment" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="cnn" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -809,17 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#485#557#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="686">
@@ -888,16 +932,6 @@
           <folding>
             <element signature="e#157#180#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="294">
-            <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -981,13 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/周报.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="43" column="74" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -998,12 +1025,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="10" />
+        <state relative-caret-position="35">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
           <folding>
-            <element signature="e#182#209#0" expanded="true" />
+            <element signature="n#!!doc" />
+            <element signature="e#161#170#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1011,21 +1039,48 @@
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="687">
-            <caret line="37" column="38" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="38" />
+          <first_editor relative-caret-position="624">
+            <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="148" column="24" lean-forward="true" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
+        <state relative-caret-position="294">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="e#182#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="84">
+            <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="228" column="52" selection-start-line="228" selection-start-column="36" selection-end-line="228" selection-end-column="52" />
           <folding>
             <element signature="n#!!doc" />
-            <element signature="e#161#170#0" expanded="true" />
+            <element signature="e#485#557#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/周报.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="67" selection-start-line="67" selection-end-line="67" selection-end-column="22" />
         </state>
       </provider>
     </entry>

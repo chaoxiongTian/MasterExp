@@ -7,7 +7,7 @@ python --captcha captcha_name#验证码的名称
        --tar org # 如果是训练集的话子目录的名称，可能有多组训练集
 ```
 生成cnn训练样本
-python CaptchaSegment/net_data.py --captcha qq --use cnn
+python CaptchaSegment/net_data.py --use cnn --captcha qq 
 按照cfs分割找到字符的宽度
 python CaptchaSegment/find_char_range.py --use seg --tar org --captcha blizzard
 按照预设条件分割验证码
