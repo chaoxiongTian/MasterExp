@@ -21,9 +21,11 @@ switch = {
     'baidu': generate_baidu,  # 4
     'qq': generate_qq,  # 4
     'sina_2014': generate_sina_2014,  # 5
+    'recaptcha_2011': generate_recaptcha_2011,  # 8
+
     'amazon': generate_amazon,  # 6
     'yahoo': generate_yahoo,  # 7
-    'recaptcha_2011': generate_recaptcha_2011,  # 8
+
     'recaptcha_2013': generate_recaptcha_2013,  # 6
     'baidu_2013': generate_baidu_2013,  # 4
     'baidu_2011': generate_baidu_2011,  # 4

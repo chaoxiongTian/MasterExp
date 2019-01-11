@@ -340,8 +340,8 @@ def generate_recaptcha_2011(captcha_name):
 def generate_yahoo(captcha_name):
     # 构造captcha
     captcha = Captcha(
-        captcha_width=100,  # 验证码宽
-        captcha_high=30,  # 验证按高
+        captcha_width=230,  # 验证码宽
+        captcha_high=65,  # 验证按高
         have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", captcha_name),  # 有背景的话，背景路径
         start_x=6,  # 第一个字符的开始位置
@@ -352,7 +352,7 @@ def generate_yahoo(captcha_name):
         font_folder=os.path.join(data_folder, "font", captcha_name, "kong"),  # 字体路径，多种字体直接全部读出来
         font_folder_clean=os.path.join(data_folder, "font", captcha_name, "shi"),
         font_color=(81, 105, 53),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
-        font_size=24,  # 字体基准大小
+        font_size=48,  # 字体基准大小
         font_size_random_range=0  # 字体随机范围
     )
 
