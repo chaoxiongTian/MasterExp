@@ -127,7 +127,8 @@ class Captcha(object):
                  step_random_range=0,  # 每两个字符之距离的随机值
                  font_folder_clean="null",  # 对照转换的验证码中的字体位置（未传参表示同一种）（用于空心到实心的转换）
                  bg_color=(255, 255, 255),  # 没有背景时，验证码的背景色
-                 mul=MUL
+                 mul=MUL,
+                 contours=False
                  ):
 
         self.mul = mul
@@ -144,6 +145,7 @@ class Captcha(object):
         self.offset_y_range = offset_y_range * self.mul
         self.font_folder = font_folder
         self.font_bg_color = font_bg_color
+        self.contours = contours
 
         if font_folder_clean.__eq__("null"):  # 没有传入参数，就说明用的同一种字体
             self.font_folder_clean = font_folder

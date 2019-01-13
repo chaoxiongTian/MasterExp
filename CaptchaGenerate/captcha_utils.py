@@ -35,7 +35,7 @@ def pre_calc(start, step, images, step_randoms, ):
     for i in range(len(images)):
         eachW = images[i].size[0]
         preCalc = preCalc + eachW + step + step_randoms[i]
-    return preCalc + abs(step)*2
+    return preCalc + abs(step) * 2
 
 
 #  等比例缩小多少倍
@@ -214,6 +214,26 @@ def paste(bg_image, image, offset_x, offset_y):
                 else:
                     bg_pix[iter_x + offset_x, iter_y + offset_y] = 0
     return bg_image
+
+
+# 画出一个image的轮廓
+def outline(im):
+    im = convert_binary(im)
+    w, h = im.size
+    from skimage import measure
+    import numpy as np
+    numpy_im = np.array(im, dtype=np.float32)  # =skimage
+    contours = measure.find_contours(numpy_im, 0.3)
+    contours_points = set()
+    for each in contours:
+        for (x, y) in each:
+            contours_points.add((int(x), int(y)))
+    im_new = Image.new('RGB', (w, h), (255, 255, 255))
+    pix_data = im_new.load()
+    for (x, y) in contours_points:
+        pix_data[y, x] = 0
+    return im_new
+
 
 # image = Image.new("RGBA", (100 * 4, 40 * 4), (0, 0, 0))
 # MUL_x = 30

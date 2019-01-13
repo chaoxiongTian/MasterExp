@@ -15,7 +15,7 @@ python CaptchaGenerate/captcha_generate.py --labels train_5000 --tar ceshi --sin
 python CaptchaGenerate/captcha_generate.py --labels train_5000 --tar ceshi --single_char True --captcha sina_2014
 python CaptchaGenerate/captcha_generate.py --labels train_5000 --tar ceshi --single_char True --captcha recaptcha_2011
 
-python CaptchaGenerate/captcha_generate.py --labels train_5000 --tar ceshi --single_char True --captcha yahoo
+python CaptchaGenerate/captcha_generate.py --labels train_5000 --tar train --single_char True --captcha yahoo
 python CaptchaGenerate/captcha_generate.py --labels train_5000 --tar ceshi --single_char True --captcha baidu_2013
 
 python CaptchaGenerate/captcha_generate.py --labels test_200 --tar test --captcha yahoo

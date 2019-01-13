@@ -6,10 +6,10 @@ python CaptchaNet/main.py --captcha mnist # 对应验证码的种类，后面用
 --epoch # 迭代次数
 --net #选的网络
 --batch_size # 批大小默认64
---moad train # 默认为train
+--moad train # 默认为train 
 --real_captcha_len # 4 对分割之后的验证码做预估的时候正式验证码的字符长度
-
-```
+ 
+``` 
 train
 ```
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 6 --captcha blizzard
@@ -21,6 +21,7 @@ python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha d
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha baidu
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 5 --captcha sina_2014
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 8 --captcha recaptcha_2011
+python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha baidu_2013
 
 ```
 test

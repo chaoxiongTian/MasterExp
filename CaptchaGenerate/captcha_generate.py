@@ -49,6 +49,8 @@ def generate(captcha, labels, feature):
     ims_clean = list()
     for i, each in enumerate(labels):
         image, image_clean = generate_captcha(captcha, each, feature)
+        if captcha.contours:
+            image = outline(image)
         ims.append(image)
         ims_clean.append(image_clean)
         print("Nub.%d in generated" % i)

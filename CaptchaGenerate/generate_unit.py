@@ -68,19 +68,20 @@ def image_wave(image, feature):
 def generate_megaupload(captcha_name):
     # 构造captcha
     captcha = Captcha(
-        captcha_width=70,  # 验证码宽
-        captcha_high=35,  # 验证按高
+        captcha_width=130,  # 验证码宽
+        captcha_high=60,  # 验证按高
         have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", captcha_name),  # 有背景的话，背景路径
         start_x=10,  # 第一个字符的开始位置
         start_x_random_range=7,
-        step=-3,  # 每个字符之间的距离
+        step=-4,  # 每个字符之间的距离
         step_stretch=1,  # 字符间距扩大每个字符之间的距离
         step_random_range=1,  # 字符之间距离随机的范围
         font_folder=os.path.join(data_folder, "font", captcha_name),  # 字体路径，多种字体直接全部读出来
         font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
-        font_size=23,  # 字体基准大小
+        font_size=41,  # 字体基准大小
         font_size_random_range=0,  # 字体随机范围
+        contours=True  # 绘制轮廓
     )
 
     def cus_paste(cap, bg_image, bg_image_clean, ims, ims_clean):
@@ -126,7 +127,7 @@ def generate_megaupload(captcha_name):
         bg_image_clean = bg_image_clean.resize((cap.captcha_width, cap.captcha_high), Image.ANTIALIAS)
         return bg_image, bg_image_clean
 
-    captcha_feature = (cus_paste, None, None, None, None, (0, 0), (0, 0), 0, 0, 0, 0, 0, (0, 0, 0))
+    captcha_feature = (cus_paste, None, None, None, None, (0, 0), (0, 0), 0, -15, 15, 0, 0, (0, 0, 0))
     return captcha, captcha_feature
 
 
