@@ -47,10 +47,7 @@ python CaptchaSegment/net_data.py --use cnn --captcha qq
 ```shell
 python CaptchaSegment/net_data.py --use seg --tar org --cond 256 --captcha qq
 ```
-**找到的一些预设条件**
-|cpatcha|cond|len|
-|------|------|------|
-|qq|62,104|4|
+**找到的一些预设条件*
 ```shell
 'qq': 62,104 # 4
 'megaupload': 62,89 #4  68,146
