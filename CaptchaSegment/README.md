@@ -31,7 +31,7 @@ megaupload: 62,89
 'nih': 256 (都是一个字符)
 'reddit': 37
 'digg': 256
-'baidu': 60,105,144  # 4
+'baidu': 60,105,144  # 4   45,105
 'sina_2014': 47,80,  # 5
 'baidu_2013' 44 # 4
 'amazon': generate_amazon,  # 6
