@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_200_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_test_20_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/data/labels/authorize_train_5000_labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+            <state relative-caret-position="525">
+              <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#431#1309#0" />
@@ -44,7 +41,7 @@
                 <element signature="e#3701#3802#0" />
                 <element signature="e#4257#4901#0" />
                 <element signature="e#5319#6052#0" />
-                <element signature="e#6878#7623#0" />
+                <element signature="e#6097#6831#0" />
                 <element signature="e#7662#8440#0" />
                 <element signature="e#8482#9261#0" />
                 <element signature="e#9301#10073#0" />
@@ -69,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="122" column="37" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="37" />
+            <state relative-caret-position="159">
+              <caret line="70" column="20" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#262#581#1" />
@@ -78,6 +75,22 @@
                 <element signature="e#1060#1096#0" />
                 <element signature="e#1462#1563#0" />
                 <element signature="e#1996#2681#0" />
+                <element signature="e#3009#3362#0" />
+                <element signature="e#3021#3051#0" />
+                <element signature="e#3096#3109#0" />
+                <element signature="e#3157#3168#0" />
+                <element signature="e#3208#3214#0" />
+                <element signature="e#3273#3305#0" />
+                <element signature="e#3364#3371#0" />
+                <element signature="e#4308#4407#0" />
+                <element signature="e#4467#8786#0" />
+                <element signature="e#5424#6445#0" />
+                <element signature="e#6489#7135#0" />
+                <element signature="e#7191#7941#0" />
+                <element signature="e#7266#7655#0" />
+                <element signature="e#7682#7941#0" />
+                <element signature="e#8009#8786#0" />
+                <element signature="e#8169#8750#0" />
               </folding>
             </state>
           </provider>
@@ -86,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+            <state relative-caret-position="349">
+              <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
               <folding>
                 <element signature="e#182#209#0" expanded="true" />
               </folding>
@@ -198,13 +211,13 @@
         <option value="$PROJECT_DIR$/CaptchaGenerate/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_utils.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/captcha.py" />
-        <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/labels_generate.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/README.md" />
         <option value="$PROJECT_DIR$/CaptchaNet/README.md" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/options.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" />
         <option value="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" />
       </list>
     </option>
@@ -809,31 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-          <folding>
-            <element signature="e#182#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="122" column="37" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#262#581#1" />
-            <element signature="e#696#2919#0" />
-            <element signature="e#1060#1096#0" />
-            <element signature="e#1462#1563#0" />
-            <element signature="e#1996#2681#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/labels_generate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -863,10 +851,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#262#581#1" />
+            <element signature="e#696#2919#0" />
+            <element signature="e#1060#1096#0" />
+            <element signature="e#1462#1563#0" />
+            <element signature="e#1996#2681#0" />
+            <element signature="e#3009#3362#0" />
+            <element signature="e#3021#3051#0" />
+            <element signature="e#3096#3109#0" />
+            <element signature="e#3157#3168#0" />
+            <element signature="e#3208#3214#0" />
+            <element signature="e#3273#3305#0" />
+            <element signature="e#3364#3371#0" />
+            <element signature="e#4308#4407#0" />
+            <element signature="e#4467#8786#0" />
+            <element signature="e#5424#6445#0" />
+            <element signature="e#6489#7135#0" />
+            <element signature="e#7191#7941#0" />
+            <element signature="e#7266#7655#0" />
+            <element signature="e#7682#7941#0" />
+            <element signature="e#8009#8786#0" />
+            <element signature="e#8169#8750#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
+          <folding>
+            <element signature="e#182#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+        <state relative-caret-position="525">
+          <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#431#1309#0" />
@@ -883,7 +912,7 @@
             <element signature="e#3701#3802#0" />
             <element signature="e#4257#4901#0" />
             <element signature="e#5319#6052#0" />
-            <element signature="e#6878#7623#0" />
+            <element signature="e#6097#6831#0" />
             <element signature="e#7662#8440#0" />
             <element signature="e#8482#9261#0" />
             <element signature="e#9301#10073#0" />

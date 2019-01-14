@@ -36,8 +36,8 @@ switch = {
 
 def save_images(ims, ims_clean, folder, single_folder):
     for i in range(len(ims)):
-        im = image_resize_scale(ims[i], 256, padding=30)
-        im_clean = image_resize_scale(ims_clean[i], 256, padding=30)
+        im = image_resize_scale(ims[i], 256, padding=20)
+        im_clean = image_resize_scale(ims_clean[i], 256, padding=20)
         if single_folder is not None:
             im_clean.save(os.path.join(single_folder, str(i) + '.png'))
         image_merge_horizontal(im, im_clean).save(os.path.join(folder, str(i) + '.png'))

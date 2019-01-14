@@ -174,8 +174,8 @@ def generate_authorize(captcha_name):
 
 def generate_captcha_net(captcha_name):
     captcha = Captcha(
-        captcha_width=150,  # 验证码宽
-        captcha_high=38,  # 验证按高
+        captcha_width=200,  # 验证码宽
+        captcha_high=60,  # 验证按高
         have_bg=False,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", captcha_name),  # 有背景的话，背景路径
         start_x=20,  # 第一个字符的开始位置
@@ -184,11 +184,11 @@ def generate_captcha_net(captcha_name):
         step_random_range=2,  # 字符之间距离随机的范围
         font_folder=os.path.join(data_folder, "font", captcha_name),  # 字体路径，多种字体直接全部读出来
         font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
-        font_size=20,  # 字体基准大小
+        font_size=33,  # 字体基准大小
         font_size_random_range=0,  # 字体随机范围
         offset_y_range=3
     )
-    captcha_feature = (None, None, None, None, None, (0, 0), (0, 0), 0, -10, 10, 2500, 0.7, (50, 50, 50))
+    captcha_feature = (None, None, None, None, None, (0, 0), (0, 0), 0, -10, 10, 2700, 1.9, (50, 50, 50))
     return captcha, captcha_feature
 
 
