@@ -24,7 +24,7 @@ python CaptchaSegment/net_data.py --use seg --tar org --cond 256 --captcha blizz
 ```
 ```
 qq: 62,104
-megaupload: 62,89
+megaupload: 62,89   68,146
 'blizzard': 256 (都是一个字符)
 'authorize': 56
 'captcha_net': 256 (都是一个字符)

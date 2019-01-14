@@ -26,5 +26,5 @@ python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha b
 ```
 test
 ```
-python CaptchaNet/main.py --captcha qq --real_captcha_len 4 --mode test --load_ckpt best_acc.tar --net cnn
+python CaptchaNet/main.py --real_captcha_len 4 --mode test --load_ckpt best_acc.tar --net cnn --captcha qq 
 ```
