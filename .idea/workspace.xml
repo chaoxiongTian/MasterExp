@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/captcha_generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+            <state relative-caret-position="565">
+              <caret line="487" column="20" selection-start-line="487" selection-start-column="20" selection-end-line="487" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#431#1309#0" />
@@ -42,6 +42,7 @@
                 <element signature="e#4257#4901#0" />
                 <element signature="e#5319#6052#0" />
                 <element signature="e#6097#6831#0" />
+                <element signature="e#6878#7623#0" />
                 <element signature="e#7662#8440#0" />
                 <element signature="e#8482#9261#0" />
                 <element signature="e#9301#10073#0" />
@@ -56,7 +57,6 @@
                 <element signature="e#16444#17230#0" />
                 <element signature="e#17280#18399#0" />
                 <element signature="e#17970#18246#0" />
-                <element signature="e#18441#19227#0" />
                 <element signature="e#19266#20071#0" />
               </folding>
             </state>
@@ -894,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+        <state relative-caret-position="565">
+          <caret line="487" column="20" selection-start-line="487" selection-start-column="20" selection-end-line="487" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#431#1309#0" />
@@ -913,6 +913,7 @@
             <element signature="e#4257#4901#0" />
             <element signature="e#5319#6052#0" />
             <element signature="e#6097#6831#0" />
+            <element signature="e#6878#7623#0" />
             <element signature="e#7662#8440#0" />
             <element signature="e#8482#9261#0" />
             <element signature="e#9301#10073#0" />
@@ -927,7 +928,6 @@
             <element signature="e#16444#17230#0" />
             <element signature="e#17280#18399#0" />
             <element signature="e#17970#18246#0" />
-            <element signature="e#18441#19227#0" />
             <element signature="e#19266#20071#0" />
           </folding>
         </state>

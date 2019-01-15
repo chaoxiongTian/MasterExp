@@ -474,8 +474,8 @@ def generate_recaptcha_2013(captcha_name):
 def generate_paypal(captcha_name):
     # 构造captcha
     captcha = Captcha(
-        captcha_width=110,  # 验证码宽
-        captcha_high=30,  # 验证按高
+        captcha_width=180,  # 验证码宽
+        captcha_high=50,  # 验证按高
         have_bg=True,  # 是否有背景
         bg_folder=os.path.join(data_folder, "bg", captcha_name),  # 有背景的话，背景路径
         start_x=20,  # 第一个字符的开始位置
@@ -485,7 +485,7 @@ def generate_paypal(captcha_name):
         step_random_range=0,  # 字符之间距离随机的范围
         font_folder=os.path.join(data_folder, "font", captcha_name),  # 字体路径，多种字体直接全部读出来
         font_color=(0, 0, 0),  # 指定颜色(处理之后都需要二值化，所以可不用随机颜色)
-        font_size=26,  # 字体基准大小
+        font_size=39,  # 字体基准大小
         font_size_random_range=0,  # 字体随机范围
         offset_y_range=0
     )
