@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaSegment/data/yahoo/cnn/yahoo_train_5000_labels.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +19,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaptchaGenerate/generate_unit.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="523">
@@ -57,6 +57,28 @@
                 <element signature="e#17280#18399#0" />
                 <element signature="e#17970#18246#0" />
                 <element signature="e#18441#19227#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/周报.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="590">
+              <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="115" column="70" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="70" />
+              <folding>
+                <element signature="n#!!doc" />
+                <element signature="e#161#170#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -258,6 +280,11 @@
               <item name="CaptchaGenerate" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="labels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
+              <item name="CaptchaSegment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -656,17 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#161#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../software/anacodna3/lib/python3.6/os.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -773,13 +789,6 @@
           <folding>
             <element signature="e#167#178#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/周报.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="67" selection-start-line="67" selection-end-line="67" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -929,6 +938,24 @@
             <element signature="e#17970#18246#0" />
             <element signature="e#18441#19227#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaSegment/net_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="115" column="70" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="70" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#161#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/周报.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="29" />
         </state>
       </provider>
     </entry>
