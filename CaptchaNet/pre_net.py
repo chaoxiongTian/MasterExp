@@ -97,6 +97,7 @@ class PreNet(object):
         self.lr = args.lr
         self.mode = args.mode
         self.net = args.net
+        self.net_str = args.net
 
         # 需要的文件夹
         self.data_sets = os.path.join(self.data_root, args.data_sets, args.captcha)
@@ -137,9 +138,9 @@ class PreNet(object):
 
     # 初始化网络
     def model_init(self):
-        if self.net == 'cnn':
+        if self.net_str == 'cnn':
             self.net = cuda(CNN(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
-        elif self.net == 'cnn_256':
+        elif self.net_str == 'cnn_256':
             self.net = cuda(CNN_256(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
         self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
         print(self.net)
@@ -158,7 +159,18 @@ class PreNet(object):
 
         while start_idx < len(data) and count < batch_size:
             image, label = data[start_idx]
-            images.append(image_2_tensor(Image.open(image).convert('L')))
+            # 对尺寸做检测，如果使用的是cnn 图片大小不是28*28 将其改为resize 28*28 256同理。
+            image = Image.open(image)
+            w, h = image.size
+            if self.net_str == 'cnn':  # 28*28
+                if w != 28 and h != 28:
+                    image = image_resize(image, 28, 28)
+            elif self.net_str == 'cnn_256':  # 256*256
+                if w != 256 and h != 256:
+                    image = image_resize(image, 256, 256)
+            else:
+                raise RuntimeError("net iuput error")
+            images.append(image_2_tensor(image.convert('L')))
             labels.append(torch.from_numpy(text2vec(label, self.captcha_len, self.char_idx)))
             count += 1
             start_idx += 1
@@ -274,46 +286,46 @@ class PreNet(object):
               '| test accuracy: %.3f' % accuracy,
               '| bast accuracy: %.3f' % self.bast_accuracy,
               '| real: %.3f' % com_correct,
-              '| real accuracy: %.3f\n' % (com_correct/200))
+              '| real accuracy: %.3f\n' % (com_correct / 200))
 
-    # def generate(self, num_sample, target=-1, epsilon=0.03, alpha=2 / 255, iteration=1):
-    #     # 无目标攻击。
-    #     images, labels = self.cus_data_loader(0, len(self.test_data), self.test_data)
-    #
-    #     def pred_acc(input_x, real_y):
-    #         output = self.net(input_x)
-    #         predict = torch.reshape(output, [-1, self.captcha_len, len(self.captcha_char_set)])
-    #         max_idx_p = predict.max(2)[1]
-    #
-    #         real = torch.reshape(real_y, [-1, self.captcha_len, len(self.captcha_char_set)])
-    #         max_idx_l = real.max(2)[1]
-    #         accuracy = max_idx_p.eq(max_idx_l).float().mean().item()
-    #         cost = self.loss_func(output, real_y)
-    #         return accuracy, cost
-    #
-    #     accuracy, cost = pred_acc(images, labels)  # 生成之前先做检测
-    #     # 修改tensor x_adv
-    #     x_adv = self.FGSM(images, labels, epsilon, alpha, iteration)
-    #
-    #     accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
-    #     print('[BEFORE] accuracy : {:.4f} cost : {:.4f}'.format(accuracy, cost))
-    #     print('[AFTER] accuracy : {:.4f} cost : {:.4f}'.format(accuracy_adv, cost_adv))
+    def generate(self, num_sample, target=-1, epsilon=0.03, alpha=2 / 255, iteration=1):
+        # 无目标攻击。
+        images, labels = self.cus_data_loader(0, len(self.test_data), self.test_data)
+
+        def pred_acc(input_x, real_y):
+            output = self.net(input_x)
+            predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
+            max_idx_p = predict.max(2)[1]
+
+            real = real_y.view([-1, self.captcha_len, len(self.captcha_char_set)])
+            max_idx_l = real.max(2)[1]
+            accuracy = max_idx_p.eq(max_idx_l).float().mean().item()
+            cost = self.loss_func(output, real_y)
+            return accuracy, cost
+
+        accuracy, cost = pred_acc(images, labels)  # 生成之前先做检测
+        # 修改tensor x_adv
+        x_adv = self.FGSM(images, labels, epsilon, alpha, iteration)
+
+        accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
+        print('[BEFORE] accuracy : {:.4f} cost : {:.4f}'.format(accuracy, cost))
+        print('[AFTER] accuracy : {:.4f} cost : {:.4f}'.format(accuracy_adv, cost_adv))
 
     # 对抗样本生成算法
-    # def FGSM(self, x, y_true, y_target=None, eps=0.03, alpha=2 / 255, iteration=1):
-    #     x = Variable(cuda(x, self.cuda), requires_grad=True)
-    #     y_true = Variable(cuda(y_true, self.cuda), requires_grad=False)
-    #     targeted = False
-    #     # 开始扰动
-    #     if iteration == 1:
-    #         if targeted:
-    #             x_adv, h_adv, h = self.attack.fgsm(x, y_target, True, eps)
-    #         else:
-    #             x_adv, h_adv, h = self.attack.fgsm(x, y_true, False, eps)
-    #     else:
-    #         if targeted:
-    #             x_adv, h_adv, h = self.attack.i_fgsm(x, y_target, True, eps, alpha, iteration)
-    #         else:
-    #             x_adv, h_adv, h = self.attack.i_fgsm(x, y_true, False, eps, alpha, iteration)
-    #
-    #     return x_adv.data
+    def FGSM(self, x, y_true, y_target=None, eps=0.03, alpha=2 / 255, iteration=1):
+        x = Variable(cuda(x, self.cuda), requires_grad=True)
+        y_true = Variable(cuda(y_true, self.cuda), requires_grad=False)
+        targeted = False
+        # 开始扰动
+        if iteration == 1:
+            if targeted:
+                x_adv, h_adv, h = self.attack.fgsm(x, y_target, True, eps)
+            else:
+                x_adv, h_adv, h = self.attack.fgsm(x, y_true, False, eps)
+        else:
+            if targeted:
+                x_adv, h_adv, h = self.attack.i_fgsm(x, y_target, True, eps, alpha, iteration)
+            else:
+                x_adv, h_adv, h = self.attack.i_fgsm(x, y_true, False, eps, alpha, iteration)
+
+        return x_adv.data

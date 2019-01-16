@@ -34,10 +34,10 @@ if __name__ == '__main__':
         net.test()
     elif opt.mode == 'generate':
         net.generate(num_sample=len(net.test_data),
-                     target=opt.target,
-                     epsilon=opt.epsilon,
-                     alpha=opt.alpha,
-                     iteration=opt.iteration)
+                     target=opt.target,  # 目标（对抗样本分为有目标和无目标）
+                     epsilon=opt.epsilon,  # 扰动因子
+                     alpha=opt.alpha,  # alpha for i-FGSM  2 / 255
+                     iteration=opt.iteration)  # the number of iteration for FGSM
     # elif opt.mode == 'universal':
     #     net.universal(opt)
     print('[*] Finished')

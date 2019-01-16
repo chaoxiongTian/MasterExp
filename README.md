@@ -27,6 +27,9 @@ python CaptchaGenerate/captcha_generate.py --labels train_5000 --tar train --sin
 python CaptchaGenerate/captcha_generate.py --labels train_5000 --tar train --captcha qq
 
 python CaptchaGenerate/captcha_generate.py --labels test_200 --tar test --captcha qq
+
+# 把原始验证码保存在tar文件夹中。
+python CaptchaGenerate/captcha_generate.py --labels test_20 --tar test  --captcha amazon --origin_captcha True
 ```
 
 ## 2: 验证码分割
@@ -87,11 +90,19 @@ python CaptchaNet/main.py --captcha mnist # 对应验证码的种类，后面用
 
 **训练**
 ```shell
+# 普通训练
+python CaptchaNet/main.py --net cnn --epoch 200 --captcha qq
+
+# 分割之后的单个验证码训练
 python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha qq
 ```
 
 **测试**
 ```shell
+# 普通测试
+python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net cnn  --captcha qq
+
+# 分割之后的单个验证码测试
 python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net cnn --real_captcha_len 4 --captcha qq 
 ```
 

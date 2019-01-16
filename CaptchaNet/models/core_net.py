@@ -11,7 +11,7 @@ import torch.nn as nn
 class CNN_256(nn.Module):
     def __init__(self, channel=1, y_dim=10):
         super(CNN_256, self).__init__()
-        self.conv1 = nn.Sequential(  # input shape (1, 28, 28)
+        self.conv1 = nn.Sequential(  # input shape
             nn.Conv2d(
                 in_channels=channel,  # input height
                 out_channels=16,  # n_filters
@@ -19,14 +19,14 @@ class CNN_256(nn.Module):
                 stride=1,  # filter movement/step
                 padding=2,
                 # if want same width and length of this image after Conv2d, padding=(kernel_size-1)/2 if stride=1
-            ),  # output shape (16, 28, 28)
+            ),  # output shape
             nn.ReLU(),  # activation
             nn.MaxPool2d(kernel_size=2),  # choose max value in 2x2 area, output shape (16, 14, 14)
         )
-        self.conv2 = nn.Sequential(  # input shape (16, 14, 14)
-            nn.Conv2d(16, 32, 5, 1, 2),  # output shape (32, 14, 14)
+        self.conv2 = nn.Sequential(  # input shape
+            nn.Conv2d(16, 32, 5, 1, 2),  # output shape
             nn.ReLU(),  # activation
-            nn.MaxPool2d(2),  # output shape (32, 7, 7)
+            nn.MaxPool2d(2),  # output shape
         )
         self.out = nn.Linear(32 * 64 * 64, y_dim)  # fully connected layer, output 10 classes
 
