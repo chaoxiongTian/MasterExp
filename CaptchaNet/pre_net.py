@@ -320,8 +320,8 @@ class PreNet(object):
         x_adv = self.FGSM(images, labels, epsilon, alpha, iteration)
         save_perturbed_image(x_adv, self.output_dir)
         accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
-        print('[BEFORE] accuracy : {:.4f} cost : {:.4f}'.format(accuracy, cost))
-        print('[AFTER] accuracy : {:.4f} cost : {:.4f}'.format(accuracy_adv, cost_adv))
+        print('[BEFORE] accuracy: %.4f' % accuracy, '| cost : : %.4f' % cost,)
+        print('[AFTER] accuracy: %.4f' % accuracy_adv, '| cost : : %.4f' % cost_adv, )
 
     # 对抗样本生成算法
     def FGSM(self, x, y_true, eps=0.03, alpha=2 / 255, iteration=1):
