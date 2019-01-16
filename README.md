@@ -69,6 +69,9 @@ python CaptchaSegment/net_data.py --use seg --tar org --cond 256 --captcha qq
 'amazon': generate_amazon,  # 6
 'yahoo': generate_yahoo,  # 7
 'recaptcha_2011': 34,61,83,109,118,153  # 8
+'cnn' : 47 # 5
+'baidu' : 52,82 # 4
+'paypal' :42,67 # 5
 ```
 ## 3: 验证码识别
 ```
