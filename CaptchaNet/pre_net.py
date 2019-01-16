@@ -303,6 +303,8 @@ class PreNet(object):
         images, labels = self.cus_data_loader(0, len(self.test_data), self.test_data)
 
         def pred_acc(input_x, real_y):
+            input_x = Variable(cuda(input_x, self.cuda))
+            real_y = Variable(cuda(real_y, self.cuda))
             output = self.net(input_x)
             predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
@@ -313,13 +315,13 @@ class PreNet(object):
             cost = self.loss_func(output, real_y)
             return accuracy, cost
 
-        # accuracy, cost = pred_acc(images, labels)  # 生成之前先做检测
+        accuracy, cost = pred_acc(images, labels)  # 生成之前先做检测
         # 修改tensor x_adv
         x_adv = self.FGSM(images, labels, epsilon, alpha, iteration)
         save_perturbed_image(x_adv, self.output_dir)
-        # accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
-        # print('[BEFORE] accuracy : {:.4f} cost : {:.4f}'.format(accuracy, cost))
-        # print('[AFTER] accuracy : {:.4f} cost : {:.4f}'.format(accuracy_adv, cost_adv))
+        accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
+        print('[BEFORE] accuracy : {:.4f} cost : {:.4f}'.format(accuracy, cost))
+        print('[AFTER] accuracy : {:.4f} cost : {:.4f}'.format(accuracy_adv, cost_adv))
 
     # 对抗样本生成算法
     def FGSM(self, x, y_true, eps=0.03, alpha=2 / 255, iteration=1):
