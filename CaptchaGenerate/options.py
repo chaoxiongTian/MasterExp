@@ -20,6 +20,7 @@ class Options:
         self.parser.add_argument('--captcha_number', dest='captcha_number', help='captcha_number', type=int, default=20)
         self.parser.add_argument('--single_char', dest='single_char', help='save clean for single char train',
                                  type=bool, default=False)
+        self.parser.add_argument('--origin_captcha', type=bool, default=False, help='save origin captcha not other')
 
     def parse(self):
         self.initialize()

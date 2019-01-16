@@ -34,13 +34,17 @@ switch = {
 }
 
 
-def save_images(ims, ims_clean, folder, single_folder):
+def save_images(ims, ims_clean, folder, single_folder, padding=20):
     for i in range(len(ims)):
-        im = image_resize_scale(ims[i], 256, padding=20)
-        im_clean = image_resize_scale(ims_clean[i], 256, padding=20)
-        if single_folder is not None:
-            im_clean.save(os.path.join(single_folder, str(i) + '.png'))
-        image_merge_horizontal(im, im_clean).save(os.path.join(folder, str(i) + '.png'))
+        if opt.origin_captcha:
+            # im = image_resize_scale(ims[i], 256, padding)
+            ims[i].save(os.path.join(folder, str(i) + '.png'))
+        else:
+            im = image_resize_scale(ims[i], 256, padding)
+            im_clean = image_resize_scale(ims_clean[i], 256, padding)
+            if single_folder is not None:
+                im_clean.save(os.path.join(single_folder, str(i) + '.png'))
+            image_merge_horizontal(im, im_clean).save(os.path.join(folder, str(i) + '.png'))
         print("Nub.{} in saved".format(str(i)))
 
 
@@ -49,7 +53,7 @@ def generate(captcha, labels, feature):
     ims_clean = list()
     for i, each in enumerate(labels):
         image, image_clean = generate_captcha(captcha, each, feature)
-        if captcha.contours:
+        if captcha.contours and not opt.origin_captcha:
             image = outline(image)
         ims.append(image)
         ims_clean.append(image_clean)
