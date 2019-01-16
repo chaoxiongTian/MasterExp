@@ -15,7 +15,7 @@ build
 
 AdversarialCaptcha/*
 IdentifiNetwork/*
-
+ceshi/*
 
 !CaptchaGenerate/data/bg/*/*.jpg
 !CaptchaGenerate/data/bg/*/*.png

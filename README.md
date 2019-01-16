@@ -107,3 +107,6 @@ python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net cnn --real_
 ```
 
 **对抗样本生成**
+```shell
+python CaptchaNet/main.py --load_ckpt best_acc.tar --mode generate --iteration 1 --epsilon 0.03  --captcha [NAME]
+```

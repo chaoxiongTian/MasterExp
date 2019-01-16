@@ -12,9 +12,9 @@ from torch.autograd import Variable
 import torch.nn.functional as F
 import torch.nn as nn
 import numpy as np
-
+from torchvision.utils import save_image
 import random
-# from adversary import Attack
+from cap_adversary import Attack
 from out_utils import *
 from models.core_net import CNN
 from models.core_net import CNN_256
@@ -86,6 +86,14 @@ def times(train_num, batch_size):
         return int(train_num / batch_size) + 1
 
 
+# 保存tensor类型的image
+def save_perturbed_image(tensor, folder):
+    for i in range(len(tensor)):
+        image_path = os.path.join(folder, str(i) + '.png')
+        print("num.'{}'is saved".format(i))
+        save_image(tensor[i], image_path, padding=0)
+
+
 class PreNet(object):
     def __init__(self, args):
         self.args = args
@@ -104,7 +112,7 @@ class PreNet(object):
         self.captcha_name = args.captcha
         self.ckpt_dir = os.path.join(self.data_root, args.ckpt_dir, args.captcha)
         self.load_ckpt = args.load_ckpt  # 有内容的时候才加载
-        self.output_dir = os.path.join(self.data_root, args.output_dir, args.captcha)
+        self.output_dir = os.path.join(self.data_sets, 'perturbed')
         # 创建文件夹 模型保存地址 对抗样本输出地址
         make_folders(self.ckpt_dir, self.output_dir)
 
@@ -133,9 +141,6 @@ class PreNet(object):
         if self.load_ckpt != '':
             self.load_checkpoint(os.path.join(self.data_root, self.ckpt_dir, args.load_ckpt))
 
-        # criterion = nn.MultiLabelSoftMarginLoss
-        # self.attack = Attack(self.net, criterion=criterion)
-
     # 初始化网络
     def model_init(self):
         if self.net_str == 'cnn':
@@ -148,6 +153,7 @@ class PreNet(object):
         self.optim = optim.Adam([{'params': self.net.parameters(), 'lr': self.lr}],
                                 betas=(0.5, 0.999))
         self.loss_func = nn.MultiLabelSoftMarginLoss()
+        self.attack = Attack(self.net, criterion=self.loss_func)
 
     # train_data格式为：[images,labels] 分别将其转为tensor；batch_idx,表示第几个batch
     def cus_data_loader(self, batch_idx, batch_size, data):
@@ -180,7 +186,11 @@ class PreNet(object):
     def load_checkpoint(self, file_path):
         if os.path.exists(file_path):
             print("=> loading checkpoint '{}'".format(file_path))
-            checkpoint = torch.load(open(file_path, 'rb'))
+            if torch.cuda.is_available():
+                checkpoint = torch.load(open(file_path, 'rb'))
+            else:
+                # cpu 加载 bug
+                checkpoint = torch.load(open(file_path, 'rb'), map_location='cpu')
             self.net.load_state_dict(checkpoint['model_states']['net'])
             self.optim.load_state_dict(checkpoint['optim_states']['optim'])
             print("=> loaded checkpoint '{}'".format(file_path))
@@ -288,7 +298,7 @@ class PreNet(object):
               '| real: %.3f' % com_correct,
               '| real accuracy: %.3f\n' % (com_correct / 200))
 
-    def generate(self, num_sample, target=-1, epsilon=0.03, alpha=2 / 255, iteration=1):
+    def generate(self, epsilon=0.03, alpha=2 / 255, iteration=1):
         # 无目标攻击。
         images, labels = self.cus_data_loader(0, len(self.test_data), self.test_data)
 
@@ -306,13 +316,14 @@ class PreNet(object):
         accuracy, cost = pred_acc(images, labels)  # 生成之前先做检测
         # 修改tensor x_adv
         x_adv = self.FGSM(images, labels, epsilon, alpha, iteration)
-
+        save_perturbed_image(x_adv, self.output_dir)
         accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
         print('[BEFORE] accuracy : {:.4f} cost : {:.4f}'.format(accuracy, cost))
         print('[AFTER] accuracy : {:.4f} cost : {:.4f}'.format(accuracy_adv, cost_adv))
 
     # 对抗样本生成算法
-    def FGSM(self, x, y_true, y_target=None, eps=0.03, alpha=2 / 255, iteration=1):
+    def FGSM(self, x, y_true, eps=0.03, alpha=2 / 255, iteration=1):
+        y_target = None
         x = Variable(cuda(x, self.cuda), requires_grad=True)
         y_true = Variable(cuda(y_true, self.cuda), requires_grad=False)
         targeted = False
