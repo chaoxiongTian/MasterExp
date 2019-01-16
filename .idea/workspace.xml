@@ -6,14 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/cap_adversary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MasterExp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MasterExp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/adversary.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +18,42 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="412">
+                  <caret line="311" column="54" lean-forward="true" selection-start-line="311" selection-start-column="54" selection-end-line="311" selection-end-column="54" />
+                  <folding>
+                    <element signature="n#!!doc" />
+                    <element signature="e#164#176#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="264" column="31" selection-start-line="264" selection-start-column="31" selection-end-line="264" selection-end-column="31" />
+                  <folding>
+                    <element signature="n#!!doc" />
+                    <element signature="e#164#176#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -139,7 +167,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
     <option name="y" value="32" />
     <option name="width" value="1920" />
     <option name="height" value="1048" />
@@ -163,12 +192,6 @@
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
               <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-              <item name="data_sets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,10 +386,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="32" width="1920" height="1048" extended-state="7" />
+    <frame x="0" y="32" width="1920" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.19020021" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49840763" weight="0.19020021" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4978903" weight="0.29212254" />
@@ -612,19 +636,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi/ceshi_options.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="e#162#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ceshi/ceshi_options.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/main.py" />
     <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/ad_options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -639,9 +652,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi/out_utils.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ceshi/out_utils.py" />
     <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -652,25 +663,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi/net.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi/ceshi_adversary.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi/ceshi_solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="115" column="20" lean-forward="true" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
-          <folding>
-            <element signature="e#158#167#0" expanded="true" />
-            <element signature="e#266#338#0" />
-            <element signature="e#247#575#0" />
-            <element signature="e#647#1156#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ceshi/net.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/ceshi_adversary.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/ceshi_solver.py" />
     <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/adversarial_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="712">
@@ -768,40 +763,6 @@
     <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/mnist/perturbed/0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#164#176#0" expanded="true" />
-            <element signature="e#487#559#0" />
-            <element signature="e#602#930#0" />
-            <element signature="e#975#1149#0" />
-            <element signature="e#1062#1124#0" />
-            <element signature="e#1392#1457#0" />
-            <element signature="e#1548#2057#0" />
-            <element signature="e#1577#1712#0" />
-            <element signature="e#1638#1687#0" />
-            <element signature="e#1893#2057#0" />
-            <element signature="e#2109#2240#0" />
-            <element signature="e#5492#5571#0" />
-            <element signature="e#5643#5726#0" />
-            <element signature="e#6380#6476#0" />
-            <element signature="e#6836#7268#0" />
-            <element signature="e#6851#6904#0" />
-            <element signature="e#6928#6985#0" />
-            <element signature="e#7003#7098#0" />
-            <element signature="e#8198#8408#0" />
-            <element signature="e#8604#8699#0" />
-            <element signature="e#8726#8960#0" />
-            <element signature="e#9894#10114#0" />
-            <element signature="e#10124#10144#0" />
-            <element signature="e#10439#10517#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/solver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
@@ -845,6 +806,17 @@
           <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding>
             <element signature="e#162#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="311" column="54" lean-forward="true" selection-start-line="311" selection-start-column="54" selection-end-line="311" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#164#176#0" expanded="true" />
           </folding>
         </state>
       </provider>

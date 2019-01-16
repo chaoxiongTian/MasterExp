@@ -309,7 +309,7 @@ class PreNet(object):
 
             real = real_y.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_l = real.max(2)[1]
-            accuracy = max_idx_p.eq(max_idx_l).float().mean().item()
+            accuracy = max_idx_p.eq(max_idx_l).float()
             cost = self.loss_func(output, real_y)
             return accuracy, cost
 
