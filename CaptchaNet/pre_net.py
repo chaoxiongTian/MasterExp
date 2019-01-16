@@ -12,7 +12,7 @@ from torch.autograd import Variable
 import torch.nn.functional as F
 import torch.nn as nn
 import numpy as np
-from torchvision.utils import save_image
+
 import random
 from cap_adversary import Attack
 from out_utils import *
@@ -86,12 +86,25 @@ def times(train_num, batch_size):
         return int(train_num / batch_size) + 1
 
 
+def save_image(tensor, nrow=8, padding=2,
+               normalize=False, range=None, scale_each=False):
+    from PIL import Image
+    tensor = tensor.cpu()
+    from torchvision.utils import make_grid
+    grid = make_grid(tensor, nrow=nrow, padding=padding,
+                     normalize=normalize, range=range, scale_each=scale_each)
+    ndarr = grid.mul(255).clamp(0, 255).byte().permute(1, 2, 0).numpy()
+    im = Image.fromarray(ndarr)
+    return im
+
+
 # 保存tensor类型的image
-def save_perturbed_image(tensor, folder):
+def save_perturbed_image(tensor, folder, w, h):
     for i in range(len(tensor)):
         image_path = os.path.join(folder, str(i) + '.png')
         print("num.'{}'is saved".format(i))
-        save_image(tensor[i], image_path, padding=0)
+        im = save_image(tensor[i], padding=0)
+        image_resize(im, w, h).save(image_path)
 
 
 class PreNet(object):
@@ -125,6 +138,7 @@ class PreNet(object):
         self.train_num = len(self.train_data)
         self.test_num = len(self.test_data)
         self.captcha_len = len(self.train_data[0][1])
+        self.captcha_w, self.captcha_h = Image.open(self.train_data[0][0]).size
         self.real_captcha_len = args.real_captcha_len
         self.captcha_char_set = sorted(get_char_set(self.train_data, self.test_data))
         self.char_idx = {str(self.captcha_char_set[i]): i for i in range(len(self.captcha_char_set))}
@@ -318,7 +332,7 @@ class PreNet(object):
         accuracy, cost = pred_acc(images, labels)  # 生成之前先做检测
         # 修改tensor x_adv
         x_adv = self.FGSM(images, labels, epsilon, alpha, iteration)
-        save_perturbed_image(x_adv, self.output_dir)
+        save_perturbed_image(x_adv, self.output_dir, self.captcha_w, self.captcha_h)
         accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
         print('[BEFORE] accuracy: %.4f' % accuracy, '| cost : %.4f' % cost)
         print('[AFTER] accuracy: %.4f' % accuracy_adv, '| cost : %.4f' % cost_adv)
