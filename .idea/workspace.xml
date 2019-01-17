@@ -6,9 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/cap_adversary.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/cap_adversary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/net_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/net_options.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -26,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="136" column="58" selection-start-line="136" selection-start-column="58" selection-end-line="136" selection-end-column="58" />
+            <state relative-caret-position="349">
+              <caret line="341" column="50" lean-forward="true" selection-start-line="341" selection-start-column="50" selection-end-line="341" selection-end-column="50" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#164#176#0" expanded="true" />
@@ -43,14 +40,11 @@
                 <element signature="e#2172#2303#0" />
                 <element signature="e#2415#2759#0" />
                 <element signature="e#5189#5823#0" />
-                <element signature="e#5963#6981#0" />
-                <element signature="e#6162#6903#0" />
                 <element signature="e#6391#6470#0" />
                 <element signature="e#6542#6625#0" />
                 <element signature="e#7044#7671#0" />
                 <element signature="e#7086#7587#0" />
                 <element signature="e#7279#7374#0" />
-                <element signature="e#7734#8166#0" />
                 <element signature="e#7749#7802#0" />
                 <element signature="e#7826#7883#0" />
                 <element signature="e#7901#7996#0" />
@@ -58,6 +52,7 @@
                 <element signature="e#8245#9374#0" />
                 <element signature="e#8325#9306#0" />
                 <element signature="e#9096#9306#0" />
+                <element signature="e#9404#11673#0" />
                 <element signature="e#9502#9597#0" />
                 <element signature="e#9624#9858#0" />
                 <element signature="e#9986#10677#0" />
@@ -75,8 +70,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="586">
-                <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+              <first_editor relative-caret-position="530">
+                <caret line="103" selection-start-line="103" selection-end-line="103" selection-end-column="106" />
               </first_editor>
               <second_editor />
             </state>
@@ -221,8 +216,8 @@
         <option value="$PROJECT_DIR$/周报.txt" />
         <option value="$PROJECT_DIR$/CaptchaNet/models/core_net.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/cap_adversary.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CaptchaNet/net_options.py" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
       </list>
     </option>
@@ -465,7 +460,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="32" width="1920" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.19020021" />
@@ -678,16 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="586">
-            <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -695,10 +679,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="530">
+            <caret line="103" selection-start-line="103" selection-end-line="103" selection-end-column="106" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="136" column="58" selection-start-line="136" selection-start-column="58" selection-end-line="136" selection-end-column="58" />
+        <state relative-caret-position="349">
+          <caret line="341" column="50" lean-forward="true" selection-start-line="341" selection-start-column="50" selection-end-line="341" selection-end-column="50" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#164#176#0" expanded="true" />
@@ -714,14 +708,11 @@
             <element signature="e#2172#2303#0" />
             <element signature="e#2415#2759#0" />
             <element signature="e#5189#5823#0" />
-            <element signature="e#5963#6981#0" />
-            <element signature="e#6162#6903#0" />
             <element signature="e#6391#6470#0" />
             <element signature="e#6542#6625#0" />
             <element signature="e#7044#7671#0" />
             <element signature="e#7086#7587#0" />
             <element signature="e#7279#7374#0" />
-            <element signature="e#7734#8166#0" />
             <element signature="e#7749#7802#0" />
             <element signature="e#7826#7883#0" />
             <element signature="e#7901#7996#0" />
@@ -729,6 +720,7 @@
             <element signature="e#8245#9374#0" />
             <element signature="e#8325#9306#0" />
             <element signature="e#9096#9306#0" />
+            <element signature="e#9404#11673#0" />
             <element signature="e#9502#9597#0" />
             <element signature="e#9624#9858#0" />
             <element signature="e#9986#10677#0" />

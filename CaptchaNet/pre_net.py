@@ -100,6 +100,7 @@ def save_image(tensor, nrow=8, padding=2,
 
 # 保存tensor类型的image
 def save_perturbed_image(tensor, folder, w, h):
+    make_folder(folder)
     for i in range(len(tensor)):
         image_path = os.path.join(folder, str(i) + '.png')
         print("num.'{}'is saved".format(i))
@@ -340,7 +341,7 @@ class PreNet(object):
         else:
             raise RuntimeError("generate fun input error")
         accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
-        save_perturbed_image(x_adv, self.output_dir, self.captcha_w, self.captcha_h)
+        save_perturbed_image(x_adv, os.path.join(self.output_dir, self.fun), self.captcha_w, self.captcha_h)
         print('[BEFORE] accuracy: %.4f' % accuracy, '| cost : %.4f' % cost)
         print('[AFTER] accuracy: %.4f' % accuracy_adv, '| cost : %.4f' % cost_adv)
 
