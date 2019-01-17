@@ -27,8 +27,9 @@ class Options:
         self.parser.add_argument('--ckpt_dir', type=str, default='checkpoints', help='checkpoint directory path')
         self.parser.add_argument('--load_ckpt', type=str, default='', help='')  # 加载模型的名字
         self.parser.add_argument('--captcha', type=str, default='jd', help='experiment name')  # 模型的名字（文件夹名）
-        self.parser.add_argument('--mode', type=str, default='train', help='train / test / generate / universal')
-
+        self.parser.add_argument('--mode', type=str, default='train', help='train / test / generate ')
+        self.parser.add_argument('--train_folder', type=str, default='train', help='name of train folder ')
+        self.parser.add_argument('--test_folder', type=str, default='test', help='name of test folder ')
         self.parser.add_argument('--silent', type=bool, default=False, help='')
 
         # 验证码相关
@@ -42,6 +43,7 @@ class Options:
         self.parser.add_argument('--iteration', type=int, default=3, help='the number of iteration for FGSM')  # 对抗样本算法
         self.parser.add_argument('--epsilon', type=float, default=0.03, help='epsilon for FGSM and i-FGSM')
         self.parser.add_argument('--alpha', type=float, default=2 / 255, help='alpha for i-FGSM')
+        self.parser.add_argument('--fun', type=str, default='fgsm', help='FGSM or deepfool')
 
         # 可视化
         self.parser.add_argument('--tensorboard', type=bool, default=False, help='enable tensorboard')

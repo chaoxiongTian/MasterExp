@@ -27,8 +27,8 @@ def cuda(tensor, is_cuda):
         return tensor
 
 
-def get_data(data_sets, flag, num):
-    folder = os.path.join(data_sets, flag)
+def get_data(data_sets, folder, flag, num):
+    folder = os.path.join(data_sets, folder)
     if num == 0:
         num = len(os.listdir(folder))
     image_paths = [os.path.join(folder, str(i) + '.png') for i in range(num)]
@@ -103,6 +103,7 @@ def save_perturbed_image(tensor, folder, w, h):
     for i in range(len(tensor)):
         image_path = os.path.join(folder, str(i) + '.png')
         print("num.'{}'is saved".format(i))
+        # im = tensor_2_image(tensor[i])
         im = save_image(tensor[i], padding=0)
         image_resize(im, w, h).save(image_path)
 
@@ -133,14 +134,15 @@ class PreNet(object):
         self.train_num = args.train_num
         self.test_num = args.test_num
         # list [image_path,label]
-        self.train_data = get_data(self.data_sets, 'train', self.train_num)
-        self.test_data = get_data(self.data_sets, 'test', self.test_num)
+        self.train_data = get_data(self.data_sets, args.train_folder, 'train', self.train_num)
+        self.test_data = get_data(self.data_sets, args.test_folder, 'test', self.test_num)
         self.train_num = len(self.train_data)
         self.test_num = len(self.test_data)
         self.captcha_len = len(self.train_data[0][1])
         self.captcha_w, self.captcha_h = Image.open(self.train_data[0][0]).size
         self.real_captcha_len = args.real_captcha_len
         self.captcha_char_set = sorted(get_char_set(self.train_data, self.test_data))
+        self.dim = self.captcha_len * len(self.captcha_char_set)
         self.char_idx = {str(self.captcha_char_set[i]): i for i in range(len(self.captcha_char_set))}
         self.idx_char = {i: str(self.captcha_char_set[i]) for i in range(len(self.captcha_char_set))}
 
@@ -148,6 +150,7 @@ class PreNet(object):
         self.target = args.target
         self.iteration = args.iteration
         self.epsilon = args.epsilon
+        self.fun = args.fun
 
         self.bast_accuracy = 0
         self.model_init()
@@ -312,7 +315,7 @@ class PreNet(object):
               '| real: %.3f' % com_correct,
               '| real accuracy: %.3f\n' % (com_correct / 200))
 
-    def generate(self, epsilon=0.03, alpha=2 / 255, iteration=1):
+    def generate(self, epsilon=0.02, alpha=2 / 255, iteration=1):
         # 无目标攻击。
         images, labels = self.cus_data_loader(0, len(self.test_data), self.test_data)
 
@@ -330,10 +333,14 @@ class PreNet(object):
             return accuracy, cost
 
         accuracy, cost = pred_acc(images, labels)  # 生成之前先做检测
-        # 修改tensor x_adv
-        x_adv = self.FGSM(images, labels, epsilon, alpha, iteration)
-        save_perturbed_image(x_adv, self.output_dir, self.captcha_w, self.captcha_h)
+        if self.fun == 'fgsm':
+            x_adv = self.FGSM(images, labels, epsilon, alpha, iteration)
+        elif self.fun == 'deepfool':
+            x_adv = self.DF(images, epsilon)
+        else:
+            raise RuntimeError("generate fun input error")
         accuracy_adv, cost_adv = pred_acc(x_adv, labels)  # 再做检测
+        save_perturbed_image(x_adv, self.output_dir, self.captcha_w, self.captcha_h)
         print('[BEFORE] accuracy: %.4f' % accuracy, '| cost : %.4f' % cost)
         print('[AFTER] accuracy: %.4f' % accuracy_adv, '| cost : %.4f' % cost_adv)
 
@@ -356,3 +363,12 @@ class PreNet(object):
                 x_adv, h_adv, h = self.attack.i_fgsm(x, y_true, False, eps, alpha, iteration)
 
         return x_adv.data
+
+    def DF(self, x, eps=0.03):
+        images = list()
+        for i in range(len(x)):
+            r, loop_i, label_orig, label_pert, pert_image = \
+                self.attack.deepfool(x[i], self.net, num_classes=self.dim, overshoot=eps)
+            images.append(pert_image)
+        return torch.stack(images, 0).float().squeeze(1)
+
