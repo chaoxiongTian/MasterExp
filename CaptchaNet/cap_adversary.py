@@ -143,7 +143,7 @@ class Attack(object):
             r_tot = np.float32(r_tot + r_i)
 
             if torch.cuda.is_available():
-                pert_image = image + (1 + overshoot) * torch.from_numpy().cuda()
+                pert_image = image + (1 + overshoot) * torch.from_numpy(r_tot).cuda()
             else:
                 pert_image = image + (1 + overshoot) * torch.from_numpy(r_tot)
 
