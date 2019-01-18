@@ -122,7 +122,7 @@ class PreNet(object):
         # 需要的文件夹
         self.data_sets = os.path.join(self.data_root, args.data_sets, args.captcha)
         self.captcha_name = args.captcha
-        self.ckpt_dir = os.path.join(self.data_root, args.ckpt_dir, args.captcha)
+        self.ckpt_dir = os.path.join(self.data_root, args.ckpt_dir, args.captcha, self.net_str)
         self.load_ckpt = args.load_ckpt  # 有内容的时候才加载
         self.output_dir = os.path.join(self.data_sets, 'perturbed')
         # 创建文件夹 模型保存地址 对抗样本输出地址
