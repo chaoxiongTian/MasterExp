@@ -152,13 +152,13 @@ def segment(image_path, condition):
 def main():
     new_images = list()
     new_labels = list()
-    for each in get_internal_path(sour_folder):
+    for i, each in enumerate(get_internal_path(sour_folder)):
         # TODO:对于训练集 使用cfs进行分割，若分割长度和验证码长度不用直接舍弃。对于测试集使用多种分割算法分割，然后修正。
         part_images, part_labels = segment(each, pre_conditions)
         if part_images is not None and len(part_images) == captcha_len:
             new_images.extend(part_images)
             new_labels.extend(part_labels)
-            print(each, "is Complete")
+            print('num.'+str(i) + each + "is Complete")
 
     # 保存图片和labels
     save_string_2_file(tar_labels_path, '#'.join(new_labels))

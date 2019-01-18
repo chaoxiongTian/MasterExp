@@ -16,8 +16,7 @@ import numpy as np
 import random
 from cap_adversary import Attack
 from out_utils import *
-from models.core_net import CNN
-from models.core_net import CNN_256
+from models.core_net import SimpleCnn3, SimpleCnn5, SimpleCnn256
 
 
 def cuda(tensor, is_cuda):
@@ -161,12 +160,16 @@ class PreNet(object):
 
     # 初始化网络
     def model_init(self):
-        if self.net_str == 'cnn':
-            self.net = cuda(CNN(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
-        elif self.net_str == 'cnn_256':
-            self.net = cuda(CNN_256(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
+        if self.net_str == 'SimpleCnn3':
+            self.net = cuda(SimpleCnn3(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
+        elif self.net_str == 'SimpleCnn5':
+            self.net = cuda(SimpleCnn5(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
+        elif self.net_str == 'SimpleCnn256':
+            self.net = cuda(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
+        else:
+            raise RuntimeError("Net param inpur error")
         self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
-        print(self.net)
+        # print(self.net)
         # Optimizers 初始化优化器
         self.optim = optim.Adam([{'params': self.net.parameters(), 'lr': self.lr}],
                                 betas=(0.5, 0.999))
@@ -186,10 +189,10 @@ class PreNet(object):
             # 对尺寸做检测，如果使用的是cnn 图片大小不是28*28 将其改为resize 28*28 256同理。
             image = Image.open(image)
             w, h = image.size
-            if self.net_str == 'cnn':  # 28*28
+            if self.net_str == 'SimpleCnn3' or self.net_str == 'SimpleCnn5':  # 28*28
                 if w != 28 and h != 28:
                     image = image_resize(image, 28, 28)
-            elif self.net_str == 'cnn_256':  # 256*256
+            elif self.net_str == 'SimpleCnn256':  # 256*256
                 if w != 256 and h != 256:
                     image = image_resize(image, 256, 256)
             else:
@@ -372,4 +375,3 @@ class PreNet(object):
                 self.attack.deepfool(x[i], self.net, num_classes=self.dim, overshoot=eps)
             images.append(pert_image)
         return torch.stack(images, 0).float().squeeze(1)
-
