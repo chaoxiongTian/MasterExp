@@ -281,7 +281,7 @@ class PreNet(object):
                 total += 1
 
             random.shuffle(self.train_data)
-            self.train_acc.append((epoch_acc / total).detach().item())
+            self.train_acc.append((epoch_acc / total).detach().numpy().item())
             self.train_lost.append((epoch_loss / total).detach().numpy().item())
             self.test()
         log_dict = {'train_acc': self.train_acc,
@@ -329,8 +329,8 @@ class PreNet(object):
             total += 1
         accuracy = accuracy / total
         cost = cost / total
-        self.test_acc.append((accuracy / total).item())
-        self.test_lost.append((cost / total).detach().item())
+        self.test_acc.append((accuracy / total).numpy().item())
+        self.test_lost.append((cost / total).detach().numpy().item())
 
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
