@@ -151,6 +151,7 @@ class PreNet(object):
         self.fun = args.fun
 
         self.bast_accuracy = 0
+        self.bast_real_accuracy = 0
         self.model_init()
 
         if self.load_ckpt != '':
@@ -311,11 +312,21 @@ class PreNet(object):
             self.bast_accuracy = accuracy
             self.save_checkpoint('best_acc.tar')
 
-        print('test loss: %.4f' % cost,
-              '| test accuracy: %.3f' % accuracy,
-              '| bast accuracy: %.3f' % self.bast_accuracy,
-              '| real: %.3f' % com_correct,
-              '| real accuracy: %.3f\n' % (com_correct / 200))
+        if self.real_captcha_len != 0:  # 分割之后的验证码
+            print('test loss: %.4f' % cost,
+                  '| test accuracy: %.3f' % accuracy,
+                  '| bast accuracy: %.3f' % self.bast_accuracy)
+        else:  # 一般训练集
+            real_accuracy = com_correct / 200
+            if real_accuracy > self.bast_real_accuracy:
+                self.bast_real_accuracy = real_accuracy
+                self.save_checkpoint('best_acc_captcha.tar')
+            print('test loss: %.4f' % cost,
+                  '| test accuracy: %.3f' % accuracy,
+                  '| bast accuracy: %.3f\n' % self.bast_accuracy,
+                  '| real: %.1f' % com_correct,
+                  '| real accuracy: %.3f' % (com_correct / 200),
+                  '| bast real accuracy: %.3f\n' % self.bast_real_accuracy)
 
     def generate(self, epsilon=0.02, alpha=2 / 255, iteration=1):
         # 无目标攻击。

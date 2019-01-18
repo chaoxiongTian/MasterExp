@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/models/core_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/models/core_net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +21,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.553676">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1040">
-                  <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
+                <state relative-caret-position="481">
+                  <caret line="322" column="60" lean-forward="true" selection-start-line="322" selection-start-column="60" selection-end-line="322" selection-end-column="60" />
                   <folding>
                     <element signature="n#!!doc" />
                     <element signature="e#164#176#0" expanded="true" />
@@ -34,11 +34,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="38" column="52" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="52" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="271">
-                  <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+                <state relative-caret-position="649">
+                  <caret line="64" column="49" lean-forward="true" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
@@ -73,7 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>yv8uf</find>
       <find>lr</find>
       <find>sigmoid</find>
       <find>print</find>
@@ -103,6 +111,7 @@
       <find>net_str</find>
       <find>net</find>
       <find>shuff</find>
+      <find>real_captcha_len</find>
     </findStrings>
     <replaceStrings>
       <replace>generate_Captcha</replace>
@@ -169,9 +178,9 @@
         <option value="$PROJECT_DIR$/CaptchaNet/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaSegment/net_data.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/net_options.py" />
-        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CaptchaNet/models/core_net.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
       </list>
     </option>
   </component>
@@ -564,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -578,17 +580,6 @@
             <caret line="95" column="8" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#164#176#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,8 +595,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        <state relative-caret-position="649">
+          <caret line="64" column="49" lean-forward="true" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="38" column="52" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="322" column="60" lean-forward="true" selection-start-line="322" selection-start-column="60" selection-end-line="322" selection-end-column="60" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#164#176#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
