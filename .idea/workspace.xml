@@ -5,12 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/README.md" line="35" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/read_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/amazon/ceshi.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/amazon/ceshi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
-    </list>
+    <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +30,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/amazon/ceshi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="197">
+              <caret line="283" column="62" selection-start-line="283" selection-start-column="62" selection-end-line="283" selection-end-column="62" />
               <folding>
                 <element signature="n#!!doc" />
               </folding>
@@ -188,10 +174,10 @@
         <option value="$PROJECT_DIR$/CaptchaNet/net_options.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CaptchaNet/models/core_net.py" />
-        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/read_log.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/ceshi.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/data_sets/amazon/ceshi.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
       </list>
     </option>
   </component>
@@ -220,19 +206,6 @@
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
               <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-              <item name="data_sets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-              <item name="data_sets" type="462c0819:PsiDirectoryNode" />
-              <item name="amazon" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -628,16 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdentifiNetwork/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="117" column="10" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="44" />
-          <folding>
-            <element signature="e#154#166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/amazon/test/857.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -674,20 +637,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="n#!!doc" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/amazon/ceshi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentifiNetwork/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="117" column="10" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="44" />
+          <folding>
+            <element signature="e#154#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="283" column="62" selection-start-line="283" selection-start-column="62" selection-end-line="283" selection-end-column="62" />
+          <folding>
+            <element signature="n#!!doc" />
+          </folding>
         </state>
       </provider>
     </entry>
