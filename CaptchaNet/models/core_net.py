@@ -44,15 +44,17 @@ class SimpleCnn256(nn.Module):
 
 
 class SimpleCnn3(nn.Module):
-    def __init__(self, channel=1, y_dim=10):
+    def __init__(self, channel=1, y_dim=10, keep_prob=0.75):
         super(SimpleCnn3, self).__init__()
         self.conv1 = nn.Sequential(
             nn.Conv2d(channel, 16, 5, 1, 2),
             nn.ReLU(), nn.MaxPool2d(kernel_size=2),
+            nn.Dropout(keep_prob),
         )
         self.conv2 = nn.Sequential(
             nn.Conv2d(16, 32, 5, 1, 2),
             nn.ReLU(), nn.MaxPool2d(2),
+            nn.Dropout(keep_prob),
         )
         self.out = nn.Linear(32 * 7 * 7, y_dim)
 

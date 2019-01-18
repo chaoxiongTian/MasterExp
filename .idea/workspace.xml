@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/models/core_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/models/core_net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +37,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="355">
-                  <caret line="83" column="9" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+                <state relative-caret-position="271">
+                  <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -53,8 +50,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$USER_HOME$/android/paper_data/simple_cnn/cnn_jd/models/net_models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="21" column="51" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="51" />
+                <state relative-caret-position="504">
+                  <caret line="33" column="29" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -597,8 +594,8 @@
     </entry>
     <entry file="file://$USER_HOME$/android/paper_data/simple_cnn/cnn_jd/models/net_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="51" />
+        <state relative-caret-position="504">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -607,8 +604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="83" column="9" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+        <state relative-caret-position="271">
+          <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
         </state>
       </provider>
     </entry>
