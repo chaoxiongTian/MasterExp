@@ -282,7 +282,7 @@ class PreNet(object):
 
             random.shuffle(self.train_data)
             self.train_acc.append((epoch_acc / total).detach().item())
-            self.train_lost.append((epoch_loss / total).detach().item())
+            self.train_lost.append((epoch_loss / total).detach().numpy().item())
             self.test()
         log_dict = {'train_acc': self.train_acc,
                     'train_lost': self.train_lost,

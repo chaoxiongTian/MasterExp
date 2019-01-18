@@ -5,7 +5,9 @@
     <bookmark url="file://$PROJECT_DIR$/README.md" line="35" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="" />
+    <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="283" column="62" selection-start-line="283" selection-start-column="62" selection-end-line="283" selection-end-column="62" />
+            <state relative-caret-position="218">
+              <caret line="284" column="73" selection-start-line="284" selection-start-column="73" selection-end-line="284" selection-end-column="73" />
               <folding>
                 <element signature="n#!!doc" />
               </folding>
@@ -253,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ceshi (1)">
+  <component name="RunManager" selected="Python.read_log">
     <configuration name="ceshi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MasterExp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -368,9 +370,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.read_log" />
         <item itemvalue="Python.ceshi (1)" />
         <item itemvalue="Python.ceshi (2)" />
-        <item itemvalue="Python.read_log" />
         <item itemvalue="Python.save_mnist_image" />
         <item itemvalue="Python.ceshi" />
       </list>
@@ -656,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="283" column="62" selection-start-line="283" selection-start-column="62" selection-end-line="283" selection-end-column="62" />
+        <state relative-caret-position="218">
+          <caret line="284" column="73" selection-start-line="284" selection-start-column="73" selection-end-line="284" selection-end-column="73" />
           <folding>
             <element signature="n#!!doc" />
           </folding>
