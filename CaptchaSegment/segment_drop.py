@@ -107,6 +107,7 @@ def do_split(source_image, starts, filter_ends):
     : param starts: 每一行的起始点 tuple of list
     : param ends: 每一行的终止点
     """
+    # TODO: 这里的starts 可能是空，导致分割出错。
     left = abs(starts[0][0])
     top = abs(starts[0][1])
     right = abs(filter_ends[0][0])

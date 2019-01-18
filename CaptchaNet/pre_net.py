@@ -359,6 +359,7 @@ class PreNet(object):
             print('real num: %.1f' % com_correct,
                   '| real accuracy: %.3f' % real_accuracy,
                   '| bast real accuracy: %.3f\n' % self.bast_real_accuracy)
+        del test_net
 
     def generate(self, epsilon=0.02, alpha=2 / 255, iteration=1):
         # 无目标攻击。

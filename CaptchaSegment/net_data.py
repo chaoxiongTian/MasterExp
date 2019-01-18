@@ -142,6 +142,7 @@ def segment(image_path, condition):
     else:
         # 用cfs结合其他分割算法分割，需要修正。
         images = cfs_projection(Image.open(image_path), pre_conditions=condition)
+        # images = cfs_drop(Image.open(image_path), pre_conditions=condition)
         # TODO:按照验证码中字符的个数对分割字符做一个修正.
         # 1. 若分割出来的 image数量小于验证码中字符数量，直接舍去。
         # 2. 若分割出来的 image数量大于验证码中字符数量，找到最小的两个部分进行合并。
