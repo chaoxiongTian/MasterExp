@@ -119,6 +119,7 @@ class PreNet(object):
         self.lr = args.lr
         self.mode = args.mode
         self.net_str = args.net
+
         # 需要的文件夹
         self.data_sets = os.path.join(self.data_root, args.data_sets, args.captcha)
         self.captcha_name = args.captcha
@@ -143,6 +144,12 @@ class PreNet(object):
         self.dim = self.captcha_len * len(self.captcha_char_set)
         self.char_idx = {str(self.captcha_char_set[i]): i for i in range(len(self.captcha_char_set))}
         self.idx_char = {i: str(self.captcha_char_set[i]) for i in range(len(self.captcha_char_set))}
+
+        #  数据输出
+        self.train_acc = list()
+        self.train_lost = list()
+        self.test_acc = list()
+        self.test_lost = list()
 
         # 对抗样本参数
         self.target = args.target
@@ -245,6 +252,8 @@ class PreNet(object):
         print(self.captcha_name)
         for epoch_idx in range(self.epoch):
             print()
+            epoch_acc, epoch_loss = 0., 0.
+            total = 0.
             for batch_idx in range(times(self.train_num, self.batch_size)):
                 images, labels = self.cus_data_loader(batch_idx, self.batch_size, self.train_data)
                 x = Variable(cuda(images, self.cuda))
@@ -255,7 +264,7 @@ class PreNet(object):
                 max_idx_p = predict.max(2)[1]
                 real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
                 max_idx_l = real.max(2)[1]
-                accuracy = max_idx_p.eq(max_idx_l).float().mean()
+                correct = max_idx_p.eq(max_idx_l).float().mean()
 
                 cost = self.loss_func(output, y)
                 self.optim.zero_grad()
@@ -266,9 +275,21 @@ class PreNet(object):
                     print('Epoch:', epoch_idx,
                           '| iter:', batch_idx * self.batch_size,
                           '| train loss: %.4f' % cost,
-                          '| train accuracy: %.3f' % accuracy)
+                          '| train accuracy: %.3f' % correct)
+                epoch_acc = epoch_acc + correct
+                epoch_loss = epoch_loss + cost
+                total += 1
+
             random.shuffle(self.train_data)
+            self.train_acc.append((epoch_acc / total).item())
+            self.train_lost.append((epoch_loss / total).detach().item())
             self.test()
+        log_dict = {'train_acc': self.train_acc,
+                    'train_lost': self.train_lost,
+                    'test_acc': self.test_acc,
+                    'test_lost': self.test_lost}
+        log_path = os.path.join(self.ckpt_dir, 'log.pickle')
+        save_pickle(log_path, log_dict)
 
     def test(self):
         # 把test中所有的数据按照batch_size = captcha_len 进行测试。
@@ -308,6 +329,8 @@ class PreNet(object):
             total += 1
         accuracy = accuracy / total
         cost = cost / total
+        self.test_acc.append((accuracy / total).item())
+        self.test_lost.append((cost / total).detach().item())
 
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
