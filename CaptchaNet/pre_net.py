@@ -179,13 +179,13 @@ class PreNet(object):
     # 初始化网络
     def model_init(self):
         if self.mode == 'train':
-            prob = 0.5
+            prob = 0.3
         else:
             prob = 0
         self.net = self.get_net(prob=prob)
         self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
-        self.test_net = self.get_net(prob=0)
-        self.test_net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
+        # self.test_net = self.get_net(prob=0)
+        # self.test_net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
         # Optimizers 初始化优化器
         self.optim = optim.Adam([{'params': self.net.parameters(), 'lr': self.lr}],
                                 betas=(0.5, 0.999))
@@ -296,7 +296,7 @@ class PreNet(object):
     def test(self):
         # 把test中所有的数据按照batch_size = captcha_len 进行测试。
         # test_net = self.get_net(prob=0)
-        self.test_net.load_state_dict(self.net.state_dict())
+        # self.test_net.load_state_dict(self.net.state_dict())
 
         if self.real_captcha_len == 0:
             # 表示这是一般的测试，不存在验证码分割之后的整体与预估
@@ -316,7 +316,7 @@ class PreNet(object):
             x = Variable(cuda(images, self.cuda))
             y = Variable(cuda(labels, self.cuda))
 
-            output = self.test_net(x)
+            output = self.net(x)
             predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
 
