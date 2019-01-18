@@ -283,15 +283,15 @@ class PreNet(object):
                 total += 1
 
             random.shuffle(self.train_data)
-            self.train_acc.append((epoch_acc / total))
-            self.train_lost.append((epoch_loss / total))
+            # self.train_acc.append((epoch_acc / total))
+            # self.train_lost.append((epoch_loss / total))
             self.test()
-        log_dict = {'train_acc': self.train_acc,
-                    'train_lost': self.train_lost,
-                    'test_acc': self.test_acc,
-                    'test_lost': self.test_lost}
-        log_path = os.path.join(self.ckpt_dir, 'log.pickle')
-        save_pickle(log_path, log_dict)
+        # log_dict = {'train_acc': self.train_acc,
+        #             'train_lost': self.train_lost,
+        #             'test_acc': self.test_acc,
+        #             'test_lost': self.test_lost}
+        # log_path = os.path.join(self.ckpt_dir, 'log.pickle')
+        # save_pickle(log_path, log_dict)
 
     def test(self):
         # 把test中所有的数据按照batch_size = captcha_len 进行测试。
@@ -315,7 +315,6 @@ class PreNet(object):
             images, labels = self.cus_data_loader(i, test_batch, self.test_data)
             x = Variable(cuda(images, self.cuda))
             y = Variable(cuda(labels, self.cuda))
-
             output = self.net(x)
             predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
@@ -331,8 +330,8 @@ class PreNet(object):
             total += 1
         accuracy = accuracy / total
         cost = cost / total
-        self.test_acc.append((accuracy / total))
-        self.test_lost.append((cost / total))
+        # self.test_acc.append((accuracy / total))
+        # self.test_lost.append((cost / total))
 
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))

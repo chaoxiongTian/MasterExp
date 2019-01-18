@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,12 +19,12 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="181" column="22" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
+            <state relative-caret-position="2524">
+              <caret line="285" column="43" lean-forward="true" selection-start-line="285" selection-start-column="43" selection-end-line="285" selection-end-column="43" />
               <folding>
                 <element signature="n#!!doc" />
               </folding>
@@ -43,7 +44,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>attack</find>
       <find>nn</find>
       <find>ro</find>
       <find>rotate</find>
@@ -73,6 +73,7 @@
       <find>load_ckpt</find>
       <find>save_pickle</find>
       <find>labe</find>
+      <find>test_net</find>
     </findStrings>
     <replaceStrings>
       <replace>generate_Captcha</replace>
@@ -158,7 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,6 +175,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -534,13 +535,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/ceshi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/ceshi.py" />
     <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/amazon/test/857.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -577,13 +572,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/amazon/ceshi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/amazon/ceshi.py" />
     <entry file="file://$PROJECT_DIR$/IdentifiNetwork/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -634,8 +623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="181" column="22" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
+        <state relative-caret-position="2524">
+          <caret line="285" column="43" lean-forward="true" selection-start-line="285" selection-start-column="43" selection-end-line="285" selection-end-column="43" />
           <folding>
             <element signature="n#!!doc" />
           </folding>
