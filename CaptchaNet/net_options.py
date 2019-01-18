@@ -18,8 +18,8 @@ class Options:
         self.parser.add_argument('--seed', type=int, default=1, help='random seed')  # 随机因子
         self.parser.add_argument('--epoch', type=int, default=20, help='epoch size')  # 循环次数
         self.parser.add_argument('--batch_size', type=int, default=64, help='mini-batch size')  # 批大小
-        self.parser.add_argument('--lr', type=float, default=0.001, help='learning rate')  # 学习率
-        self.parser.add_argument('--net', type=str, default='cnn', help='which net')
+        self.parser.add_argument('--lr', type=float, default=0.0001, help='learning rate')  # 学习率
+        self.parser.add_argument('--net', type=str, default='SimpleCnn5', help='which net')
 
         # 文件夹
         self.parser.add_argument('--data_sets', type=str, default='data_sets', help='dataset directory path')  # 目录
