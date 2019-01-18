@@ -104,13 +104,13 @@ python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha q
 **测试**
 ```shell
 # 普通测试
-python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net cnn --test_folder test --captcha qq 
+python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net SimpleCnn5 --test_folder test --captcha qq 
 
 # 分割之后的单个验证码测试
-python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net cnn --real_captcha_len 4 --captcha qq 
+python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net SimpleCnn5 --real_captcha_len 4 --captcha qq 
 ```
 
 **对抗样本生成**
 ```shell
-python CaptchaNet/main.py --load_ckpt best_acc.tar --net cnn --mode generate --fun fgsm --iteration 1 --epsilon 0.2 --captcha [NAME]
+python CaptchaNet/main.py --load_ckpt best_acc.tar --net SimpleCnn5 --mode generate --fun fgsm --iteration 1 --epsilon 0.2 --captcha [NAME]
 ```

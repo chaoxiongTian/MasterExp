@@ -118,9 +118,7 @@ class PreNet(object):
         self.batch_size = args.batch_size
         self.lr = args.lr
         self.mode = args.mode
-        self.net = args.net
         self.net_str = args.net
-
         # 需要的文件夹
         self.data_sets = os.path.join(self.data_root, args.data_sets, args.captcha)
         self.captcha_name = args.captcha
@@ -167,7 +165,7 @@ class PreNet(object):
         elif self.net_str == 'SimpleCnn256':
             self.net = cuda(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
         else:
-            raise RuntimeError("Net param inpur error")
+            raise RuntimeError("Net param input error")
         self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
         # print(self.net)
         # Optimizers 初始化优化器
@@ -196,7 +194,7 @@ class PreNet(object):
                 if w != 256 and h != 256:
                     image = image_resize(image, 256, 256)
             else:
-                raise RuntimeError("net iuput error")
+                raise RuntimeError("net input error")
             images.append(image_2_tensor(image.convert('L')))
             labels.append(torch.from_numpy(text2vec(label, self.captcha_len, self.char_idx)))
             count += 1

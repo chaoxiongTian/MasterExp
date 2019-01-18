@@ -70,37 +70,33 @@ class SimpleCnn3(nn.Module):
 
 
 class SimpleCnn5(nn.Module):
-    def __init__(self, channel=1, y_dim=10):
+    def __init__(self, channel=1, y_dim=10, keep_prob=0.75):
         super(SimpleCnn5, self).__init__()
         self.conv1 = nn.Sequential(
             nn.Conv2d(channel, 32, 3, 1, 1),
             nn.ReLU(), nn.MaxPool2d(kernel_size=2),
+            nn.Dropout(keep_prob),
         )
         self.conv2 = nn.Sequential(
             nn.Conv2d(32, 64, 3, 1, 1),
             nn.ReLU(), nn.MaxPool2d(2),
+            nn.Dropout(keep_prob),
         )
         self.conv3 = nn.Sequential(
             nn.Conv2d(64, 64, 3, 1, 1),
             nn.ReLU(), nn.MaxPool2d(2),
+            nn.Dropout(keep_prob),
         )
         self.fully = nn.Linear(64 * 3 * 3, 1024)
         self.out = nn.Linear(1024, y_dim)
 
     def forward(self, x):  # torch.Size([64, 1, 28, 28])
-        # print('1', x.shape)
         x = self.conv1(x)  # torch.Size([64, 32, 14, 14])
-        # print('2', x.shape)
         x = self.conv2(x)  # torch.Size([64, 64, 7, 7])
-        # print('3', x.shape)
         x = self.conv3(x)  # torch.Size([64, 64, 3, 3])
-        # print('4', x.shape)
         x = x.view(x.size(0), -1)  # torch.Size([64, 64*3*3])
-        # print('5', x.shape)
         x = self.fully(x)  # torch.Size([64, 1024])
-        # print('6', x.shape)
         output = self.out(x)  # torch.Size([64, y_dim])
-        # print('7', output.shape)
         return output
 
     def weight_init(self, _type='kaiming'):
