@@ -95,10 +95,10 @@ python CaptchaNet/main.py --captcha mnist # 对应验证码的种类，后面用
 **训练**
 ```shell
 # 普通训练
-python CaptchaNet/main.py --net cnn --epoch 200 --captcha qq
+python CaptchaNet/main.py --net SimpleCnn5 --epoch 200 --captcha qq
 
 # 分割之后的单个验证码训练
-python CaptchaNet/main.py --net cnn --epoch 200 --real_captcha_len 4 --captcha qq
+python CaptchaNet/main.py --net SimpleCnn5 --epoch 200 --real_captcha_len 4 --captcha qq
 ```
 
 **测试**

@@ -157,18 +157,26 @@ class PreNet(object):
         if self.load_ckpt != '':
             self.load_checkpoint(os.path.join(self.data_root, self.ckpt_dir, args.load_ckpt))
 
-    # 初始化网络
-    def model_init(self):
+    def get_net(self, prob=0):
         if self.net_str == 'SimpleCnn3':
-            self.net = cuda(SimpleCnn3(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
+            net = cuda(SimpleCnn3(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
         elif self.net_str == 'SimpleCnn5':
-            self.net = cuda(SimpleCnn5(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
+            net = cuda(SimpleCnn5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
         elif self.net_str == 'SimpleCnn256':
-            self.net = cuda(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set)), self.cuda)
+            net = cuda(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob),
+                       self.cuda)
         else:
             raise RuntimeError("Net param input error")
+        return net
+
+    # 初始化网络
+    def model_init(self):
+        if self.mode == 'train':
+            prob = 0.5
+        else:
+            prob = 0
+        self.net = self.get_net(prob=prob)
         self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
-        # print(self.net)
         # Optimizers 初始化优化器
         self.optim = optim.Adam([{'params': self.net.parameters(), 'lr': self.lr}],
                                 betas=(0.5, 0.999))
@@ -234,7 +242,9 @@ class PreNet(object):
         print("=> saved checkpoint '{}'".format(file_path))
 
     def train(self):
+        print(self.captcha_name)
         for epoch_idx in range(self.epoch):
+            print()
             for batch_idx in range(times(self.train_num, self.batch_size)):
                 images, labels = self.cus_data_loader(batch_idx, self.batch_size, self.train_data)
                 x = Variable(cuda(images, self.cuda))
@@ -262,6 +272,8 @@ class PreNet(object):
 
     def test(self):
         # 把test中所有的数据按照batch_size = captcha_len 进行测试。
+        test_net = self.get_net(prob=0)
+        test_net.load_state_dict(self.net.state_dict())
 
         if self.real_captcha_len == 0:
             # 表示这是一般的测试，不存在验证码分割之后的整体与预估
@@ -272,17 +284,16 @@ class PreNet(object):
                 raise RuntimeError("There is a problem with the test sample")
             test_batch = self.real_captcha_len
             Times = int(self.test_num / self.real_captcha_len)
-
         accuracy = 0.
         cost = 0.
-        com_correct = 0
+        com_correct = 0.
         total = 0.
         for i in range(Times):
             images, labels = self.cus_data_loader(i, test_batch, self.test_data)
             x = Variable(cuda(images, self.cuda))
             y = Variable(cuda(labels, self.cuda))
 
-            output = self.net(x)
+            output = test_net(x)
             predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
 
@@ -308,24 +319,22 @@ class PreNet(object):
         #     print("real:'{}' predict:'{}'".format(vec2text(index2vec(max_idx_l[i]), self.idx_char),
         #                                           vec2text(index2vec(max_idx_p[i]), self.idx_char)))
 
-        if (accuracy >= self.bast_accuracy).all() and self.mode == 'train':
+        # 选择最好的模型保存
+        if (accuracy > self.bast_accuracy).all() and self.mode == 'train':
             self.bast_accuracy = accuracy
             self.save_checkpoint('best_acc.tar')
 
-        if self.real_captcha_len == 0:  # 一般训练集
-            print('test loss: %.4f' % cost,
-                  '| test accuracy: %.3f' % accuracy,
-                  '| bast accuracy: %.3f' % self.bast_accuracy)
-        else:  # 分割之后的验证码
+        print('test loss: %.4f' % cost,
+              '| test accuracy: %.3f' % accuracy,
+              '| bast accuracy: %.3f' % self.bast_accuracy)
+
+        if self.real_captcha_len != 0:  # 分割之后的验证码需要检查出最大的验证码准确率进行保存
             real_accuracy = com_correct / 200
-            if real_accuracy > self.bast_real_accuracy:
+            if real_accuracy > self.bast_real_accuracy and self.mode == 'train':
                 self.bast_real_accuracy = real_accuracy
                 self.save_checkpoint('best_acc_captcha.tar')
-            print('test loss: %.4f' % cost,
-                  '| test accuracy: %.3f' % accuracy,
-                  '| bast accuracy: %.3f\n' % self.bast_accuracy,
-                  'real num: %.1f' % com_correct,
-                  '| real accuracy: %.3f' % (com_correct / 200),
+            print('real num: %.1f' % com_correct,
+                  '| real accuracy: %.3f' % real_accuracy,
                   '| bast real accuracy: %.3f\n' % self.bast_real_accuracy)
 
     def generate(self, epsilon=0.02, alpha=2 / 255, iteration=1):

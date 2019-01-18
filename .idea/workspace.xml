@@ -6,7 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/models/core_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/models/core_net.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,17 +21,41 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.553676">
+    <splitter split-orientation="horizontal" split-proportion="0.5146389">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="124" column="94" selection-start-line="124" selection-start-column="94" selection-end-line="124" selection-end-column="94" />
+                <state relative-caret-position="236">
+                  <caret line="246" column="18" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="18" />
                   <folding>
                     <element signature="n#!!doc" />
-                    <element signature="e#164#176#0" expanded="true" />
+                    <element signature="e#487#559#0" />
+                    <element signature="e#610#940#0" />
+                    <element signature="e#985#1159#0" />
+                    <element signature="e#1072#1134#0" />
+                    <element signature="e#1213#1485#0" />
+                    <element signature="e#1402#1467#0" />
+                    <element signature="e#1558#2067#0" />
+                    <element signature="e#1587#1722#0" />
+                    <element signature="e#1648#1697#0" />
+                    <element signature="e#1903#2067#0" />
+                    <element signature="e#2119#2250#0" />
+                    <element signature="e#2362#2706#0" />
+                    <element signature="e#2780#3070#0" />
+                    <element signature="e#2841#3070#0" />
+                    <element signature="e#6468#6547#0" />
+                    <element signature="e#6619#6702#0" />
+                    <element signature="e#10869#11089#0" />
+                    <element signature="e#11099#11119#0" />
+                    <element signature="e#11826#13163#0" />
+                    <element signature="e#11973#12508#0" />
+                    <element signature="e#13257#13937#0" />
+                    <element signature="e#13485#13664#0" />
+                    <element signature="e#13691#13910#0" />
+                    <element signature="e#13978#14272#0" />
+                    <element signature="e#14038#14215#0" />
                   </folding>
                 </state>
               </provider>
@@ -37,8 +64,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="38" column="52" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="52" />
+                <state relative-caret-position="305">
+                  <caret line="27" column="45" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
@@ -46,8 +73,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="649">
-                  <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+                <state relative-caret-position="257">
+                  <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -59,7 +86,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$USER_HOME$/android/paper_data/simple_cnn/cnn_jd/models/net_models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="504">
+                <state relative-caret-position="693">
                   <caret line="33" column="29" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
@@ -82,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lr</find>
       <find>sigmoid</find>
       <find>print</find>
       <find>attack</find>
@@ -112,6 +138,7 @@
       <find>net</find>
       <find>shuff</find>
       <find>real_captcha_len</find>
+      <find>load_ckpt</find>
     </findStrings>
     <replaceStrings>
       <replace>generate_Captcha</replace>
@@ -214,7 +241,7 @@
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
               <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="checkpoints" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -412,7 +439,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.19020021" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49840763" weight="0.19020021" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4978903" weight="0.29212254" />
@@ -573,6 +600,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/android/paper_data/simple_cnn/cnn_jd/models/net_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -583,37 +627,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/android/paper_data/simple_cnn/cnn_jd/models/net_models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="38" column="52" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="52" />
+        <state relative-caret-position="257">
+          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="124" column="94" selection-start-line="124" selection-start-column="94" selection-end-line="124" selection-end-column="94" />
+        <state relative-caret-position="236">
+          <caret line="246" column="18" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc" />
-            <element signature="e#164#176#0" expanded="true" />
+            <element signature="e#487#559#0" />
+            <element signature="e#610#940#0" />
+            <element signature="e#985#1159#0" />
+            <element signature="e#1072#1134#0" />
+            <element signature="e#1213#1485#0" />
+            <element signature="e#1402#1467#0" />
+            <element signature="e#1558#2067#0" />
+            <element signature="e#1587#1722#0" />
+            <element signature="e#1648#1697#0" />
+            <element signature="e#1903#2067#0" />
+            <element signature="e#2119#2250#0" />
+            <element signature="e#2362#2706#0" />
+            <element signature="e#2780#3070#0" />
+            <element signature="e#2841#3070#0" />
+            <element signature="e#6468#6547#0" />
+            <element signature="e#6619#6702#0" />
+            <element signature="e#10869#11089#0" />
+            <element signature="e#11099#11119#0" />
+            <element signature="e#11826#13163#0" />
+            <element signature="e#11973#12508#0" />
+            <element signature="e#13257#13937#0" />
+            <element signature="e#13485#13664#0" />
+            <element signature="e#13691#13910#0" />
+            <element signature="e#13978#14272#0" />
+            <element signature="e#14038#14215#0" />
           </folding>
         </state>
       </provider>

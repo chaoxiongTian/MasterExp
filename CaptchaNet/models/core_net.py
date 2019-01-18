@@ -9,7 +9,7 @@ import torch.nn as nn
 
 
 class SimpleCnn256(nn.Module):
-    def __init__(self, channel=1, y_dim=10):
+    def __init__(self, channel=1, y_dim=10, keep_prob=0.75):
         super(SimpleCnn256, self).__init__()
         self.conv1 = nn.Sequential(  # input shape
             nn.Conv2d(
