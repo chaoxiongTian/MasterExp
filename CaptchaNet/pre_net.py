@@ -179,7 +179,7 @@ class PreNet(object):
     # 初始化网络
     def model_init(self):
         if self.mode == 'train':
-            prob = 0.3
+            prob = 0.4
         else:
             prob = 0
         self.net = self.get_net(prob=prob)
@@ -251,9 +251,8 @@ class PreNet(object):
         print("=> saved checkpoint '{}'".format(file_path))
 
     def train(self):
-        print(self.captcha_name)
         for epoch_idx in range(self.epoch):
-            print()
+            print(self.captcha_name)
             epoch_acc, epoch_loss = 0., 0.
             total = 0.
             for batch_idx in range(times(self.train_num, self.batch_size)):
@@ -283,6 +282,7 @@ class PreNet(object):
                 total += 1
 
             random.shuffle(self.train_data)
+            # TODO: BUG: 这里一直再往内存中保存tensor导致占用cpu过大。
             # self.train_acc.append((epoch_acc / total))
             # self.train_lost.append((epoch_loss / total))
             self.test()
