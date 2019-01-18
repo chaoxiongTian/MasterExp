@@ -312,11 +312,11 @@ class PreNet(object):
             self.bast_accuracy = accuracy
             self.save_checkpoint('best_acc.tar')
 
-        if self.real_captcha_len != 0:  # 分割之后的验证码
+        if self.real_captcha_len == 0:  # 一般训练集
             print('test loss: %.4f' % cost,
                   '| test accuracy: %.3f' % accuracy,
                   '| bast accuracy: %.3f' % self.bast_accuracy)
-        else:  # 一般训练集
+        else:  # 分割之后的验证码
             real_accuracy = com_correct / 200
             if real_accuracy > self.bast_real_accuracy:
                 self.bast_real_accuracy = real_accuracy
@@ -324,7 +324,7 @@ class PreNet(object):
             print('test loss: %.4f' % cost,
                   '| test accuracy: %.3f' % accuracy,
                   '| bast accuracy: %.3f\n' % self.bast_accuracy,
-                  '| real: %.1f' % com_correct,
+                  'real num: %.1f' % com_correct,
                   '| real accuracy: %.3f' % (com_correct / 200),
                   '| bast real accuracy: %.3f\n' % self.bast_real_accuracy)
 
