@@ -334,11 +334,12 @@ class PreNet(object):
         # self.test_lost.append((cost / total).item())
         # print("log test # train_acc: {},train_lost: {}".format(accuracy.item(), (cost).item()))
 
-        def index2vec(index_tensor):
-            vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
-            for i in range(self.captcha_len):
-                vector[index_tensor[i] + i * len(self.captcha_char_set)] = 1
-            return vector
+        # def index2vec(index_tensor):
+        #     vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
+        #     for i in range(self.captcha_len):
+        #         # bug item()版本问题。
+        #         vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
+        #     return vector
 
         for i in range(2):
             print("real:'{}' predict:'{}'".format(vec2text(index2vec(max_idx_l[i]), self.idx_char),
