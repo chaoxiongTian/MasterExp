@@ -6,6 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/baidu_new/test_labels.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/baidu_new/train_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize_2/test.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize/test.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize_2/test_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize/test_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize_2/train_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize/train_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard/train_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard/train_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard_2/test.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard/test.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard_2/test_labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard_2/train_labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net/train_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net/train_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net_2/test.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net/test.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net_2/test_labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net_2/train_labels.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,12 +36,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="255" selection-start-line="255" selection-end-line="255" />
+            <state relative-caret-position="277">
+              <caret line="305" column="43" selection-start-line="305" selection-start-column="43" selection-end-line="305" selection-end-column="43" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#9304#10405#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -44,7 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ro</find>
       <find>rotate</find>
       <find>MUL</find>
       <find>captcha_generate.py</find>
@@ -74,6 +96,7 @@
       <find>labe</find>
       <find>test_net</find>
       <find>get_net</find>
+      <find>here is a problem with the test sample</find>
     </findStrings>
     <replaceStrings>
       <replace>generate_Captcha</replace>
@@ -146,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="32" />
     <option name="width" value="1920" />
     <option name="height" value="1048" />
@@ -170,6 +193,18 @@
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
               <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
+              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
+              <item name="data_sets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
+              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -368,7 +403,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.19020021" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.19020021" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4978903" weight="0.29212254" />
@@ -498,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="75" column="42" lean-forward="true" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdversarialCaptcha/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-107" />
@@ -621,10 +649,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net/test/0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaGenerate/data/labels/captcha_net_test_20_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="255" selection-start-line="255" selection-end-line="255" />
+        <state relative-caret-position="277">
+          <caret line="305" column="43" selection-start-line="305" selection-start-column="43" selection-end-line="305" selection-end-column="43" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#9304#10405#0" />

@@ -283,8 +283,8 @@ class PreNet(object):
 
             random.shuffle(self.train_data)
             # TODO: BUG: 这里一直再往内存中保存tensor导致占用cpu过大。
-            # self.train_acc.append((epoch_acc / total))
-            # self.train_lost.append((epoch_loss / total))
+            # self.train_acc.append((epoch_acc / total).item())
+            # self.train_lost.append((epoch_loss / total).item())
             self.test()
         # log_dict = {'train_acc': self.train_acc,
         #             'train_lost': self.train_lost,
@@ -329,8 +329,8 @@ class PreNet(object):
             total += 1
         accuracy = accuracy / total
         cost = cost / total
-        # self.test_acc.append((accuracy / total))
-        # self.test_lost.append((cost / total))
+        # self.test_acc.append((accuracy / total).item())
+        # self.test_lost.append((cost / total).item())
 
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
