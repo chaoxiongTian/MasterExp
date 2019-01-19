@@ -1,0 +1,3047 @@
+
+[ARGUMENTS]
+Namespace(alpha=0.00784313725490196, batch_size=64, captcha='qq', captcha_len=4, ckpt_dir='checkpoints', cuda=True, data_sets='data_sets', epoch=300, epsilon=0.03, fun='fgsm', iteration=3, load_ckpt='', lr=0.0001, mode='train', net='SimpleCnn5', output_dir='output', real_captcha_len=4, seed=1, silent=False, target=-1, tensorboard=False, test_folder='test', test_num=0, train_folder='train', train_num=0, visdom=False, visdom_port=55558)
+qq
+Epoch: 0 | iter: 0 | train loss: 0.6862 | train accuracy: 0.047
+Epoch: 0 | iter: 256 | train loss: 0.5938 | train accuracy: 0.031
+Epoch: 0 | iter: 512 | train loss: 0.4556 | train accuracy: 0.016
+Epoch: 0 | iter: 768 | train loss: 0.2949 | train accuracy: 0.000
+log train # train_acc: 0.03365384787321091,train_lost: 0.5137596130371094
+log test # train_acc: 0.00019999999494757503,train_lost: 0.002063760068267584
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.4128 | test accuracy: 0.040 | bast accuracy: 0.040
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 1 | iter: 0 | train loss: 0.2628 | train accuracy: 0.047
+Epoch: 1 | iter: 256 | train loss: 0.1834 | train accuracy: 0.062
+Epoch: 1 | iter: 512 | train loss: 0.1714 | train accuracy: 0.016
+Epoch: 1 | iter: 768 | train loss: 0.1695 | train accuracy: 0.094
+log train # train_acc: 0.046875,train_lost: 0.18837954103946686
+log test # train_acc: 0.00019999999494757503,train_lost: 0.0011700704926624894
+test loss: 0.2340 | test accuracy: 0.040 | bast accuracy: 0.040
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 2 | iter: 0 | train loss: 0.1708 | train accuracy: 0.016
+Epoch: 2 | iter: 256 | train loss: 0.1690 | train accuracy: 0.031
+Epoch: 2 | iter: 512 | train loss: 0.1678 | train accuracy: 0.016
+Epoch: 2 | iter: 768 | train loss: 0.1691 | train accuracy: 0.031
+log train # train_acc: 0.04326923191547394,train_lost: 0.16940993070602417
+log test # train_acc: 0.0003812500217463821,train_lost: 0.0011757108150050044
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2351 | test accuracy: 0.076 | bast accuracy: 0.076
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 3 | iter: 0 | train loss: 0.1688 | train accuracy: 0.016
+Epoch: 3 | iter: 256 | train loss: 0.1697 | train accuracy: 0.047
+Epoch: 3 | iter: 512 | train loss: 0.1673 | train accuracy: 0.062
+Epoch: 3 | iter: 768 | train loss: 0.1716 | train accuracy: 0.000
+log train # train_acc: 0.051682692021131516,train_lost: 0.16891033947467804
+log test # train_acc: 0.00018124999769497663,train_lost: 0.0011730684200301766
+test loss: 0.2346 | test accuracy: 0.036 | bast accuracy: 0.076
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 4 | iter: 0 | train loss: 0.1674 | train accuracy: 0.062
+Epoch: 4 | iter: 256 | train loss: 0.1704 | train accuracy: 0.031
+Epoch: 4 | iter: 512 | train loss: 0.1693 | train accuracy: 0.000
+Epoch: 4 | iter: 768 | train loss: 0.1700 | train accuracy: 0.094
+log train # train_acc: 0.05048076808452606,train_lost: 0.16843804717063904
+log test # train_acc: 0.0005249999812804163,train_lost: 0.0011736818123608828
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2347 | test accuracy: 0.105 | bast accuracy: 0.105
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 5 | iter: 0 | train loss: 0.1665 | train accuracy: 0.031
+Epoch: 5 | iter: 256 | train loss: 0.1682 | train accuracy: 0.016
+Epoch: 5 | iter: 512 | train loss: 0.1651 | train accuracy: 0.141
+Epoch: 5 | iter: 768 | train loss: 0.1698 | train accuracy: 0.000
+log train # train_acc: 0.05528846010565758,train_lost: 0.16779352724552155
+log test # train_acc: 0.00018124999769497663,train_lost: 0.0011655478738248348
+test loss: 0.2331 | test accuracy: 0.036 | bast accuracy: 0.105
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 6 | iter: 0 | train loss: 0.1680 | train accuracy: 0.031
+Epoch: 6 | iter: 256 | train loss: 0.1677 | train accuracy: 0.047
+Epoch: 6 | iter: 512 | train loss: 0.1692 | train accuracy: 0.016
+Epoch: 6 | iter: 768 | train loss: 0.1655 | train accuracy: 0.094
+log train # train_acc: 0.06490384787321091,train_lost: 0.16690495610237122
+log test # train_acc: 0.0003375000087544322,train_lost: 0.0011632933747023344
+test loss: 0.2327 | test accuracy: 0.068 | bast accuracy: 0.105
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 7 | iter: 0 | train loss: 0.1666 | train accuracy: 0.094
+Epoch: 7 | iter: 256 | train loss: 0.1685 | train accuracy: 0.062
+Epoch: 7 | iter: 512 | train loss: 0.1663 | train accuracy: 0.062
+Epoch: 7 | iter: 768 | train loss: 0.1657 | train accuracy: 0.062
+log train # train_acc: 0.08052884787321091,train_lost: 0.1668800711631775
+log test # train_acc: 0.00022500001068692654,train_lost: 0.0011664575431495905
+test loss: 0.2333 | test accuracy: 0.045 | bast accuracy: 0.105
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 8 | iter: 0 | train loss: 0.1681 | train accuracy: 0.031
+Epoch: 8 | iter: 256 | train loss: 0.1685 | train accuracy: 0.047
+Epoch: 8 | iter: 512 | train loss: 0.1662 | train accuracy: 0.109
+Epoch: 8 | iter: 768 | train loss: 0.1640 | train accuracy: 0.125
+log train # train_acc: 0.08413461595773697,train_lost: 0.16602040827274323
+log test # train_acc: 0.0007312499801628292,train_lost: 0.0011641181772574782
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2328 | test accuracy: 0.146 | bast accuracy: 0.146
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 9 | iter: 0 | train loss: 0.1683 | train accuracy: 0.078
+Epoch: 9 | iter: 256 | train loss: 0.1640 | train accuracy: 0.062
+Epoch: 9 | iter: 512 | train loss: 0.1664 | train accuracy: 0.109
+Epoch: 9 | iter: 768 | train loss: 0.1626 | train accuracy: 0.156
+log train # train_acc: 0.09855769574642181,train_lost: 0.16548825800418854
+log test # train_acc: 0.00021874999220017344,train_lost: 0.0011629349319264293
+test loss: 0.2326 | test accuracy: 0.044 | bast accuracy: 0.146
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 10 | iter: 0 | train loss: 0.1647 | train accuracy: 0.078
+Epoch: 10 | iter: 256 | train loss: 0.1681 | train accuracy: 0.062
+Epoch: 10 | iter: 512 | train loss: 0.1676 | train accuracy: 0.094
+Epoch: 10 | iter: 768 | train loss: 0.1588 | train accuracy: 0.125
+log train # train_acc: 0.09495192021131516,train_lost: 0.16445845365524292
+log test # train_acc: 0.0002500000118743628,train_lost: 0.0011429503792896867
+test loss: 0.2286 | test accuracy: 0.050 | bast accuracy: 0.146
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 11 | iter: 0 | train loss: 0.1651 | train accuracy: 0.062
+Epoch: 11 | iter: 256 | train loss: 0.1644 | train accuracy: 0.094
+Epoch: 11 | iter: 512 | train loss: 0.1628 | train accuracy: 0.109
+Epoch: 11 | iter: 768 | train loss: 0.1625 | train accuracy: 0.094
+log train # train_acc: 0.10336538404226303,train_lost: 0.16439276933670044
+log test # train_acc: 0.0009562500054016709,train_lost: 0.0011370409047231078
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2274 | test accuracy: 0.191 | bast accuracy: 0.191
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 1.0 | real accuracy: 0.005 | bast real accuracy: 0.005
+
+qq
+Epoch: 12 | iter: 0 | train loss: 0.1617 | train accuracy: 0.172
+Epoch: 12 | iter: 256 | train loss: 0.1660 | train accuracy: 0.109
+Epoch: 12 | iter: 512 | train loss: 0.1591 | train accuracy: 0.203
+Epoch: 12 | iter: 768 | train loss: 0.1607 | train accuracy: 0.156
+log train # train_acc: 0.15024039149284363,train_lost: 0.16228415071964264
+log test # train_acc: 0.0012312500039115548,train_lost: 0.0011163962772116065
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2233 | test accuracy: 0.246 | bast accuracy: 0.246
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.005
+
+qq
+Epoch: 13 | iter: 0 | train loss: 0.1609 | train accuracy: 0.125
+Epoch: 13 | iter: 256 | train loss: 0.1651 | train accuracy: 0.125
+Epoch: 13 | iter: 512 | train loss: 0.1627 | train accuracy: 0.109
+Epoch: 13 | iter: 768 | train loss: 0.1633 | train accuracy: 0.094
+log train # train_acc: 0.14783653616905212,train_lost: 0.16178996860980988
+log test # train_acc: 0.0010812500258907676,train_lost: 0.0011144886957481503
+test loss: 0.2229 | test accuracy: 0.216 | bast accuracy: 0.246
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.005
+
+qq
+Epoch: 14 | iter: 0 | train loss: 0.1566 | train accuracy: 0.266
+Epoch: 14 | iter: 256 | train loss: 0.1582 | train accuracy: 0.172
+Epoch: 14 | iter: 512 | train loss: 0.1593 | train accuracy: 0.109
+Epoch: 14 | iter: 768 | train loss: 0.1608 | train accuracy: 0.094
+log train # train_acc: 0.15144230425357819,train_lost: 0.15963493287563324
+log test # train_acc: 0.0009437499684281647,train_lost: 0.0011040340177714825
+test loss: 0.2208 | test accuracy: 0.189 | bast accuracy: 0.246
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.005
+
+qq
+Epoch: 15 | iter: 0 | train loss: 0.1566 | train accuracy: 0.219
+Epoch: 15 | iter: 256 | train loss: 0.1586 | train accuracy: 0.141
+Epoch: 15 | iter: 512 | train loss: 0.1571 | train accuracy: 0.188
+Epoch: 15 | iter: 768 | train loss: 0.1530 | train accuracy: 0.312
+log train # train_acc: 0.19831730425357819,train_lost: 0.15717071294784546
+log test # train_acc: 0.001774999895133078,train_lost: 0.0010617817752063274
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2124 | test accuracy: 0.355 | bast accuracy: 0.355
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 3.0 | real accuracy: 0.015 | bast real accuracy: 0.015
+
+qq
+Epoch: 16 | iter: 0 | train loss: 0.1524 | train accuracy: 0.281
+Epoch: 16 | iter: 256 | train loss: 0.1539 | train accuracy: 0.234
+Epoch: 16 | iter: 512 | train loss: 0.1549 | train accuracy: 0.172
+Epoch: 16 | iter: 768 | train loss: 0.1536 | train accuracy: 0.312
+log train # train_acc: 0.22596153616905212,train_lost: 0.15429431200027466
+log test # train_acc: 0.0018187500536441803,train_lost: 0.0010278401896357536
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2056 | test accuracy: 0.364 | bast accuracy: 0.364
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 6.0 | real accuracy: 0.030 | bast real accuracy: 0.030
+
+qq
+Epoch: 17 | iter: 0 | train loss: 0.1542 | train accuracy: 0.234
+Epoch: 17 | iter: 256 | train loss: 0.1501 | train accuracy: 0.328
+Epoch: 17 | iter: 512 | train loss: 0.1511 | train accuracy: 0.234
+Epoch: 17 | iter: 768 | train loss: 0.1442 | train accuracy: 0.312
+log train # train_acc: 0.2860576808452606,train_lost: 0.14968274533748627
+log test # train_acc: 0.0018125000642612576,train_lost: 0.0009931608801707625
+test loss: 0.1986 | test accuracy: 0.363 | bast accuracy: 0.364
+real num: 6.0 | real accuracy: 0.030 | bast real accuracy: 0.030
+
+qq
+Epoch: 18 | iter: 0 | train loss: 0.1513 | train accuracy: 0.266
+Epoch: 18 | iter: 256 | train loss: 0.1492 | train accuracy: 0.266
+Epoch: 18 | iter: 512 | train loss: 0.1448 | train accuracy: 0.312
+Epoch: 18 | iter: 768 | train loss: 0.1395 | train accuracy: 0.250
+log train # train_acc: 0.3257211446762085,train_lost: 0.14446459710597992
+log test # train_acc: 0.0025875000283122063,train_lost: 0.0009322146070189774
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1864 | test accuracy: 0.517 | bast accuracy: 0.517
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 14.0 | real accuracy: 0.070 | bast real accuracy: 0.070
+
+qq
+Epoch: 19 | iter: 0 | train loss: 0.1362 | train accuracy: 0.375
+Epoch: 19 | iter: 256 | train loss: 0.1403 | train accuracy: 0.344
+Epoch: 19 | iter: 512 | train loss: 0.1386 | train accuracy: 0.328
+Epoch: 19 | iter: 768 | train loss: 0.1301 | train accuracy: 0.281
+log train # train_acc: 0.3701923191547394,train_lost: 0.13639222085475922
+log test # train_acc: 0.0032187500037252903,train_lost: 0.0008501915144734085
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1700 | test accuracy: 0.644 | bast accuracy: 0.644
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 44.0 | real accuracy: 0.220 | bast real accuracy: 0.220
+
+qq
+Epoch: 20 | iter: 0 | train loss: 0.1290 | train accuracy: 0.453
+Epoch: 20 | iter: 256 | train loss: 0.1236 | train accuracy: 0.453
+Epoch: 20 | iter: 512 | train loss: 0.1241 | train accuracy: 0.438
+Epoch: 20 | iter: 768 | train loss: 0.1123 | train accuracy: 0.594
+log train # train_acc: 0.4795673191547394,train_lost: 0.12588928639888763
+log test # train_acc: 0.003050000173971057,train_lost: 0.0007604607963003218
+test loss: 0.1521 | test accuracy: 0.610 | bast accuracy: 0.644
+real num: 26.0 | real accuracy: 0.130 | bast real accuracy: 0.220
+
+qq
+Epoch: 21 | iter: 0 | train loss: 0.1118 | train accuracy: 0.641
+Epoch: 21 | iter: 256 | train loss: 0.1118 | train accuracy: 0.562
+Epoch: 21 | iter: 512 | train loss: 0.1146 | train accuracy: 0.484
+Epoch: 21 | iter: 768 | train loss: 0.1060 | train accuracy: 0.625
+log train # train_acc: 0.536057710647583,train_lost: 0.11397448182106018
+log test # train_acc: 0.004000000189989805,train_lost: 0.0006664539105258882
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1333 | test accuracy: 0.800 | bast accuracy: 0.800
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 84.0 | real accuracy: 0.420 | bast real accuracy: 0.420
+
+qq
+Epoch: 22 | iter: 0 | train loss: 0.1085 | train accuracy: 0.516
+Epoch: 22 | iter: 256 | train loss: 0.0981 | train accuracy: 0.703
+Epoch: 22 | iter: 512 | train loss: 0.1066 | train accuracy: 0.484
+Epoch: 22 | iter: 768 | train loss: 0.1050 | train accuracy: 0.594
+log train # train_acc: 0.6418269276618958,train_lost: 0.10190590471029282
+log test # train_acc: 0.004212500061839819,train_lost: 0.0005756370956078172
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1151 | test accuracy: 0.842 | bast accuracy: 0.842
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 113.0 | real accuracy: 0.565 | bast real accuracy: 0.565
+
+qq
+Epoch: 23 | iter: 0 | train loss: 0.0932 | train accuracy: 0.703
+Epoch: 23 | iter: 256 | train loss: 0.0931 | train accuracy: 0.641
+Epoch: 23 | iter: 512 | train loss: 0.0920 | train accuracy: 0.719
+Epoch: 23 | iter: 768 | train loss: 0.0863 | train accuracy: 0.812
+log train # train_acc: 0.6790865659713745,train_lost: 0.09154511243104935
+log test # train_acc: 0.0037562502548098564,train_lost: 0.0005073986831121147
+test loss: 0.1015 | test accuracy: 0.751 | bast accuracy: 0.842
+real num: 76.0 | real accuracy: 0.380 | bast real accuracy: 0.565
+
+qq
+Epoch: 24 | iter: 0 | train loss: 0.0957 | train accuracy: 0.547
+Epoch: 24 | iter: 256 | train loss: 0.0796 | train accuracy: 0.766
+Epoch: 24 | iter: 512 | train loss: 0.0807 | train accuracy: 0.781
+Epoch: 24 | iter: 768 | train loss: 0.0787 | train accuracy: 0.750
+log train # train_acc: 0.7475961446762085,train_lost: 0.08054061233997345
+log test # train_acc: 0.00455624982714653,train_lost: 0.0004159905656706542
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0832 | test accuracy: 0.911 | bast accuracy: 0.911
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 141.0 | real accuracy: 0.705 | bast real accuracy: 0.705
+
+qq
+Epoch: 25 | iter: 0 | train loss: 0.0693 | train accuracy: 0.797
+Epoch: 25 | iter: 256 | train loss: 0.0732 | train accuracy: 0.781
+Epoch: 25 | iter: 512 | train loss: 0.0745 | train accuracy: 0.828
+Epoch: 25 | iter: 768 | train loss: 0.0695 | train accuracy: 0.875
+log train # train_acc: 0.7908653616905212,train_lost: 0.07180105894804001
+log test # train_acc: 0.0046562496572732925,train_lost: 0.00037674023769795895
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0753 | test accuracy: 0.931 | bast accuracy: 0.931
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 154.0 | real accuracy: 0.770 | bast real accuracy: 0.770
+
+qq
+Epoch: 26 | iter: 0 | train loss: 0.0685 | train accuracy: 0.797
+Epoch: 26 | iter: 256 | train loss: 0.0614 | train accuracy: 0.875
+Epoch: 26 | iter: 512 | train loss: 0.0676 | train accuracy: 0.844
+Epoch: 26 | iter: 768 | train loss: 0.0615 | train accuracy: 0.906
+log train # train_acc: 0.8461538553237915,train_lost: 0.06398489326238632
+log test # train_acc: 0.004662500228732824,train_lost: 0.00034110984415747225
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0682 | test accuracy: 0.933 | bast accuracy: 0.933
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 157.0 | real accuracy: 0.785 | bast real accuracy: 0.785
+
+qq
+Epoch: 27 | iter: 0 | train loss: 0.0515 | train accuracy: 0.922
+Epoch: 27 | iter: 256 | train loss: 0.0611 | train accuracy: 0.859
+Epoch: 27 | iter: 512 | train loss: 0.0612 | train accuracy: 0.875
+Epoch: 27 | iter: 768 | train loss: 0.0569 | train accuracy: 0.844
+log train # train_acc: 0.8617788553237915,train_lost: 0.05774549022316933
+log test # train_acc: 0.004518750123679638,train_lost: 0.0002814632607623935
+test loss: 0.0563 | test accuracy: 0.904 | bast accuracy: 0.933
+real num: 138.0 | real accuracy: 0.690 | bast real accuracy: 0.785
+
+qq
+Epoch: 28 | iter: 0 | train loss: 0.0638 | train accuracy: 0.844
+Epoch: 28 | iter: 256 | train loss: 0.0517 | train accuracy: 0.875
+Epoch: 28 | iter: 512 | train loss: 0.0522 | train accuracy: 0.922
+Epoch: 28 | iter: 768 | train loss: 0.0395 | train accuracy: 0.969
+log train # train_acc: 0.911057710647583,train_lost: 0.05127068608999252
+log test # train_acc: 0.004650000017136335,train_lost: 0.00025785996695049107
+test loss: 0.0516 | test accuracy: 0.930 | bast accuracy: 0.933
+real num: 151.0 | real accuracy: 0.755 | bast real accuracy: 0.785
+
+qq
+Epoch: 29 | iter: 0 | train loss: 0.0475 | train accuracy: 0.938
+Epoch: 29 | iter: 256 | train loss: 0.0521 | train accuracy: 0.891
+Epoch: 29 | iter: 512 | train loss: 0.0487 | train accuracy: 0.906
+Epoch: 29 | iter: 768 | train loss: 0.0463 | train accuracy: 0.938
+log train # train_acc: 0.9086538553237915,train_lost: 0.048882968723773956
+log test # train_acc: 0.004862500354647636,train_lost: 0.00023379904450848699
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0468 | test accuracy: 0.973 | bast accuracy: 0.973
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 180.0 | real accuracy: 0.900 | bast real accuracy: 0.900
+
+qq
+Epoch: 30 | iter: 0 | train loss: 0.0463 | train accuracy: 0.922
+Epoch: 30 | iter: 256 | train loss: 0.0409 | train accuracy: 0.922
+Epoch: 30 | iter: 512 | train loss: 0.0465 | train accuracy: 0.953
+Epoch: 30 | iter: 768 | train loss: 0.0411 | train accuracy: 0.938
+log train # train_acc: 0.9230769276618958,train_lost: 0.043975744396448135
+log test # train_acc: 0.0048374999314546585,train_lost: 0.00023423884704243392
+test loss: 0.0468 | test accuracy: 0.967 | bast accuracy: 0.973
+real num: 176.0 | real accuracy: 0.880 | bast real accuracy: 0.900
+
+qq
+Epoch: 31 | iter: 0 | train loss: 0.0467 | train accuracy: 0.891
+Epoch: 31 | iter: 256 | train loss: 0.0381 | train accuracy: 0.922
+Epoch: 31 | iter: 512 | train loss: 0.0488 | train accuracy: 0.891
+Epoch: 31 | iter: 768 | train loss: 0.0348 | train accuracy: 0.938
+log train # train_acc: 0.9230769276618958,train_lost: 0.04148880019783974
+log test # train_acc: 0.0048500001430511475,train_lost: 0.00020185553876217455
+test loss: 0.0404 | test accuracy: 0.970 | bast accuracy: 0.973
+real num: 178.0 | real accuracy: 0.890 | bast real accuracy: 0.900
+
+qq
+Epoch: 32 | iter: 0 | train loss: 0.0368 | train accuracy: 0.953
+Epoch: 32 | iter: 256 | train loss: 0.0373 | train accuracy: 0.938
+Epoch: 32 | iter: 512 | train loss: 0.0342 | train accuracy: 0.953
+Epoch: 32 | iter: 768 | train loss: 0.0337 | train accuracy: 0.969
+log train # train_acc: 0.9459134340286255,train_lost: 0.03677784278988838
+log test # train_acc: 0.004862500354647636,train_lost: 0.00015943980542942882
+test loss: 0.0319 | test accuracy: 0.973 | bast accuracy: 0.973
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 181.0 | real accuracy: 0.905 | bast real accuracy: 0.905
+
+qq
+Epoch: 33 | iter: 0 | train loss: 0.0386 | train accuracy: 0.906
+Epoch: 33 | iter: 256 | train loss: 0.0344 | train accuracy: 0.953
+Epoch: 33 | iter: 512 | train loss: 0.0290 | train accuracy: 0.984
+Epoch: 33 | iter: 768 | train loss: 0.0412 | train accuracy: 0.812
+log train # train_acc: 0.9471153616905212,train_lost: 0.03465183824300766
+log test # train_acc: 0.004918749909847975,train_lost: 0.00015104369958862662
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0302 | test accuracy: 0.984 | bast accuracy: 0.984
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 189.0 | real accuracy: 0.945 | bast real accuracy: 0.945
+
+qq
+Epoch: 34 | iter: 0 | train loss: 0.0344 | train accuracy: 0.953
+Epoch: 34 | iter: 256 | train loss: 0.0337 | train accuracy: 0.906
+Epoch: 34 | iter: 512 | train loss: 0.0355 | train accuracy: 0.922
+Epoch: 34 | iter: 768 | train loss: 0.0375 | train accuracy: 0.906
+log train # train_acc: 0.9447115659713745,train_lost: 0.03296289220452309
+log test # train_acc: 0.004925000015646219,train_lost: 0.00015523217734880745
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0310 | test accuracy: 0.985 | bast accuracy: 0.985
+real num: 188.0 | real accuracy: 0.940 | bast real accuracy: 0.945
+
+qq
+Epoch: 35 | iter: 0 | train loss: 0.0280 | train accuracy: 0.953
+Epoch: 35 | iter: 256 | train loss: 0.0345 | train accuracy: 0.938
+Epoch: 35 | iter: 512 | train loss: 0.0275 | train accuracy: 0.953
+Epoch: 35 | iter: 768 | train loss: 0.0354 | train accuracy: 0.969
+log train # train_acc: 0.9603365659713745,train_lost: 0.03013133816421032
+log test # train_acc: 0.004875000100582838,train_lost: 0.00014715534052811563
+test loss: 0.0294 | test accuracy: 0.975 | bast accuracy: 0.985
+real num: 182.0 | real accuracy: 0.910 | bast real accuracy: 0.945
+
+qq
+Epoch: 36 | iter: 0 | train loss: 0.0248 | train accuracy: 0.984
+Epoch: 36 | iter: 256 | train loss: 0.0221 | train accuracy: 0.969
+Epoch: 36 | iter: 512 | train loss: 0.0231 | train accuracy: 1.000
+Epoch: 36 | iter: 768 | train loss: 0.0243 | train accuracy: 1.000
+log train # train_acc: 0.963942289352417,train_lost: 0.027494512498378754
+log test # train_acc: 0.004931250121444464,train_lost: 0.0001288764615310356
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0258 | test accuracy: 0.986 | bast accuracy: 0.986
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 190.0 | real accuracy: 0.950 | bast real accuracy: 0.950
+
+qq
+Epoch: 37 | iter: 0 | train loss: 0.0279 | train accuracy: 0.969
+Epoch: 37 | iter: 256 | train loss: 0.0244 | train accuracy: 0.969
+Epoch: 37 | iter: 512 | train loss: 0.0296 | train accuracy: 0.953
+Epoch: 37 | iter: 768 | train loss: 0.0214 | train accuracy: 1.000
+log train # train_acc: 0.9747596383094788,train_lost: 0.025467325001955032
+log test # train_acc: 0.004943749867379665,train_lost: 0.00011503799760248512
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0230 | test accuracy: 0.989 | bast accuracy: 0.989
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 191.0 | real accuracy: 0.955 | bast real accuracy: 0.955
+
+qq
+Epoch: 38 | iter: 0 | train loss: 0.0234 | train accuracy: 0.969
+Epoch: 38 | iter: 256 | train loss: 0.0219 | train accuracy: 0.969
+Epoch: 38 | iter: 512 | train loss: 0.0268 | train accuracy: 0.984
+Epoch: 38 | iter: 768 | train loss: 0.0261 | train accuracy: 0.969
+log train # train_acc: 0.9747596383094788,train_lost: 0.023973319679498672
+log test # train_acc: 0.004931250121444464,train_lost: 0.00011989744962193072
+test loss: 0.0240 | test accuracy: 0.986 | bast accuracy: 0.989
+real num: 190.0 | real accuracy: 0.950 | bast real accuracy: 0.955
+
+qq
+Epoch: 39 | iter: 0 | train loss: 0.0258 | train accuracy: 0.938
+Epoch: 39 | iter: 256 | train loss: 0.0217 | train accuracy: 0.984
+Epoch: 39 | iter: 512 | train loss: 0.0244 | train accuracy: 0.984
+Epoch: 39 | iter: 768 | train loss: 0.0184 | train accuracy: 1.000
+log train # train_acc: 0.9783653616905212,train_lost: 0.022778131067752838
+log test # train_acc: 0.004937500227242708,train_lost: 0.00010947969713015482
+test loss: 0.0219 | test accuracy: 0.988 | bast accuracy: 0.989
+real num: 190.0 | real accuracy: 0.950 | bast real accuracy: 0.955
+
+qq
+Epoch: 40 | iter: 0 | train loss: 0.0257 | train accuracy: 0.969
+Epoch: 40 | iter: 256 | train loss: 0.0179 | train accuracy: 0.984
+Epoch: 40 | iter: 512 | train loss: 0.0166 | train accuracy: 1.000
+Epoch: 40 | iter: 768 | train loss: 0.0351 | train accuracy: 0.906
+log train # train_acc: 0.9807692170143127,train_lost: 0.021214919164776802
+log test # train_acc: 0.004962500184774399,train_lost: 9.781404514797032e-05
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0196 | test accuracy: 0.993 | bast accuracy: 0.993
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 194.0 | real accuracy: 0.970 | bast real accuracy: 0.970
+
+qq
+Epoch: 41 | iter: 0 | train loss: 0.0250 | train accuracy: 0.984
+Epoch: 41 | iter: 256 | train loss: 0.0187 | train accuracy: 0.969
+Epoch: 41 | iter: 512 | train loss: 0.0190 | train accuracy: 0.969
+Epoch: 41 | iter: 768 | train loss: 0.0182 | train accuracy: 0.969
+log train # train_acc: 0.9759615659713745,train_lost: 0.020764274522662163
+log test # train_acc: 0.00494999997317791,train_lost: 9.46029249462299e-05
+test loss: 0.0189 | test accuracy: 0.990 | bast accuracy: 0.993
+real num: 192.0 | real accuracy: 0.960 | bast real accuracy: 0.970
+
+qq
+Epoch: 42 | iter: 0 | train loss: 0.0206 | train accuracy: 0.953
+Epoch: 42 | iter: 256 | train loss: 0.0220 | train accuracy: 1.000
+Epoch: 42 | iter: 512 | train loss: 0.0165 | train accuracy: 0.984
+Epoch: 42 | iter: 768 | train loss: 0.0143 | train accuracy: 1.000
+log train # train_acc: 0.9747596383094788,train_lost: 0.020048262551426888
+log test # train_acc: 0.0049749999307096004,train_lost: 7.927101250970736e-05
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0159 | test accuracy: 0.995 | bast accuracy: 0.995
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 196.0 | real accuracy: 0.980 | bast real accuracy: 0.980
+
+qq
+Epoch: 43 | iter: 0 | train loss: 0.0211 | train accuracy: 0.953
+Epoch: 43 | iter: 256 | train loss: 0.0243 | train accuracy: 0.953
+Epoch: 43 | iter: 512 | train loss: 0.0136 | train accuracy: 1.000
+Epoch: 43 | iter: 768 | train loss: 0.0193 | train accuracy: 0.969
+log train # train_acc: 0.9759615659713745,train_lost: 0.019593294709920883
+log test # train_acc: 0.00494999997317791,train_lost: 8.504631841788068e-05
+test loss: 0.0170 | test accuracy: 0.990 | bast accuracy: 0.995
+real num: 192.0 | real accuracy: 0.960 | bast real accuracy: 0.980
+
+qq
+Epoch: 44 | iter: 0 | train loss: 0.0159 | train accuracy: 1.000
+Epoch: 44 | iter: 256 | train loss: 0.0163 | train accuracy: 1.000
+Epoch: 44 | iter: 512 | train loss: 0.0128 | train accuracy: 1.000
+Epoch: 44 | iter: 768 | train loss: 0.0142 | train accuracy: 1.000
+log train # train_acc: 0.9831730723381042,train_lost: 0.01685105636715889
+log test # train_acc: 0.004987500142306089,train_lost: 6.524819764308631e-05
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0130 | test accuracy: 0.998 | bast accuracy: 0.998
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 45 | iter: 0 | train loss: 0.0195 | train accuracy: 1.000
+Epoch: 45 | iter: 256 | train loss: 0.0164 | train accuracy: 0.969
+Epoch: 45 | iter: 512 | train loss: 0.0169 | train accuracy: 1.000
+Epoch: 45 | iter: 768 | train loss: 0.0150 | train accuracy: 1.000
+log train # train_acc: 0.9855769276618958,train_lost: 0.015856249257922173
+log test # train_acc: 0.0049749999307096004,train_lost: 6.505229976028204e-05
+test loss: 0.0130 | test accuracy: 0.995 | bast accuracy: 0.998
+real num: 196.0 | real accuracy: 0.980 | bast real accuracy: 0.990
+
+qq
+Epoch: 46 | iter: 0 | train loss: 0.0172 | train accuracy: 0.969
+Epoch: 46 | iter: 256 | train loss: 0.0183 | train accuracy: 0.969
+Epoch: 46 | iter: 512 | train loss: 0.0163 | train accuracy: 0.984
+Epoch: 46 | iter: 768 | train loss: 0.0094 | train accuracy: 1.000
+log train # train_acc: 0.9807692170143127,train_lost: 0.014983007684350014
+log test # train_acc: 0.004956250078976154,train_lost: 5.845590931130573e-05
+test loss: 0.0117 | test accuracy: 0.991 | bast accuracy: 0.998
+real num: 193.0 | real accuracy: 0.965 | bast real accuracy: 0.990
+
+qq
+Epoch: 47 | iter: 0 | train loss: 0.0164 | train accuracy: 0.969
+Epoch: 47 | iter: 256 | train loss: 0.0177 | train accuracy: 0.953
+Epoch: 47 | iter: 512 | train loss: 0.0140 | train accuracy: 0.984
+Epoch: 47 | iter: 768 | train loss: 0.0172 | train accuracy: 0.969
+log train # train_acc: 0.9879807829856873,train_lost: 0.014386843889951706
+log test # train_acc: 0.004956250078976154,train_lost: 6.409432535292581e-05
+test loss: 0.0128 | test accuracy: 0.991 | bast accuracy: 0.998
+real num: 193.0 | real accuracy: 0.965 | bast real accuracy: 0.990
+
+qq
+Epoch: 48 | iter: 0 | train loss: 0.0164 | train accuracy: 1.000
+Epoch: 48 | iter: 256 | train loss: 0.0138 | train accuracy: 0.984
+Epoch: 48 | iter: 512 | train loss: 0.0101 | train accuracy: 1.000
+Epoch: 48 | iter: 768 | train loss: 0.0109 | train accuracy: 0.969
+log train # train_acc: 0.9831730723381042,train_lost: 0.01516205444931984
+log test # train_acc: 0.004968749824911356,train_lost: 5.1804541726596653e-05
+test loss: 0.0104 | test accuracy: 0.994 | bast accuracy: 0.998
+real num: 195.0 | real accuracy: 0.975 | bast real accuracy: 0.990
+
+qq
+Epoch: 49 | iter: 0 | train loss: 0.0081 | train accuracy: 1.000
+Epoch: 49 | iter: 256 | train loss: 0.0079 | train accuracy: 1.000
+Epoch: 49 | iter: 512 | train loss: 0.0131 | train accuracy: 1.000
+Epoch: 49 | iter: 768 | train loss: 0.0122 | train accuracy: 0.969
+log train # train_acc: 0.9879807829856873,train_lost: 0.012156895361840725
+log test # train_acc: 0.004987500142306089,train_lost: 4.7475659812334925e-05
+test loss: 0.0095 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 50 | iter: 0 | train loss: 0.0143 | train accuracy: 1.000
+Epoch: 50 | iter: 256 | train loss: 0.0133 | train accuracy: 0.984
+Epoch: 50 | iter: 512 | train loss: 0.0109 | train accuracy: 0.984
+Epoch: 50 | iter: 768 | train loss: 0.0206 | train accuracy: 1.000
+log train # train_acc: 0.9855769276618958,train_lost: 0.013862340711057186
+log test # train_acc: 0.004962500184774399,train_lost: 5.8767291193362325e-05
+test loss: 0.0118 | test accuracy: 0.993 | bast accuracy: 0.998
+real num: 194.0 | real accuracy: 0.970 | bast real accuracy: 0.990
+
+qq
+Epoch: 51 | iter: 0 | train loss: 0.0124 | train accuracy: 1.000
+Epoch: 51 | iter: 256 | train loss: 0.0111 | train accuracy: 0.984
+Epoch: 51 | iter: 512 | train loss: 0.0134 | train accuracy: 1.000
+Epoch: 51 | iter: 768 | train loss: 0.0124 | train accuracy: 0.969
+log train # train_acc: 0.995192289352417,train_lost: 0.0114109106361866
+log test # train_acc: 0.004981250036507845,train_lost: 4.9434584070695564e-05
+test loss: 0.0099 | test accuracy: 0.996 | bast accuracy: 0.998
+real num: 197.0 | real accuracy: 0.985 | bast real accuracy: 0.990
+
+qq
+Epoch: 52 | iter: 0 | train loss: 0.0126 | train accuracy: 0.969
+Epoch: 52 | iter: 256 | train loss: 0.0144 | train accuracy: 0.969
+Epoch: 52 | iter: 512 | train loss: 0.0133 | train accuracy: 1.000
+Epoch: 52 | iter: 768 | train loss: 0.0083 | train accuracy: 1.000
+log train # train_acc: 0.9903846383094788,train_lost: 0.01320517249405384
+log test # train_acc: 0.004987500142306089,train_lost: 3.737221049959771e-05
+test loss: 0.0075 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 53 | iter: 0 | train loss: 0.0194 | train accuracy: 0.969
+Epoch: 53 | iter: 256 | train loss: 0.0150 | train accuracy: 0.984
+Epoch: 53 | iter: 512 | train loss: 0.0126 | train accuracy: 0.953
+Epoch: 53 | iter: 768 | train loss: 0.0141 | train accuracy: 1.000
+log train # train_acc: 0.9867788553237915,train_lost: 0.012895047664642334
+log test # train_acc: 0.004987500142306089,train_lost: 4.6131215640343726e-05
+test loss: 0.0092 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 54 | iter: 0 | train loss: 0.0088 | train accuracy: 0.984
+Epoch: 54 | iter: 256 | train loss: 0.0154 | train accuracy: 1.000
+Epoch: 54 | iter: 512 | train loss: 0.0123 | train accuracy: 0.984
+Epoch: 54 | iter: 768 | train loss: 0.0118 | train accuracy: 1.000
+log train # train_acc: 0.9939903616905212,train_lost: 0.0112601974979043
+log test # train_acc: 0.004987500142306089,train_lost: 4.1867857362376526e-05
+test loss: 0.0084 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 55 | iter: 0 | train loss: 0.0128 | train accuracy: 1.000
+Epoch: 55 | iter: 256 | train loss: 0.0098 | train accuracy: 1.000
+Epoch: 55 | iter: 512 | train loss: 0.0144 | train accuracy: 0.953
+Epoch: 55 | iter: 768 | train loss: 0.0113 | train accuracy: 1.000
+log train # train_acc: 0.9903846383094788,train_lost: 0.010192979127168655
+log test # train_acc: 0.004987500142306089,train_lost: 3.8752128602936864e-05
+test loss: 0.0078 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 56 | iter: 0 | train loss: 0.0088 | train accuracy: 1.000
+Epoch: 56 | iter: 256 | train loss: 0.0062 | train accuracy: 1.000
+Epoch: 56 | iter: 512 | train loss: 0.0076 | train accuracy: 1.000
+Epoch: 56 | iter: 768 | train loss: 0.0076 | train accuracy: 1.000
+log train # train_acc: 0.9915865659713745,train_lost: 0.009111572057008743
+log test # train_acc: 0.004987500142306089,train_lost: 3.922364703612402e-05
+test loss: 0.0078 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 57 | iter: 0 | train loss: 0.0109 | train accuracy: 0.984
+Epoch: 57 | iter: 256 | train loss: 0.0094 | train accuracy: 0.984
+Epoch: 57 | iter: 512 | train loss: 0.0108 | train accuracy: 0.984
+Epoch: 57 | iter: 768 | train loss: 0.0081 | train accuracy: 1.000
+log train # train_acc: 0.995192289352417,train_lost: 0.008987532928586006
+log test # train_acc: 0.004987500142306089,train_lost: 3.313622437417507e-05
+test loss: 0.0066 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 58 | iter: 0 | train loss: 0.0144 | train accuracy: 1.000
+Epoch: 58 | iter: 256 | train loss: 0.0059 | train accuracy: 1.000
+Epoch: 58 | iter: 512 | train loss: 0.0133 | train accuracy: 1.000
+Epoch: 58 | iter: 768 | train loss: 0.0106 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.010446569882333279
+log test # train_acc: 0.004987500142306089,train_lost: 3.419053246034309e-05
+test loss: 0.0068 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 59 | iter: 0 | train loss: 0.0120 | train accuracy: 1.000
+Epoch: 59 | iter: 256 | train loss: 0.0150 | train accuracy: 0.984
+Epoch: 59 | iter: 512 | train loss: 0.0060 | train accuracy: 1.000
+Epoch: 59 | iter: 768 | train loss: 0.0063 | train accuracy: 1.000
+log train # train_acc: 0.9927884340286255,train_lost: 0.009593425318598747
+log test # train_acc: 0.004987500142306089,train_lost: 2.8380700314301066e-05
+test loss: 0.0057 | test accuracy: 0.998 | bast accuracy: 0.998
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.990
+
+qq
+Epoch: 60 | iter: 0 | train loss: 0.0089 | train accuracy: 1.000
+Epoch: 60 | iter: 256 | train loss: 0.0107 | train accuracy: 1.000
+Epoch: 60 | iter: 512 | train loss: 0.0112 | train accuracy: 0.953
+Epoch: 60 | iter: 768 | train loss: 0.0100 | train accuracy: 0.969
+log train # train_acc: 0.9915865659713745,train_lost: 0.009110230952501297
+log test # train_acc: 0.004993749782443047,train_lost: 2.589477844594512e-05
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0052 | test accuracy: 0.999 | bast accuracy: 0.999
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 61 | iter: 0 | train loss: 0.0053 | train accuracy: 1.000
+Epoch: 61 | iter: 256 | train loss: 0.0068 | train accuracy: 1.000
+Epoch: 61 | iter: 512 | train loss: 0.0091 | train accuracy: 1.000
+Epoch: 61 | iter: 768 | train loss: 0.0084 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.008629552088677883
+log test # train_acc: 0.004981250036507845,train_lost: 3.60408412234392e-05
+test loss: 0.0072 | test accuracy: 0.996 | bast accuracy: 0.999
+real num: 197.0 | real accuracy: 0.985 | bast real accuracy: 0.995
+
+qq
+Epoch: 62 | iter: 0 | train loss: 0.0068 | train accuracy: 1.000
+Epoch: 62 | iter: 256 | train loss: 0.0062 | train accuracy: 1.000
+Epoch: 62 | iter: 512 | train loss: 0.0113 | train accuracy: 0.984
+Epoch: 62 | iter: 768 | train loss: 0.0089 | train accuracy: 0.969
+log train # train_acc: 0.9939903616905212,train_lost: 0.008170193061232567
+log test # train_acc: 0.004981250036507845,train_lost: 2.7342059183865786e-05
+test loss: 0.0055 | test accuracy: 0.996 | bast accuracy: 0.999
+real num: 197.0 | real accuracy: 0.985 | bast real accuracy: 0.995
+
+qq
+Epoch: 63 | iter: 0 | train loss: 0.0040 | train accuracy: 1.000
+Epoch: 63 | iter: 256 | train loss: 0.0073 | train accuracy: 1.000
+Epoch: 63 | iter: 512 | train loss: 0.0077 | train accuracy: 1.000
+Epoch: 63 | iter: 768 | train loss: 0.0034 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.0071194893680512905
+log test # train_acc: 0.004981250036507845,train_lost: 2.8394559194566682e-05
+test loss: 0.0057 | test accuracy: 0.996 | bast accuracy: 0.999
+real num: 197.0 | real accuracy: 0.985 | bast real accuracy: 0.995
+
+qq
+Epoch: 64 | iter: 0 | train loss: 0.0061 | train accuracy: 1.000
+Epoch: 64 | iter: 256 | train loss: 0.0062 | train accuracy: 1.000
+Epoch: 64 | iter: 512 | train loss: 0.0076 | train accuracy: 1.000
+Epoch: 64 | iter: 768 | train loss: 0.0054 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.006971872411668301
+log test # train_acc: 0.004987500142306089,train_lost: 2.442845106997993e-05
+test loss: 0.0049 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 65 | iter: 0 | train loss: 0.0069 | train accuracy: 1.000
+Epoch: 65 | iter: 256 | train loss: 0.0071 | train accuracy: 1.000
+Epoch: 65 | iter: 512 | train loss: 0.0101 | train accuracy: 0.984
+Epoch: 65 | iter: 768 | train loss: 0.0102 | train accuracy: 0.969
+log train # train_acc: 0.9915865659713745,train_lost: 0.008282534778118134
+log test # train_acc: 0.004987500142306089,train_lost: 2.1939657017355785e-05
+test loss: 0.0044 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 66 | iter: 0 | train loss: 0.0043 | train accuracy: 1.000
+Epoch: 66 | iter: 256 | train loss: 0.0081 | train accuracy: 0.984
+Epoch: 66 | iter: 512 | train loss: 0.0087 | train accuracy: 0.984
+Epoch: 66 | iter: 768 | train loss: 0.0055 | train accuracy: 1.000
+log train # train_acc: 0.9927884340286255,train_lost: 0.007432945072650909
+log test # train_acc: 0.004993749782443047,train_lost: 2.222590228484478e-05
+test loss: 0.0044 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 67 | iter: 0 | train loss: 0.0054 | train accuracy: 1.000
+Epoch: 67 | iter: 256 | train loss: 0.0079 | train accuracy: 0.984
+Epoch: 67 | iter: 512 | train loss: 0.0039 | train accuracy: 1.000
+Epoch: 67 | iter: 768 | train loss: 0.0042 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.006364685483276844
+log test # train_acc: 0.004987500142306089,train_lost: 2.2281881683738902e-05
+test loss: 0.0045 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 68 | iter: 0 | train loss: 0.0065 | train accuracy: 1.000
+Epoch: 68 | iter: 256 | train loss: 0.0044 | train accuracy: 1.000
+Epoch: 68 | iter: 512 | train loss: 0.0040 | train accuracy: 1.000
+Epoch: 68 | iter: 768 | train loss: 0.0043 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.005884733982384205
+log test # train_acc: 0.004987500142306089,train_lost: 1.834800059441477e-05
+test loss: 0.0037 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 69 | iter: 0 | train loss: 0.0048 | train accuracy: 1.000
+Epoch: 69 | iter: 256 | train loss: 0.0072 | train accuracy: 1.000
+Epoch: 69 | iter: 512 | train loss: 0.0052 | train accuracy: 1.000
+Epoch: 69 | iter: 768 | train loss: 0.0049 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.006329311057925224
+log test # train_acc: 0.004987500142306089,train_lost: 2.1926965928287245e-05
+test loss: 0.0044 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 70 | iter: 0 | train loss: 0.0055 | train accuracy: 1.000
+Epoch: 70 | iter: 256 | train loss: 0.0066 | train accuracy: 1.000
+Epoch: 70 | iter: 512 | train loss: 0.0082 | train accuracy: 0.984
+Epoch: 70 | iter: 768 | train loss: 0.0058 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.006449282169342041
+log test # train_acc: 0.004987500142306089,train_lost: 1.9219443856854923e-05
+test loss: 0.0038 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 71 | iter: 0 | train loss: 0.0059 | train accuracy: 1.000
+Epoch: 71 | iter: 256 | train loss: 0.0076 | train accuracy: 1.000
+Epoch: 71 | iter: 512 | train loss: 0.0048 | train accuracy: 1.000
+Epoch: 71 | iter: 768 | train loss: 0.0029 | train accuracy: 1.000
+log train # train_acc: 0.995192289352417,train_lost: 0.006246485281735659
+log test # train_acc: 0.004987500142306089,train_lost: 1.90728187590139e-05
+test loss: 0.0038 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 72 | iter: 0 | train loss: 0.0043 | train accuracy: 1.000
+Epoch: 72 | iter: 256 | train loss: 0.0043 | train accuracy: 1.000
+Epoch: 72 | iter: 512 | train loss: 0.0086 | train accuracy: 1.000
+Epoch: 72 | iter: 768 | train loss: 0.0027 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.005933346226811409
+log test # train_acc: 0.004987500142306089,train_lost: 1.8340537280892022e-05
+test loss: 0.0037 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 73 | iter: 0 | train loss: 0.0085 | train accuracy: 1.000
+Epoch: 73 | iter: 256 | train loss: 0.0049 | train accuracy: 1.000
+Epoch: 73 | iter: 512 | train loss: 0.0073 | train accuracy: 1.000
+Epoch: 73 | iter: 768 | train loss: 0.0055 | train accuracy: 1.000
+log train # train_acc: 0.9939903616905212,train_lost: 0.006169860251247883
+log test # train_acc: 0.004987500142306089,train_lost: 1.852242712629959e-05
+test loss: 0.0037 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 74 | iter: 0 | train loss: 0.0070 | train accuracy: 1.000
+Epoch: 74 | iter: 256 | train loss: 0.0091 | train accuracy: 0.984
+Epoch: 74 | iter: 512 | train loss: 0.0044 | train accuracy: 1.000
+Epoch: 74 | iter: 768 | train loss: 0.0029 | train accuracy: 1.000
+log train # train_acc: 0.995192289352417,train_lost: 0.00596283283084631
+log test # train_acc: 0.004987500142306089,train_lost: 1.8669992641662247e-05
+test loss: 0.0037 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 75 | iter: 0 | train loss: 0.0049 | train accuracy: 1.000
+Epoch: 75 | iter: 256 | train loss: 0.0059 | train accuracy: 1.000
+Epoch: 75 | iter: 512 | train loss: 0.0044 | train accuracy: 1.000
+Epoch: 75 | iter: 768 | train loss: 0.0037 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.005383898038417101
+log test # train_acc: 0.004993749782443047,train_lost: 1.5030433132778853e-05
+test loss: 0.0030 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 76 | iter: 0 | train loss: 0.0043 | train accuracy: 1.000
+Epoch: 76 | iter: 256 | train loss: 0.0059 | train accuracy: 0.984
+Epoch: 76 | iter: 512 | train loss: 0.0069 | train accuracy: 0.984
+Epoch: 76 | iter: 768 | train loss: 0.0034 | train accuracy: 1.000
+log train # train_acc: 0.9939903616905212,train_lost: 0.005163985304534435
+log test # train_acc: 0.004987500142306089,train_lost: 1.6059942936408333e-05
+test loss: 0.0032 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 77 | iter: 0 | train loss: 0.0061 | train accuracy: 1.000
+Epoch: 77 | iter: 256 | train loss: 0.0046 | train accuracy: 1.000
+Epoch: 77 | iter: 512 | train loss: 0.0060 | train accuracy: 1.000
+Epoch: 77 | iter: 768 | train loss: 0.0028 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.004637857433408499
+log test # train_acc: 0.004987500142306089,train_lost: 1.5188595170911867e-05
+test loss: 0.0030 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 78 | iter: 0 | train loss: 0.0091 | train accuracy: 1.000
+Epoch: 78 | iter: 256 | train loss: 0.0037 | train accuracy: 1.000
+Epoch: 78 | iter: 512 | train loss: 0.0025 | train accuracy: 1.000
+Epoch: 78 | iter: 768 | train loss: 0.0129 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.0058147800154984
+log test # train_acc: 0.004987500142306089,train_lost: 1.6229960237978958e-05
+test loss: 0.0032 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 79 | iter: 0 | train loss: 0.0049 | train accuracy: 1.000
+Epoch: 79 | iter: 256 | train loss: 0.0036 | train accuracy: 1.000
+Epoch: 79 | iter: 512 | train loss: 0.0092 | train accuracy: 0.984
+Epoch: 79 | iter: 768 | train loss: 0.0042 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.005180011037737131
+log test # train_acc: 0.004987500142306089,train_lost: 1.5203831935650669e-05
+test loss: 0.0030 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 80 | iter: 0 | train loss: 0.0024 | train accuracy: 1.000
+Epoch: 80 | iter: 256 | train loss: 0.0067 | train accuracy: 1.000
+Epoch: 80 | iter: 512 | train loss: 0.0065 | train accuracy: 1.000
+Epoch: 80 | iter: 768 | train loss: 0.0081 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.005311626475304365
+log test # train_acc: 0.004987500142306089,train_lost: 1.3634637980430853e-05
+test loss: 0.0027 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 81 | iter: 0 | train loss: 0.0061 | train accuracy: 1.000
+Epoch: 81 | iter: 256 | train loss: 0.0056 | train accuracy: 1.000
+Epoch: 81 | iter: 512 | train loss: 0.0048 | train accuracy: 1.000
+Epoch: 81 | iter: 768 | train loss: 0.0050 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.004379190504550934
+log test # train_acc: 0.004987500142306089,train_lost: 1.2996373698115349e-05
+test loss: 0.0026 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 82 | iter: 0 | train loss: 0.0053 | train accuracy: 1.000
+Epoch: 82 | iter: 256 | train loss: 0.0132 | train accuracy: 0.953
+Epoch: 82 | iter: 512 | train loss: 0.0035 | train accuracy: 1.000
+Epoch: 82 | iter: 768 | train loss: 0.0043 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.0048833610489964485
+log test # train_acc: 0.004993749782443047,train_lost: 1.4683992958453018e-05
+test loss: 0.0029 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 83 | iter: 0 | train loss: 0.0030 | train accuracy: 1.000
+Epoch: 83 | iter: 256 | train loss: 0.0046 | train accuracy: 1.000
+Epoch: 83 | iter: 512 | train loss: 0.0047 | train accuracy: 0.984
+Epoch: 83 | iter: 768 | train loss: 0.0074 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.005060053430497646
+log test # train_acc: 0.004987500142306089,train_lost: 1.612362393643707e-05
+test loss: 0.0032 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 84 | iter: 0 | train loss: 0.0052 | train accuracy: 1.000
+Epoch: 84 | iter: 256 | train loss: 0.0048 | train accuracy: 1.000
+Epoch: 84 | iter: 512 | train loss: 0.0063 | train accuracy: 0.984
+Epoch: 84 | iter: 768 | train loss: 0.0046 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.004556368105113506
+log test # train_acc: 0.004987500142306089,train_lost: 1.3797108294966165e-05
+test loss: 0.0028 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 85 | iter: 0 | train loss: 0.0052 | train accuracy: 1.000
+Epoch: 85 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 85 | iter: 512 | train loss: 0.0048 | train accuracy: 1.000
+Epoch: 85 | iter: 768 | train loss: 0.0046 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.004601102322340012
+log test # train_acc: 0.004993749782443047,train_lost: 1.4796924006077461e-05
+test loss: 0.0030 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 86 | iter: 0 | train loss: 0.0053 | train accuracy: 1.000
+Epoch: 86 | iter: 256 | train loss: 0.0035 | train accuracy: 0.984
+Epoch: 86 | iter: 512 | train loss: 0.0044 | train accuracy: 1.000
+Epoch: 86 | iter: 768 | train loss: 0.0167 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.0052128443494439125
+log test # train_acc: 0.004987500142306089,train_lost: 1.256785344594391e-05
+test loss: 0.0025 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 87 | iter: 0 | train loss: 0.0047 | train accuracy: 1.000
+Epoch: 87 | iter: 256 | train loss: 0.0056 | train accuracy: 0.984
+Epoch: 87 | iter: 512 | train loss: 0.0026 | train accuracy: 1.000
+Epoch: 87 | iter: 768 | train loss: 0.0033 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.004044351167976856
+log test # train_acc: 0.004993749782443047,train_lost: 1.2773092748830095e-05
+test loss: 0.0026 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 88 | iter: 0 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 88 | iter: 256 | train loss: 0.0053 | train accuracy: 1.000
+Epoch: 88 | iter: 512 | train loss: 0.0029 | train accuracy: 1.000
+Epoch: 88 | iter: 768 | train loss: 0.0026 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0040361313149333
+log test # train_acc: 0.004987500142306089,train_lost: 1.3293447409523651e-05
+test loss: 0.0027 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 89 | iter: 0 | train loss: 0.0069 | train accuracy: 0.984
+Epoch: 89 | iter: 256 | train loss: 0.0042 | train accuracy: 1.000
+Epoch: 89 | iter: 512 | train loss: 0.0035 | train accuracy: 1.000
+Epoch: 89 | iter: 768 | train loss: 0.0058 | train accuracy: 0.969
+log train # train_acc: 0.9963942170143127,train_lost: 0.004376180935651064
+log test # train_acc: 0.004987500142306089,train_lost: 1.1780699423979968e-05
+test loss: 0.0024 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 90 | iter: 0 | train loss: 0.0028 | train accuracy: 1.000
+Epoch: 90 | iter: 256 | train loss: 0.0032 | train accuracy: 1.000
+Epoch: 90 | iter: 512 | train loss: 0.0027 | train accuracy: 1.000
+Epoch: 90 | iter: 768 | train loss: 0.0095 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00373574229888618
+log test # train_acc: 0.004987500142306089,train_lost: 1.109830554923974e-05
+test loss: 0.0022 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 91 | iter: 0 | train loss: 0.0044 | train accuracy: 1.000
+Epoch: 91 | iter: 256 | train loss: 0.0041 | train accuracy: 0.984
+Epoch: 91 | iter: 512 | train loss: 0.0038 | train accuracy: 1.000
+Epoch: 91 | iter: 768 | train loss: 0.0036 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.003921459428966045
+log test # train_acc: 0.004987500142306089,train_lost: 1.1097356036771089e-05
+test loss: 0.0022 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 92 | iter: 0 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 92 | iter: 256 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 92 | iter: 512 | train loss: 0.0044 | train accuracy: 1.000
+Epoch: 92 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.003109727054834366
+log test # train_acc: 0.004987500142306089,train_lost: 1.1971103049290832e-05
+test loss: 0.0024 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 93 | iter: 0 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 93 | iter: 256 | train loss: 0.0034 | train accuracy: 1.000
+Epoch: 93 | iter: 512 | train loss: 0.0054 | train accuracy: 1.000
+Epoch: 93 | iter: 768 | train loss: 0.0050 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.004020448308438063
+log test # train_acc: 0.004987500142306089,train_lost: 1.0127330824616365e-05
+test loss: 0.0020 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 94 | iter: 0 | train loss: 0.0044 | train accuracy: 1.000
+Epoch: 94 | iter: 256 | train loss: 0.0033 | train accuracy: 1.000
+Epoch: 94 | iter: 512 | train loss: 0.0037 | train accuracy: 1.000
+Epoch: 94 | iter: 768 | train loss: 0.0038 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.003496479708701372
+log test # train_acc: 0.004993749782443047,train_lost: 1.0193388334300835e-05
+test loss: 0.0020 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 95 | iter: 0 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 95 | iter: 256 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 95 | iter: 512 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 95 | iter: 768 | train loss: 0.0066 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.0031233185436576605
+log test # train_acc: 0.004987500142306089,train_lost: 1.0851646948140115e-05
+test loss: 0.0022 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 96 | iter: 0 | train loss: 0.0032 | train accuracy: 1.000
+Epoch: 96 | iter: 256 | train loss: 0.0034 | train accuracy: 1.000
+Epoch: 96 | iter: 512 | train loss: 0.0041 | train accuracy: 1.000
+Epoch: 96 | iter: 768 | train loss: 0.0071 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.003523321356624365
+log test # train_acc: 0.004987500142306089,train_lost: 1.0571909115242306e-05
+test loss: 0.0021 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 97 | iter: 0 | train loss: 0.0055 | train accuracy: 1.000
+Epoch: 97 | iter: 256 | train loss: 0.0043 | train accuracy: 1.000
+Epoch: 97 | iter: 512 | train loss: 0.0036 | train accuracy: 1.000
+Epoch: 97 | iter: 768 | train loss: 0.0053 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0034171154256910086
+log test # train_acc: 0.004987500142306089,train_lost: 1.0678395483409986e-05
+test loss: 0.0021 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 98 | iter: 0 | train loss: 0.0035 | train accuracy: 1.000
+Epoch: 98 | iter: 256 | train loss: 0.0068 | train accuracy: 1.000
+Epoch: 98 | iter: 512 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 98 | iter: 768 | train loss: 0.0021 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.003176880069077015
+log test # train_acc: 0.004987500142306089,train_lost: 9.791748198040295e-06
+test loss: 0.0020 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 99 | iter: 0 | train loss: 0.0036 | train accuracy: 1.000
+Epoch: 99 | iter: 256 | train loss: 0.0030 | train accuracy: 1.000
+Epoch: 99 | iter: 512 | train loss: 0.0061 | train accuracy: 1.000
+Epoch: 99 | iter: 768 | train loss: 0.0032 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.003295586444437504
+log test # train_acc: 0.004987500142306089,train_lost: 1.0277496585331392e-05
+test loss: 0.0021 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 100 | iter: 0 | train loss: 0.0053 | train accuracy: 0.984
+Epoch: 100 | iter: 256 | train loss: 0.0027 | train accuracy: 1.000
+Epoch: 100 | iter: 512 | train loss: 0.0035 | train accuracy: 1.000
+Epoch: 100 | iter: 768 | train loss: 0.0038 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.0035784062929451466
+log test # train_acc: 0.004987500142306089,train_lost: 1.1134074156871065e-05
+test loss: 0.0022 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 101 | iter: 0 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 101 | iter: 256 | train loss: 0.0047 | train accuracy: 0.984
+Epoch: 101 | iter: 512 | train loss: 0.0031 | train accuracy: 1.000
+Epoch: 101 | iter: 768 | train loss: 0.0009 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.003908234182745218
+log test # train_acc: 0.004987500142306089,train_lost: 9.956541362043936e-06
+test loss: 0.0020 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 102 | iter: 0 | train loss: 0.0034 | train accuracy: 1.000
+Epoch: 102 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 102 | iter: 512 | train loss: 0.0027 | train accuracy: 1.000
+Epoch: 102 | iter: 768 | train loss: 0.0021 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.003276434727013111
+log test # train_acc: 0.004981250036507845,train_lost: 1.1625786100921687e-05
+test loss: 0.0023 | test accuracy: 0.996 | bast accuracy: 0.999
+real num: 197.0 | real accuracy: 0.985 | bast real accuracy: 0.995
+
+qq
+Epoch: 103 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 103 | iter: 256 | train loss: 0.0039 | train accuracy: 1.000
+Epoch: 103 | iter: 512 | train loss: 0.0040 | train accuracy: 1.000
+Epoch: 103 | iter: 768 | train loss: 0.0028 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0031463901977986097
+log test # train_acc: 0.004993749782443047,train_lost: 9.174321348837111e-06
+test loss: 0.0018 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 104 | iter: 0 | train loss: 0.0039 | train accuracy: 1.000
+Epoch: 104 | iter: 256 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 104 | iter: 512 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 104 | iter: 768 | train loss: 0.0018 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.003014242509379983
+log test # train_acc: 0.004993749782443047,train_lost: 7.725434443273116e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 105 | iter: 0 | train loss: 0.0061 | train accuracy: 1.000
+Epoch: 105 | iter: 256 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 105 | iter: 512 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 105 | iter: 768 | train loss: 0.0041 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.002829319331794977
+log test # train_acc: 0.004987500142306089,train_lost: 1.0122148523805663e-05
+test loss: 0.0020 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 106 | iter: 0 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 106 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 106 | iter: 512 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 106 | iter: 768 | train loss: 0.0013 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.002812845166772604
+log test # train_acc: 0.004987500142306089,train_lost: 1.0551548257353716e-05
+test loss: 0.0021 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 107 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 107 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 107 | iter: 512 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 107 | iter: 768 | train loss: 0.0024 | train accuracy: 1.000
+log train # train_acc: 0.995192289352417,train_lost: 0.0033874628134071827
+log test # train_acc: 0.004993749782443047,train_lost: 1.0102996384375729e-05
+test loss: 0.0020 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 108 | iter: 0 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 108 | iter: 256 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 108 | iter: 512 | train loss: 0.0032 | train accuracy: 1.000
+Epoch: 108 | iter: 768 | train loss: 0.0020 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0025572909507900476
+log test # train_acc: 0.004993749782443047,train_lost: 8.770991371420678e-06
+test loss: 0.0018 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 109 | iter: 0 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 109 | iter: 256 | train loss: 0.0030 | train accuracy: 1.000
+Epoch: 109 | iter: 512 | train loss: 0.0037 | train accuracy: 1.000
+Epoch: 109 | iter: 768 | train loss: 0.0023 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0026687125209718943
+log test # train_acc: 0.004987500142306089,train_lost: 8.313387297675945e-06
+test loss: 0.0017 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 110 | iter: 0 | train loss: 0.0039 | train accuracy: 1.000
+Epoch: 110 | iter: 256 | train loss: 0.0034 | train accuracy: 1.000
+Epoch: 110 | iter: 512 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 110 | iter: 768 | train loss: 0.0029 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0024346469435840845
+log test # train_acc: 0.004993749782443047,train_lost: 9.518550541542936e-06
+test loss: 0.0019 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 111 | iter: 0 | train loss: 0.0030 | train accuracy: 1.000
+Epoch: 111 | iter: 256 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 111 | iter: 512 | train loss: 0.0025 | train accuracy: 1.000
+Epoch: 111 | iter: 768 | train loss: 0.0011 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0022658968809992075
+log test # train_acc: 0.004987500142306089,train_lost: 8.996198630484287e-06
+test loss: 0.0018 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 112 | iter: 0 | train loss: 0.0049 | train accuracy: 1.000
+Epoch: 112 | iter: 256 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 112 | iter: 512 | train loss: 0.0022 | train accuracy: 0.984
+Epoch: 112 | iter: 768 | train loss: 0.0011 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0027139694429934025
+log test # train_acc: 0.004993749782443047,train_lost: 7.742613888694905e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 113 | iter: 0 | train loss: 0.0027 | train accuracy: 1.000
+Epoch: 113 | iter: 256 | train loss: 0.0030 | train accuracy: 1.000
+Epoch: 113 | iter: 512 | train loss: 0.0045 | train accuracy: 1.000
+Epoch: 113 | iter: 768 | train loss: 0.0014 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0024553267285227776
+log test # train_acc: 0.004993749782443047,train_lost: 7.74728505348321e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 114 | iter: 0 | train loss: 0.0057 | train accuracy: 1.000
+Epoch: 114 | iter: 256 | train loss: 0.0033 | train accuracy: 1.000
+Epoch: 114 | iter: 512 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 114 | iter: 768 | train loss: 0.0027 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0028872033581137657
+log test # train_acc: 0.004993749782443047,train_lost: 8.947590686148033e-06
+test loss: 0.0018 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 115 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 115 | iter: 256 | train loss: 0.0033 | train accuracy: 1.000
+Epoch: 115 | iter: 512 | train loss: 0.0044 | train accuracy: 1.000
+Epoch: 115 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0022412659600377083
+log test # train_acc: 0.004987500142306089,train_lost: 8.932626769819763e-06
+test loss: 0.0018 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 116 | iter: 0 | train loss: 0.0035 | train accuracy: 1.000
+Epoch: 116 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 116 | iter: 512 | train loss: 0.0046 | train accuracy: 0.984
+Epoch: 116 | iter: 768 | train loss: 0.0056 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0028553674928843975
+log test # train_acc: 0.004993749782443047,train_lost: 8.19206798041705e-06
+test loss: 0.0016 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 117 | iter: 0 | train loss: 0.0063 | train accuracy: 1.000
+Epoch: 117 | iter: 256 | train loss: 0.0055 | train accuracy: 0.984
+Epoch: 117 | iter: 512 | train loss: 0.0042 | train accuracy: 1.000
+Epoch: 117 | iter: 768 | train loss: 0.0032 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.00345563143491745
+log test # train_acc: 0.004993749782443047,train_lost: 8.441629688604735e-06
+test loss: 0.0017 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 118 | iter: 0 | train loss: 0.0033 | train accuracy: 1.000
+Epoch: 118 | iter: 256 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 118 | iter: 512 | train loss: 0.0048 | train accuracy: 1.000
+Epoch: 118 | iter: 768 | train loss: 0.0035 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0028130863793194294
+log test # train_acc: 0.004993749782443047,train_lost: 9.054595466295723e-06
+test loss: 0.0018 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 119 | iter: 0 | train loss: 0.0037 | train accuracy: 1.000
+Epoch: 119 | iter: 256 | train loss: 0.0035 | train accuracy: 1.000
+Epoch: 119 | iter: 512 | train loss: 0.0028 | train accuracy: 1.000
+Epoch: 119 | iter: 768 | train loss: 0.0011 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.002317210426554084
+log test # train_acc: 0.004993749782443047,train_lost: 8.581918336858507e-06
+test loss: 0.0017 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 120 | iter: 0 | train loss: 0.0046 | train accuracy: 1.000
+Epoch: 120 | iter: 256 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 120 | iter: 512 | train loss: 0.0034 | train accuracy: 1.000
+Epoch: 120 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0023472728207707405
+log test # train_acc: 0.004993749782443047,train_lost: 7.553049726993777e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 121 | iter: 0 | train loss: 0.0026 | train accuracy: 1.000
+Epoch: 121 | iter: 256 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 121 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 121 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0019011355470865965
+log test # train_acc: 0.004993749782443047,train_lost: 6.677790224784985e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 122 | iter: 0 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 122 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 122 | iter: 512 | train loss: 0.0037 | train accuracy: 1.000
+Epoch: 122 | iter: 768 | train loss: 0.0047 | train accuracy: 0.969
+log train # train_acc: 0.9975961446762085,train_lost: 0.0023489727173000574
+log test # train_acc: 0.004993749782443047,train_lost: 6.394123374775518e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 123 | iter: 0 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 123 | iter: 256 | train loss: 0.0037 | train accuracy: 1.000
+Epoch: 123 | iter: 512 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 123 | iter: 768 | train loss: 0.0013 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.002335518365725875
+log test # train_acc: 0.004993749782443047,train_lost: 7.642521268280689e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 124 | iter: 0 | train loss: 0.0051 | train accuracy: 1.000
+Epoch: 124 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 124 | iter: 512 | train loss: 0.0024 | train accuracy: 1.000
+Epoch: 124 | iter: 768 | train loss: 0.0031 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0024907004553824663
+log test # train_acc: 0.004993749782443047,train_lost: 6.887885319883935e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 125 | iter: 0 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 125 | iter: 256 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 125 | iter: 512 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 125 | iter: 768 | train loss: 0.0016 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.002017110353335738
+log test # train_acc: 0.004993749782443047,train_lost: 6.7115256570104975e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 126 | iter: 0 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 126 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 126 | iter: 512 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 126 | iter: 768 | train loss: 0.0021 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0019506006501615047
+log test # train_acc: 0.004993749782443047,train_lost: 7.250662292790366e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 127 | iter: 0 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 127 | iter: 256 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 127 | iter: 512 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 127 | iter: 768 | train loss: 0.0021 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0016355214174836874
+log test # train_acc: 0.004993749782443047,train_lost: 6.504001248686109e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 128 | iter: 0 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 128 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 128 | iter: 512 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 128 | iter: 768 | train loss: 0.0043 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.002512326231226325
+log test # train_acc: 0.004993749782443047,train_lost: 5.996256732032634e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 129 | iter: 0 | train loss: 0.0042 | train accuracy: 0.984
+Epoch: 129 | iter: 256 | train loss: 0.0042 | train accuracy: 1.000
+Epoch: 129 | iter: 512 | train loss: 0.0024 | train accuracy: 1.000
+Epoch: 129 | iter: 768 | train loss: 0.0021 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.002572794910520315
+log test # train_acc: 0.004987500142306089,train_lost: 7.005735369602917e-06
+test loss: 0.0014 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 130 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 130 | iter: 256 | train loss: 0.0032 | train accuracy: 1.000
+Epoch: 130 | iter: 512 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 130 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001922497060149908
+log test # train_acc: 0.004993749782443047,train_lost: 7.361775715253316e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 131 | iter: 0 | train loss: 0.0037 | train accuracy: 1.000
+Epoch: 131 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 131 | iter: 512 | train loss: 0.0033 | train accuracy: 0.984
+Epoch: 131 | iter: 768 | train loss: 0.0028 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0018514003604650497
+log test # train_acc: 0.004993749782443047,train_lost: 6.265150659601204e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 132 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 132 | iter: 256 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 132 | iter: 512 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 132 | iter: 768 | train loss: 0.0014 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0018722137901932001
+log test # train_acc: 0.004987500142306089,train_lost: 7.0123774094099645e-06
+test loss: 0.0014 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 133 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 133 | iter: 256 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 133 | iter: 512 | train loss: 0.0024 | train accuracy: 1.000
+Epoch: 133 | iter: 768 | train loss: 0.0014 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0016353155951946974
+log test # train_acc: 0.004987500142306089,train_lost: 8.606504707131535e-06
+test loss: 0.0017 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 134 | iter: 0 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 134 | iter: 256 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 134 | iter: 512 | train loss: 0.0033 | train accuracy: 1.000
+Epoch: 134 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0018145005451515317
+log test # train_acc: 0.004987500142306089,train_lost: 8.367919690499548e-06
+test loss: 0.0017 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 135 | iter: 0 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 135 | iter: 256 | train loss: 0.0024 | train accuracy: 1.000
+Epoch: 135 | iter: 512 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 135 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001620086724869907
+log test # train_acc: 0.004987500142306089,train_lost: 6.179197953315452e-06
+test loss: 0.0012 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 136 | iter: 0 | train loss: 0.0030 | train accuracy: 0.984
+Epoch: 136 | iter: 256 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 136 | iter: 512 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 136 | iter: 768 | train loss: 0.0027 | train accuracy: 1.000
+log train # train_acc: 0.9963942170143127,train_lost: 0.0021156384609639645
+log test # train_acc: 0.004987500142306089,train_lost: 7.0815808612678666e-06
+test loss: 0.0014 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 137 | iter: 0 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 137 | iter: 256 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 137 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 137 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0015524555929005146
+log test # train_acc: 0.004993749782443047,train_lost: 7.03438763594022e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 138 | iter: 0 | train loss: 0.0028 | train accuracy: 1.000
+Epoch: 138 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 138 | iter: 512 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 138 | iter: 768 | train loss: 0.0014 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001893362496048212
+log test # train_acc: 0.004987500142306089,train_lost: 6.965103693801211e-06
+test loss: 0.0014 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 139 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 139 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 139 | iter: 512 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 139 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0011401236988604069
+log test # train_acc: 0.004993749782443047,train_lost: 7.155542789405445e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 140 | iter: 0 | train loss: 0.0025 | train accuracy: 1.000
+Epoch: 140 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 140 | iter: 512 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 140 | iter: 768 | train loss: 0.0006 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0016911354614421725
+log test # train_acc: 0.004993749782443047,train_lost: 6.0291995396255516e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 141 | iter: 0 | train loss: 0.0039 | train accuracy: 1.000
+Epoch: 141 | iter: 256 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 141 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 141 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0018117453437298536
+log test # train_acc: 0.004993749782443047,train_lost: 5.695530489902012e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 142 | iter: 0 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 142 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 142 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 142 | iter: 768 | train loss: 0.0015 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.001737801474519074
+log test # train_acc: 0.004993749782443047,train_lost: 5.8444106798560824e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 143 | iter: 0 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 143 | iter: 256 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 143 | iter: 512 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 143 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0014094398356974125
+log test # train_acc: 0.004993749782443047,train_lost: 5.8798973441298585e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 144 | iter: 0 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 144 | iter: 256 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 144 | iter: 512 | train loss: 0.0046 | train accuracy: 0.984
+Epoch: 144 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0016752672381699085
+log test # train_acc: 0.004993749782443047,train_lost: 6.163748366816435e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 145 | iter: 0 | train loss: 0.0032 | train accuracy: 1.000
+Epoch: 145 | iter: 256 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 145 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 145 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0011734117288142443
+log test # train_acc: 0.004993749782443047,train_lost: 6.2959379647509195e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 146 | iter: 0 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 146 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 146 | iter: 512 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 146 | iter: 768 | train loss: 0.0012 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00125974474940449
+log test # train_acc: 0.004993749782443047,train_lost: 6.097236109781079e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 147 | iter: 0 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 147 | iter: 256 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 147 | iter: 512 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 147 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0014065310824662447
+log test # train_acc: 0.004993749782443047,train_lost: 6.277436114032753e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 148 | iter: 0 | train loss: 0.0060 | train accuracy: 0.984
+Epoch: 148 | iter: 256 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 148 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 148 | iter: 768 | train loss: 0.0009 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0014662320027127862
+log test # train_acc: 0.004993749782443047,train_lost: 7.0435548877867404e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 149 | iter: 0 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 149 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 149 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 149 | iter: 768 | train loss: 0.0021 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0015234944876283407
+log test # train_acc: 0.004993749782443047,train_lost: 7.088452093739761e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 150 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 150 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 150 | iter: 512 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 150 | iter: 768 | train loss: 0.0028 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0020807809196412563
+log test # train_acc: 0.004993749782443047,train_lost: 5.320912350725848e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 151 | iter: 0 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 151 | iter: 256 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 151 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 151 | iter: 768 | train loss: 0.0015 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0012131135445088148
+log test # train_acc: 0.004993749782443047,train_lost: 6.778832812415203e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 152 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 152 | iter: 256 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 152 | iter: 512 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 152 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0012875405373051763
+log test # train_acc: 0.004993749782443047,train_lost: 6.410440619220026e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 153 | iter: 0 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 153 | iter: 256 | train loss: 0.0027 | train accuracy: 1.000
+Epoch: 153 | iter: 512 | train loss: 0.0041 | train accuracy: 1.000
+Epoch: 153 | iter: 768 | train loss: 0.0025 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0016914947191253304
+log test # train_acc: 0.004981250036507845,train_lost: 1.1922716112167109e-05
+test loss: 0.0024 | test accuracy: 0.996 | bast accuracy: 0.999
+real num: 197.0 | real accuracy: 0.985 | bast real accuracy: 0.995
+
+qq
+Epoch: 154 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 154 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 154 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 154 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0015537373255938292
+log test # train_acc: 0.004993749782443047,train_lost: 7.590174391225446e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 155 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 155 | iter: 256 | train loss: 0.0043 | train accuracy: 0.984
+Epoch: 155 | iter: 512 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 155 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0014288126258179545
+log test # train_acc: 0.004993749782443047,train_lost: 5.6797916840878315e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 156 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 156 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 156 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 156 | iter: 768 | train loss: 0.0012 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010939051862806082
+log test # train_acc: 0.004993749782443047,train_lost: 5.7835814004647546e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 157 | iter: 0 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 157 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 157 | iter: 512 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 157 | iter: 768 | train loss: 0.0012 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0013636217918246984
+log test # train_acc: 0.004993749782443047,train_lost: 6.09128073847387e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 158 | iter: 0 | train loss: 0.0026 | train accuracy: 1.000
+Epoch: 158 | iter: 256 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 158 | iter: 512 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 158 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001489747315645218
+log test # train_acc: 0.004987500142306089,train_lost: 7.148591521399794e-06
+test loss: 0.0014 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 159 | iter: 0 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 159 | iter: 256 | train loss: 0.0051 | train accuracy: 1.000
+Epoch: 159 | iter: 512 | train loss: 0.0025 | train accuracy: 1.000
+Epoch: 159 | iter: 768 | train loss: 0.0018 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.001962449634447694
+log test # train_acc: 0.004993749782443047,train_lost: 6.739784112141933e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 160 | iter: 0 | train loss: 0.0029 | train accuracy: 0.984
+Epoch: 160 | iter: 256 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 160 | iter: 512 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 160 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0013046135427430272
+log test # train_acc: 0.004993749782443047,train_lost: 5.769557446910767e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 161 | iter: 0 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 161 | iter: 256 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 161 | iter: 512 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 161 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0012122541666030884
+log test # train_acc: 0.004993749782443047,train_lost: 6.672483777947491e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 162 | iter: 0 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 162 | iter: 256 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 162 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 162 | iter: 768 | train loss: 0.0021 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0014418101636692882
+log test # train_acc: 0.004993749782443047,train_lost: 6.8966273829573765e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 163 | iter: 0 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 163 | iter: 256 | train loss: 0.0028 | train accuracy: 1.000
+Epoch: 163 | iter: 512 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 163 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001147918519563973
+log test # train_acc: 0.004993749782443047,train_lost: 8.798628186923452e-06
+test loss: 0.0018 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 164 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 164 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 164 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 164 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008283726056106389
+log test # train_acc: 0.004993749782443047,train_lost: 5.973767201794544e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 165 | iter: 0 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 165 | iter: 256 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 165 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 165 | iter: 768 | train loss: 0.0015 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0014706330839544535
+log test # train_acc: 0.004993749782443047,train_lost: 7.072585958667332e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 166 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 166 | iter: 256 | train loss: 0.0027 | train accuracy: 1.000
+Epoch: 166 | iter: 512 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 166 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001363524585030973
+log test # train_acc: 0.004993749782443047,train_lost: 6.080268576624803e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 167 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 167 | iter: 256 | train loss: 0.0029 | train accuracy: 1.000
+Epoch: 167 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 167 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0013411043910309672
+log test # train_acc: 0.004993749782443047,train_lost: 6.92982985128765e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 168 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 168 | iter: 256 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 168 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 168 | iter: 768 | train loss: 0.0012 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0011956054950132966
+log test # train_acc: 0.004993749782443047,train_lost: 5.593700279860059e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 169 | iter: 0 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 169 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 169 | iter: 512 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 169 | iter: 768 | train loss: 0.0014 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0013586432905867696
+log test # train_acc: 0.004993749782443047,train_lost: 5.173061708774185e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 170 | iter: 0 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 170 | iter: 256 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 170 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 170 | iter: 768 | train loss: 0.0009 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0012064469046890736
+log test # train_acc: 0.004993749782443047,train_lost: 5.243306077318266e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 171 | iter: 0 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 171 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 171 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 171 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001037332694977522
+log test # train_acc: 0.004993749782443047,train_lost: 5.509375114343129e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 172 | iter: 0 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 172 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 172 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 172 | iter: 768 | train loss: 0.0017 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001471497118473053
+log test # train_acc: 0.004993749782443047,train_lost: 7.060824827931356e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 173 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 173 | iter: 256 | train loss: 0.0024 | train accuracy: 1.000
+Epoch: 173 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 173 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0012890765210613608
+log test # train_acc: 0.004993749782443047,train_lost: 4.56948009741609e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 174 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 174 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 174 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 174 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008213755208998919
+log test # train_acc: 0.004993749782443047,train_lost: 6.455704351537861e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 175 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 175 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 175 | iter: 512 | train loss: 0.0049 | train accuracy: 0.984
+Epoch: 175 | iter: 768 | train loss: 0.0018 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0013161225942894816
+log test # train_acc: 0.004993749782443047,train_lost: 5.097749635751825e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 176 | iter: 0 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 176 | iter: 256 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 176 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 176 | iter: 768 | train loss: 0.0013 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010376236168667674
+log test # train_acc: 0.004993749782443047,train_lost: 4.250616257195361e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 177 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 177 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 177 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 177 | iter: 768 | train loss: 0.0022 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0011376258917152882
+log test # train_acc: 0.004993749782443047,train_lost: 5.848684850207064e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 178 | iter: 0 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 178 | iter: 256 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 178 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 178 | iter: 768 | train loss: 0.0009 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0012408385518938303
+log test # train_acc: 0.004993749782443047,train_lost: 4.582375368045177e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 179 | iter: 0 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 179 | iter: 256 | train loss: 0.0033 | train accuracy: 1.000
+Epoch: 179 | iter: 512 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 179 | iter: 768 | train loss: 0.0017 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0020692157559096813
+log test # train_acc: 0.004993749782443047,train_lost: 5.972382950858446e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 180 | iter: 0 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 180 | iter: 256 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 180 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 180 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009741167887113988
+log test # train_acc: 0.004993749782443047,train_lost: 7.153526439651614e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 181 | iter: 0 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 181 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 181 | iter: 512 | train loss: 0.0027 | train accuracy: 0.984
+Epoch: 181 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0014053122140467167
+log test # train_acc: 0.004993749782443047,train_lost: 5.255200449028052e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 182 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 182 | iter: 256 | train loss: 0.0029 | train accuracy: 1.000
+Epoch: 182 | iter: 512 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 182 | iter: 768 | train loss: 0.0026 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0013291488867253065
+log test # train_acc: 0.004993749782443047,train_lost: 5.057592261437094e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 183 | iter: 0 | train loss: 0.0043 | train accuracy: 0.984
+Epoch: 183 | iter: 256 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 183 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 183 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.001158126280643046
+log test # train_acc: 0.004993749782443047,train_lost: 5.396951564762276e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 184 | iter: 0 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 184 | iter: 256 | train loss: 0.0025 | train accuracy: 1.000
+Epoch: 184 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 184 | iter: 768 | train loss: 0.0013 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010474550072103739
+log test # train_acc: 0.004993749782443047,train_lost: 5.75050125917187e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 185 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 185 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 185 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 185 | iter: 768 | train loss: 0.0015 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0013763598399236798
+log test # train_acc: 0.004987500142306089,train_lost: 7.816354809619952e-06
+test loss: 0.0016 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 186 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 186 | iter: 256 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 186 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 186 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010043391957879066
+log test # train_acc: 0.004993749782443047,train_lost: 4.975810497853672e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 187 | iter: 0 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 187 | iter: 256 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 187 | iter: 512 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 187 | iter: 768 | train loss: 0.0013 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0012360773980617523
+log test # train_acc: 0.004993749782443047,train_lost: 5.5636855904594995e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 188 | iter: 0 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 188 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 188 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 188 | iter: 768 | train loss: 0.0011 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007941437652334571
+log test # train_acc: 0.004993749782443047,train_lost: 7.178969553933712e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 189 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 189 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 189 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 189 | iter: 768 | train loss: 0.0037 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001096255611628294
+log test # train_acc: 0.004993749782443047,train_lost: 5.531273018277716e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 190 | iter: 0 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 190 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 190 | iter: 512 | train loss: 0.0024 | train accuracy: 1.000
+Epoch: 190 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0017683283658698201
+log test # train_acc: 0.004993749782443047,train_lost: 7.83717587182764e-06
+test loss: 0.0016 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 191 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 191 | iter: 256 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 191 | iter: 512 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 191 | iter: 768 | train loss: 0.0023 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0015992075204849243
+log test # train_acc: 0.004993749782443047,train_lost: 4.131270998186665e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 192 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 192 | iter: 256 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 192 | iter: 512 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 192 | iter: 768 | train loss: 0.0012 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009398041293025017
+log test # train_acc: 0.004993749782443047,train_lost: 6.195513378770556e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 193 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 193 | iter: 256 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 193 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 193 | iter: 768 | train loss: 0.0013 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007790629169903696
+log test # train_acc: 0.004993749782443047,train_lost: 5.111352038511541e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 194 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 194 | iter: 256 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 194 | iter: 512 | train loss: 0.0030 | train accuracy: 1.000
+Epoch: 194 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009202269138768315
+log test # train_acc: 0.004993749782443047,train_lost: 5.829529072798323e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 195 | iter: 0 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 195 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 195 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 195 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0010024072835221887
+log test # train_acc: 0.004993749782443047,train_lost: 5.205584329814883e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 196 | iter: 0 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 196 | iter: 256 | train loss: 0.0027 | train accuracy: 1.000
+Epoch: 196 | iter: 512 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 196 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001152596203610301
+log test # train_acc: 0.004993749782443047,train_lost: 5.594812137132976e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 197 | iter: 0 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 197 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 197 | iter: 512 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 197 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.000776502420194447
+log test # train_acc: 0.004993749782443047,train_lost: 5.505025001184549e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 198 | iter: 0 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 198 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 198 | iter: 512 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 198 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0009614040027372539
+log test # train_acc: 0.004993749782443047,train_lost: 5.447310286399443e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 199 | iter: 0 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 199 | iter: 256 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 199 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 199 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008148652268573642
+log test # train_acc: 0.004987500142306089,train_lost: 7.0353394221456256e-06
+test loss: 0.0014 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 200 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 200 | iter: 256 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 200 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 200 | iter: 768 | train loss: 0.0019 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010976467747241259
+log test # train_acc: 0.004993749782443047,train_lost: 4.622788765118457e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 201 | iter: 0 | train loss: 0.0033 | train accuracy: 1.000
+Epoch: 201 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 201 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 201 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0011422449024394155
+log test # train_acc: 0.004993749782443047,train_lost: 6.107877652539173e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 202 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 202 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 202 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 202 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007441415218636394
+log test # train_acc: 0.004987500142306089,train_lost: 7.528977675974602e-06
+test loss: 0.0015 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 203 | iter: 0 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 203 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 203 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 203 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.00108759431168437
+log test # train_acc: 0.004993749782443047,train_lost: 5.795994638901902e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 204 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 204 | iter: 256 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 204 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 204 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009122676565311849
+log test # train_acc: 0.004993749782443047,train_lost: 4.282373538444517e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 205 | iter: 0 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 205 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 205 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 205 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.000777721346821636
+log test # train_acc: 0.004993749782443047,train_lost: 5.5732461987645365e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 206 | iter: 0 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 206 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 206 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 206 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007179145468398929
+log test # train_acc: 0.004993749782443047,train_lost: 4.5147367018216755e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 207 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 207 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 207 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 207 | iter: 768 | train loss: 0.0026 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0009621958015486598
+log test # train_acc: 0.004993749782443047,train_lost: 5.714668077416718e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 208 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 208 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 208 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 208 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007323289755731821
+log test # train_acc: 0.004993749782443047,train_lost: 5.803272415505489e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 209 | iter: 0 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 209 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 209 | iter: 512 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 209 | iter: 768 | train loss: 0.0011 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007944686803966761
+log test # train_acc: 0.004993749782443047,train_lost: 5.689002136932686e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 210 | iter: 0 | train loss: 0.0029 | train accuracy: 0.984
+Epoch: 210 | iter: 256 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 210 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 210 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0009818233083933592
+log test # train_acc: 0.004993749782443047,train_lost: 4.83103849546751e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 211 | iter: 0 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 211 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 211 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 211 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006827078177593648
+log test # train_acc: 0.004993749782443047,train_lost: 5.18098477186868e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 212 | iter: 0 | train loss: 0.0016 | train accuracy: 1.000
+Epoch: 212 | iter: 256 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 212 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 212 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010771125089377165
+log test # train_acc: 0.004993749782443047,train_lost: 4.797633664566092e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 213 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 213 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 213 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 213 | iter: 768 | train loss: 0.0046 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007787771173752844
+log test # train_acc: 0.004993749782443047,train_lost: 6.781369847885799e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 214 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 214 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 214 | iter: 512 | train loss: 0.0023 | train accuracy: 1.000
+Epoch: 214 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0012803745921701193
+log test # train_acc: 0.004993749782443047,train_lost: 4.416977390064858e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 215 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 215 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 215 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 215 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007225092267617583
+log test # train_acc: 0.004993749782443047,train_lost: 4.23984829467372e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 216 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 216 | iter: 256 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 216 | iter: 512 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 216 | iter: 768 | train loss: 0.0016 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.001033029635436833
+log test # train_acc: 0.004993749782443047,train_lost: 5.394338586484082e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 217 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 217 | iter: 256 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 217 | iter: 512 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 217 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006477484712377191
+log test # train_acc: 0.004987500142306089,train_lost: 4.3919617382925935e-06
+test loss: 0.0009 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 218 | iter: 0 | train loss: 0.0034 | train accuracy: 1.000
+Epoch: 218 | iter: 256 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 218 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 218 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009268116555176675
+log test # train_acc: 0.004987500142306089,train_lost: 5.28637883689953e-06
+test loss: 0.0011 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 219 | iter: 0 | train loss: 0.0017 | train accuracy: 1.000
+Epoch: 219 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 219 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 219 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007757496787235141
+log test # train_acc: 0.004993749782443047,train_lost: 5.41098415851593e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 220 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 220 | iter: 256 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 220 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 220 | iter: 768 | train loss: 0.0012 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0010780792217701674
+log test # train_acc: 0.004993749782443047,train_lost: 5.725465598516166e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 221 | iter: 0 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 221 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 221 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 221 | iter: 768 | train loss: 0.0013 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.001006794860586524
+log test # train_acc: 0.004993749782443047,train_lost: 5.01966997035197e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 222 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 222 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 222 | iter: 512 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 222 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007976986817084253
+log test # train_acc: 0.004993749782443047,train_lost: 4.664937932830071e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 223 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 223 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 223 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 223 | iter: 768 | train loss: 0.0016 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009375525987707078
+log test # train_acc: 0.004993749782443047,train_lost: 4.622349479177501e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 224 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 224 | iter: 256 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 224 | iter: 512 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 224 | iter: 768 | train loss: 0.0011 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0011411679442971945
+log test # train_acc: 0.004993749782443047,train_lost: 4.640033694158774e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 225 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 225 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 225 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 225 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005679323803633451
+log test # train_acc: 0.004993749782443047,train_lost: 5.805906766909175e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 226 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 226 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 226 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 226 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005077120149508119
+log test # train_acc: 0.004993749782443047,train_lost: 3.941058366763173e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 227 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 227 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 227 | iter: 512 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 227 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010555305052548647
+log test # train_acc: 0.004993749782443047,train_lost: 4.729275133286137e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 228 | iter: 0 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 228 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 228 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 228 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008313698344863951
+log test # train_acc: 0.004993749782443047,train_lost: 5.370330200094031e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 229 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 229 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 229 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 229 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006189938867464662
+log test # train_acc: 0.004993749782443047,train_lost: 5.34677292307606e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 230 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 230 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 230 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 230 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007207774906419218
+log test # train_acc: 0.004987500142306089,train_lost: 5.039702955400571e-06
+test loss: 0.0010 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 231 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 231 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 231 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 231 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.000582655833568424
+log test # train_acc: 0.004993749782443047,train_lost: 3.6747660487890244e-06
+test loss: 0.0007 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 232 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 232 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 232 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 232 | iter: 768 | train loss: 0.0026 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008892234181985259
+log test # train_acc: 0.004993749782443047,train_lost: 4.665548203774961e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 233 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 233 | iter: 256 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 233 | iter: 512 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 233 | iter: 768 | train loss: 0.0046 | train accuracy: 0.969
+log train # train_acc: 0.9975961446762085,train_lost: 0.0009630488930270076
+log test # train_acc: 0.004993749782443047,train_lost: 5.220973434916232e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 234 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 234 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 234 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 234 | iter: 768 | train loss: 0.0015 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006838556146249175
+log test # train_acc: 0.004993749782443047,train_lost: 5.030896772950655e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 235 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 235 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 235 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 235 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0006975488504394889
+log test # train_acc: 0.004993749782443047,train_lost: 5.256280928733759e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 236 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 236 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 236 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 236 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0004862835048697889
+log test # train_acc: 0.004993749782443047,train_lost: 4.343604814494029e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 237 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 237 | iter: 256 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 237 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 237 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006242954405024648
+log test # train_acc: 0.004993749782443047,train_lost: 3.7336137665988645e-06
+test loss: 0.0007 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 238 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 238 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 238 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 238 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0008573433151468635
+log test # train_acc: 0.004993749782443047,train_lost: 5.699692792404676e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 239 | iter: 0 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 239 | iter: 256 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 239 | iter: 512 | train loss: 0.0036 | train accuracy: 1.000
+Epoch: 239 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009910250082612038
+log test # train_acc: 0.004993749782443047,train_lost: 4.978587185178185e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 240 | iter: 0 | train loss: 0.0015 | train accuracy: 1.000
+Epoch: 240 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 240 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 240 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009564383653923869
+log test # train_acc: 0.004993749782443047,train_lost: 5.971023256279295e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 241 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 241 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 241 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 241 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0003373391809873283
+log test # train_acc: 0.004993749782443047,train_lost: 5.607073489954928e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 242 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 242 | iter: 256 | train loss: 0.0032 | train accuracy: 1.000
+Epoch: 242 | iter: 512 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 242 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0015754573978483677
+log test # train_acc: 0.004987500142306089,train_lost: 8.461561264994089e-06
+test loss: 0.0017 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 243 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 243 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 243 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 243 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0012100576423108578
+log test # train_acc: 0.004993749782443047,train_lost: 4.670214366342407e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 244 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 244 | iter: 256 | train loss: 0.0025 | train accuracy: 0.984
+Epoch: 244 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 244 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0007383327465504408
+log test # train_acc: 0.004993749782443047,train_lost: 5.523912477656268e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 245 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 245 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 245 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 245 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.000600819883402437
+log test # train_acc: 0.004987500142306089,train_lost: 6.143432528915582e-06
+test loss: 0.0012 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 246 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 246 | iter: 256 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 246 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 246 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006933835102245212
+log test # train_acc: 0.004993749782443047,train_lost: 5.1391862143645994e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 247 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 247 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 247 | iter: 512 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 247 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008614224498160183
+log test # train_acc: 0.004993749782443047,train_lost: 5.389217221818399e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 248 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 248 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 248 | iter: 512 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 248 | iter: 768 | train loss: 0.0006 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008184515754692256
+log test # train_acc: 0.004993749782443047,train_lost: 3.711585122800898e-06
+test loss: 0.0007 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 249 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 249 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 249 | iter: 512 | train loss: 0.0045 | train accuracy: 1.000
+Epoch: 249 | iter: 768 | train loss: 0.0006 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008183605968952179
+log test # train_acc: 0.004993749782443047,train_lost: 7.13378949512844e-06
+test loss: 0.0014 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 250 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 250 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 250 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 250 | iter: 768 | train loss: 0.0011 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009748861193656921
+log test # train_acc: 0.004993749782443047,train_lost: 6.716084499203134e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 251 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 251 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 251 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 251 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0009209811687469482
+log test # train_acc: 0.004993749782443047,train_lost: 4.97814335176372e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 252 | iter: 0 | train loss: 0.0027 | train accuracy: 1.000
+Epoch: 252 | iter: 256 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 252 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 252 | iter: 768 | train loss: 0.0021 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.000928088731598109
+log test # train_acc: 0.004993749782443047,train_lost: 7.731766345386859e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 253 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 253 | iter: 256 | train loss: 0.0026 | train accuracy: 1.000
+Epoch: 253 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 253 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008717207238078117
+log test # train_acc: 0.004987500142306089,train_lost: 5.9172148212383036e-06
+test loss: 0.0012 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 254 | iter: 0 | train loss: 0.0011 | train accuracy: 1.000
+Epoch: 254 | iter: 256 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 254 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 254 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005196701968088746
+log test # train_acc: 0.004993749782443047,train_lost: 4.687844921136275e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 255 | iter: 0 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 255 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 255 | iter: 512 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 255 | iter: 768 | train loss: 0.0006 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005177889252081513
+log test # train_acc: 0.004993749782443047,train_lost: 4.3967684177914634e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 256 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 256 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 256 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 256 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00043652590829879045
+log test # train_acc: 0.004993749782443047,train_lost: 6.132646831247257e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 257 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 257 | iter: 256 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 257 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 257 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005518397665582597
+log test # train_acc: 0.004993749782443047,train_lost: 4.520323273027316e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 258 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 258 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 258 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 258 | iter: 768 | train loss: 0.0006 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005254059797152877
+log test # train_acc: 0.004993749782443047,train_lost: 5.295310984365642e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 259 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 259 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 259 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 259 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00035716945421881974
+log test # train_acc: 0.004993749782443047,train_lost: 7.412649210891686e-06
+test loss: 0.0015 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 260 | iter: 0 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 260 | iter: 256 | train loss: 0.0018 | train accuracy: 1.000
+Epoch: 260 | iter: 512 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 260 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006444720784202218
+log test # train_acc: 0.004993749782443047,train_lost: 5.194614459469449e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 261 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 261 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 261 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 261 | iter: 768 | train loss: 0.0006 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0004650497285183519
+log test # train_acc: 0.004993749782443047,train_lost: 5.350392711989116e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 262 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 262 | iter: 256 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 262 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 262 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00048249593237414956
+log test # train_acc: 0.004993749782443047,train_lost: 3.559463038982358e-06
+test loss: 0.0007 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 263 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 263 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 263 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 263 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005189559306018054
+log test # train_acc: 0.004993749782443047,train_lost: 5.044397767051123e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 264 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 264 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 264 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 264 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0003003508027177304
+log test # train_acc: 0.004993749782443047,train_lost: 3.2321947855962208e-06
+test loss: 0.0006 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 265 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 265 | iter: 256 | train loss: 0.0029 | train accuracy: 0.984
+Epoch: 265 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 265 | iter: 768 | train loss: 0.0013 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0007472942234016955
+log test # train_acc: 0.004993749782443047,train_lost: 4.715140221378533e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 266 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 266 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 266 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 266 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00029564471333287656
+log test # train_acc: 0.004993749782443047,train_lost: 3.7058221096231136e-06
+test loss: 0.0007 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 267 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 267 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 267 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 267 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010001064511016011
+log test # train_acc: 0.004993749782443047,train_lost: 5.983425580780022e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 268 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 268 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 268 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 268 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006519545568153262
+log test # train_acc: 0.004993749782443047,train_lost: 5.8149435062659904e-06
+test loss: 0.0012 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 269 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 269 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 269 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 269 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006747205625288188
+log test # train_acc: 0.004993749782443047,train_lost: 5.489842351380503e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 270 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 270 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 270 | iter: 512 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 270 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005276136798784137
+log test # train_acc: 0.004993749782443047,train_lost: 5.0793146328942385e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 271 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 271 | iter: 256 | train loss: 0.0019 | train accuracy: 1.000
+Epoch: 271 | iter: 512 | train loss: 0.0028 | train accuracy: 1.000
+Epoch: 271 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007246664608828723
+log test # train_acc: 0.004993749782443047,train_lost: 3.8652706280117854e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 272 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 272 | iter: 256 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 272 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 272 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006369361653923988
+log test # train_acc: 0.004993749782443047,train_lost: 4.914166765956907e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 273 | iter: 0 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 273 | iter: 256 | train loss: 0.0022 | train accuracy: 1.000
+Epoch: 273 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 273 | iter: 768 | train loss: 0.0015 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0008387012640014291
+log test # train_acc: 0.004993749782443047,train_lost: 5.575082013820065e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 274 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 274 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 274 | iter: 512 | train loss: 0.0000 | train accuracy: 1.000
+Epoch: 274 | iter: 768 | train loss: 0.0015 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0012306326534599066
+log test # train_acc: 0.004981250036507845,train_lost: 7.802009349688888e-06
+test loss: 0.0016 | test accuracy: 0.996 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 275 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 275 | iter: 256 | train loss: 0.0021 | train accuracy: 1.000
+Epoch: 275 | iter: 512 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 275 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005658607115037739
+log test # train_acc: 0.004993749782443047,train_lost: 4.071809144079452e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 276 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 276 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 276 | iter: 512 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 276 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.000346159387845546
+log test # train_acc: 0.004993749782443047,train_lost: 5.271559984976193e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 277 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 277 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 277 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 277 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006311475881375372
+log test # train_acc: 0.004993749782443047,train_lost: 4.9460459194961e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 278 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 278 | iter: 256 | train loss: 0.0020 | train accuracy: 1.000
+Epoch: 278 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 278 | iter: 768 | train loss: 0.0008 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005371039151214063
+log test # train_acc: 0.004993749782443047,train_lost: 6.299906090134755e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 279 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 279 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 279 | iter: 512 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 279 | iter: 768 | train loss: 0.0012 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0004976728232577443
+log test # train_acc: 0.004993749782443047,train_lost: 4.860556600760901e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 280 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 280 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 280 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 280 | iter: 768 | train loss: 0.0017 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00044772381079383194
+log test # train_acc: 0.004993749782443047,train_lost: 4.626457666745409e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 281 | iter: 0 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 281 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 281 | iter: 512 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 281 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005181588931009173
+log test # train_acc: 0.004993749782443047,train_lost: 4.501580406213179e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 282 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 282 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 282 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 282 | iter: 768 | train loss: 0.0023 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0007597877993248403
+log test # train_acc: 0.004993749782443047,train_lost: 5.21108722750796e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 283 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 283 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 283 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 283 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00026496275677345693
+log test # train_acc: 0.004993749782443047,train_lost: 3.987232958024833e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 284 | iter: 0 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 284 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 284 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 284 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0008423450635746121
+log test # train_acc: 0.004993749782443047,train_lost: 5.585782218986424e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 285 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 285 | iter: 256 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 285 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 285 | iter: 768 | train loss: 0.0014 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0010060775093734264
+log test # train_acc: 0.004993749782443047,train_lost: 4.380056452646386e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 286 | iter: 0 | train loss: 0.0013 | train accuracy: 1.000
+Epoch: 286 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 286 | iter: 512 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 286 | iter: 768 | train loss: 0.0001 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.000569768832065165
+log test # train_acc: 0.004993749782443047,train_lost: 5.076686647953466e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 287 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 287 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 287 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 287 | iter: 768 | train loss: 0.0007 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00039360186201520264
+log test # train_acc: 0.004993749782443047,train_lost: 6.252491857594578e-06
+test loss: 0.0013 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 288 | iter: 0 | train loss: 0.0008 | train accuracy: 1.000
+Epoch: 288 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 288 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 288 | iter: 768 | train loss: 0.0015 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005418056389316916
+log test # train_acc: 0.004993749782443047,train_lost: 4.523364623310044e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 289 | iter: 0 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 289 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 289 | iter: 512 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 289 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00046823115553706884
+log test # train_acc: 0.004993749782443047,train_lost: 4.20979222326423e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 290 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 290 | iter: 256 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 290 | iter: 512 | train loss: 0.0010 | train accuracy: 1.000
+Epoch: 290 | iter: 768 | train loss: 0.0002 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0008642455795779824
+log test # train_acc: 0.004993749782443047,train_lost: 5.153156962478533e-06
+test loss: 0.0010 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 291 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 291 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 291 | iter: 512 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 291 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0005305950762704015
+log test # train_acc: 0.004993749782443047,train_lost: 4.6847344492562115e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 292 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 292 | iter: 256 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 292 | iter: 512 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 292 | iter: 768 | train loss: 0.0004 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00047311553498730063
+log test # train_acc: 0.004993749782443047,train_lost: 5.287588464852888e-06
+test loss: 0.0011 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 293 | iter: 0 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 293 | iter: 256 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 293 | iter: 512 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 293 | iter: 768 | train loss: 0.0010 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006977024022489786
+log test # train_acc: 0.004987500142306089,train_lost: 5.771145424660062e-06
+test loss: 0.0012 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 294 | iter: 0 | train loss: 0.0003 | train accuracy: 1.000
+Epoch: 294 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 294 | iter: 512 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 294 | iter: 768 | train loss: 0.0011 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00075954117346555
+log test # train_acc: 0.004987500142306089,train_lost: 7.288509095815243e-06
+test loss: 0.0015 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 198.0 | real accuracy: 0.990 | bast real accuracy: 0.995
+
+qq
+Epoch: 295 | iter: 0 | train loss: 0.0012 | train accuracy: 1.000
+Epoch: 295 | iter: 256 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 295 | iter: 512 | train loss: 0.0009 | train accuracy: 1.000
+Epoch: 295 | iter: 768 | train loss: 0.0005 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.0006983646308071911
+log test # train_acc: 0.004993749782443047,train_lost: 4.745825208374299e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 296 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 296 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 296 | iter: 512 | train loss: 0.0006 | train accuracy: 1.000
+Epoch: 296 | iter: 768 | train loss: 0.0006 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00040339326369576156
+log test # train_acc: 0.004993749782443047,train_lost: 3.9172114156826865e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 297 | iter: 0 | train loss: 0.0005 | train accuracy: 1.000
+Epoch: 297 | iter: 256 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 297 | iter: 512 | train loss: 0.0059 | train accuracy: 0.984
+Epoch: 297 | iter: 768 | train loss: 0.0000 | train accuracy: 1.000
+log train # train_acc: 0.9975961446762085,train_lost: 0.0011469107121229172
+log test # train_acc: 0.004993749782443047,train_lost: 4.133016773266718e-06
+test loss: 0.0008 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 298 | iter: 0 | train loss: 0.0004 | train accuracy: 1.000
+Epoch: 298 | iter: 256 | train loss: 0.0001 | train accuracy: 1.000
+Epoch: 298 | iter: 512 | train loss: 0.0014 | train accuracy: 1.000
+Epoch: 298 | iter: 768 | train loss: 0.0003 | train accuracy: 1.000
+log train # train_acc: 1.0,train_lost: 0.00047789650852791965
+log test # train_acc: 0.004993749782443047,train_lost: 4.504866865318036e-06
+test loss: 0.0009 | test accuracy: 0.999 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+qq
+Epoch: 299 | iter: 0 | train loss: 0.0002 | train accuracy: 1.000
+Epoch: 299 | iter: 256 | train loss: 0.0017 | train accuracy: 0.984
+Epoch: 299 | iter: 512 | train loss: 0.0007 | train accuracy: 1.000
+Epoch: 299 | iter: 768 | train loss: 0.0006 | train accuracy: 1.000
+log train # train_acc: 0.9987980723381042,train_lost: 0.0006562902708537877
+log test # train_acc: 0.004987500142306089,train_lost: 6.154641596367583e-06
+test loss: 0.0012 | test accuracy: 0.998 | bast accuracy: 0.999
+real num: 199.0 | real accuracy: 0.995 | bast real accuracy: 0.995
+
+[*] Finished

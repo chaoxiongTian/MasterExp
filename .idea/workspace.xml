@@ -6,20 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/baidu_new/test_labels.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/baidu_new/train_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize_2/test.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize/test.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize_2/test_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize/test_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize_2/train_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/authorize/train_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard/train_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard/train_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard_2/test.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard/test.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard_2/test_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/blizzard_2/train_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net/train_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net/train_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net_2/test.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net/test.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net_2/test_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/data_sets/captcha_net_2/train_labels.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,13 +22,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="305" column="43" selection-start-line="305" selection-start-column="43" selection-end-line="305" selection-end-column="43" />
+            <state relative-caret-position="19">
+              <caret line="335" lean-forward="true" selection-start-line="335" selection-end-line="335" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#9304#10405#0" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="1995">
+                <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/train.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-630" />
           </provider>
         </entry>
       </file>
@@ -169,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="32" />
     <option name="width" value="1920" />
     <option name="height" value="1048" />
@@ -188,23 +193,6 @@
             <path>
               <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-              <item name="data_sets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasterExp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasterExp" type="462c0819:PsiDirectoryNode" />
-              <item name="CaptchaNet" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,11 +348,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.ceshi" />
-      <item itemvalue="Python.save_mnist_image" />
-      <item itemvalue="Python.ceshi (2)" />
-      <item itemvalue="Python.read_log" />
       <item itemvalue="Python.ceshi (1)" />
+      <item itemvalue="Python.ceshi (2)" />
+      <item itemvalue="Python.ceshi" />
+      <item itemvalue="Python.read_log" />
+      <item itemvalue="Python.save_mnist_image" />
     </list>
     <recent_temporary>
       <list>
@@ -611,23 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/read_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="613">
-            <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaSegment/segment_drop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
@@ -666,10 +637,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/read_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1995">
+            <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_up_log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="36" column="59" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="305" column="43" selection-start-line="305" selection-start-column="43" selection-end-line="305" selection-end-column="43" />
+        <state relative-caret-position="19">
+          <caret line="335" lean-forward="true" selection-start-line="335" selection-end-line="335" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#9304#10405#0" />

@@ -1,0 +1,439 @@
+
+[ARGUMENTS]
+Namespace(alpha=0.00784313725490196, batch_size=64, captcha='qq', captcha_len=4, ckpt_dir='checkpoints', cuda=True, data_sets='data_sets', epoch=200, epsilon=0.03, fun='fgsm', iteration=3, load_ckpt='', lr=0.0001, mode='train', net='SimpleCnn5', output_dir='output', real_captcha_len=4, seed=1, silent=False, target=-1, tensorboard=False, test_folder='test', test_num=0, train_folder='train', train_num=0, visdom=False, visdom_port=55558)
+qq
+Epoch: 0 | iter: 0 | train loss: 0.6862 | train accuracy: 0.047
+Epoch: 0 | iter: 256 | train loss: 0.5938 | train accuracy: 0.031
+Epoch: 0 | iter: 512 | train loss: 0.4556 | train accuracy: 0.016
+Epoch: 0 | iter: 768 | train loss: 0.2949 | train accuracy: 0.000
+log train # train_acc: 0.03365384787321091,train_lost: 0.5137596130371094
+log test # train_acc: 0.00019999999494757503,train_lost: 0.002063760068267584
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.4128 | test accuracy: 0.040 | bast accuracy: 0.040
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 1 | iter: 0 | train loss: 0.2618 | train accuracy: 0.094
+Epoch: 1 | iter: 256 | train loss: 0.1834 | train accuracy: 0.047
+Epoch: 1 | iter: 512 | train loss: 0.1717 | train accuracy: 0.016
+Epoch: 1 | iter: 768 | train loss: 0.1696 | train accuracy: 0.031
+log train # train_acc: 0.03725961595773697,train_lost: 0.18858104944229126
+log test # train_acc: 0.00011250000534346327,train_lost: 0.0011718823807314038
+test loss: 0.2344 | test accuracy: 0.023 | bast accuracy: 0.040
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 2 | iter: 0 | train loss: 0.1680 | train accuracy: 0.031
+Epoch: 2 | iter: 256 | train loss: 0.1706 | train accuracy: 0.062
+Epoch: 2 | iter: 512 | train loss: 0.1717 | train accuracy: 0.031
+Epoch: 2 | iter: 768 | train loss: 0.1726 | train accuracy: 0.031
+log train # train_acc: 0.042067307978868484,train_lost: 0.16923072934150696
+log test # train_acc: 0.0003812500217463821,train_lost: 0.0011724536307156086
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2345 | test accuracy: 0.076 | bast accuracy: 0.076
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 3 | iter: 0 | train loss: 0.1686 | train accuracy: 0.016
+Epoch: 3 | iter: 256 | train loss: 0.1692 | train accuracy: 0.078
+Epoch: 3 | iter: 512 | train loss: 0.1676 | train accuracy: 0.047
+Epoch: 3 | iter: 768 | train loss: 0.1667 | train accuracy: 0.094
+log train # train_acc: 0.05528846010565758,train_lost: 0.16856619715690613
+log test # train_acc: 0.0004312499950174242,train_lost: 0.001169628114439547
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2339 | test accuracy: 0.086 | bast accuracy: 0.086
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 4 | iter: 0 | train loss: 0.1676 | train accuracy: 0.062
+Epoch: 4 | iter: 256 | train loss: 0.1705 | train accuracy: 0.047
+Epoch: 4 | iter: 512 | train loss: 0.1698 | train accuracy: 0.031
+Epoch: 4 | iter: 768 | train loss: 0.1697 | train accuracy: 0.062
+log train # train_acc: 0.05408653989434242,train_lost: 0.16865523159503937
+log test # train_acc: 0.00028124998789280653,train_lost: 0.0011714845895767212
+test loss: 0.2343 | test accuracy: 0.056 | bast accuracy: 0.086
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 5 | iter: 0 | train loss: 0.1678 | train accuracy: 0.109
+Epoch: 5 | iter: 256 | train loss: 0.1691 | train accuracy: 0.047
+Epoch: 5 | iter: 512 | train loss: 0.1695 | train accuracy: 0.062
+Epoch: 5 | iter: 768 | train loss: 0.1665 | train accuracy: 0.188
+log train # train_acc: 0.07331730425357819,train_lost: 0.16794554889202118
+log test # train_acc: 0.000375000003259629,train_lost: 0.0011649761581793427
+test loss: 0.2330 | test accuracy: 0.075 | bast accuracy: 0.086
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 6 | iter: 0 | train loss: 0.1704 | train accuracy: 0.016
+Epoch: 6 | iter: 256 | train loss: 0.1662 | train accuracy: 0.078
+Epoch: 6 | iter: 512 | train loss: 0.1698 | train accuracy: 0.047
+Epoch: 6 | iter: 768 | train loss: 0.1638 | train accuracy: 0.188
+log train # train_acc: 0.07572115212678909,train_lost: 0.1675434112548828
+log test # train_acc: 0.0003124999930150807,train_lost: 0.0011624982580542564
+test loss: 0.2325 | test accuracy: 0.062 | bast accuracy: 0.086
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 7 | iter: 0 | train loss: 0.1682 | train accuracy: 0.062
+Epoch: 7 | iter: 256 | train loss: 0.1669 | train accuracy: 0.109
+Epoch: 7 | iter: 512 | train loss: 0.1653 | train accuracy: 0.078
+Epoch: 7 | iter: 768 | train loss: 0.1648 | train accuracy: 0.062
+log train # train_acc: 0.08173076808452606,train_lost: 0.16658654808998108
+log test # train_acc: 0.00031874998239800334,train_lost: 0.0011709029786288738
+test loss: 0.2342 | test accuracy: 0.064 | bast accuracy: 0.086
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 8 | iter: 0 | train loss: 0.1661 | train accuracy: 0.109
+Epoch: 8 | iter: 256 | train loss: 0.1649 | train accuracy: 0.094
+Epoch: 8 | iter: 512 | train loss: 0.1640 | train accuracy: 0.172
+Epoch: 8 | iter: 768 | train loss: 0.1639 | train accuracy: 0.062
+log train # train_acc: 0.08894230425357819,train_lost: 0.16650190949440002
+log test # train_acc: 0.0007187500013969839,train_lost: 0.0011662626639008522
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2333 | test accuracy: 0.144 | bast accuracy: 0.144
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 9 | iter: 0 | train loss: 0.1677 | train accuracy: 0.078
+Epoch: 9 | iter: 256 | train loss: 0.1655 | train accuracy: 0.047
+Epoch: 9 | iter: 512 | train loss: 0.1655 | train accuracy: 0.078
+Epoch: 9 | iter: 768 | train loss: 0.1648 | train accuracy: 0.094
+log train # train_acc: 0.08173076808452606,train_lost: 0.16545356810092926
+log test # train_acc: 0.0005999999702908099,train_lost: 0.0011595864780247211
+test loss: 0.2319 | test accuracy: 0.120 | bast accuracy: 0.144
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 10 | iter: 0 | train loss: 0.1650 | train accuracy: 0.094
+Epoch: 10 | iter: 256 | train loss: 0.1709 | train accuracy: 0.016
+Epoch: 10 | iter: 512 | train loss: 0.1645 | train accuracy: 0.109
+Epoch: 10 | iter: 768 | train loss: 0.1652 | train accuracy: 0.125
+log train # train_acc: 0.10096153616905212,train_lost: 0.16511568427085876
+log test # train_acc: 0.0004500000213738531,train_lost: 0.001143438508734107
+test loss: 0.2287 | test accuracy: 0.090 | bast accuracy: 0.144
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 11 | iter: 0 | train loss: 0.1622 | train accuracy: 0.125
+Epoch: 11 | iter: 256 | train loss: 0.1623 | train accuracy: 0.141
+Epoch: 11 | iter: 512 | train loss: 0.1661 | train accuracy: 0.047
+Epoch: 11 | iter: 768 | train loss: 0.1639 | train accuracy: 0.125
+log train # train_acc: 0.11778846383094788,train_lost: 0.1637691855430603
+log test # train_acc: 0.00023750000400468707,train_lost: 0.001134974998421967
+test loss: 0.2270 | test accuracy: 0.047 | bast accuracy: 0.144
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 12 | iter: 0 | train loss: 0.1629 | train accuracy: 0.109
+Epoch: 12 | iter: 256 | train loss: 0.1645 | train accuracy: 0.125
+Epoch: 12 | iter: 512 | train loss: 0.1626 | train accuracy: 0.188
+Epoch: 12 | iter: 768 | train loss: 0.1670 | train accuracy: 0.031
+log train # train_acc: 0.13581730425357819,train_lost: 0.16363032162189484
+log test # train_acc: 0.001075000036507845,train_lost: 0.0011306880041956902
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2261 | test accuracy: 0.215 | bast accuracy: 0.215
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 13 | iter: 0 | train loss: 0.1616 | train accuracy: 0.094
+Epoch: 13 | iter: 256 | train loss: 0.1592 | train accuracy: 0.219
+Epoch: 13 | iter: 512 | train loss: 0.1601 | train accuracy: 0.188
+Epoch: 13 | iter: 768 | train loss: 0.1608 | train accuracy: 0.125
+log train # train_acc: 0.12860576808452606,train_lost: 0.16146454215049744
+log test # train_acc: 0.0009937500581145287,train_lost: 0.0011099206749349833
+test loss: 0.2220 | test accuracy: 0.199 | bast accuracy: 0.215
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 14 | iter: 0 | train loss: 0.1589 | train accuracy: 0.188
+Epoch: 14 | iter: 256 | train loss: 0.1576 | train accuracy: 0.172
+Epoch: 14 | iter: 512 | train loss: 0.1619 | train accuracy: 0.172
+Epoch: 14 | iter: 768 | train loss: 0.1569 | train accuracy: 0.250
+log train # train_acc: 0.17067307233810425,train_lost: 0.15925456583499908
+log test # train_acc: 0.0008687499794177711,train_lost: 0.001097292872145772
+test loss: 0.2195 | test accuracy: 0.174 | bast accuracy: 0.215
+real num: 0.0 | real accuracy: 0.000 | bast real accuracy: 0.000
+
+qq
+Epoch: 15 | iter: 0 | train loss: 0.1589 | train accuracy: 0.234
+Epoch: 15 | iter: 256 | train loss: 0.1558 | train accuracy: 0.266
+Epoch: 15 | iter: 512 | train loss: 0.1539 | train accuracy: 0.234
+Epoch: 15 | iter: 768 | train loss: 0.1601 | train accuracy: 0.156
+log train # train_acc: 0.19951923191547394,train_lost: 0.15725550055503845
+log test # train_acc: 0.001806250074878335,train_lost: 0.0010660231346264482
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.2132 | test accuracy: 0.361 | bast accuracy: 0.361
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 6.0 | real accuracy: 0.030 | bast real accuracy: 0.030
+
+qq
+Epoch: 16 | iter: 0 | train loss: 0.1527 | train accuracy: 0.359
+Epoch: 16 | iter: 256 | train loss: 0.1573 | train accuracy: 0.172
+Epoch: 16 | iter: 512 | train loss: 0.1523 | train accuracy: 0.312
+Epoch: 16 | iter: 768 | train loss: 0.1520 | train accuracy: 0.344
+log train # train_acc: 0.24038460850715637,train_lost: 0.1546274572610855
+log test # train_acc: 0.0012749999295920134,train_lost: 0.0010328355710953474
+test loss: 0.2066 | test accuracy: 0.255 | bast accuracy: 0.361
+real num: 1.0 | real accuracy: 0.005 | bast real accuracy: 0.030
+
+qq
+Epoch: 17 | iter: 0 | train loss: 0.1521 | train accuracy: 0.219
+Epoch: 17 | iter: 256 | train loss: 0.1542 | train accuracy: 0.219
+Epoch: 17 | iter: 512 | train loss: 0.1461 | train accuracy: 0.344
+Epoch: 17 | iter: 768 | train loss: 0.1464 | train accuracy: 0.375
+log train # train_acc: 0.24639423191547394,train_lost: 0.15090173482894897
+log test # train_acc: 0.0019499999471008778,train_lost: 0.0009894858812913299
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1979 | test accuracy: 0.390 | bast accuracy: 0.390
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 7.0 | real accuracy: 0.035 | bast real accuracy: 0.035
+
+qq
+Epoch: 18 | iter: 0 | train loss: 0.1501 | train accuracy: 0.281
+Epoch: 18 | iter: 256 | train loss: 0.1480 | train accuracy: 0.281
+Epoch: 18 | iter: 512 | train loss: 0.1492 | train accuracy: 0.234
+Epoch: 18 | iter: 768 | train loss: 0.1504 | train accuracy: 0.250
+log train # train_acc: 0.29807692766189575,train_lost: 0.14658528566360474
+log test # train_acc: 0.002812500111758709,train_lost: 0.000930602487642318
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1861 | test accuracy: 0.562 | bast accuracy: 0.562
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 23.0 | real accuracy: 0.115 | bast real accuracy: 0.115
+
+qq
+Epoch: 19 | iter: 0 | train loss: 0.1407 | train accuracy: 0.359
+Epoch: 19 | iter: 256 | train loss: 0.1388 | train accuracy: 0.359
+Epoch: 19 | iter: 512 | train loss: 0.1399 | train accuracy: 0.328
+Epoch: 19 | iter: 768 | train loss: 0.1231 | train accuracy: 0.562
+log train # train_acc: 0.38461539149284363,train_lost: 0.1373610943555832
+log test # train_acc: 0.0033562500029802322,train_lost: 0.0008616689592599869
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1723 | test accuracy: 0.671 | bast accuracy: 0.671
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 45.0 | real accuracy: 0.225 | bast real accuracy: 0.225
+
+qq
+Epoch: 20 | iter: 0 | train loss: 0.1303 | train accuracy: 0.469
+Epoch: 20 | iter: 256 | train loss: 0.1326 | train accuracy: 0.484
+Epoch: 20 | iter: 512 | train loss: 0.1269 | train accuracy: 0.562
+Epoch: 20 | iter: 768 | train loss: 0.1131 | train accuracy: 0.594
+log train # train_acc: 0.49639421701431274,train_lost: 0.12678836286067963
+log test # train_acc: 0.003137500025331974,train_lost: 0.0007574070477858186
+test loss: 0.1515 | test accuracy: 0.627 | bast accuracy: 0.671
+real num: 35.0 | real accuracy: 0.175 | bast real accuracy: 0.225
+
+qq
+Epoch: 21 | iter: 0 | train loss: 0.1223 | train accuracy: 0.469
+Epoch: 21 | iter: 256 | train loss: 0.1193 | train accuracy: 0.547
+Epoch: 21 | iter: 512 | train loss: 0.1165 | train accuracy: 0.547
+Epoch: 21 | iter: 768 | train loss: 0.1121 | train accuracy: 0.625
+log train # train_acc: 0.5396634340286255,train_lost: 0.11585338413715363
+log test # train_acc: 0.0036812499165534973,train_lost: 0.0006804351578466594
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1361 | test accuracy: 0.736 | bast accuracy: 0.736
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 64.0 | real accuracy: 0.320 | bast real accuracy: 0.320
+
+qq
+Epoch: 22 | iter: 0 | train loss: 0.1180 | train accuracy: 0.422
+Epoch: 22 | iter: 256 | train loss: 0.1071 | train accuracy: 0.625
+Epoch: 22 | iter: 512 | train loss: 0.1070 | train accuracy: 0.609
+Epoch: 22 | iter: 768 | train loss: 0.1039 | train accuracy: 0.594
+log train # train_acc: 0.5805288553237915,train_lost: 0.10608308017253876
+log test # train_acc: 0.0042500002309679985,train_lost: 0.0005885440623387694
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1177 | test accuracy: 0.850 | bast accuracy: 0.850
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 108.0 | real accuracy: 0.540 | bast real accuracy: 0.540
+
+qq
+Epoch: 23 | iter: 0 | train loss: 0.1078 | train accuracy: 0.516
+Epoch: 23 | iter: 256 | train loss: 0.0967 | train accuracy: 0.672
+Epoch: 23 | iter: 512 | train loss: 0.0846 | train accuracy: 0.750
+Epoch: 23 | iter: 768 | train loss: 0.0875 | train accuracy: 0.750
+log train # train_acc: 0.6862980723381042,train_lost: 0.09305381774902344
+log test # train_acc: 0.004337499849498272,train_lost: 0.0005249321111477911
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.1050 | test accuracy: 0.868 | bast accuracy: 0.868
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 120.0 | real accuracy: 0.600 | bast real accuracy: 0.600
+
+qq
+Epoch: 24 | iter: 0 | train loss: 0.0855 | train accuracy: 0.672
+Epoch: 24 | iter: 256 | train loss: 0.0863 | train accuracy: 0.688
+Epoch: 24 | iter: 512 | train loss: 0.0841 | train accuracy: 0.797
+Epoch: 24 | iter: 768 | train loss: 0.0807 | train accuracy: 0.719
+log train # train_acc: 0.7475961446762085,train_lost: 0.08268681913614273
+log test # train_acc: 0.004568750038743019,train_lost: 0.00042590603698045015
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0852 | test accuracy: 0.914 | bast accuracy: 0.914
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 143.0 | real accuracy: 0.715 | bast real accuracy: 0.715
+
+qq
+Epoch: 25 | iter: 0 | train loss: 0.0750 | train accuracy: 0.828
+Epoch: 25 | iter: 256 | train loss: 0.0776 | train accuracy: 0.797
+Epoch: 25 | iter: 512 | train loss: 0.0682 | train accuracy: 0.859
+Epoch: 25 | iter: 768 | train loss: 0.0752 | train accuracy: 0.844
+log train # train_acc: 0.8028846383094788,train_lost: 0.07350042462348938
+log test # train_acc: 0.004631249699741602,train_lost: 0.0003465432964731008
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0693 | test accuracy: 0.926 | bast accuracy: 0.926
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 149.0 | real accuracy: 0.745 | bast real accuracy: 0.745
+
+qq
+Epoch: 26 | iter: 0 | train loss: 0.0710 | train accuracy: 0.859
+Epoch: 26 | iter: 256 | train loss: 0.0676 | train accuracy: 0.766
+Epoch: 26 | iter: 512 | train loss: 0.0633 | train accuracy: 0.844
+Epoch: 26 | iter: 768 | train loss: 0.0616 | train accuracy: 0.875
+log train # train_acc: 0.84375,train_lost: 0.06623440235853195
+log test # train_acc: 0.004768750164657831,train_lost: 0.00032814836595207453
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0656 | test accuracy: 0.954 | bast accuracy: 0.954
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 168.0 | real accuracy: 0.840 | bast real accuracy: 0.840
+
+qq
+Epoch: 27 | iter: 0 | train loss: 0.0592 | train accuracy: 0.859
+Epoch: 27 | iter: 256 | train loss: 0.0608 | train accuracy: 0.875
+Epoch: 27 | iter: 512 | train loss: 0.0540 | train accuracy: 0.859
+Epoch: 27 | iter: 768 | train loss: 0.0575 | train accuracy: 0.906
+log train # train_acc: 0.8617788553237915,train_lost: 0.058630846440792084
+log test # train_acc: 0.004793750122189522,train_lost: 0.0002984347229357809
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0597 | test accuracy: 0.959 | bast accuracy: 0.959
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 171.0 | real accuracy: 0.855 | bast real accuracy: 0.855
+
+qq
+Epoch: 28 | iter: 0 | train loss: 0.0580 | train accuracy: 0.859
+Epoch: 28 | iter: 256 | train loss: 0.0513 | train accuracy: 0.922
+Epoch: 28 | iter: 512 | train loss: 0.0546 | train accuracy: 0.844
+Epoch: 28 | iter: 768 | train loss: 0.0602 | train accuracy: 0.781
+log train # train_acc: 0.8846153616905212,train_lost: 0.053106579929590225
+log test # train_acc: 0.004550000187009573,train_lost: 0.0003014571266248822
+test loss: 0.0603 | test accuracy: 0.910 | bast accuracy: 0.959
+real num: 137.0 | real accuracy: 0.685 | bast real accuracy: 0.855
+
+qq
+Epoch: 29 | iter: 0 | train loss: 0.0518 | train accuracy: 0.828
+Epoch: 29 | iter: 256 | train loss: 0.0601 | train accuracy: 0.875
+Epoch: 29 | iter: 512 | train loss: 0.0554 | train accuracy: 0.859
+Epoch: 29 | iter: 768 | train loss: 0.0531 | train accuracy: 0.906
+log train # train_acc: 0.890625,train_lost: 0.05041811987757683
+log test # train_acc: 0.004799999762326479,train_lost: 0.0002556473482400179
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0511 | test accuracy: 0.960 | bast accuracy: 0.960
+real num: 171.0 | real accuracy: 0.855 | bast real accuracy: 0.855
+
+qq
+Epoch: 30 | iter: 0 | train loss: 0.0433 | train accuracy: 0.953
+Epoch: 30 | iter: 256 | train loss: 0.0467 | train accuracy: 0.938
+Epoch: 30 | iter: 512 | train loss: 0.0411 | train accuracy: 0.922
+Epoch: 30 | iter: 768 | train loss: 0.0423 | train accuracy: 0.906
+log train # train_acc: 0.9230769276618958,train_lost: 0.044862471520900726
+log test # train_acc: 0.004881249740719795,train_lost: 0.00021007463510613889
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0420 | test accuracy: 0.976 | bast accuracy: 0.976
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 183.0 | real accuracy: 0.915 | bast real accuracy: 0.915
+
+qq
+Epoch: 31 | iter: 0 | train loss: 0.0399 | train accuracy: 0.953
+Epoch: 31 | iter: 256 | train loss: 0.0448 | train accuracy: 0.953
+Epoch: 31 | iter: 512 | train loss: 0.0434 | train accuracy: 0.906
+Epoch: 31 | iter: 768 | train loss: 0.0444 | train accuracy: 0.938
+log train # train_acc: 0.9435096383094788,train_lost: 0.0409465953707695
+log test # train_acc: 0.004856249783188105,train_lost: 0.00020792000577785075
+test loss: 0.0416 | test accuracy: 0.971 | bast accuracy: 0.976
+real num: 180.0 | real accuracy: 0.900 | bast real accuracy: 0.915
+
+qq
+Epoch: 32 | iter: 0 | train loss: 0.0354 | train accuracy: 0.938
+Epoch: 32 | iter: 256 | train loss: 0.0434 | train accuracy: 0.938
+Epoch: 32 | iter: 512 | train loss: 0.0404 | train accuracy: 0.969
+Epoch: 32 | iter: 768 | train loss: 0.0417 | train accuracy: 0.906
+log train # train_acc: 0.9362980723381042,train_lost: 0.039776548743247986
+log test # train_acc: 0.004881249740719795,train_lost: 0.00018562324112281203
+test loss: 0.0371 | test accuracy: 0.976 | bast accuracy: 0.976
+real num: 183.0 | real accuracy: 0.915 | bast real accuracy: 0.915
+
+qq
+Epoch: 33 | iter: 0 | train loss: 0.0369 | train accuracy: 0.953
+Epoch: 33 | iter: 256 | train loss: 0.0354 | train accuracy: 0.969
+Epoch: 33 | iter: 512 | train loss: 0.0441 | train accuracy: 0.828
+Epoch: 33 | iter: 768 | train loss: 0.0298 | train accuracy: 1.000
+log train # train_acc: 0.9471153616905212,train_lost: 0.03481079638004303
+log test # train_acc: 0.004900000058114529,train_lost: 0.00016140232037287205
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0323 | test accuracy: 0.980 | bast accuracy: 0.980
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 185.0 | real accuracy: 0.925 | bast real accuracy: 0.925
+
+qq
+Epoch: 34 | iter: 0 | train loss: 0.0344 | train accuracy: 0.922
+Epoch: 34 | iter: 256 | train loss: 0.0330 | train accuracy: 0.906
+Epoch: 34 | iter: 512 | train loss: 0.0302 | train accuracy: 0.984
+Epoch: 34 | iter: 768 | train loss: 0.0425 | train accuracy: 0.875
+log train # train_acc: 0.9543269276618958,train_lost: 0.032114721834659576
+log test # train_acc: 0.004906250163912773,train_lost: 0.00014573744556400925
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0291 | test accuracy: 0.981 | bast accuracy: 0.981
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 187.0 | real accuracy: 0.935 | bast real accuracy: 0.935
+
+qq
+Epoch: 35 | iter: 0 | train loss: 0.0311 | train accuracy: 0.953
+Epoch: 35 | iter: 256 | train loss: 0.0317 | train accuracy: 0.922
+Epoch: 35 | iter: 512 | train loss: 0.0303 | train accuracy: 0.922
+Epoch: 35 | iter: 768 | train loss: 0.0311 | train accuracy: 0.969
+log train # train_acc: 0.9459134340286255,train_lost: 0.031628552824258804
+log test # train_acc: 0.004931250121444464,train_lost: 0.00013244675938040018
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0265 | test accuracy: 0.986 | bast accuracy: 0.986
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 190.0 | real accuracy: 0.950 | bast real accuracy: 0.950
+
+qq
+Epoch: 36 | iter: 0 | train loss: 0.0253 | train accuracy: 0.984
+Epoch: 36 | iter: 256 | train loss: 0.0290 | train accuracy: 0.969
+Epoch: 36 | iter: 512 | train loss: 0.0269 | train accuracy: 0.969
+Epoch: 36 | iter: 768 | train loss: 0.0244 | train accuracy: 0.969
+log train # train_acc: 0.9603365659713745,train_lost: 0.02715602144598961
+log test # train_acc: 0.004893749952316284,train_lost: 0.000127960869576782
+test loss: 0.0256 | test accuracy: 0.979 | bast accuracy: 0.986
+real num: 184.0 | real accuracy: 0.920 | bast real accuracy: 0.950
+
+qq
+Epoch: 37 | iter: 0 | train loss: 0.0217 | train accuracy: 0.984
+Epoch: 37 | iter: 256 | train loss: 0.0271 | train accuracy: 0.984
+Epoch: 37 | iter: 512 | train loss: 0.0271 | train accuracy: 0.969
+Epoch: 37 | iter: 768 | train loss: 0.0256 | train accuracy: 0.969
+log train # train_acc: 0.9711538553237915,train_lost: 0.02612239308655262
+log test # train_acc: 0.004943749867379665,train_lost: 0.0001133703044615686
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0227 | test accuracy: 0.989 | bast accuracy: 0.989
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 191.0 | real accuracy: 0.955 | bast real accuracy: 0.955
+
+qq
+Epoch: 38 | iter: 0 | train loss: 0.0260 | train accuracy: 1.000
+Epoch: 38 | iter: 256 | train loss: 0.0269 | train accuracy: 1.000
+Epoch: 38 | iter: 512 | train loss: 0.0288 | train accuracy: 0.969
+Epoch: 38 | iter: 768 | train loss: 0.0240 | train accuracy: 0.969
+log train # train_acc: 0.973557710647583,train_lost: 0.02517583593726158
+log test # train_acc: 0.004981250036507845,train_lost: 0.00011538279068190604
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc.tar'
+test loss: 0.0231 | test accuracy: 0.996 | bast accuracy: 0.996
+=> saved checkpoint '/home/tianchaoxiong/LinuxData/code/pythonpro/MasterExp/CaptchaNet/checkpoints/qq/SimpleCnn5/best_acc_captcha.tar'
+real num: 197.0 | real accuracy: 0.985 | bast real accuracy: 0.985
+
+qq
+Epoch: 39 | iter: 0 | train loss: 0.0286 | train accuracy: 0.969
+Epoch: 39 | iter: 256 | train loss: 0.0263 | train accuracy: 0.984
+Epoch: 39 | iter: 512 | train loss: 0.0230 | train accuracy: 1.000
+Epoch: 39 | iter: 768 | train loss: 0.0211 | train accuracy: 1.000
+log train # train_acc: 0.9699519276618958,train_lost: 0.02463560551404953
