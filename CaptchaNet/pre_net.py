@@ -337,7 +337,7 @@ class PreNet(object):
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
             for i in range(self.captcha_len):
-                vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
+                vector[index_tensor[i] + i * len(self.captcha_char_set)] = 1
             return vector
 
         for i in range(2):
