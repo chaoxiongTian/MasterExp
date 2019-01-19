@@ -283,7 +283,7 @@ class PreNet(object):
 
             random.shuffle(self.train_data)
             # TODO: BUG: 这里一直再往内存中保存tensor导致占用cpu过大。
-            print("log train # train_acc: {},train_lost: {}".format((epoch_acc / total).item(), (epoch_loss / total).item()))
+            # print("log train # train_acc: {},train_lost: {}".format((epoch_acc / total).item(), (epoch_loss / total).item()))
             # self.train_acc.append((epoch_acc / total).item())
             # self.train_lost.append((epoch_loss / total).item())
             self.test()
@@ -340,9 +340,9 @@ class PreNet(object):
                 vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
             return vector
 
-        # for i in range(5):
-        #     print("real:'{}' predict:'{}'".format(vec2text(index2vec(max_idx_l[i]), self.idx_char),
-        #                                           vec2text(index2vec(max_idx_p[i]), self.idx_char)))
+        for i in range(2):
+            print("real:'{}' predict:'{}'".format(vec2text(index2vec(max_idx_l[i]), self.idx_char),
+                                                  vec2text(index2vec(max_idx_p[i]), self.idx_char)))
 
         # 选择最好的模型保存
         if (accuracy > self.bast_accuracy).all() and self.mode == 'train':
