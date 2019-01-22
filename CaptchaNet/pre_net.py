@@ -16,7 +16,7 @@ import numpy as np
 import random
 from cap_adversary import Attack
 from out_utils import *
-from models.core_net import SimpleCnn3, SimpleCnn5, SimpleCnn256
+from models.core_net import SimpleCnn3, SimpleCnn5, SimpleCnn256, LeNet5, AlexNet, GoogLeNet
 
 
 def cuda(tensor, is_cuda):
@@ -165,13 +165,19 @@ class PreNet(object):
             self.load_checkpoint(os.path.join(self.data_root, self.ckpt_dir, args.load_ckpt))
 
     def get_net(self, prob=0):
+        print('load net :', self.net_str)
         if self.net_str == 'SimpleCnn3':
             net = cuda(SimpleCnn3(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
         elif self.net_str == 'SimpleCnn5':
             net = cuda(SimpleCnn5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
         elif self.net_str == 'SimpleCnn256':
-            net = cuda(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob),
-                       self.cuda)
+            net = cuda(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+        elif self.net_str == 'LeNet5':
+            net = cuda(LeNet5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+        elif self.net_str == 'AlexNet':
+            net = cuda(AlexNet(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+        elif self.net_str == 'GoogLeNet':
+            net = cuda(GoogLeNet(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
         else:
             raise RuntimeError("Net param input error")
         return net
@@ -205,12 +211,18 @@ class PreNet(object):
             # 对尺寸做检测，如果使用的是cnn 图片大小不是28*28 将其改为resize 28*28 256同理。
             image = Image.open(image)
             w, h = image.size
-            if self.net_str == 'SimpleCnn3' or self.net_str == 'SimpleCnn5':  # 28*28
+            if self.net_str == 'SimpleCnn3' or self.net_str == 'SimpleCnn5' or self.net_str == 'LeNet5':  # 28*28
                 if w != 28 and h != 28:
                     image = image_resize(image, 28, 28)
             elif self.net_str == 'SimpleCnn256':  # 256*256
                 if w != 256 and h != 256:
                     image = image_resize(image, 256, 256)
+            elif self.net_str == 'AlexNet':  # 227*227
+                if w != 227 and h != 227:
+                    image = image_resize(image, 227, 227)
+            elif self.net_str == 'GoogLeNet':  # 96*96
+                if w != 96 and h != 96:
+                    image = image_resize(image, 96, 96)
             else:
                 raise RuntimeError("net input error")
             images.append(image_2_tensor(image.convert('L')))
