@@ -190,13 +190,13 @@ class PreNet(object):
             prob = 0
         self.net = self.get_net(prob=prob)
         self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
-        # self.test_net = self.get_net(prob=0)
-        # self.test_net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
+        self.test_net = self.get_net(prob=0)
+        self.test_net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
         # Optimizers 初始化优化器
         self.optim = optim.Adam([{'params': self.net.parameters(), 'lr': self.lr}],
                                 betas=(0.5, 0.999))
         self.loss_func = nn.MultiLabelSoftMarginLoss()
-        self.attack = Attack(self.net, criterion=self.loss_func)
+        self.attack = Attack(self.test_net, criterion=self.loss_func)
 
     # train_data格式为：[images,labels] 分别将其转为tensor；batch_idx,表示第几个batch
     def cus_data_loader(self, batch_idx, batch_size, data):
@@ -327,7 +327,7 @@ class PreNet(object):
             images, labels = self.cus_data_loader(i, test_batch, self.test_data)
             x = Variable(cuda(images, self.cuda))
             y = Variable(cuda(labels, self.cuda))
-            output = self.net(x)
+            output = self.test_net(x)
             predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
 
