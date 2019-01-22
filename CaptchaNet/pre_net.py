@@ -298,7 +298,7 @@ class PreNet(object):
             # print("log train # train_acc: {},train_lost: {}".format((epoch_acc / total).item(), (epoch_loss / total).item()))
             # self.train_acc.append((epoch_acc / total).item())
             # self.train_lost.append((epoch_loss / total).item())
-            # self.test()
+            self.test()
         # log_dict = {'train_acc': self.train_acc,
         #             'train_lost': self.train_lost,
         #             'test_acc': self.test_acc,
@@ -308,7 +308,7 @@ class PreNet(object):
 
     def test(self):
         # 把test中所有的数据按照batch_size = captcha_len 进行测试。
-        self.test_net.load_state_dict(self.net.state_dict())
+        # self.test_net.load_state_dict(self.net.state_dict())
 
         if self.real_captcha_len == 0:
             # 表示这是一般的测试，不存在验证码分割之后的整体与预估
@@ -327,7 +327,7 @@ class PreNet(object):
             images, labels = self.cus_data_loader(i, test_batch, self.test_data)
             x = Variable(cuda(images, self.cuda))
             y = Variable(cuda(labels, self.cuda))
-            output = self.test_net(x)
+            output = self.net(x)
             predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
 
