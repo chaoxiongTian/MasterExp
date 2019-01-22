@@ -298,7 +298,7 @@ class PreNet(object):
             # print("log train # train_acc: {},train_lost: {}".format((epoch_acc / total).item(), (epoch_loss / total).item()))
             # self.train_acc.append((epoch_acc / total).item())
             # self.train_lost.append((epoch_loss / total).item())
-            self.test()
+            # self.test()
         # log_dict = {'train_acc': self.train_acc,
         #             'train_lost': self.train_lost,
         #             'test_acc': self.test_acc,

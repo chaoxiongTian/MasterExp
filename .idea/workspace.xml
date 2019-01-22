@@ -6,8 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,14 +18,14 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5599022">
+    <splitter split-orientation="horizontal" split-proportion="0.64792174">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="407">
-                  <caret line="311" lean-forward="true" selection-start-line="311" selection-end-line="311" />
+                <state relative-caret-position="593">
+                  <caret line="301" column="25" lean-forward="true" selection-start-line="301" selection-start-column="25" selection-end-line="301" selection-end-column="25" />
                   <folding>
                     <element signature="n#!!doc" />
                     <element signature="e#164#176#0" expanded="true" />
@@ -440,7 +438,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.13804004" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4978903" visible="true" weight="0.29212254" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4978903" weight="0.29212254" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32821077" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.3600439" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5021097" side_tool="true" weight="0.39187706" />
@@ -848,8 +846,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="311" lean-forward="true" selection-start-line="311" selection-end-line="311" />
+        <state relative-caret-position="593">
+          <caret line="301" column="25" lean-forward="true" selection-start-line="301" selection-start-column="25" selection-end-line="301" selection-end-column="25" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#164#176#0" expanded="true" />
