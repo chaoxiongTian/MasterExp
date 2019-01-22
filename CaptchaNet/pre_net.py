@@ -339,6 +339,7 @@ class PreNet(object):
                 com_correct += 1
             accuracy = accuracy + correct
             cost += self.loss_func(output, y)
+            self.optim.zero_grad()
             total += 1
         accuracy = accuracy / total
         cost = cost / total

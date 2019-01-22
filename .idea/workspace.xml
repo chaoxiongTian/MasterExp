@@ -6,8 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,14 +18,14 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.64792174">
+    <splitter split-orientation="horizontal" split-proportion="0.5794621">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="601">
-                  <caret line="329" column="26" selection-start-line="329" selection-start-column="26" selection-end-line="329" selection-end-column="26" />
+                <state relative-caret-position="349">
+                  <caret line="329" column="32" lean-forward="true" selection-start-line="329" selection-start-column="32" selection-end-line="329" selection-end-column="32" />
                   <folding>
                     <element signature="n#!!doc" />
                     <element signature="e#164#176#0" expanded="true" />
@@ -49,7 +47,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="3654">
@@ -81,11 +79,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="19" column="46" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="46" />
+                <state relative-caret-position="607">
+                  <caret line="35" column="45" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
@@ -793,10 +791,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="46" />
+        <state relative-caret-position="483">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -830,17 +828,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="607">
+          <caret line="35" column="45" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="329" column="26" selection-start-line="329" selection-start-column="26" selection-end-line="329" selection-end-column="26" />
+        <state relative-caret-position="349">
+          <caret line="329" column="32" lean-forward="true" selection-start-line="329" selection-start-column="32" selection-end-line="329" selection-end-column="32" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#164#176#0" expanded="true" />
