@@ -6,14 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/mnist/processed/test.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/mnist/processed/training.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/mnist/raw/t10k-images-idx3-ubyte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/mnist/raw/t10k-labels-idx1-ubyte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/mnist/raw/train-images-idx3-ubyte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/mnist/raw/train-labels-idx1-ubyte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaptchaNet/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptchaNet/test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,14 +20,14 @@
     <favorites_list name="MasterExp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6026895">
+    <splitter split-orientation="horizontal" split-proportion="0.5599022">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="470">
-                  <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
+                <state relative-caret-position="407">
+                  <caret line="224" column="54" selection-start-line="224" selection-start-column="54" selection-end-line="224" selection-end-column="54" />
                   <folding>
                     <element signature="n#!!doc" />
                     <element signature="e#164#176#0" expanded="true" />
@@ -44,17 +39,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/ceshi.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="693">
-                  <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/CaptchaNet/test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+                <state relative-caret-position="-126">
+                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
                 </state>
               </provider>
             </entry>
@@ -63,11 +49,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="739">
-                  <caret line="263" column="40" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="40" />
+                <state relative-caret-position="-17">
+                  <caret line="225" column="33" selection-start-line="225" selection-start-column="33" selection-end-line="225" selection-end-column="33" />
                   <folding>
                     <element signature="n#!!doc" />
                     <element signature="e#228#1637#0" />
@@ -84,8 +70,6 @@
                     <element signature="e#4113#4539#0" />
                     <element signature="e#5001#5121#0" />
                     <element signature="e#5036#5121#0" />
-                    <element signature="e#6252#6363#0" />
-                    <element signature="e#6486#7802#0" />
                     <element signature="e#10082#10202#0" />
                     <element signature="e#9641#9992#0" />
                     <element signature="e#9662#9992#0" />
@@ -96,7 +80,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptchaNet/net_options.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="397">
@@ -215,9 +199,9 @@
         <option value="$PROJECT_DIR$/CaptchaGenerate/generate_unit.py" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/ceshi.py" />
-        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/models/core_net.py" />
         <option value="$PROJECT_DIR$/CaptchaNet/test.py" />
+        <option value="$PROJECT_DIR$/CaptchaNet/pre_net.py" />
       </list>
     </option>
   </component>
@@ -443,10 +427,10 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50159234" side_tool="true" weight="0.14135021" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.13804004" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.13804004" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.4978903" visible="true" weight="0.29212254" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4978903" visible="true" weight="0.29212254" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32821077" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.3600439" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5021097" side_tool="true" weight="0.39187706" />
@@ -753,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/ceshi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -780,48 +757,6 @@
             <element signature="e#2260#2298#0" />
             <element signature="e#2341#2383#0" />
             <element signature="e#2442#2541#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#164#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="263" column="40" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#228#1637#0" />
-            <element signature="e#293#1210#0" />
-            <element signature="e#1246#1463#0" />
-            <element signature="e#1517#1637#0" />
-            <element signature="e#1552#1637#0" />
-            <element signature="e#1673#2670#0" />
-            <element signature="e#1738#2159#0" />
-            <element signature="e#2226#2496#0" />
-            <element signature="e#2550#2670#0" />
-            <element signature="e#2585#2670#0" />
-            <element signature="e#3904#3989#0" />
-            <element signature="e#4113#4539#0" />
-            <element signature="e#5001#5121#0" />
-            <element signature="e#5036#5121#0" />
-            <element signature="e#6252#6363#0" />
-            <element signature="e#6486#7802#0" />
-            <element signature="e#10082#10202#0" />
-            <element signature="e#9641#9992#0" />
-            <element signature="e#9662#9992#0" />
-            <element signature="e#9716#9833#0" />
-            <element signature="e#9906#9992#0" />
           </folding>
         </state>
       </provider>
@@ -852,8 +787,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        <state relative-caret-position="378">
+          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+          <folding>
+            <element signature="e#151#163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/ceshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/models/core_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="225" column="33" selection-start-line="225" selection-start-column="33" selection-end-line="225" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#228#1637#0" />
+            <element signature="e#293#1210#0" />
+            <element signature="e#1246#1463#0" />
+            <element signature="e#1517#1637#0" />
+            <element signature="e#1552#1637#0" />
+            <element signature="e#1673#2670#0" />
+            <element signature="e#1738#2159#0" />
+            <element signature="e#2226#2496#0" />
+            <element signature="e#2550#2670#0" />
+            <element signature="e#2585#2670#0" />
+            <element signature="e#3904#3989#0" />
+            <element signature="e#4113#4539#0" />
+            <element signature="e#5001#5121#0" />
+            <element signature="e#5036#5121#0" />
+            <element signature="e#10082#10202#0" />
+            <element signature="e#9641#9992#0" />
+            <element signature="e#9662#9992#0" />
+            <element signature="e#9716#9833#0" />
+            <element signature="e#9906#9992#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="224" column="54" selection-start-line="224" selection-start-column="54" selection-end-line="224" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#164#176#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

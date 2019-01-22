@@ -221,8 +221,8 @@ class PreNet(object):
                 if w != 227 and h != 227:
                     image = image_resize(image, 227, 227)
             elif self.net_str == 'GoogLeNet':  # 96*96
-                if w != 96 and h != 96:
-                    image = image_resize(image, 96, 96)
+                if w != 32 and h != 32:
+                    image = image_resize(image, 32, 32)
             else:
                 raise RuntimeError("net input error")
             images.append(image_2_tensor(image.convert('L')))
