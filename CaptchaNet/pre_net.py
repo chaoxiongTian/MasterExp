@@ -308,7 +308,7 @@ class PreNet(object):
 
     def test(self):
         # 把test中所有的数据按照batch_size = captcha_len 进行测试。
-        # self.test_net.load_state_dict(self.net.state_dict())
+        self.test_net.load_state_dict(self.net.state_dict())
 
         if self.real_captcha_len == 0:
             # 表示这是一般的测试，不存在验证码分割之后的整体与预估
