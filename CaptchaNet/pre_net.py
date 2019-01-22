@@ -196,7 +196,7 @@ class PreNet(object):
         self.optim = optim.Adam([{'params': self.net.parameters(), 'lr': self.lr}],
                                 betas=(0.5, 0.999))
         self.loss_func = nn.MultiLabelSoftMarginLoss()
-        self.attack = Attack(self.test_net, criterion=self.loss_func)
+        self.attack = Attack(self.net, criterion=self.loss_func)
 
     # train_data格式为：[images,labels] 分别将其转为tensor；batch_idx,表示第几个batch
     def cus_data_loader(self, batch_idx, batch_size, data):
