@@ -276,7 +276,7 @@ class GoogLeNet(nn.Module):  # 输入为96×96
         network = self.avgpool(network)
         network = network.view(network.size(0), -1)
         out = self.linear(network)
-        return out, network
+        return out
 
     def weight_init(self, _type='kaiming'):
         if _type == 'kaiming':
