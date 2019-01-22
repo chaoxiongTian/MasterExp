@@ -319,10 +319,10 @@ class PreNet(object):
                 raise RuntimeError("There is a problem with the test sample")
             test_batch = self.real_captcha_len
             Times = int(self.test_num / self.real_captcha_len)
-        accuracy = 0.
-        cost = 0.
-        com_correct = 0.
-        total = 0.
+        # accuracy = 0.
+        # cost = 0.
+        # com_correct = 0.
+        # total = 0.
         for i in range(Times):
             images, labels = self.cus_data_loader(i, test_batch, self.test_data)
             x = Variable(cuda(images, self.cuda))
@@ -335,14 +335,14 @@ class PreNet(object):
             max_idx_l = real.max(2)[1]
 
             correct = max_idx_p.eq(max_idx_l).float().mean()
-            if (correct == 1).all():
-                com_correct += 1
-            accuracy = accuracy + correct
-            cost += self.loss_func(output, y)
-            total += 1
-            del x, y, output
-        accuracy = accuracy / total
-        cost = cost / total
+            print(correct)
+            # if (correct == 1).all():
+            #     com_correct += 1
+            # accuracy = accuracy + correct
+            # cost += self.loss_func(output, y)
+            # total += 1
+        # accuracy = accuracy / total
+        # cost = cost / total
         # self.test_acc.append((accuracy / total).item())
         # self.test_lost.append((cost / total).item())
         # print("log test # train_acc: {},train_lost: {}".format(accuracy.item(), (cost).item()))
@@ -359,22 +359,22 @@ class PreNet(object):
         #                                           vec2text(index2vec(max_idx_p[i]), self.idx_char)))
 
         # 选择最好的模型保存
-        if (accuracy > self.bast_accuracy).all() and self.mode == 'train':
-            self.bast_accuracy = accuracy
-            self.save_checkpoint('best_acc.tar')
-
-        print('test loss: %.4f' % cost,
-              '| test accuracy: %.3f' % accuracy,
-              '| bast accuracy: %.3f' % self.bast_accuracy)
-
-        if self.real_captcha_len != 0:  # 分割之后的验证码需要检查出最大的验证码准确率进行保存
-            real_accuracy = com_correct / 200
-            if real_accuracy > self.bast_real_accuracy and self.mode == 'train':
-                self.bast_real_accuracy = real_accuracy
-                self.save_checkpoint('best_acc_captcha.tar')
-            print('real num: %.1f' % com_correct,
-                  '| real accuracy: %.3f' % real_accuracy,
-                  '| bast real accuracy: %.3f\n' % self.bast_real_accuracy)
+        # if (accuracy > self.bast_accuracy).all() and self.mode == 'train':
+        #     self.bast_accuracy = accuracy
+        #     self.save_checkpoint('best_acc.tar')
+        #
+        # print('test loss: %.4f' % cost,
+        #       '| test accuracy: %.3f' % accuracy,
+        #       '| bast accuracy: %.3f' % self.bast_accuracy)
+        #
+        # if self.real_captcha_len != 0:  # 分割之后的验证码需要检查出最大的验证码准确率进行保存
+        #     real_accuracy = com_correct / 200
+        #     if real_accuracy > self.bast_real_accuracy and self.mode == 'train':
+        #         self.bast_real_accuracy = real_accuracy
+        #         self.save_checkpoint('best_acc_captcha.tar')
+        #     print('real num: %.1f' % com_correct,
+        #           '| real accuracy: %.3f' % real_accuracy,
+        #           '| bast real accuracy: %.3f\n' % self.bast_real_accuracy)
 
     def generate(self, epsilon=0.02, alpha=2 / 255, iteration=1):
         # 无目标攻击。
