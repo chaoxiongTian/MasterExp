@@ -26,6 +26,14 @@ def cuda(tensor, is_cuda):
         return tensor
 
 
+def gpu_ids(tensor, is_cuda, ids):
+    if is_cuda:
+        net = torch.nn.DataParallel(tensor, device_ids=ids)
+        return net
+    else:
+        return tensor
+
+
 def get_data(data_sets, folder, flag, num):
     folder = os.path.join(data_sets, folder)
     if num == 0:
@@ -108,6 +116,21 @@ def save_perturbed_image(tensor, folder, w, h):
         image_resize(im, w, h).save(image_path)
 
 
+# 解析gpu_id
+def parse_gpu_id(gpu_id):
+    gpu_ids = list()
+    for each in gpu_id.split(','):
+        try:
+            id = int(each)
+            if id < 3:
+                gpu_ids.append(id)
+            else:
+                raise RuntimeError(" gpu ids input error")
+        except:
+            raise RuntimeError(" gpu ids input error")
+    return gpu_ids
+
+
 class PreNet(object):
     def __init__(self, args):
         self.args = args
@@ -119,6 +142,7 @@ class PreNet(object):
         self.lr = args.lr
         self.mode = args.mode
         self.net_str = args.net
+        self.gpu_ids = parse_gpu_id(args.gpu_id)
 
         # 需要的文件夹
         self.data_sets = os.path.join(self.data_root, args.data_sets, args.captcha)
@@ -167,17 +191,23 @@ class PreNet(object):
     def get_net(self, prob=0):
         print('load net :', self.net_str)
         if self.net_str == 'SimpleCnn3':
-            net = cuda(SimpleCnn3(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+            net = gpu_ids(SimpleCnn3(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
+                          self.gpu_ids)
         elif self.net_str == 'SimpleCnn5':
-            net = cuda(SimpleCnn5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+            net = gpu_ids(SimpleCnn5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
+                          self.gpu_ids)
         elif self.net_str == 'SimpleCnn256':
-            net = cuda(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+            net = gpu_ids(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
+                          self.gpu_ids)
         elif self.net_str == 'LeNet5':
-            net = cuda(LeNet5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+            net = gpu_ids(LeNet5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
+                          self.gpu_ids)
         elif self.net_str == 'AlexNet':
-            net = cuda(AlexNet(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+            net = gpu_ids(AlexNet(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
+                          self.gpu_ids)
         elif self.net_str == 'GoogLeNet':
-            net = cuda(GoogLeNet(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda)
+            net = gpu_ids(GoogLeNet(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
+                          self.gpu_ids)
         else:
             raise RuntimeError("Net param input error")
         return net
