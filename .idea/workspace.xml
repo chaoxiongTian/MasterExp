@@ -6,7 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CaptchaNet/net_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/net_options.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="194" column="39" lean-forward="true" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
+            <state relative-caret-position="449">
+              <caret line="224" column="20" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" />
               </folding>
@@ -861,8 +860,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="194" column="39" lean-forward="true" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
+        <state relative-caret-position="449">
+          <caret line="224" column="20" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" />
           </folding>

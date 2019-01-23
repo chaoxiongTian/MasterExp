@@ -219,9 +219,9 @@ class PreNet(object):
         else:
             prob = 0
         self.net = self.get_net(prob=prob)
-        self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
+        # self.net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
         self.test_net = self.get_net(prob=0)
-        self.test_net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
+        # self.test_net.weight_init(_type='kaiming')  # 对net中的参数进行初始化
         # Optimizers 初始化优化器
         self.optim = optim.Adam([{'params': self.net.parameters(), 'lr': self.lr}],
                                 betas=(0.5, 0.999))
