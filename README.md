@@ -92,7 +92,8 @@ python CaptchaNet/main.py --captcha mnist # 对应验证码的种类，后面用
 --real_captcha_len # 4 对分割之后的验证码做预估的时候正式验证码的字符长度
 ``` 
 
-**训练**
+**训练** 
+网络有:　SimpleCnn3　SimpleCnn5　LeNet5　AlexNet　GoogLeNet
 ```shell
 # 普通训练
 python CaptchaNet/main.py --net SimpleCnn5 --epoch 200 --captcha qq

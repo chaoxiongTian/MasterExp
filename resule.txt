@@ -1,0 +1,18 @@
+jd
+
+SimpleCnn5 epoch:300 batch_size:64 lr:0.0001
+test loss: 0.0382 | test accuracy: 0.938
+real num: 159.0 | real accuracy: 0.795
+
+LeNet5 epoch:300 batch_size:64 lr:0.0001
+test loss: 0.0742 | test accuracy: 0.882
+real num: 127.0 | real accuracy: 0.635
+
+AlexNet epoch:300 batch_size:64 lr:0.0001
+test loss: 0.1514 | test accuracy: 0.939
+real num: 162.0 | real accuracy: 0.810
+
+GoogLeNet epoch:300 batch_size:64 lr:0.0001
+test loss: 0.0866 | test accuracy: 0.950
+real num: 169.0 | real accuracy: 0.845
+

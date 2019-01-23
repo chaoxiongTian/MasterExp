@@ -283,6 +283,7 @@ class GoogLeNet(nn.Module):  # 输入为96×96
             for ms in self._modules:
                 kaiming_init(self._modules[ms].parameters())
 
+
 # 反向传导的时候还是用kaiming优化
 def kaiming_init(ms):
     for m in ms:

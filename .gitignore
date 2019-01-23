@@ -12,7 +12,7 @@
 dist
 build
 *ceshi.py
-
+*resule.txt
 AdversarialCaptcha/*
 IdentifiNetwork/*
 ceshi/*

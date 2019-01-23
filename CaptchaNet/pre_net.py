@@ -277,7 +277,7 @@ class PreNet(object):
                 max_idx_p = predict.max(2)[1]
                 real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
                 max_idx_l = real.max(2)[1]
-                correct = max_idx_p.eq(max_idx_l).float().mean()
+                correct = max_idx_p.eq(max_idx_l).float().mean().item()
 
                 cost = self.loss_func(output, y)
                 self.optim.zero_grad()
@@ -287,28 +287,26 @@ class PreNet(object):
                 if batch_idx % 4 == 0:
                     print('Epoch:', epoch_idx,
                           '| iter:', batch_idx * self.batch_size,
-                          '| train loss: %.4f' % cost,
+                          '| train loss: %.4f' % cost.item(),
                           '| train accuracy: %.3f' % correct)
                 epoch_acc = epoch_acc + correct
-                epoch_loss = epoch_loss + cost
+                epoch_loss = epoch_loss + cost.item()
                 total += 1
 
             random.shuffle(self.train_data)
-            # TODO: BUG: 这里一直再往内存中保存tensor导致占用cpu过大。
-            # print("log train # train_acc: {},train_lost: {}".format((epoch_acc / total).item(), (epoch_loss / total).item()))
-            # self.train_acc.append((epoch_acc / total).item())
-            # self.train_lost.append((epoch_loss / total).item())
+            self.train_acc.append(epoch_acc / total)
+            self.train_lost.append(epoch_loss / total)
             self.test()
-        # log_dict = {'train_acc': self.train_acc,
-        #             'train_lost': self.train_lost,
-        #             'test_acc': self.test_acc,
-        #             'test_lost': self.test_lost}
-        # log_path = os.path.join(self.ckpt_dir, 'log.pickle')
-        # save_pickle(log_path, log_dict)
+        log_dict = {'train_acc': self.train_acc,
+                    'train_lost': self.train_lost,
+                    'test_acc': self.test_acc,
+                    'test_lost': self.test_lost}
+        log_path = os.path.join(self.ckpt_dir, 'log.pickle')
+        save_pickle(log_path, log_dict)
 
     def test(self):
         # 把test中所有的数据按照batch_size = captcha_len 进行测试。
-        # self.test_net.load_state_dict(self.net.state_dict())
+        self.test_net.load_state_dict(self.net.state_dict())
 
         if self.real_captcha_len == 0:
             # 表示这是一般的测试，不存在验证码分割之后的整体与预估
@@ -327,12 +325,15 @@ class PreNet(object):
             images, labels = self.cus_data_loader(i, test_batch, self.test_data)
             x = Variable(cuda(images, self.cuda))
             y = Variable(cuda(labels, self.cuda))
-            output = self.net(x)
+            output = self.test_net(x)
             predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
 
             real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_l = real.max(2)[1]
+            # 如果是普通的训练　把前两个预测结果做一个打印．
+            if self.real_captcha_len == 0:
+                self.show_predict(2, max_idx_p, max_idx_l)
 
             correct = max_idx_p.eq(max_idx_l).float().mean().item()
             if correct == 1:
@@ -342,20 +343,8 @@ class PreNet(object):
             total += 1
         accuracy = accuracy / total
         cost = cost / total
-        # self.test_acc.append((accuracy / total).item())
-        # self.test_lost.append((cost / total).item())
-        # print("log test # train_acc: {},train_lost: {}".format(accuracy.item(), (cost).item()))
-
-        def index2vec(index_tensor):
-            vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
-            for i in range(self.captcha_len):
-                # bug item()版本问题。
-                vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
-            return vector
-
-        # for i in range(2):
-        #     print("real:'{}' predict:'{}'".format(vec2text(index2vec(max_idx_l[i]), self.idx_char),
-        #                                           vec2text(index2vec(max_idx_p[i]), self.idx_char)))
+        self.test_acc.append(accuracy)
+        self.test_lost.append(cost)
 
         # 选择最好的模型保存
         if accuracy > self.bast_accuracy and self.mode == 'train':
@@ -374,6 +363,18 @@ class PreNet(object):
             print('real num: %.1f' % com_correct,
                   '| real accuracy: %.3f' % real_accuracy,
                   '| bast real accuracy: %.3f\n' % self.bast_real_accuracy)
+
+    def show_predict(self, num, max_idx_l, max_idx_p):
+        def index2vec(index_tensor):
+            vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
+            for i in range(self.captcha_len):
+                # bug item()版本问题。
+                vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
+            return vector
+
+        for i in range(num):
+            print("real:'{}' predict:'{}'".format(vec2text(index2vec(max_idx_l[i]), self.idx_char),
+                                                  vec2text(index2vec(max_idx_p[i]), self.idx_char)))
 
     def generate(self, epsilon=0.02, alpha=2 / 255, iteration=1):
         # 无目标攻击。
