@@ -100,6 +100,9 @@ python CaptchaNet/main.py --net SimpleCnn5 --epoch 200 --captcha qq
 
 # 分割之后的单个验证码训练
 python CaptchaNet/main.py --net SimpleCnn5 --epoch 200 --real_captcha_len 4 --captcha qq
+
+# 根基训练数据画图
+python CaptchaNet/read_log.py --captcha mnist --net SimpleCnn3
 ```
 
 **测试**
