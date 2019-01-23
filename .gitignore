@@ -17,7 +17,7 @@ AdversarialCaptcha/*
 IdentifiNetwork/*
 ceshi/*
 .idea/*
-.idea/workspace.xml
+/.idea/workspace.xml
 
 !CaptchaGenerate/data/bg/*/*.jpg
 !CaptchaGenerate/data/bg/*/*.png
