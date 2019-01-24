@@ -19,6 +19,8 @@ from out_utils import *
 from models.core_net import SimpleCnn3, SimpleCnn5, SimpleCnn256, LeNet5, AlexNet, GoogLeNet
 
 
+# CUDA_VISIBLE_DEVICES=id
+
 def cuda(tensor, is_cuda):
     if is_cuda:
         return tensor.cuda()
@@ -28,7 +30,7 @@ def cuda(tensor, is_cuda):
 
 def gpu_ids(net, is_cuda, ids):
     if is_cuda:
-        net = torch.nn.DataParallel(net, device_ids=ids)
+        # net = torch.nn.DataParallel(net, device_ids=ids)
         return cuda(net, is_cuda)
     else:
         return net
@@ -122,7 +124,7 @@ def parse_gpu_id(gpu_id):
     for each in gpu_id.split(','):
         try:
             id = int(each)
-            if id < 3:
+            if id < 4:
                 gpu_ids.append(id)
             else:
                 raise RuntimeError(" gpu ids input error")

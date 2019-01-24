@@ -6,7 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0068ee4d-95e5-47cc-9689-3c85cd1e10e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptchaNet/pre_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaNet/pre_net.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+            <state relative-caret-position="336">
+              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#635#965#0" />
@@ -40,9 +39,6 @@
                 <element signature="e#2387#2731#0" />
                 <element signature="e#2805#3095#0" />
                 <element signature="e#2866#3095#0" />
-                <element signature="e#3139#3455#0" />
-                <element signature="e#3199#3436#0" />
-                <element signature="e#3216#3365#0" />
                 <element signature="e#6515#6662#0" />
                 <element signature="e#6714#6855#0" />
                 <element signature="e#6908#7050#0" />
@@ -918,8 +914,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaptchaNet/pre_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+        <state relative-caret-position="336">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#635#965#0" />
@@ -935,9 +931,6 @@
             <element signature="e#2387#2731#0" />
             <element signature="e#2805#3095#0" />
             <element signature="e#2866#3095#0" />
-            <element signature="e#3139#3455#0" />
-            <element signature="e#3199#3436#0" />
-            <element signature="e#3216#3365#0" />
             <element signature="e#6515#6662#0" />
             <element signature="e#6714#6855#0" />
             <element signature="e#6908#7050#0" />
