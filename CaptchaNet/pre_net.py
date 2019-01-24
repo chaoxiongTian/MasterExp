@@ -28,7 +28,7 @@ def cuda(tensor, is_cuda):
 
 def gpu_ids(net, is_cuda, ids):
     if is_cuda:
-        # net = torch.nn.DataParallel(tensor, device_ids=ids)
+        net = torch.nn.DataParallel(net, device_ids=ids)
         return cuda(net, is_cuda)
     else:
         return net
