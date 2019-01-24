@@ -26,12 +26,12 @@ def cuda(tensor, is_cuda):
         return tensor
 
 
-def gpu_ids(tensor, is_cuda, ids):
+def gpu_ids(net, is_cuda, ids):
     if is_cuda:
-        net = torch.nn.DataParallel(tensor, device_ids=ids)
-        return net
+        # net = torch.nn.DataParallel(tensor, device_ids=ids)
+        return cuda(net, is_cuda)
     else:
-        return tensor
+        return net
 
 
 def get_data(data_sets, folder, flag, num):
@@ -190,6 +190,7 @@ class PreNet(object):
 
     def get_net(self, prob=0):
         print('load net :', self.net_str)
+        # TODO:bug 可以把数据放在不同的gpu中,不过取出数据的时候出错.
         if self.net_str == 'SimpleCnn3':
             net = gpu_ids(SimpleCnn3(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
                           self.gpu_ids)
@@ -307,6 +308,7 @@ class PreNet(object):
                 max_idx_p = predict.max(2)[1]
                 real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
                 max_idx_l = real.max(2)[1]
+                # bug
                 correct = max_idx_p.eq(max_idx_l).float().mean().item()
 
                 cost = self.loss_func(output, y)
