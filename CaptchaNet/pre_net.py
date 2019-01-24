@@ -19,8 +19,6 @@ from out_utils import *
 from models.core_net import SimpleCnn3, SimpleCnn5, SimpleCnn256, LeNet5, AlexNet, GoogLeNet
 
 
-# CUDA_VISIBLE_DEVICES=id
-
 def cuda(tensor, is_cuda):
     if is_cuda:
         return tensor.cuda()
@@ -28,6 +26,7 @@ def cuda(tensor, is_cuda):
         return tensor
 
 
+# 这里用来制定多GPU有一些BUG,没有继续尝试,而是使用 CUDA_VISIBLE_DEVICES=id 来制定运行的gpu
 def gpu_ids(net, is_cuda, ids):
     if is_cuda:
         # net = torch.nn.DataParallel(net, device_ids=ids)
