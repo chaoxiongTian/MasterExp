@@ -17,6 +17,7 @@ class Options:
         self.parser.add_argument('--use', dest='use', help='cnn or seg', type=str, default='seg')
         self.parser.add_argument('--tar', dest='tar', help='segment folder', type=str, default='org')
         self.parser.add_argument('--cond', dest='cond', help='pre,conditions', type=str, default='')
+        self.parser.add_argument('--seg_fun', dest='seg_fun', help='segment function', type=str, default='projection')
 
     def parse(self):
         self.initialize()

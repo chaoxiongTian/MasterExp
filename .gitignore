@@ -16,6 +16,7 @@ build
 *workspace.xml
 AdversarialCaptcha/*
 IdentifiNetwork/*
+transfer_cnn/*
 ceshi/*
 .idea
 /.idea/workspace.xml

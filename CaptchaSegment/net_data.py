@@ -109,17 +109,18 @@ def correct(images, label):
 
 # 超参数
 opt = Options().parse()
+fun_str = opt.seg_fun  # 需要调用的函数
 folder = os.path.join(data_folder, opt.captcha, opt.use)
 if opt.use == 'cnn':
     sour_folder = os.path.join(folder, 'images')
     tar_folder = os.path.join(folder, 'train')
-    labels_path = os.path.join(folder, opt.captcha+'_train_5000_labels.txt')
+    labels_path = os.path.join(folder, opt.captcha + '_train_5000_labels.txt')
     tar_labels_path = os.path.join(folder, 'train_labels.txt')
 
 elif opt.use == 'seg':
     sour_folder = os.path.join(folder, opt.tar, 'images')
     tar_folder = os.path.join(folder, opt.tar, 'test')
-    labels_path = os.path.join(folder, opt.captcha+'_test_200_labels.txt')
+    labels_path = os.path.join(folder, opt.captcha + '_test_200_labels.txt')
     tar_labels_path = os.path.join(folder, opt.tar, 'test_labels.txt')
 else:
     raise RuntimeError('use input error ,only cnn or seg')
@@ -131,6 +132,7 @@ captcha_len = len(labels[0])
 pre_conditions = get_cond(opt.cond)
 
 
+# 分割过程
 def segment(image_path, condition):
     label = (labels[int(get_file_name(image_path))])
     if opt.use == 'cnn':
@@ -141,8 +143,12 @@ def segment(image_path, condition):
             label = ''
     else:
         # 用cfs结合其他分割算法分割，需要修正。
-        images = cfs_projection(Image.open(image_path), pre_conditions=condition)
-        # images = cfs_drop(Image.open(image_path), pre_conditions=condition)
+        if fun_str == 'projection':
+            images = cfs_projection(Image.open(image_path), pre_conditions=condition)
+        elif fun_str == 'drop':
+            images = cfs_drop(Image.open(image_path), pre_conditions=condition)
+        else:
+            raise ValueError("input function error")
         # TODO:按照验证码中字符的个数对分割字符做一个修正.
         # 1. 若分割出来的 image数量小于验证码中字符数量，直接舍去。
         # 2. 若分割出来的 image数量大于验证码中字符数量，找到最小的两个部分进行合并。
@@ -159,7 +165,7 @@ def main():
         if part_images is not None and len(part_images) == captcha_len:
             new_images.extend(part_images)
             new_labels.extend(part_labels)
-            print('num.'+str(i) + each + "is Complete")
+            print('num.' + str(i) + each + "is Complete")
 
     # 保存图片和labels
     save_string_2_file(tar_labels_path, '#'.join(new_labels))

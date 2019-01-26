@@ -167,6 +167,9 @@ def drop_segment(im, start_list):
 
 
 def drop(image, pre_conditions=(30, 60, 90)):
+    w, h = image.size
+    if pre_conditions[0] > w:
+        return [image]
     new_image, edge = get_edge(image, pre_conditions)
     if len(edge) == 1:
         return [new_image]
