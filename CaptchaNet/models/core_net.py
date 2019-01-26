@@ -9,34 +9,41 @@ import torch
 import torch.nn as nn
 
 
-class SimpleCnn256(nn.Module):
+class SimpleCnn128(nn.Module):
     def __init__(self, channel=1, y_dim=10, keep_prob=0.75):
-        super(SimpleCnn256, self).__init__()
-        self.conv1 = nn.Sequential(  # input shape
-            nn.Conv2d(
-                in_channels=channel,  # input height
-                out_channels=16,  # n_filters
-                kernel_size=5,  # filter size
-                stride=1,  # filter movement/step
-                padding=2,
-                # if want same width and length of this image after Conv2d, padding=(kernel_size-1)/2 if stride=1
-            ),  # output shape
-            nn.ReLU(),  # activation
-            nn.MaxPool2d(kernel_size=2),  # choose max value in 2x2 area, output shape (16, 14, 14)
+        super(SimpleCnn128, self).__init__()
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(channel, 32, 5, 1, 2),
+            nn.ReLU(), nn.MaxPool2d(2),
+            nn.Dropout(keep_prob),
         )
-        self.conv2 = nn.Sequential(  # input shape
-            nn.Conv2d(16, 32, 5, 1, 2),  # output shape
-            nn.ReLU(),  # activation
-            nn.MaxPool2d(2),  # output shape
+        self.conv2 = nn.Sequential(
+            nn.Conv2d(32, 64, 5, 1, 2),
+            nn.ReLU(), nn.MaxPool2d(2),
+            nn.Dropout(keep_prob),
         )
-        self.out = nn.Linear(32 * 64 * 64, y_dim)  # fully connected layer, output 10 classes
+        self.conv3 = nn.Sequential(
+            nn.Conv2d(64, 128, 3, 1, 1),
+            nn.ReLU(), nn.MaxPool2d(2),
+            nn.Dropout(keep_prob),
+        )
+        self.conv4 = nn.Sequential(
+            nn.Conv2d(128, 128, 3, 1, 1),
+            nn.ReLU(), nn.MaxPool2d(2),
+            nn.Dropout(keep_prob),
+        )
+        self.fully = nn.Linear(128 * 8 * 8, 2048)
+        self.out = nn.Linear(2048, y_dim)
 
-    def forward(self, x):
-        x = self.conv1(x)
-        x = self.conv2(x)
-        x = x.view(x.size(0), -1)  # flatten the output of conv2 to (batch_size, 32 * 7 * 7)
-        output = self.out(x)
-        return output  # return x for visualization
+    def forward(self, x):  # torch.Size([64, 1, 128, 128])
+        x = self.conv1(x)  # torch.Size([64, 32, 64, 64])
+        x = self.conv2(x)  # torch.Size([64, 64, 32, 32])
+        x = self.conv3(x)  # torch.Size([64, 128, 16, 16])
+        x = self.conv4(x)  # torch.Size([64, 128, 8, 8])
+        x = x.view(x.size(0), -1)  # torch.Size([64, 128*8*8])
+        x = self.fully(x)  # torch.Size([64, 2048])
+        output = self.out(x)  # torch.Size([64, y_dim])
+        return output
 
     def weight_init(self, _type='kaiming'):
         if _type == 'kaiming':

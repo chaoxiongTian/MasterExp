@@ -16,7 +16,7 @@ import numpy as np
 import random
 from cap_adversary import Attack
 from out_utils import *
-from models.core_net import SimpleCnn3, SimpleCnn5, SimpleCnn256, LeNet5, AlexNet, GoogLeNet
+from models.core_net import SimpleCnn3, SimpleCnn5, SimpleCnn128, LeNet5, AlexNet, GoogLeNet
 
 
 def cuda(tensor, is_cuda):
@@ -198,8 +198,8 @@ class PreNet(object):
         elif self.net_str == 'SimpleCnn5':
             net = gpu_ids(SimpleCnn5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
                           self.gpu_ids)
-        elif self.net_str == 'SimpleCnn256':
-            net = gpu_ids(SimpleCnn256(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
+        elif self.net_str == 'SimpleCnn128':
+            net = gpu_ids(SimpleCnn128(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
                           self.gpu_ids)
         elif self.net_str == 'LeNet5':
             net = gpu_ids(LeNet5(y_dim=self.captcha_len * len(self.captcha_char_set), keep_prob=prob), self.cuda,
@@ -240,15 +240,15 @@ class PreNet(object):
 
         while start_idx < len(data) and count < batch_size:
             image, label = data[start_idx]
-            # 对尺寸做检测，如果使用的是cnn 图片大小不是28*28 将其改为resize 28*28 256同理。
+            # 对尺寸做检测，如果使用的是cnn 图片大小不是28*28 将其改为resize 28*28 128。
             image = Image.open(image)
             w, h = image.size
             if self.net_str == 'SimpleCnn3' or self.net_str == 'SimpleCnn5' or self.net_str == 'LeNet5':  # 28*28
                 if w != 28 and h != 28:
                     image = image_resize(image, 28, 28)
-            elif self.net_str == 'SimpleCnn256':  # 256*256
-                if w != 256 and h != 256:
-                    image = image_resize(image, 256, 256)
+            elif self.net_str == 'SimpleCnn128':  # 128*128
+                if w != 128 and h != 128:
+                    image = image_resize(image, 128, 128)
             elif self.net_str == 'AlexNet':  # 227*227
                 if w != 227 and h != 227:
                     image = image_resize(image, 227, 227)
