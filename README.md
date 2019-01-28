@@ -93,7 +93,7 @@ python CaptchaNet/main.py --captcha mnist # 对应验证码的种类，后面用
 ``` 
 
 **训练** 
-网络有:　SimpleCnn3　SimpleCnn5　LeNet5　AlexNet　GoogLeNet
+网络有:　SimpleCnn3　SimpleCnn5 SimpleCnn128　LeNet5　AlexNet　GoogLeNet
 ```shell
 # 普通训练
 python CaptchaNet/main.py --net SimpleCnn5 --epoch 200 --captcha qq
@@ -112,6 +112,12 @@ python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net SimpleCnn5 
 
 # 分割之后的单个验证码测试
 python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net SimpleCnn5 --real_captcha_len 4 --captcha qq 
+```
+
+**迁移训练**
+```shell
+# 迁移学习
+python CaptchaNet/main.py --load_ckpt train_best_acc.tar --mode fine --net SimpleCnn5 --test_folder train --train_labels train_labels.txt --test_folder test --test_labels test_labels.txt --epoch 20 --captcha mnist
 ```
 
 **对抗样本生成**

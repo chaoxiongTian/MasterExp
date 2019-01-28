@@ -30,7 +30,9 @@ class Options:
         self.parser.add_argument('--captcha', type=str, default='jd', help='experiment name')  # 模型的名字（文件夹名）
         self.parser.add_argument('--mode', type=str, default='train', help='train / test / generate ')
         self.parser.add_argument('--train_folder', type=str, default='train', help='name of train folder ')
+        self.parser.add_argument('--train_labels', type=str, default='train_labels.txt', help='name of train labels ')
         self.parser.add_argument('--test_folder', type=str, default='test', help='name of test folder ')
+        self.parser.add_argument('--test_labels', type=str, default='test_labels.txt', help='name of test folder ')
         self.parser.add_argument('--silent', type=bool, default=False, help='')
 
         # 验证码相关

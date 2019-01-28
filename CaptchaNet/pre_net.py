@@ -35,12 +35,13 @@ def gpu_ids(net, is_cuda, ids):
         return net
 
 
-def get_data(data_sets, folder, flag, num):
+def get_data(data_sets, folder, labels, num):
     folder = os.path.join(data_sets, folder)
     if num == 0:
         num = len(os.listdir(folder))
     image_paths = [os.path.join(folder, str(i) + '.png') for i in range(num)]
-    labels = open(os.path.join(data_sets, flag + '_labels.txt'), 'r').read().strip().split('#')
+    label_path = os.path.join(data_sets, labels)
+    labels = open(label_path, 'r').read().strip().split('#')
     return [(image_paths[i], labels[i]) for i in range(num)]
 
 
@@ -152,14 +153,14 @@ class PreNet(object):
         self.load_ckpt = args.load_ckpt  # 有内容的时候才加载
         self.output_dir = os.path.join(self.data_sets, 'perturbed')
         # 创建文件夹 模型保存地址 对抗样本输出地址
-        make_folders(self.ckpt_dir, self.output_dir)
+        make_folder(self.ckpt_dir)
 
         # 验证码相关 如果都没有赋值就都是0，则按照文件夹取，取完之后重新赋值。
         self.train_num = args.train_num
         self.test_num = args.test_num
         # list [image_path,label]
-        self.train_data = get_data(self.data_sets, args.train_folder, 'train', self.train_num)
-        self.test_data = get_data(self.data_sets, args.test_folder, 'test', self.test_num)
+        self.train_data = get_data(self.data_sets, args.train_folder, args.train_labels, self.train_num)
+        self.test_data = get_data(self.data_sets, args.test_folder, args.test_labels, self.test_num)
         self.train_num = len(self.train_data)
         self.test_num = len(self.test_data)
         self.captcha_len = len(self.train_data[0][1])
@@ -334,7 +335,7 @@ class PreNet(object):
                     'train_lost': self.train_lost,
                     'test_acc': self.test_acc,
                     'test_lost': self.test_lost}
-        log_path = os.path.join(self.ckpt_dir, 'log.pickle')
+        log_path = os.path.join(self.ckpt_dir, self.mode+'_log.pickle')
         save_pickle(log_path, log_dict)
 
     def test(self):
@@ -380,9 +381,9 @@ class PreNet(object):
         self.test_lost.append(cost)
 
         # 选择最好的模型保存
-        if accuracy > self.bast_accuracy and self.mode == 'train':
+        if accuracy > self.bast_accuracy and (self.mode == 'train' or self.mode == 'fine'):
             self.bast_accuracy = accuracy
-            self.save_checkpoint('best_acc.tar')
+            self.save_checkpoint(self.mode+'_best_acc.tar')
 
         print('test loss: %.4f' % cost,
               '| test accuracy: %.3f' % accuracy,
@@ -397,6 +398,13 @@ class PreNet(object):
                   '| real accuracy: %.3f' % real_accuracy,
                   '| bast real accuracy: %.3f\n' % self.bast_real_accuracy)
 
+    def fine_tune(self):
+        # TODO: 加载模型 使用新的数据集合重新迭代训练. 之后保存模型.
+        # 1. 测试之前的准确率.
+        self.test()
+        # 2. 在之前的模型上继续训练.
+        self.train()
+
     def show_predict(self, num, max_idx_l, max_idx_p):
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
@@ -410,6 +418,7 @@ class PreNet(object):
                                                   vec2text(index2vec(max_idx_p[i]), self.idx_char)))
 
     def generate(self, epsilon=0.02, alpha=2 / 255, iteration=1):
+        make_folder(self.output_dir)
         # 无目标攻击。
         images, labels = self.cus_data_loader(0, len(self.test_data), self.test_data)
 

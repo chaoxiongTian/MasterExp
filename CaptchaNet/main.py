@@ -32,6 +32,8 @@ if __name__ == '__main__':
         net.train()
     elif opt.mode == 'test':
         net.test()
+    elif opt.mode == 'fine':
+        net.fine_tune()
     elif opt.mode == 'generate':
         net.generate(epsilon=opt.epsilon,  # 扰动因子
                      alpha=opt.alpha,  # alpha for i-FGSM  2 / 255
