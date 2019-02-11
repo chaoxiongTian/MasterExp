@@ -1,0 +1,27 @@
+# Python:
+!/CaptchaGenerate/data/bg/*
+
+.vscode
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+*.jpg
+*.png
+*.tar
+*.tar.gz
+*.swp
+dist
+build
+*ceshi.py
+*resule.txt
+*workspace.xml
+AdversarialCaptcha/*
+IdentifiNetwork/*
+transfer_cnn/*
+ceshi/*
+.idea
+/.idea/workspace.xml
+
+!CaptchaGenerate/data/bg/*/*.jpg
+!CaptchaGenerate/data/bg/*/*.png
