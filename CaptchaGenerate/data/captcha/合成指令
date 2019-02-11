@@ -1,6 +1,0 @@
-python combine_A_and_B.py --fold_A ./four_char_20000/A --fold_B ./four_char_20000/B --fold_AB ./four_char_20000
-
-python combine_A_and_B.py --fold_A ./four_char_distance/A --fold_B ./four_char_distance/B --fold_AB ./four_char_distance
-
-python combine_A_and_B.py --fold_A ./train_wave_resize/A --fold_B ./train_wave_resize/B --fold_AB ./train_wave_resize
-python combine_A_and_B.py --fold_A ./test/A --fold_B ./test/B --fold_AB ./test

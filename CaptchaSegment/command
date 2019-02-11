@@ -1,5 +1,0 @@
-python CaptchaGenerate/captcha_generate.py --captcha blizzard --labels train_5000 --tar train --single_char True
-
-python CaptchaGenerate/captcha_generate.py --captcha authorize --labels train_5000 --tar train --single_char True
-
-python CaptchaGenerate/captcha_generate.py --captcha captcha_net --labels train_5000 --tar train --single_char True
