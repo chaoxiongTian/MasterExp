@@ -368,12 +368,13 @@ class PreNet(object):
             # 如果是普通的训练　把前两个预测结果做一个打印．
             if self.real_captcha_len == 0:
                 self.show_predict(2, max_idx_p, max_idx_l)
-                pd, pd_num = self.get_pd(len(labels), max_idx_p, max_idx_l)
+                accuracy, accuracy_num = self.get_pd(len(labels), max_idx_p, max_idx_l)
                 # print("test num : {} | acc num: | acc : {}".format(len(labels), pd_num, pd))
-            correct = max_idx_p.eq(max_idx_l).float().mean().item()
-            if correct == 1:
-                com_correct += 1
-            accuracy = accuracy + correct
+            else:
+                correct = max_idx_p.eq(max_idx_l).float().mean().item()
+                if correct == 1:
+                    com_correct += 1
+                accuracy = accuracy + correct
             cost += self.loss_func(output, y).item()
             total += 1
         accuracy = accuracy / total
