@@ -9,6 +9,7 @@
 *.jpg
 *.png
 *.tar
+*.swp
 dist
 build
 *ceshi.py
