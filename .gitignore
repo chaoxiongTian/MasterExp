@@ -9,6 +9,7 @@
 *.jpg
 *.png
 *.tar
+*.tar.gz
 *.swp
 dist
 build
