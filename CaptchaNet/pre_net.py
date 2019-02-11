@@ -419,7 +419,7 @@ class PreNet(object):
             real = vec2text(index2vec(max_idx_p[i]), self.idx_char)
             if pre == real:
                 count += 1
-        print(num, count, (num/count))
+        print(num, count, (count/num))
         return (count / num), count
 
     def show_predict(self, num, max_idx_l, max_idx_p):
