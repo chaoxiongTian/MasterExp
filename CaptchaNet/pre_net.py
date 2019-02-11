@@ -369,7 +369,7 @@ class PreNet(object):
             if self.real_captcha_len == 0:
                 self.show_predict(2, max_idx_p, max_idx_l)
                 pd, pd_num = self.get_pd(len(labels), max_idx_p, max_idx_l)
-                print("test num : {} | acc num: | acc : {}".format(len(labels), pd_num, pd))
+                # print("test num : {} | acc num: | acc : {}".format(len(labels), pd_num, pd))
             correct = max_idx_p.eq(max_idx_l).float().mean().item()
             if correct == 1:
                 com_correct += 1
@@ -413,14 +413,14 @@ class PreNet(object):
                 # bug item()版本问题。
                 vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
             return vector
-
         count = 0
         for i in range(num):
             pre = vec2text(index2vec(max_idx_l[i]), self.idx_char)
             real = vec2text(index2vec(max_idx_p[i]), self.idx_char)
             if pre == real:
                 count += 1
-        return count / num, count
+        print(num, count, (num/count))
+        return (count / num), count
 
     def show_predict(self, num, max_idx_l, max_idx_p):
         def index2vec(index_tensor):
