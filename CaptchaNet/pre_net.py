@@ -323,8 +323,11 @@ class PreNet(object):
                 max_idx_p = predict.max(2)[1]
                 real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
                 max_idx_l = real.max(2)[1]
-                # bug
-                correct = max_idx_p.eq(max_idx_l).float().mean().item()
+                # 待测试
+                if self.real_captcha_len == 0:
+                    correct, correct_num = self.get_pd(len(labels), max_idx_p, max_idx_l)
+                else:
+                    correct = max_idx_p.eq(max_idx_l).float().mean().item()
 
                 cost = self.loss_func(output, y)
                 self.optim.zero_grad()
@@ -356,7 +359,7 @@ class PreNet(object):
         self.test_net.load_state_dict(self.net.state_dict())
 
         if self.real_captcha_len == 0:
-            # 表示这是一般的测试，不存在验证码分割之后的整体与预估
+            # 表示这是一般的测试，不存在验证码分割之后的整体预估
             test_batch = len(self.test_data)
             Times = 1
         else:
@@ -375,15 +378,15 @@ class PreNet(object):
             output = self.test_net(x)
             predict = output.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_p = predict.max(2)[1]
-
             real = y.view([-1, self.captcha_len, len(self.captcha_char_set)])
             max_idx_l = real.max(2)[1]
+
             # 如果是普通的训练　把前两个预测结果做一个打印．
             if self.real_captcha_len == 0:
                 self.show_predict(2, max_idx_p, max_idx_l)
                 accuracy, accuracy_num = self.get_pd(len(labels), max_idx_p, max_idx_l)
-                # print("test num : {} | acc num: | acc : {}".format(len(labels), pd_num, pd))
             else:
+                # test_batch等于字符个数,如果等于1表示一个字符全部预测准确.
                 correct = max_idx_p.eq(max_idx_l).float().mean().item()
                 if correct == 1:
                     com_correct += 1
