@@ -385,6 +385,7 @@ class PreNet(object):
             if self.real_captcha_len == 0:
                 self.show_predict(2, max_idx_p, max_idx_l)
                 accuracy, accuracy_num = self.get_pd(len(labels), max_idx_p, max_idx_l)
+                print(len(labels), accuracy_num, accuracy)
             else:
                 # test_batch等于字符个数,如果等于1表示一个字符全部预测准确.
                 correct = max_idx_p.eq(max_idx_l).float().mean().item()
@@ -436,7 +437,6 @@ class PreNet(object):
             real = vec2text(index2vec(max_idx_p[i]), self.idx_char)
             if pre == real:
                 count += 1
-        print(num, count, (count / num))
         return (count / num), count
 
     def show_predict(self, num, max_idx_l, max_idx_p):
