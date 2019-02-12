@@ -68,22 +68,34 @@ def text2vec(text, cap_len, char_idx):
 
 
 # 遍历验证码的labels 返回出现的字符集合
-def get_char_set(train_data, test_data):
+def get_char_set(train_data, test_data, captcha_name):
+    # 看是否有预定义好的字符结合,有则直接取出.没有则看两则大小是否相等.或者测试集合大,直接返回测试集,不然抛出异常
+    live_chars = {'K', 'S', 'R', 'X', 'V', 'G', 'P', '4', 'W', 'H', '5', 'N', 'M', 'Q', 'Y', 'A', 'B', 'Z', 'J', '6',
+                  'C', 'F', 'T', 'U', 'L', 'D', '3', 'y', 'p', 's', 'd', 'O', 'E', 'I'}
+    chars = {'4_live': live_chars}
+
     def get_chars(data):
-        char_sets = set()
+        chars = set()
         for _, labels in data:
             for i in labels:
-                char_sets.add(i)
-        return char_sets
+                chars.add(i)
+        return chars
 
-    train_chars = get_chars(train_data)
-    test_chars = get_chars(test_data)
-    print("debug info ***: train_chars num: {} test_chars num: {}".format(len(train_chars),len(test_chars)))
-    if sorted(train_chars) == sorted(test_chars):
-        return list(train_chars)
+    if chars.get(captcha_name) is not None:
+        # 有预定义好的 直接取出 (这里这么做原因是因为 当时做的live训练集合的数据34多于测试的24)
+        char_sets = chars.get(captcha_name)
+        train_chars = char_sets
+        test_chars = char_sets
     else:
-        if len(train_chars) > len(test_chars):
-            return list(train_chars)
+        train_chars = get_chars(train_data)
+        test_chars = get_chars(test_data)
+    print("*** debug info ***: train_chars num: {} test_chars num: {}".format(len(train_chars), len(test_chars)))
+    if sorted(train_chars) == sorted(test_chars):
+        return list(test_chars)
+    else:
+        # 如果测试集合包含训练集合 暂时包含函数没有写
+        if len(test_chars) >= len(train_chars):
+            return list(test_chars)
         else:
             raise RuntimeError("train labels chars set is more than test")
 
@@ -167,7 +179,7 @@ class PreNet(object):
         self.captcha_len = len(self.train_data[0][1])
         self.captcha_w, self.captcha_h = Image.open(self.train_data[0][0]).size
         self.real_captcha_len = args.real_captcha_len
-        self.captcha_char_set = sorted(get_char_set(self.train_data, self.test_data))
+        self.captcha_char_set = sorted(get_char_set(self.train_data, self.test_data, self.captcha_name))
         self.dim = self.captcha_len * len(self.captcha_char_set)
         self.char_idx = {str(self.captcha_char_set[i]): i for i in range(len(self.captcha_char_set))}
         self.idx_char = {i: str(self.captcha_char_set[i]) for i in range(len(self.captcha_char_set))}
@@ -414,13 +426,14 @@ class PreNet(object):
             for i in range(self.captcha_len):
                 vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
             return vector
+
         count = 0
         for i in range(num):
             pre = vec2text(index2vec(max_idx_l[i]), self.idx_char)
             real = vec2text(index2vec(max_idx_p[i]), self.idx_char)
             if pre == real:
                 count += 1
-        print(num, count, (count/num))
+        print(num, count, (count / num))
         return (count / num), count
 
     def show_predict(self, num, max_idx_l, max_idx_p):
