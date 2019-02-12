@@ -108,7 +108,7 @@ python CaptchaNet/read_log.py --captcha mnist --net SimpleCnn3
 **测试**
 ```shell
 # 普通测试
-python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net SimpleCnn5 --test_folder test --captcha qq 
+python CaptchaNet/main.py --load_ckpt train_best_acc.tar --mode test --net SimpleCnn128 --test_folder test --captcha qq 
 
 # 分割之后的单个验证码测试
 python CaptchaNet/main.py --load_ckpt best_acc.tar --mode test --net SimpleCnn5 --real_captcha_len 4 --captcha qq 

@@ -78,6 +78,7 @@ def get_char_set(train_data, test_data):
 
     train_chars = get_chars(train_data)
     test_chars = get_chars(test_data)
+    print("debug info ***: train_chars num: {} test_chars num: {}".format(len(train_chars),len(test_chars)))
     if sorted(train_chars) == sorted(test_chars):
         return list(train_chars)
     else:
@@ -411,7 +412,6 @@ class PreNet(object):
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
             for i in range(self.captcha_len):
-                # bug item()版本问题。
                 vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
             return vector
         count = 0
@@ -427,7 +427,6 @@ class PreNet(object):
         def index2vec(index_tensor):
             vector = np.zeros(self.captcha_len * len(self.captcha_char_set))
             for i in range(self.captcha_len):
-                # bug item()版本问题。
                 vector[index_tensor[i].item() + i * len(self.captcha_char_set)] = 1
             return vector
 
