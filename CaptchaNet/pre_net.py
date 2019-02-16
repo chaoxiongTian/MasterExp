@@ -400,7 +400,7 @@ class PreNet(object):
         self.test_lost.append(cost)
 
         # 选择最好的模型保存
-        if accuracy >= self.bast_accuracy and (self.mode == 'train' or self.mode == 'fine'):
+        if accuracy > self.bast_accuracy and (self.mode == 'train' or self.mode == 'fine'):
             self.bast_accuracy = accuracy
             self.save_checkpoint(self.mode + '_best_acc.tar')
 
