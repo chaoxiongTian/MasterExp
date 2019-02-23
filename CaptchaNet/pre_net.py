@@ -97,7 +97,7 @@ def get_char_set(train_data, test_data, captcha_name):
         if len(test_chars) >= len(train_chars):
             return list(test_chars)
         else:
-            raise RuntimeError("train labels chars set is more than test")
+            return list(train_chars)
 
 
 # 获得 倍数 进1
