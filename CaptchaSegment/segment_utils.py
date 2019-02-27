@@ -5,7 +5,7 @@
 # @File    : segment_utils.py
 # @Software: PyCharm
 
-from utils import *
+from out_utils import *
 
 
 #  转灰度

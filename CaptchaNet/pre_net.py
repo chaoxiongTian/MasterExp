@@ -158,7 +158,7 @@ class PreNet(object):
         self.mode = args.mode
         self.net_str = args.net
         self.gpu_ids = parse_gpu_id(args.gpu_id)
-
+        self.check_name = args.check_name
         # 需要的文件夹
         self.data_sets = os.path.join(self.data_root, args.data_sets, args.captcha)
         self.captcha_name = args.captcha
@@ -351,7 +351,7 @@ class PreNet(object):
                     'train_lost': self.train_lost,
                     'test_acc': self.test_acc,
                     'test_lost': self.test_lost}
-        log_path = os.path.join(self.ckpt_dir, self.mode + '_log.pickle')
+        log_path = os.path.join(self.ckpt_dir, self.mode + self.check_name + '_log.pickle')
         save_pickle(log_path, log_dict)
 
     def test(self):
@@ -402,7 +402,7 @@ class PreNet(object):
         # 选择最好的模型保存
         if accuracy > self.bast_accuracy and (self.mode == 'train' or self.mode == 'fine'):
             self.bast_accuracy = accuracy
-            self.save_checkpoint(self.mode + '_best_acc.tar')
+            self.save_checkpoint(self.mode + self.check_name+'.tar')
 
         print('test loss: %.4f' % cost,
               '| test accuracy: %.3f' % accuracy,

@@ -21,6 +21,8 @@ class Options:
         self.parser.add_argument('--lr', type=float, default=0.0001, help='learning rate')  # 学习率
         self.parser.add_argument('--net', type=str, default='SimpleCnn5', help='which net')
         self.parser.add_argument('--gpu_id', type=str, default='0', help='gpu ids')
+        self.parser.add_argument('--check_name', type=str, default='_best_acc', help='model name')
+
 
         # 文件夹
         self.parser.add_argument('--data_sets', type=str, default='data_sets', help='dataset directory path')  # 目录
