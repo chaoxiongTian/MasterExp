@@ -60,7 +60,7 @@ def main():
     order_log = load_pickle(log_path)
     train_acc, train_lost = order_log['train_acc'], order_log['train_lost']
     test_acc, test_lost = order_log['test_acc'], order_log['test_lost']
-    draw(train_acc, train_lost, test_acc, test_lost)
+    draw(train_acc, train_lost, test_acc[:len(train_acc)], test_lost[:len(train_lost)])
 
 
 if __name__ == '__main__':

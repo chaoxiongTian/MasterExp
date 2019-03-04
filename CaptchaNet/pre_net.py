@@ -385,6 +385,8 @@ class PreNet(object):
             if self.real_captcha_len == 0:
                 self.show_predict(2, max_idx_p, max_idx_l)
                 accuracy, accuracy_num = self.get_pd(len(labels), max_idx_p, max_idx_l)
+                tmp_correct = max_idx_p.eq(max_idx_l).float().mean().item()
+                print("char rg acc :%.3f"% tmp_correct)
                 print(len(labels), accuracy_num, accuracy)
             else:
                 # test_batch等于字符个数,如果等于1表示一个字符全部预测准确.
